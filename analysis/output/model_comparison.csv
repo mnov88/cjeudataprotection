@@ -1,0 +1,8 @@
+Model,N,K,Log-lik,AIC,BIC,Pseudo-R²
+Model 0: Null,181,1,-121.22,244.4,247.6,0.0000
+Model 1: Institutional,181,6,-111.18,234.4,253.6,0.0828
+Model 2: + Conceptual,181,13,-105.45,236.9,278.5,0.1301
+Model 3: + Interpretive,181,18,-93.13,222.3,279.8,0.2318
+Model 4: + Reasoning,181,24,-90.51,229.0,305.8,0.2533
+Model 5: Full,181,25,-87.68,225.4,305.3,0.2768
+Model 6: Parsimonious,181,8,-106.65,229.3,254.9,0.1203
