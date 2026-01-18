@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR CJEU Case Analyzer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-0: #09090b;
+            --bg-1: #0f0f12;
+            --bg-2: #18181b;
+            --bg-3: #27272a;
+            --border: #3f3f46;
+            --border-light: #52525b;
+            --text-0: #fafafa;
+            --text-1: #d4d4d8;
+            --text-2: #a1a1aa;
+            --text-3: #71717a;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --green: #22c55e;
+            --red: #ef4444;
+            --amber: #f59e0b;
+            --purple: #a855f7;
+            --cyan: #06b6d4;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background: var(--bg-0);
+            color: var(--text-1);
+            font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+        
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-1); }
+        ::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--border); }
+        
+        input, select, button { font-family: inherit; font-size: inherit; }
+        
+        input[type="text"], input[type="search"], input[type="number"], select {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            color: var(--text-1);
+            padding: 8px 12px;
+            border-radius: 6px;
+            outline: none;
+            transition: border-color 0.15s;
+        }
+        input:focus, select:focus { border-color: var(--accent); }
+        
+        .btn {
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+            border: 1px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-ghost { background: transparent; border-color: var(--border); color: var(--text-1); }
+        .btn-ghost:hover { border-color: var(--text-2); background: var(--bg-2); }
+        .btn-sm { padding: 4px 10px; font-size: 12px; }
+        
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            transition: all 0.15s;
+            border: 1px solid transparent;
+        }
+        .tag:hover { filter: brightness(1.2); }
+        
+        .tag-ds { background: rgba(34, 197, 94, 0.15); color: var(--green); border-color: rgba(34, 197, 94, 0.3); }
+        .tag-ctrl { background: rgba(239, 68, 68, 0.15); color: var(--red); border-color: rgba(239, 68, 68, 0.3); }
+        .tag-mixed { background: rgba(245, 158, 11, 0.15); color: var(--amber); border-color: rgba(245, 158, 11, 0.3); }
+        .tag-neutral { background: rgba(113, 113, 122, 0.15); color: var(--text-2); border-color: rgba(113, 113, 122, 0.3); }
+        
+        .tag-semantic { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3); }
+        .tag-systematic { background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: rgba(168, 85, 247, 0.3); }
+        .tag-teleological { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); }
+        .tag-unclear { background: rgba(113, 113, 122, 0.15); color: var(--text-2); border-color: rgba(113, 113, 122, 0.3); }
+        
+        .tag-concept { background: rgba(6, 182, 212, 0.1); color: var(--cyan); border-color: rgba(6, 182, 212, 0.2); }
+        .tag-chamber { background: rgba(168, 85, 247, 0.1); color: #c084fc; border-color: rgba(168, 85, 247, 0.2); }
+        .tag-article { background: rgba(59, 130, 246, 0.1); color: #60a5fa; border-color: rgba(59, 130, 246, 0.2); }
+        
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.15s;
+            user-select: none;
+        }
+        .chip:hover { border-color: var(--text-3); }
+        .chip.active { background: rgba(59, 130, 246, 0.15); border-color: var(--accent); color: var(--accent); }
+        .chip .count { color: var(--text-3); font-size: 11px; }
+        
+        .toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .toggle:hover { border-color: var(--text-3); }
+        .toggle.active { background: rgba(59, 130, 246, 0.1); border-color: var(--accent); }
+        .toggle-indicator {
+            width: 32px;
+            height: 18px;
+            background: var(--bg-3);
+            border-radius: 9px;
+            position: relative;
+            transition: background 0.15s;
+        }
+        .toggle.active .toggle-indicator { background: var(--accent); }
+        .toggle-indicator::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.15s;
+        }
+        .toggle.active .toggle-indicator::after { transform: translateX(14px); }
+        
+        .card {
+            background: var(--bg-1);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        
+        .holding-card {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .holding-card:hover { border-color: var(--border-light); }
+        .holding-card.expanded { border-color: var(--accent); }
+        
+        .quote {
+            border-left: 3px solid var(--accent);
+            padding-left: 12px;
+            margin: 8px 0;
+            color: var(--text-2);
+            font-style: italic;
+            font-size: 13px;
+        }
+        
+        .section-label {
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-3);
+            margin-bottom: 8px;
+        }
+        
+        .stat-bar {
+            height: 6px;
+            background: var(--bg-3);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .stat-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        
+        .tab {
+            padding: 8px 16px;
+            background: transparent;
+            border: none;
+            color: var(--text-2);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.15s;
+        }
+        .tab:hover { color: var(--text-1); }
+        .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+        
+        .crosstab {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .crosstab th, .crosstab td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .crosstab th { 
+            font-weight: 600; 
+            color: var(--text-2);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .crosstab tr:hover td { background: var(--bg-2); }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-in { animation: fadeIn 0.2s ease; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState, useMemo, useCallback } = React;
+
+        // ============================================================================
+        // SAMPLE DATA
+        // ============================================================================
+        const SAMPLE_DATA = [
+            {
+                "case_id": "C-710/23",
+                "judgment_date": "2025-04-03",
+                "chamber": "FIRST",
+                "holding_count": 2,
+                "holdings": [
+                    {
+                        "holding_id": 1,
+                        "paragraphs": [18,19,20,21,22,23,24,25,26,27,28,29,30,31],
+                        "core_holding": "Data identifying a natural person representing a legal person (name, surname, signature, contact details) constitutes personal data, and its disclosure is processing regardless of purpose.",
+                        "provisions_cited": ["Article 4(1)", "Article 4(2)"],
+                        "article_numbers": [4],
+                        "primary_concept": "PERSONAL_DATA_SCOPE",
+                        "secondary_concepts": [],
+                        "interpretation": {
+                            "semantic_present": true,
+                            "semantic_quote": "According to settled case-law, the use of the expression 'any information' in the definition of the concept of 'personal data' reflects the aim of the EU legislature to assign a wide scope to that concept.",
+                            "systematic_present": true,
+                            "systematic_quote": "That interpretation cannot be invalidated by recital 14 of the GDPR.",
+                            "teleological_present": true,
+                            "teleological_quote": "That interpretation is consistent with the objective of ensuring a high level of protection of fundamental rights and freedoms of natural persons.",
+                            "teleological_purposes": ["HIGH_LEVEL_OF_PROTECTION", "FUNDAMENTAL_RIGHTS"],
+                            "other_purpose": null,
+                            "dominant_source": "SEMANTIC",
+                            "dominant_confident": true
+                        },
+                        "reasoning": {
+                            "rule_based_present": true,
+                            "rule_based_quote": "Under Article 4(1) GDPR, 'personal data' means 'any information relating to an identified or identifiable natural person'.",
+                            "case_law_present": true,
+                            "case_law_quote": "Information relating to natural persons authorised to represent a company constitutes 'personal data'.",
+                            "cited_cases": ["C-604/22", "C-200/23", "C-398/15", "C-740/22", "C-394/23"],
+                            "principle_based_present": false,
+                            "principle_based_quote": null,
+                            "dominant_structure": "RULE_BASED",
+                            "level_shifting": false,
+                            "level_shifting_explanation": null
+                        },
+                        "ruling_direction": "PRO_DATA_SUBJECT",
+                        "direction_justification": "Broad interpretation of personal data scope includes representatives of legal persons, expanding GDPR protection.",
+                        "balancing": {
+                            "necessity_discussed": false,
+                            "necessity_standard": "NONE",
+                            "necessity_summary": null,
+                            "controller_ds_balancing": false,
+                            "interest_prevails": "NONE",
+                            "balance_summary": null,
+                            "other_rights_balancing": false,
+                            "other_rights": [],
+                            "right_prevails": "NONE",
+                            "rights_balance_summary": null
+                        }
+                    },
+                    {
+                        "holding_id": 2,
+                        "paragraphs": [32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48],
+                        "core_holding": "National case-law requiring prior consultation of data subjects before disclosure of official documents is permissible provided it does not impose disproportionate restrictions on public access.",
+                        "provisions_cited": ["Article 6(1)(c)", "Article 6(1)(e)", "Article 86", "Article 5(1)(a)"],
+                        "article_numbers": [5, 6, 86],
+                        "primary_concept": "MEMBER_STATE_DISCRETION",
+                        "secondary_concepts": ["DATA_PROTECTION_PRINCIPLES"],
+                        "interpretation": {
+                            "semantic_present": true,
+                            "semantic_quote": "Article 6(3) provides that the basis for processing is to be defined by EU or Member State law.",
+                            "systematic_present": true,
+                            "systematic_quote": "That article must be read in light of recital 4, stating that data protection is not an absolute right.",
+                            "teleological_present": true,
+                            "teleological_quote": "Such obligation ensures lawful, fair and transparent processing.",
+                            "teleological_purposes": ["HIGH_LEVEL_OF_PROTECTION", "HARMONIZATION"],
+                            "other_purpose": null,
+                            "dominant_source": "SYSTEMATIC",
+                            "dominant_confident": true
+                        },
+                        "reasoning": {
+                            "rule_based_present": true,
+                            "rule_based_quote": "Article 6(1)(c) provides that processing may be lawful if necessary for compliance with a legal obligation.",
+                            "case_law_present": true,
+                            "case_law_quote": "Member States must use their discretion within limits so as not to undermine the regulation's objectives.",
+                            "cited_cases": ["C-394/23", "C-37/20", "C-601/20", "C-34/21", "C-667/21"],
+                            "principle_based_present": true,
+                            "principle_based_quote": "In accordance with proportionality, Member States must ensure practical consequences are not excessive.",
+                            "dominant_structure": "MIXED",
+                            "level_shifting": true,
+                            "level_shifting_explanation": "Text of Article 6 permits Member State rules, but Court invokes proportionality principle to limit them."
+                        },
+                        "ruling_direction": "MIXED",
+                        "direction_justification": "Permits national data subject protections but limits them through proportionality.",
+                        "balancing": {
+                            "necessity_discussed": true,
+                            "necessity_standard": "REGULAR",
+                            "necessity_summary": "Prior consultation must not require disproportionate effort.",
+                            "controller_ds_balancing": false,
+                            "interest_prevails": "NONE",
+                            "balance_summary": null,
+                            "other_rights_balancing": true,
+                            "other_rights": ["public access to official documents", "transparency"],
+                            "right_prevails": "NONE",
+                            "rights_balance_summary": "Neither prevails absolutely; reconciliation required with proportionality."
+                        }
+                    }
+                ],
+                "source_file": "C-710-23_coded.md"
+            },
+            {
+                "case_id": "C-131/12",
+                "judgment_date": "2014-05-13",
+                "chamber": "GRAND_CHAMBER",
+                "holding_count": 1,
+                "holdings": [
+                    {
+                        "holding_id": 1,
+                        "paragraphs": [62,63,64,65,66,67,68,69,70],
+                        "core_holding": "A search engine operator is a controller for processing of personal data appearing on third-party web pages.",
+                        "provisions_cited": ["Article 2(b)", "Article 2(d)", "Article 4(1)(a)"],
+                        "article_numbers": [2, 4],
+                        "primary_concept": "CONTROLLER_DEFINITION",
+                        "secondary_concepts": ["PERSONAL_DATA_SCOPE"],
+                        "interpretation": {
+                            "semantic_present": true,
+                            "semantic_quote": "The activity of finding, indexing, storing and making available information constitutes 'processing'.",
+                            "systematic_present": true,
+                            "systematic_quote": "Article 8 of the Charter guarantees the right to protection of personal data.",
+                            "teleological_present": true,
+                            "teleological_quote": "The objective is to ensure effective and complete protection of fundamental rights and freedoms.",
+                            "teleological_purposes": ["HIGH_LEVEL_OF_PROTECTION", "FUNDAMENTAL_RIGHTS"],
+                            "other_purpose": null,
+                            "dominant_source": "TELEOLOGICAL",
+                            "dominant_confident": true
+                        },
+                        "reasoning": {
+                            "rule_based_present": true,
+                            "rule_based_quote": "Article 2(d) provides that controller is the entity which determines purposes and means of processing.",
+                            "case_law_present": true,
+                            "case_law_quote": "Protection of personal data is especially important for the right to respect for private life.",
+                            "cited_cases": ["C-73/07", "C-553/07"],
+                            "principle_based_present": true,
+                            "principle_based_quote": "A fair balance should be sought between legitimate interests and fundamental rights.",
+                            "dominant_structure": "PRINCIPLE_BASED",
+                            "level_shifting": false,
+                            "level_shifting_explanation": null
+                        },
+                        "ruling_direction": "PRO_DATA_SUBJECT",
+                        "direction_justification": "Broad controller definition captures search engines; establishes right to delisting.",
+                        "balancing": {
+                            "necessity_discussed": false,
+                            "necessity_standard": "NONE",
+                            "necessity_summary": null,
+                            "controller_ds_balancing": true,
+                            "interest_prevails": "DATA_SUBJECT",
+                            "balance_summary": "Data subject's privacy overrides economic interest of search engine.",
+                            "other_rights_balancing": true,
+                            "other_rights": ["freedom of information", "freedom to conduct business"],
+                            "right_prevails": "DATA_PROTECTION",
+                            "rights_balance_summary": "Data protection prevails over information access and business freedom."
+                        }
+                    }
+                ],
+                "source_file": "C-131-12_coded.md"
+            }
+        ];
+
+        // ============================================================================
+        // UTILITIES
+        // ============================================================================
+        const formatConcept = (c) => c?.replace(/_/g, ' ').toLowerCase().replace(/\b\w/g, x => x.toUpperCase()) || '';
+        const formatDirection = (d) => ({ 'PRO_DATA_SUBJECT': 'Pro DS', 'PRO_CONTROLLER': 'Pro Ctrl', 'MIXED': 'Mixed', 'NEUTRAL_OR_UNCLEAR': 'Neutral' }[d] || d);
+        const directionClass = (d) => ({ 'PRO_DATA_SUBJECT': 'tag-ds', 'PRO_CONTROLLER': 'tag-ctrl', 'MIXED': 'tag-mixed', 'NEUTRAL_OR_UNCLEAR': 'tag-neutral' }[d] || 'tag-neutral');
+        const sourceClass = (s) => ({ 'SEMANTIC': 'tag-semantic', 'SYSTEMATIC': 'tag-systematic', 'TELEOLOGICAL': 'tag-teleological', 'UNCLEAR': 'tag-unclear' }[s] || 'tag-unclear');
+        const countBy = (arr, fn) => arr.reduce((acc, item) => { const key = fn(item); acc[key] = (acc[key] || 0) + 1; return acc; }, {});
+
+        // ============================================================================
+        // FILTER PANEL
+        // ============================================================================
+        const FilterPanel = ({ filters, setFilters, holdings, allHoldings }) => {
+            const stats = useMemo(() => ({
+                directions: countBy(allHoldings, h => h.ruling_direction),
+                sources: countBy(allHoldings, h => h.interpretation.dominant_source),
+                chambers: countBy(allHoldings, h => h._chamber),
+                concepts: countBy(allHoldings, h => h.primary_concept),
+                structures: countBy(allHoldings, h => h.reasoning.dominant_structure),
+            }), [allHoldings]);
+            
+            const toggleFilter = (cat, val) => setFilters(p => ({ ...p, [cat]: p[cat]?.includes(val) ? p[cat].filter(v => v !== val) : [...(p[cat] || []), val] }));
+            const toggleFeature = (f) => setFilters(p => ({ ...p, features: { ...p.features, [f]: !p.features?.[f] } }));
+            const clearAll = () => setFilters({ search: '', directions: [], sources: [], chambers: [], concepts: [], structures: [], features: {}, articleFilter: null });
+            
+            const activeCount = [filters.directions, filters.sources, filters.chambers, filters.concepts, filters.structures].map(a => a?.length || 0).reduce((a,b) => a+b, 0) 
+                + Object.values(filters.features || {}).filter(Boolean).length + (filters.search ? 1 : 0) + (filters.articleFilter ? 1 : 0);
+
+            return (
+                <div className="space-y-5">
+                    <div>
+                        <div className="section-label">Search</div>
+                        <input type="search" placeholder="Case ID, text, quotes..." value={filters.search || ''} onChange={e => setFilters(p => ({ ...p, search: e.target.value }))} className="w-full" />
+                    </div>
+                    
+                    <div>
+                        <div className="section-label">Ruling Direction</div>
+                        <div className="flex flex-wrap gap-2">
+                            {['PRO_DATA_SUBJECT', 'PRO_CONTROLLER', 'MIXED', 'NEUTRAL_OR_UNCLEAR'].map(d => (
+                                <div key={d} className={`chip ${filters.directions?.includes(d) ? 'active' : ''}`} onClick={() => toggleFilter('directions', d)}>
+                                    {formatDirection(d)} <span className="count">{stats.directions[d] || 0}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div className="section-label">Dominant Source</div>
+                        <div className="flex flex-wrap gap-2">
+                            {['SEMANTIC', 'SYSTEMATIC', 'TELEOLOGICAL', 'UNCLEAR'].map(s => (
+                                <div key={s} className={`chip ${filters.sources?.includes(s) ? 'active' : ''}`} onClick={() => toggleFilter('sources', s)}>
+                                    {s.charAt(0) + s.slice(1).toLowerCase()} <span className="count">{stats.sources[s] || 0}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div className="section-label">Chamber</div>
+                        <div className="flex flex-wrap gap-2">
+                            {Object.entries(stats.chambers).sort((a,b) => b[1] - a[1]).slice(0, 6).map(([c, count]) => (
+                                <div key={c} className={`chip ${filters.chambers?.includes(c) ? 'active' : ''}`} onClick={() => toggleFilter('chambers', c)}>
+                                    {c.replace('_', ' ')} <span className="count">{count}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div className="section-label">Reasoning Structure</div>
+                        <div className="flex flex-wrap gap-2">
+                            {['RULE_BASED', 'CASE_LAW_BASED', 'PRINCIPLE_BASED', 'MIXED'].map(s => (
+                                <div key={s} className={`chip ${filters.structures?.includes(s) ? 'active' : ''}`} onClick={() => toggleFilter('structures', s)}>
+                                    {formatConcept(s)} <span className="count">{stats.structures[s] || 0}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div className="section-label">Primary Concept</div>
+                        <select value={filters.concepts?.[0] || ''} onChange={e => setFilters(p => ({ ...p, concepts: e.target.value ? [e.target.value] : [] }))} className="w-full">
+                            <option value="">All Concepts</option>
+                            {Object.entries(stats.concepts).sort((a,b) => b[1] - a[1]).map(([c, count]) => (
+                                <option key={c} value={c}>{formatConcept(c)} ({count})</option>
+                            ))}
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <div className="section-label">GDPR Article</div>
+                        <input type="number" placeholder="e.g. 6, 17, 82..." value={filters.articleFilter || ''} onChange={e => setFilters(p => ({ ...p, articleFilter: e.target.value ? parseInt(e.target.value) : null }))} className="w-full" min="1" max="99" />
+                    </div>
+                    
+                    <div>
+                        <div className="section-label">Features Present</div>
+                        <div className="space-y-2">
+                            {[['hasLevelShift', 'Level Shifting'], ['hasNecessity', 'Necessity'], ['hasBalancing', 'Interest Balancing'], ['hasOtherRights', 'Other Rights']].map(([k, l]) => (
+                                <div key={k} className={`toggle ${filters.features?.[k] ? 'active' : ''}`} onClick={() => toggleFeature(k)}>
+                                    <div className="toggle-indicator"></div><span>{l}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div className="pt-4 border-t border-zinc-800">
+                        <div className="flex items-center justify-between">
+                            <span className="text-sm text-zinc-400"><span className="text-white font-medium">{holdings.length}</span> / {allHoldings.length} holdings</span>
+                            {activeCount > 0 && <button className="btn btn-ghost btn-sm" onClick={clearAll}>Clear ({activeCount})</button>}
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // ============================================================================
+        // HOLDING DETAIL
+        // ============================================================================
+        const HoldingDetail = ({ holding, onTagClick }) => {
+            const [section, setSection] = useState('interpretation');
+            const { interpretation: interp, reasoning, balancing } = holding;
+            
+            return (
+                <div className="mt-4 pt-4 border-t border-zinc-700 animate-in">
+                    <div className="flex gap-1 mb-4 border-b border-zinc-800">
+                        {[['interpretation', 'Interpretation'], ['reasoning', 'Reasoning'], ['balancing', 'Balancing'], ['meta', 'Metadata']].map(([k, l]) => (
+                            <button key={k} className={`tab ${section === k ? 'active' : ''}`} onClick={() => setSection(k)}>{l}</button>
+                        ))}
+                    </div>
+                    
+                    {section === 'interpretation' && (
+                        <div className="space-y-4">
+                            <div className="grid grid-cols-3 gap-3">
+                                {[['Semantic', interp.semantic_present, interp.semantic_quote, 'tag-semantic'],
+                                  ['Systematic', interp.systematic_present, interp.systematic_quote, 'tag-systematic'],
+                                  ['Teleological', interp.teleological_present, interp.teleological_quote, 'tag-teleological']].map(([n, p, q, c]) => (
+                                    <div key={n} className={`p-3 rounded-lg ${p ? 'bg-zinc-800/50' : 'bg-zinc-900/30 opacity-50'}`}>
+                                        <div className="flex items-center gap-2 mb-2"><span className={`tag ${c}`}>{n}</span>{p ? '✓' : '✗'}</div>
+                                        {p && q && <div className="quote text-xs">{q}</div>}
+                                    </div>
+                                ))}
+                            </div>
+                            {interp.teleological_purposes?.length > 0 && (
+                                <div>
+                                    <div className="section-label">Teleological Purposes</div>
+                                    <div className="flex flex-wrap gap-2">{interp.teleological_purposes.map(p => <span key={p} className="tag tag-concept">{formatConcept(p)}</span>)}</div>
+                                </div>
+                            )}
+                            <div className="flex items-center gap-4 text-sm">
+                                <span className="text-zinc-400">Dominant:</span>
+                                <span className={`tag ${sourceClass(interp.dominant_source)}`}>{interp.dominant_source}</span>
+                                {interp.dominant_confident ? <span className="text-green-500 text-xs">● Confident</span> : <span className="text-amber-500 text-xs">○ Uncertain</span>}
+                            </div>
+                        </div>
+                    )}
+                    
+                    {section === 'reasoning' && (
+                        <div className="space-y-4">
+                            <div className="grid grid-cols-3 gap-3">
+                                {[['Rule-Based', reasoning.rule_based_present, reasoning.rule_based_quote],
+                                  ['Case-Law', reasoning.case_law_present, reasoning.case_law_quote],
+                                  ['Principle-Based', reasoning.principle_based_present, reasoning.principle_based_quote]].map(([n, p, q]) => (
+                                    <div key={n} className={`p-3 rounded-lg ${p ? 'bg-zinc-800/50' : 'bg-zinc-900/30 opacity-50'}`}>
+                                        <div className="flex items-center gap-2 mb-2"><span className="font-medium text-sm">{n}</span>{p ? '✓' : '✗'}</div>
+                                        {p && q && <div className="quote text-xs">{q}</div>}
+                                    </div>
+                                ))}
+                            </div>
+                            {reasoning.cited_cases?.length > 0 && (
+                                <div>
+                                    <div className="section-label">Cited Cases ({reasoning.cited_cases.length})</div>
+                                    <div className="flex flex-wrap gap-2">{reasoning.cited_cases.map(c => <span key={c} className="tag tag-article mono" onClick={() => onTagClick?.('case', c)}>{c}</span>)}</div>
+                                </div>
+                            )}
+                            <div className="flex items-center gap-4 text-sm">
+                                <span className="text-zinc-400">Dominant:</span><span className="font-medium">{formatConcept(reasoning.dominant_structure)}</span>
+                            </div>
+                            {reasoning.level_shifting && (
+                                <div className="p-3 bg-amber-900/20 border border-amber-800/30 rounded-lg">
+                                    <div className="flex items-center gap-2 text-amber-400 font-medium text-sm mb-2">⚡ Level Shifting</div>
+                                    <p className="text-sm text-zinc-300">{reasoning.level_shifting_explanation}</p>
+                                </div>
+                            )}
+                        </div>
+                    )}
+                    
+                    {section === 'balancing' && (
+                        <div className="space-y-4">
+                            {!balancing.necessity_discussed && !balancing.controller_ds_balancing && !balancing.other_rights_balancing ? (
+                                <div className="text-center py-8 text-zinc-500">No balancing analysis</div>
+                            ) : (
+                                <>
+                                    {balancing.necessity_discussed && (
+                                        <div className="p-3 bg-zinc-800/50 rounded-lg">
+                                            <div className="section-label">Necessity</div>
+                                            <div className="flex items-center gap-3 mb-2">
+                                                <span className={`tag ${balancing.necessity_standard === 'STRICT' ? 'tag-ds' : 'tag-mixed'}`}>{balancing.necessity_standard}</span>
+                                            </div>
+                                            {balancing.necessity_summary && <p className="text-sm text-zinc-300">{balancing.necessity_summary}</p>}
+                                        </div>
+                                    )}
+                                    {balancing.controller_ds_balancing && (
+                                        <div className="p-3 bg-zinc-800/50 rounded-lg">
+                                            <div className="section-label">Controller vs Data Subject</div>
+                                            <span className={`tag ${balancing.interest_prevails === 'DATA_SUBJECT' ? 'tag-ds' : balancing.interest_prevails === 'CONTROLLER' ? 'tag-ctrl' : 'tag-neutral'}`}>{balancing.interest_prevails}</span>
+                                            {balancing.balance_summary && <p className="text-sm text-zinc-300 mt-2">{balancing.balance_summary}</p>}
+                                        </div>
+                                    )}
+                                    {balancing.other_rights_balancing && (
+                                        <div className="p-3 bg-zinc-800/50 rounded-lg">
+                                            <div className="section-label">vs Other Rights</div>
+                                            <div className="flex flex-wrap gap-2 mb-2">{balancing.other_rights?.map(r => <span key={r} className="tag tag-concept">{r}</span>)}</div>
+                                            <span className={`tag ${balancing.right_prevails === 'DATA_PROTECTION' ? 'tag-ds' : 'tag-neutral'}`}>{balancing.right_prevails}</span>
+                                            {balancing.rights_balance_summary && <p className="text-sm text-zinc-300 mt-2">{balancing.rights_balance_summary}</p>}
+                                        </div>
+                                    )}
+                                </>
+                            )}
+                        </div>
+                    )}
+                    
+                    {section === 'meta' && (
+                        <div className="grid grid-cols-2 gap-4">
+                            <div><div className="section-label">Provisions</div><div className="mono text-sm text-blue-400">{holding.provisions_cited?.join(', ') || 'None'}</div></div>
+                            <div><div className="section-label">Articles</div><div className="flex gap-2">{holding.article_numbers?.map(a => <span key={a} className="tag tag-article" onClick={() => onTagClick?.('article', a)}>Art. {a}</span>)}</div></div>
+                            <div><div className="section-label">Paragraphs</div><div className="mono text-sm text-zinc-400">¶{holding.paragraphs?.[0]}–{holding.paragraphs?.[holding.paragraphs.length - 1]} ({holding.paragraphs?.length})</div></div>
+                            <div><div className="section-label">Justification</div><p className="text-sm text-zinc-300 italic">{holding.direction_justification}</p></div>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        // ============================================================================
+        // HOLDING CARD
+        // ============================================================================
+        const HoldingCard = ({ holding, expanded, onToggle, onTagClick }) => (
+            <div className={`holding-card p-4 mb-3 ${expanded ? 'expanded' : ''}`}>
+                <div className="flex items-start gap-4 cursor-pointer" onClick={onToggle}>
+                    <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-2 flex-wrap">
+                            <span className="mono text-xs text-zinc-500">{holding._case_id}</span>
+                            <span className="text-zinc-600">•</span>
+                            <span className="mono text-xs text-zinc-500">H{holding.holding_id}</span>
+                            <span className={`tag ${directionClass(holding.ruling_direction)}`}>{formatDirection(holding.ruling_direction)}</span>
+                            <span className={`tag ${sourceClass(holding.interpretation.dominant_source)}`}>{holding.interpretation.dominant_source}</span>
+                            <span className="tag tag-chamber text-xs">{holding._chamber}</span>
+                            <span className="mono text-xs text-zinc-600">{holding._date}</span>
+                        </div>
+                        <p className="text-sm mb-2 pr-8">{holding.core_holding}</p>
+                        <div className="flex flex-wrap gap-1">
+                            <span className="tag tag-concept" onClick={e => { e.stopPropagation(); onTagClick?.('concept', holding.primary_concept); }}>{formatConcept(holding.primary_concept)}</span>
+                            {holding.secondary_concepts?.map(c => <span key={c} className="tag tag-concept opacity-60" onClick={e => { e.stopPropagation(); onTagClick?.('concept', c); }}>{formatConcept(c)}</span>)}
+                            {holding.reasoning.level_shifting && <span className="tag" style={{background: 'rgba(245,158,11,0.1)', color: '#fbbf24', borderColor: 'rgba(245,158,11,0.2)'}}>⚡ Level Shift</span>}
+                            {holding.balancing.necessity_discussed && <span className="tag" style={{background: 'rgba(6,182,212,0.1)', color: '#22d3ee', borderColor: 'rgba(6,182,212,0.2)'}}>⚖ Necessity</span>}
+                            {holding.balancing.other_rights_balancing && <span className="tag" style={{background: 'rgba(168,85,247,0.1)', color: '#c084fc', borderColor: 'rgba(168,85,247,0.2)'}}>⚖ Other Rights</span>}
+                        </div>
+                    </div>
+                    <div className="text-zinc-500 text-lg flex-shrink-0">{expanded ? '−' : '+'}</div>
+                </div>
+                {expanded && <HoldingDetail holding={holding} onTagClick={onTagClick} />}
+            </div>
+        );
+
+        // ============================================================================
+        // STATS DASHBOARD
+        // ============================================================================
+        const StatsDashboard = ({ holdings }) => {
+            const stats = useMemo(() => ({
+                total: holdings.length,
+                directions: countBy(holdings, h => h.ruling_direction),
+                sources: countBy(holdings, h => h.interpretation.dominant_source),
+                structures: countBy(holdings, h => h.reasoning.dominant_structure),
+                levelShifts: holdings.filter(h => h.reasoning.level_shifting).length,
+                necessity: holdings.filter(h => h.balancing.necessity_discussed).length,
+                balancing: holdings.filter(h => h.balancing.controller_ds_balancing).length,
+                otherRights: holdings.filter(h => h.balancing.other_rights_balancing).length,
+            }), [holdings]);
+            
+            const Bar = ({ label, value, total, color }) => (
+                <div className="mb-3">
+                    <div className="flex justify-between text-xs mb-1">
+                        <span className="text-zinc-400">{label}</span>
+                        <span className="mono" style={{ color }}>{value} <span className="text-zinc-600">({total > 0 ? (value/total*100).toFixed(0) : 0}%)</span></span>
+                    </div>
+                    <div className="stat-bar"><div className="stat-bar-fill" style={{ width: `${total > 0 ? value/total*100 : 0}%`, background: color }} /></div>
+                </div>
+            );
+            
+            return (
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    <div className="card p-4">
+                        <div className="text-xs uppercase text-zinc-500 mb-3 font-medium tracking-wide">Ruling Direction</div>
+                        <Bar label="Pro Data Subject" value={stats.directions.PRO_DATA_SUBJECT || 0} total={stats.total} color="var(--green)" />
+                        <Bar label="Pro Controller" value={stats.directions.PRO_CONTROLLER || 0} total={stats.total} color="var(--red)" />
+                        <Bar label="Mixed" value={stats.directions.MIXED || 0} total={stats.total} color="var(--amber)" />
+                        <Bar label="Neutral" value={stats.directions.NEUTRAL_OR_UNCLEAR || 0} total={stats.total} color="#71717a" />
+                    </div>
+                    <div className="card p-4">
+                        <div className="text-xs uppercase text-zinc-500 mb-3 font-medium tracking-wide">Interpretive Source</div>
+                        <Bar label="Semantic" value={stats.sources.SEMANTIC || 0} total={stats.total} color="#60a5fa" />
+                        <Bar label="Systematic" value={stats.sources.SYSTEMATIC || 0} total={stats.total} color="#c084fc" />
+                        <Bar label="Teleological" value={stats.sources.TELEOLOGICAL || 0} total={stats.total} color="#fbbf24" />
+                        <Bar label="Unclear" value={stats.sources.UNCLEAR || 0} total={stats.total} color="#71717a" />
+                    </div>
+                    <div className="card p-4">
+                        <div className="text-xs uppercase text-zinc-500 mb-3 font-medium tracking-wide">Reasoning Structure</div>
+                        <Bar label="Rule-Based" value={stats.structures.RULE_BASED || 0} total={stats.total} color="#60a5fa" />
+                        <Bar label="Case-Law" value={stats.structures.CASE_LAW_BASED || 0} total={stats.total} color="#c084fc" />
+                        <Bar label="Principle-Based" value={stats.structures.PRINCIPLE_BASED || 0} total={stats.total} color="#22d3ee" />
+                        <Bar label="Mixed" value={stats.structures.MIXED || 0} total={stats.total} color="#fbbf24" />
+                    </div>
+                    <div className="card p-4">
+                        <div className="text-xs uppercase text-zinc-500 mb-3 font-medium tracking-wide">Features</div>
+                        <Bar label="Level Shifting" value={stats.levelShifts} total={stats.total} color="#fbbf24" />
+                        <Bar label="Necessity" value={stats.necessity} total={stats.total} color="#22d3ee" />
+                        <Bar label="Interest Balance" value={stats.balancing} total={stats.total} color="#c084fc" />
+                        <Bar label="Other Rights" value={stats.otherRights} total={stats.total} color="#22c55e" />
+                    </div>
+                </div>
+            );
+        };
+
+        // ============================================================================
+        // CROSSTAB
+        // ============================================================================
+        const CrossTab = ({ holdings, rowKey, colKey, rowLabel, colLabel }) => {
+            const data = useMemo(() => {
+                const getVal = (h, key) => key.split('.').reduce((o, k) => o?.[k], h);
+                const rows = [...new Set(holdings.map(h => getVal(h, rowKey)))].filter(Boolean).sort();
+                const cols = [...new Set(holdings.map(h => getVal(h, colKey)))].filter(Boolean).sort();
+                const matrix = {};
+                rows.forEach(r => { matrix[r] = {}; cols.forEach(c => matrix[r][c] = 0); });
+                holdings.forEach(h => {
+                    const r = getVal(h, rowKey), c = getVal(h, colKey);
+                    if (r && c && matrix[r]) matrix[r][c] = (matrix[r][c] || 0) + 1;
+                });
+                return { rows, cols, matrix };
+            }, [holdings, rowKey, colKey]);
+            
+            return (
+                <div className="card overflow-hidden">
+                    <div className="p-3 border-b border-zinc-800 bg-zinc-900/50"><span className="text-sm font-medium">{rowLabel} × {colLabel}</span></div>
+                    <div className="overflow-x-auto">
+                        <table className="crosstab">
+                            <thead><tr><th></th>{data.cols.map(c => <th key={c}>{formatConcept(c).split(' ').map(w => w[0]).join('')}</th>)}<th>Total</th></tr></thead>
+                            <tbody>
+                                {data.rows.map(r => {
+                                    const rowTotal = data.cols.reduce((s, c) => s + (data.matrix[r]?.[c] || 0), 0);
+                                    return (
+                                        <tr key={r}>
+                                            <td className="font-medium text-zinc-300">{formatConcept(r)}</td>
+                                            {data.cols.map(c => {
+                                                const v = data.matrix[r]?.[c] || 0;
+                                                return <td key={c} className="mono text-sm">{v > 0 ? <span>{v} <span className="text-zinc-600 text-xs">({rowTotal > 0 ? (v/rowTotal*100).toFixed(0) : 0}%)</span></span> : <span className="text-zinc-700">–</span>}</td>;
+                                            })}
+                                            <td className="mono text-sm font-medium">{rowTotal}</td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            );
+        };
+
+        // ============================================================================
+        // APP
+        // ============================================================================
+        const App = () => {
+            const [data, setData] = useState(SAMPLE_DATA);
+            const [filters, setFilters] = useState({ search: '', directions: [], sources: [], chambers: [], concepts: [], structures: [], features: {}, articleFilter: null });
+            const [expanded, setExpanded] = useState(new Set());
+            const [view, setView] = useState('browse');
+            const [sortBy, setSortBy] = useState('date');
+            
+            const allHoldings = useMemo(() => data.flatMap(c => c.holdings.map(h => ({ ...h, _case_id: c.case_id, _date: c.judgment_date, _chamber: c.chamber, _year: c.judgment_date ? parseInt(c.judgment_date.split('-')[0]) : null }))), [data]);
+            
+            const filteredHoldings = useMemo(() => allHoldings.filter(h => {
+                if (filters.search) {
+                    const q = filters.search.toLowerCase();
+                    const text = [h._case_id, h.core_holding, h.primary_concept, h.direction_justification, h.interpretation.semantic_quote, h.interpretation.systematic_quote, h.interpretation.teleological_quote, ...(h.reasoning.cited_cases || [])].filter(Boolean).join(' ').toLowerCase();
+                    if (!text.includes(q)) return false;
+                }
+                if (filters.directions.length && !filters.directions.includes(h.ruling_direction)) return false;
+                if (filters.sources.length && !filters.sources.includes(h.interpretation.dominant_source)) return false;
+                if (filters.chambers.length && !filters.chambers.includes(h._chamber)) return false;
+                if (filters.concepts.length && !filters.concepts.some(c => h.primary_concept === c || h.secondary_concepts?.includes(c))) return false;
+                if (filters.structures.length && !filters.structures.includes(h.reasoning.dominant_structure)) return false;
+                if (filters.articleFilter && !h.article_numbers?.includes(filters.articleFilter)) return false;
+                const f = filters.features || {};
+                if (f.hasLevelShift && !h.reasoning.level_shifting) return false;
+                if (f.hasNecessity && !h.balancing.necessity_discussed) return false;
+                if (f.hasBalancing && !h.balancing.controller_ds_balancing) return false;
+                if (f.hasOtherRights && !h.balancing.other_rights_balancing) return false;
+                return true;
+            }), [allHoldings, filters]);
+            
+            const sortedHoldings = useMemo(() => {
+                const s = [...filteredHoldings];
+                if (sortBy === 'date') s.sort((a, b) => (b._date || '').localeCompare(a._date || ''));
+                else if (sortBy === 'case') s.sort((a, b) => a._case_id.localeCompare(b._case_id));
+                else if (sortBy === 'direction') { const o = { 'PRO_DATA_SUBJECT': 0, 'PRO_CONTROLLER': 1, 'MIXED': 2, 'NEUTRAL_OR_UNCLEAR': 3 }; s.sort((a, b) => (o[a.ruling_direction] || 99) - (o[b.ruling_direction] || 99)); }
+                return s;
+            }, [filteredHoldings, sortBy]);
+            
+            const toggle = useCallback(id => setExpanded(p => { const n = new Set(p); n.has(id) ? n.delete(id) : n.add(id); return n; }), []);
+            const tagClick = useCallback((type, val) => {
+                if (type === 'concept') setFilters(p => ({ ...p, concepts: [val] }));
+                else if (type === 'article') setFilters(p => ({ ...p, articleFilter: val }));
+                else if (type === 'case') setFilters(p => ({ ...p, search: val }));
+            }, []);
+            
+            const upload = e => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const r = new FileReader();
+                r.onload = evt => { try { setData(Array.isArray(JSON.parse(evt.target.result)) ? JSON.parse(evt.target.result) : [JSON.parse(evt.target.result)]); setFilters({ search: '', directions: [], sources: [], chambers: [], concepts: [], structures: [], features: {}, articleFilter: null }); } catch { alert('Invalid JSON'); } };
+                r.readAsText(file);
+            };
+
+            return (
+                <div className="min-h-screen flex flex-col">
+                    <header className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur sticky top-0 z-50">
+                        <div className="max-w-[1600px] mx-auto px-6 py-4 flex items-center justify-between">
+                            <div>
+                                <h1 className="text-lg font-bold">GDPR CJEU Analyzer</h1>
+                                <p className="text-xs text-zinc-500 mono">{data.length} cases • {allHoldings.length} holdings</p>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="flex border border-zinc-700 rounded-lg overflow-hidden">
+                                    {[['browse', 'Browse'], ['analysis', 'Analysis'], ['crosstab', 'Cross-Tab']].map(([k, l]) => (
+                                        <button key={k} className={`px-4 py-2 text-sm transition-colors ${view === k ? 'bg-zinc-700 text-white' : 'text-zinc-400 hover:text-zinc-200'}`} onClick={() => setView(k)}>{l}</button>
+                                    ))}
+                                </div>
+                                <label className="btn btn-primary cursor-pointer">Load JSON<input type="file" accept=".json" onChange={upload} className="hidden" /></label>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <main className="flex-1 max-w-[1600px] mx-auto w-full px-6 py-6">
+                        {view === 'browse' && (
+                            <div className="flex gap-6">
+                                <aside className="w-72 flex-shrink-0"><div className="sticky top-24"><FilterPanel filters={filters} setFilters={setFilters} holdings={filteredHoldings} allHoldings={allHoldings} /></div></aside>
+                                <div className="flex-1 min-w-0">
+                                    <StatsDashboard holdings={filteredHoldings} />
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="text-sm text-zinc-400">Showing <span className="text-white font-medium">{sortedHoldings.length}</span> holdings</div>
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-xs text-zinc-500">Sort:</span>
+                                            <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="text-sm py-1">
+                                                <option value="date">Date (newest)</option>
+                                                <option value="case">Case ID</option>
+                                                <option value="direction">Direction</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    {sortedHoldings.length === 0 ? <div className="text-center py-16 text-zinc-500"><div className="text-4xl mb-4">∅</div><div>No holdings match</div></div> : sortedHoldings.map(h => <HoldingCard key={`${h._case_id}-${h.holding_id}`} holding={h} expanded={expanded.has(`${h._case_id}-${h.holding_id}`)} onToggle={() => toggle(`${h._case_id}-${h.holding_id}`)} onTagClick={tagClick} />)}
+                                </div>
+                            </div>
+                        )}
+                        
+                        {view === 'analysis' && (
+                            <div className="space-y-6">
+                                <StatsDashboard holdings={filteredHoldings} />
+                                <div className="grid grid-cols-2 gap-6">
+                                    <CrossTab holdings={filteredHoldings} rowKey="interpretation.dominant_source" colKey="ruling_direction" rowLabel="Source" colLabel="Direction" />
+                                    <CrossTab holdings={filteredHoldings} rowKey="reasoning.dominant_structure" colKey="ruling_direction" rowLabel="Structure" colLabel="Direction" />
+                                    <CrossTab holdings={filteredHoldings} rowKey="_chamber" colKey="ruling_direction" rowLabel="Chamber" colLabel="Direction" />
+                                    <CrossTab holdings={filteredHoldings} rowKey="interpretation.dominant_source" colKey="reasoning.dominant_structure" rowLabel="Source" colLabel="Structure" />
+                                </div>
+                            </div>
+                        )}
+                        
+                        {view === 'crosstab' && (
+                            <div className="space-y-6">
+                                <div className="card p-4">
+                                    <div className="text-sm text-zinc-400 mb-4">Filter in Browse, then view cross-tabs. Currently: <span className="text-white font-medium">{filteredHoldings.length}</span> holdings.</div>
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <CrossTab holdings={filteredHoldings} rowKey="primary_concept" colKey="ruling_direction" rowLabel="Concept" colLabel="Direction" />
+                                        <CrossTab holdings={filteredHoldings} rowKey="primary_concept" colKey="interpretation.dominant_source" rowLabel="Concept" colLabel="Source" />
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </main>
+                    
+                    <footer className="border-t border-zinc-800 py-4 text-center text-xs text-zinc-600">Filters apply at holding level • Click tags to filter • Stats update with filters</footer>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
