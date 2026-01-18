@@ -20,6 +20,12 @@ class Composition:
     advocateGeneral: Optional[str]
 
 
+# Known name corrections for OCR/encoding errors in source files
+NAME_CORRECTIONS = {
+    'M.L. Arasteyx2 Sahún': 'M.L. Arastey Sahún',
+}
+
+
 def normalize_name(name: str) -> str:
     """Normalize judge name by cleaning whitespace and special characters."""
     # Replace various dash types with standard hyphen
@@ -41,7 +47,13 @@ def normalize_name(name: str) -> str:
     for pattern in role_fragments:
         name = re.sub(pattern, '', name, flags=re.IGNORECASE)
 
-    return name.strip()
+    name = name.strip()
+
+    # Apply known name corrections
+    if name in NAME_CORRECTIONS:
+        name = NAME_CORRECTIONS[name]
+
+    return name
 
 
 def is_valid_judgment_file(text: str) -> bool:
