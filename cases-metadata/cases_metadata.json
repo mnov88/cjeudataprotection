@@ -16,7 +16,27 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-492-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0492",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0492"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0492",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "T. von Danwitz",
+          "F. Biltgen",
+          "K. Jürimäe",
+          "C. Lycourgos",
+          "I. Jarukaitis",
+          "M.L. Arastey Sahún",
+          "I. Ziemele",
+          "J. Passer",
+          "S. Rodin",
+          "E. Regan",
+          "N. Jääskinen",
+          "D. Gratsias"
+        ],
+        "judgeRapporteur": "K. Jürimäe",
+        "advocateGeneral": "M. Szpunar"
+      }
     },
     {
       "caseCelex": "62023CJ0655",
@@ -29,7 +49,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-655-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0655",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0655"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0655",
+      "composition": {
+        "chamber": "Fourth",
+        "judges": [
+          "I. Jarukaitis",
+          "N. Jääskinen",
+          "A. Arabadjiev",
+          "M. Condinanzi",
+          "R. Frendo"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62023CJ0313",
@@ -42,7 +74,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-313-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0313",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0313"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0313",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "K. Lenaerts",
+          "T. von Danwitz",
+          "A. Kumin",
+          "I. Ziemele",
+          "O. Spineanu-Matei"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "P. Pikamäe"
+      }
     },
     {
       "caseCelex": "62023CJ0710",
@@ -55,7 +99,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-710-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0710",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0710"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0710",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "F. Biltgen",
+          "T. von Danwitz",
+          "A. Kumin",
+          "I. Ziemele",
+          "S. Gervasoni"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "J. Richard de la Tour"
+      }
     },
     {
       "caseCelex": "62023CJ0247",
@@ -68,7 +124,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-247-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0247",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0247"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0247",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "K. Lenaerts",
+          "T. von Danwitz",
+          "M.L. Arastey Sahún",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "A.M. Collins"
+      }
     },
     {
       "caseCelex": "62022CJ0203",
@@ -81,7 +149,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-203-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0203",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0203"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0203",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "K. Lenaerts",
+          "T. von Danwitz",
+          "A. Kumin",
+          "N. Jääskinen",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "J. Richard de la Tour"
+      }
     },
     {
       "caseCelex": "62023CJ0638",
@@ -94,7 +174,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-638-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0638",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0638"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0638",
+      "composition": {
+        "chamber": "Eighth",
+        "judges": [
+          "N. Jääskinen",
+          "M. Gavalec",
+          "N. Piçarra"
+        ],
+        "judgeRapporteur": "M. Gavalec",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62023CJ0383",
@@ -107,7 +197,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-383-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0383",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0383"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0383",
+      "composition": {
+        "chamber": "Fifth",
+        "judges": [
+          "I. Jarukaitis",
+          "D. Gratsias",
+          "Z. Csehi"
+        ],
+        "judgeRapporteur": "Z. Csehi",
+        "advocateGeneral": "L. Medina"
+      }
     },
     {
       "caseCelex": "62023CJ0394",
@@ -120,7 +220,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-394-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0394",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0394"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0394",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "K. Lenaerts",
+          "T. von Danwitz",
+          "M.L. Arastey Sahún",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "M. Szpunar"
+      }
     },
     {
       "caseCelex": "62023CJ0416",
@@ -133,7 +245,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-416-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0416",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0416"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0416",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "T. von Danwitz",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "J. Richard de la Tour"
+      }
     },
     {
       "caseCelex": "62023CJ0065",
@@ -146,7 +268,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-65-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0065",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0065"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0065",
+      "composition": {
+        "chamber": "Eighth",
+        "judges": [
+          "N. Jääskinen",
+          "M. Gavalec",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "L. Medina"
+      }
     },
     {
       "caseCelex": "62023CJ0169",
@@ -159,7 +291,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-169-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0169",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0169"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0169",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "K. Lenaerts",
+          "N. Jääskinen",
+          "M. Gavalec",
+          "N. Piçarra"
+        ],
+        "judgeRapporteur": "M. Gavalec",
+        "advocateGeneral": "L. Medina"
+      }
     },
     {
       "caseCelex": "62021CJ0446",
@@ -172,7 +316,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-446-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0446",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0446"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0446",
+      "composition": {
+        "chamber": "Fourth",
+        "judges": [
+          "C. Lycourgos",
+          "O. Spineanu-Matei",
+          "J.-C. Bonichot",
+          "S. Rodin",
+          "L.S. Rossi"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "A. Rantos"
+      }
     },
     {
       "caseCelex": "62022CJ0621",
@@ -185,7 +341,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-621-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0621",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0621"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0621",
+      "composition": {
+        "chamber": "Ninth",
+        "judges": [
+          "O. Spineanu-Matei",
+          "J.-C. Bonichot",
+          "L.S. Rossi"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "L. Medina"
+      }
     },
     {
       "caseCelex": "62023CJ0021",
@@ -211,7 +377,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-200-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0200",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0200"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0200",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "T. von Danwitz",
+          "P.G. Xuereb",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "L. Medina"
+      }
     },
     {
       "caseCelex": "62023CJ0507",
@@ -224,7 +402,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-507-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0507",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0507"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0507",
+      "composition": {
+        "chamber": "Eighth",
+        "judges": [
+          "N. Piçarra",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "M. Szpunar"
+      }
     },
     {
       "caseCelex": "62021CJ0768",
@@ -237,7 +425,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-768-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0768",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0768"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0768",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "T. von Danwitz",
+          "P.G. Xuereb",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "A. Kumin",
+        "advocateGeneral": "P. Pikamäe"
+      }
     },
     {
       "caseCelex": "62022CJ0017",
@@ -250,7 +450,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-17-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0017",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0017"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0017",
+      "composition": {
+        "chamber": "Fourth",
+        "judges": [
+          "C. Lycourgos",
+          "O. Spineanu-Matei",
+          "J.-C. Bonichot",
+          "S. Rodin",
+          "L.S. Rossi"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "J. Richard de la Tour"
+      }
     },
     {
       "caseCelex": "62022CJ0461",
@@ -263,7 +475,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-461-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0461",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0461"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0461",
+      "composition": {
+        "chamber": "Ninth",
+        "judges": [
+          "O. Spineanu-Matei",
+          "J.-C. Bonichot",
+          "L.S. Rossi"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "P. Pikamäe"
+      }
     },
     {
       "caseCelex": "62022CJ0757",
@@ -276,7 +498,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-757-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0757",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0757"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0757",
+      "composition": {
+        "chamber": "Fourth",
+        "judges": [
+          "C. Lycourgos",
+          "O. Spineanu-Matei",
+          "J.-C. Bonichot",
+          "S. Rodin",
+          "L.S. Rossi"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "J. Richard de la Tour"
+      }
     },
     {
       "caseCelex": "62022CJ0182",
@@ -289,7 +523,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-182-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0182",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0182"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0182",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "N. Piçarra",
+          "N. Jääskinen"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "A.M. Collins"
+      }
     },
     {
       "caseCelex": "62022CJ0590",
@@ -302,7 +546,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-590-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0590",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0590"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0590",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "K. Lenaerts",
+          "N. Piçarra",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62023CO0312",
@@ -328,7 +584,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-741-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0741",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0741"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0741",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "N. Piçarra",
+          "N. Jääskinen"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62023CJ0046",
@@ -341,7 +607,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-46-23.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62023CJ0046",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0046"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0046",
+      "composition": {
+        "chamber": "Fifth",
+        "judges": [
+          "E. Regan",
+          "Z. Csehi",
+          "M. Ilešič",
+          "I. Jarukaitis",
+          "D. Gratsias"
+        ],
+        "judgeRapporteur": "M. Ilešič",
+        "advocateGeneral": "L. Medina"
+      }
     },
     {
       "caseCelex": "62022CJ0604",
@@ -354,7 +632,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-604-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0604",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0604"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0604",
+      "composition": {
+        "chamber": "Fourth",
+        "judges": [
+          "C. Lycourgos",
+          "O. Spineanu-Matei",
+          "J.-C. Bonichot",
+          "S. Rodin",
+          "L.S. Rossi"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "T. Ćapeta"
+      }
     },
     {
       "caseCelex": "62022CJ0740",
@@ -367,7 +657,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-740-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0740",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0740"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0740",
+      "composition": {
+        "chamber": "Sixth",
+        "judges": [
+          "T. von Danwitz",
+          "P.G. Xuereb",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "T. Ćapeta"
+      }
     },
     {
       "caseCelex": "62021CJ0687",
@@ -380,7 +680,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-687-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0687",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0687"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0687",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "N. Piçarra",
+          "M. Safjan",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62022CJ0033",
@@ -393,7 +705,29 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-33-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0033",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0033"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0033",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "L. Bay Larsen",
+          "K. Jürimäe",
+          "C. Lycourgos",
+          "E. Regan",
+          "N. Piçarra",
+          "M. Ilešič",
+          "P.G. Xuereb",
+          "L.S. Rossi",
+          "I. Jarukaitis",
+          "A. Kumin",
+          "N. Jääskinen",
+          "N. Wahl",
+          "I. Ziemele",
+          "J. Passer"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "M. Szpunar"
+      }
     },
     {
       "caseCelex": "62022CJ0231",
@@ -406,7 +740,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-231-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0231",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0231"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0231",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "N. Piçarra",
+          "M. Safjan",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "M. Safjan",
+        "advocateGeneral": "L. Medina"
+      }
     },
     {
       "caseCelex": "62021CJ0667",
@@ -419,7 +765,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-667-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0667",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0667"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0667",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "N. Piçarra",
+          "M. Safjan",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62021CJ0340",
@@ -432,7 +790,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-340-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0340",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0340"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0340",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "N. Piçarra",
+          "M. Safjan",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "G. Pitruzzella"
+      }
     },
     {
       "caseCelex": "62022CJ0456",
@@ -445,7 +815,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-456-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0456",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0456"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0456",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "N. Piçarra",
+          "M. Safjan",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "N. Emiliou"
+      }
     },
     {
       "caseCelex": "62021CJ0634",
@@ -458,7 +840,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-634-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0634",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0634"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0634",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "T. von Danwitz",
+          "P.G. Xuereb",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "A. Kumin",
+        "advocateGeneral": "P. Pikamäe"
+      }
     },
     {
       "caseCelex": "62022CJ0026",
@@ -471,7 +865,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-26-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0026",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0026"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0026",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "T. von Danwitz",
+          "P.G. Xuereb",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "A. Kumin",
+        "advocateGeneral": "P. Pikamäe"
+      }
     },
     {
       "caseCelex": "62021CJ0683",
@@ -484,7 +890,29 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-683-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0683",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0683"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0683",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "L. Bay Larsen",
+          "A. Arabadjiev",
+          "C. Lycourgos",
+          "E. Regan",
+          "T. von Danwitz",
+          "Z. Csehi",
+          "O. Spineanu-Matei",
+          "M. Ilešič",
+          "J.-C. Bonichot",
+          "L.S. Rossi",
+          "A. Kumin",
+          "N. Jääskinen",
+          "N. Wahl",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "N. Emiliou"
+      }
     },
     {
       "caseCelex": "62021CJ0807",
@@ -497,7 +925,29 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-807-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0807",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0807"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0807",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "L. Bay Larsen",
+          "A. Arabadjiev",
+          "C. Lycourgos",
+          "E. Regan",
+          "T. von Danwitz",
+          "Z. Csehi",
+          "O. Spineanu-Matei",
+          "M. Ilešič",
+          "J.-C. Bonichot",
+          "L.S. Rossi",
+          "A. Kumin",
+          "N. Jääskinen",
+          "N. Wahl",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62022CJ0307",
@@ -510,7 +960,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-307-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0307",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0307"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0307",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "T. von Danwitz",
+          "P.G. Xuereb",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "N. Emiliou"
+      }
     },
     {
       "caseCelex": "62022CJ0659",
@@ -523,7 +985,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-659-22.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62022CJ0659",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0659"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0659",
+      "composition": {
+        "chamber": "Eighth",
+        "judges": [
+          "M. Safjan",
+          "N. Piçarra",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "M. Gavalec",
+        "advocateGeneral": "L. Medina"
+      }
     },
     {
       "caseCelex": "62021CJ0252",
@@ -536,7 +1008,29 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-252-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0252",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0252"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0252",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "L. Bay Larsen",
+          "A. Prechal",
+          "K. Jürimäe",
+          "C. Lycourgos",
+          "M. Safjan",
+          "L.S. Rossi",
+          "D. Gratsias",
+          "M.L. Arastey Sahún",
+          "J.-C. Bonichot",
+          "S. Rodin",
+          "F. Biltgen",
+          "M. Gavalec",
+          "Z. Csehi",
+          "O. Spineanu-Matei"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "A. Rantos"
+      }
     },
     {
       "caseCelex": "62021CJ0579",
@@ -549,7 +1043,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-579-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0579",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0579"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0579",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "P.G. Xuereb",
+          "T. von Danwitz",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62021CJ0300",
@@ -562,7 +1068,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-300-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0300",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0300"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0300",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "M. Safjan",
+          "N. Piçarra",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62021CJ0487",
@@ -575,7 +1093,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-487-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0487",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0487"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0487",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "P.G. Xuereb",
+          "T. von Danwitz",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "G. Pitruzzella"
+      }
     },
     {
       "caseCelex": "62022CJ0060",
@@ -601,7 +1131,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-34-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0034",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0034"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0034",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "K. Lenaerts",
+          "L. Bay Larsen",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62021CJ0268",
@@ -614,7 +1156,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-268-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0268",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0268"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0268",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "K. Jürimäe",
+          "M.L. Arasteyx2 Sahún",
+          "N. Piçarra",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "T. Ćapeta"
+      }
     },
     {
       "caseCelex": "62021CJ0453",
@@ -627,7 +1181,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-453-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0453",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0453"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0453",
+      "composition": {
+        "chamber": "Sixth",
+        "judges": [
+          "P.G. Xuereb",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "J. Richard de la Tour"
+      }
     },
     {
       "caseCelex": "62021CJ0560",
@@ -653,7 +1217,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-205-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0205",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0205"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0205",
+      "composition": {
+        "chamber": "Fifth",
+        "judges": [
+          "E. Regan",
+          "D. Gratsias",
+          "M. Ilešič",
+          "I. Jarukaitis",
+          "Z. Csehi"
+        ],
+        "judgeRapporteur": "D. Gratsias",
+        "advocateGeneral": "G. Pitruzzella"
+      }
     },
     {
       "caseCelex": "62021CJ0132",
@@ -666,7 +1242,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-132-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0132",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0132"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0132",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "L. Bay Larsen",
+          "P.G. Xuereb",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "J. Richard de la Tour"
+      }
     },
     {
       "caseCelex": "62021CJ0154",
@@ -679,7 +1267,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-154-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0154",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0154"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0154",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "L. Bay Larsen",
+          "P.G. Xuereb",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "G. Pitruzzella"
+      }
     },
     {
       "caseCelex": "62020CJ0460",
@@ -692,7 +1292,29 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-460-20.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62020CJ0460",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0460"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0460",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "L. Bay Larsen",
+          "A. Prechal",
+          "K. Jürimäe",
+          "C. Lycourgos",
+          "P.G. Xuereb",
+          "L.S. Rossi",
+          "D. Gratsias",
+          "M. Ilešič",
+          "F. Biltgen",
+          "N. Piçarra",
+          "N. Jääskinen",
+          "N. Wahl",
+          "I. Ziemele",
+          "J. Passer"
+        ],
+        "judgeRapporteur": "M. Ilešič",
+        "advocateGeneral": "G. Pitruzzella"
+      }
     },
     {
       "caseCelex": "62021CJ0180",
@@ -705,7 +1327,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-180-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0180",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0180"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0180",
+      "composition": {
+        "chamber": "Fifth",
+        "judges": [
+          "E. Regan",
+          "D. Gratsias",
+          "M. Ilešič",
+          "I. Jarukaitis",
+          "Z. Csehi"
+        ],
+        "judgeRapporteur": "D. Gratsias",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62021CJ0129",
@@ -718,7 +1352,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-129-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0129",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0129"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0129",
+      "composition": {
+        "chamber": "Fourth",
+        "judges": [
+          "C. Lycourgos",
+          "L.S. Rossi",
+          "J.-C. Bonichot",
+          "S. Rodin",
+          "O. Spineanu-Matei"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "A.M. Collins"
+      }
     },
     {
       "caseCelex": "62021CJ0077",
@@ -731,7 +1377,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-77-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0077",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0077"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0077",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "L. Bay Larsen",
+          "P.G. Xuereb",
+          "A. Kumin",
+          "I. Ziemele"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "P. Pikamäe"
+      }
     },
     {
       "caseCelex": "62021CJ0306",
@@ -744,7 +1402,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-306-21.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62021CJ0306",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0306"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62021CJ0306",
+      "composition": {
+        "chamber": "Eighth",
+        "judges": [
+          "N. Piçarra",
+          "N. Jääskinen",
+          "M. Gavalec"
+        ],
+        "judgeRapporteur": "N. Jääskinen",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     },
     {
       "caseCelex": "62020CJ0184",
@@ -757,7 +1425,27 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-184-20.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62020CJ0184",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0184"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0184",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "L. Bay Larsen",
+          "A. Arabadjiev",
+          "A. Prechal",
+          "K. Jürimäe",
+          "C. Lycourgos",
+          "N. Jääskinen",
+          "I. Ziemele",
+          "J. Passer",
+          "M. Ilešič",
+          "J.-C. Bonichot",
+          "A. Kumin",
+          "N. Wahl"
+        ],
+        "judgeRapporteur": "M. Ilešič",
+        "advocateGeneral": "P. Pikamäe"
+      }
     },
     {
       "caseCelex": "62020CJ0534",
@@ -770,7 +1458,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-534-20.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62020CJ0534",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0534"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0534",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "A. Arabadjiev",
+          "I. Ziemele",
+          "P.G. Xuereb"
+        ],
+        "judgeRapporteur": "I. Ziemele",
+        "advocateGeneral": "J. Richard de la Tour"
+      }
     },
     {
       "caseCelex": "62019CJ0817",
@@ -783,7 +1481,27 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-817-19.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62019CJ0817",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0817"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0817",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "A. Arabadjiev",
+          "S. Rodin",
+          "I. Jarukaitis",
+          "N. Jääskinen",
+          "T. von Danwitz",
+          "M. Safjan",
+          "F. Biltgen",
+          "P.G. Xuereb",
+          "N. Piçarra",
+          "L.S. Rossi",
+          "A. Kumin",
+          "N. Wahl"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "G. Pitruzzella"
+      }
     },
     {
       "caseCelex": "62020CJ0319",
@@ -796,7 +1514,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-319-20.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62020CJ0319",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0319"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0319",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "A. Prechal",
+          "J. Passer",
+          "F. Biltgen",
+          "L.S. Rossi",
+          "N. Wahl"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "J. Richard de la Tour"
+      }
     },
     {
       "caseCelex": "62020CJ0245",
@@ -809,7 +1539,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-245-20.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62020CJ0245",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0245"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0245",
+      "composition": {
+        "chamber": "First",
+        "judges": [
+          "K. Lenaerts",
+          "L. Bay Larsen",
+          "N. Jääskinen",
+          "J.-C. Bonichot",
+          "M. Safjan"
+        ],
+        "judgeRapporteur": "J.-C. Bonichot",
+        "advocateGeneral": "M. Bobek"
+      }
     },
     {
       "caseCelex": "62020CJ0175",
@@ -822,7 +1564,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-175-20.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62020CJ0175",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0175"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62020CJ0175",
+      "composition": {
+        "chamber": "Fifth",
+        "judges": [
+          "E. Regan",
+          "K. Lenaerts",
+          "C. Lycourgos",
+          "I. Jarukaitis",
+          "M. Ilešič"
+        ],
+        "judgeRapporteur": "M. Ilešič",
+        "advocateGeneral": "M. Bobek"
+      }
     },
     {
       "caseCelex": "62019CJ0439",
@@ -835,7 +1589,29 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-439-19.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62019CJ0439",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0439"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0439",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "R. Silva de Lapuerta",
+          "J.-C. Bonichot",
+          "A. Arabadjiev",
+          "E. Regan",
+          "M. Ilešič",
+          "N. Piçarra",
+          "E. Juhász",
+          "M. Safjan",
+          "D. Šváby",
+          "S. Rodin",
+          "F. Biltgen",
+          "K. Jürimäe",
+          "C. Lycourgos",
+          "P.G. Xuereb"
+        ],
+        "judgeRapporteur": "M. Ilešič",
+        "advocateGeneral": "M. Szpunar"
+      }
     },
     {
       "caseCelex": "62019CJ0597",
@@ -848,7 +1624,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-597-19.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62019CJ0597",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0597"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0597",
+      "composition": {
+        "chamber": "Fifth",
+        "judges": [
+          "E. Regan",
+          "M. Ilešič",
+          "E. Juhász",
+          "C. Lycourgos",
+          "I. Jarukaitis"
+        ],
+        "judgeRapporteur": "M. Ilešič",
+        "advocateGeneral": "M. Szpunar"
+      }
     },
     {
       "caseCelex": "62019CJ0645",
@@ -861,7 +1649,29 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-645-19.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62019CJ0645",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0645"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0645",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "R. Silva de Lapuerta",
+          "A. Arabadjiev",
+          "A. Prechal",
+          "M. Vilaras",
+          "M. Ilešič",
+          "N. Wahl",
+          "E. Juhász",
+          "D. Šváby",
+          "S. Rodin",
+          "F. Biltgen",
+          "K. Jürimäe",
+          "C. Lycourgos",
+          "P.G. Xuereb",
+          "L.S. Rossi"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "M. Bobek"
+      }
     },
     {
       "caseCelex": "62019CJ0061",
@@ -874,7 +1684,17 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-61-19.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62019CJ0061",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0061"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0061",
+      "composition": {
+        "chamber": "Second",
+        "judges": [
+          "A. Arabadjiev",
+          "T. von Danwitz",
+          "P.G. Xuereb"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "M. Szpunar"
+      }
     },
     {
       "caseCelex": "62018CJ0311",
@@ -887,7 +1707,27 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-311-18.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62018CJ0311",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62018CJ0311"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62018CJ0311",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "R. Silva de Lapuerta",
+          "A. Arabadjiev",
+          "A. Prechal",
+          "M. Vilaras",
+          "M. Safjan",
+          "S. Rodin",
+          "P.G. Xuereb",
+          "L.S. Rossi",
+          "I. Jarukaitis",
+          "M. Ilešič",
+          "T. von Danwitz",
+          "D. Šváby"
+        ],
+        "judgeRapporteur": "T. von Danwitz",
+        "advocateGeneral": "H. Saugmandsgaard Øe"
+      }
     },
     {
       "caseCelex": "62019CJ0272",
@@ -900,7 +1740,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-272-19.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62019CJ0272",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0272"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0272",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "A. Prechal",
+          "L.S. Rossi",
+          "J. Malenovský",
+          "F. Biltgen",
+          "N. Wahl"
+        ],
+        "judgeRapporteur": "L.S. Rossi",
+        "advocateGeneral": "M. Szpunar"
+      }
     },
     {
       "caseCelex": "62017CJ0673",
@@ -913,7 +1765,27 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-673-17.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62017CJ0673",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62017CJ0673"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62017CJ0673",
+      "composition": {
+        "chamber": "Grand",
+        "judges": [
+          "K. Lenaerts",
+          "R. Silva de Lapuerta",
+          "J.-C. Bonichot",
+          "M. Vilaras",
+          "T. von Danwitz",
+          "C. Toader",
+          "F. Biltgen",
+          "K. Jürimäe",
+          "C. Lycourgos",
+          "A. Rosas",
+          "L. Bay Larsen",
+          "M. Safjan",
+          "S. Rodin"
+        ],
+        "judgeRapporteur": "A. Rosas",
+        "advocateGeneral": "M. Szpunar"
+      }
     },
     {
       "caseCelex": "62017CJ0496",
@@ -926,7 +1798,19 @@
       "relationshipType": "preliminary_ruling",
       "filename": "preliminary_rulings/C-496-17.html",
       "cellarUrl": "https://publications.europa.eu/resource/celex/62017CJ0496",
-      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62017CJ0496"
+      "eurLexUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62017CJ0496",
+      "composition": {
+        "chamber": "Third",
+        "judges": [
+          "M. Vilaras",
+          "J. Malenovský",
+          "L. Bay Larsen",
+          "M. Safjan",
+          "D. Šváby"
+        ],
+        "judgeRapporteur": "M. Vilaras",
+        "advocateGeneral": "M. Campos Sánchez-Bordona"
+      }
     }
   ],
   "exportDate": "2026-01-14T20:34:48.589Z",
