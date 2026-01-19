@@ -551,7 +551,7 @@ All analysis scripts are available at: `analysis/scripts/`
 8. `08_reviewer_response_analysis.py` — Robustness analyses
 9. `09_advanced_topic_analysis.py` — Supplementary variable analysis
 
-Data files: `parsed-coded/holdings.csv`, `analysis/output/holdings_prepared.csv`
+Data files: `data/parsed/holdings.csv`, `analysis/output/holdings_prepared.csv`
 
 ## Appendix D: Supplementary Findings
 

@@ -90,67 +90,75 @@ We conducted comprehensive robustness analyses (`08_reviewer_response_analysis.p
 
 ## Revision Plan
 
-### Essential Revisions (Required)
+### Essential Revisions (Required) — ALL COMPLETED
 
-1. **Reframe causal language throughout**
-   - Change "predicts" → "correlates with" / "is associated with"
-   - Add explicit discussion of endogeneity in Section 5.4
-   - Acknowledge that purpose invocation may be post-hoc justification
+1. **Reframe causal language throughout** ✅ DONE
+   - Changed "predicts" → "correlates with" / "is associated with" throughout
+   - Added explicit discussion of endogeneity in Section 5.4
+   - Acknowledged that purpose invocation may be post-hoc justification
+   - *See: ACADEMIC_PAPER.md Section 5.1, 5.4*
 
-2. **Add inverse-weighted results**
-   - Report in new Table B2 (Appendix)
-   - Note that main finding is robust
+2. **Add inverse-weighted results** ✅ DONE
+   - Reported in Table B2 (Appendix)
+   - Noted that main finding is robust (OR strengthens from 4.43 to 4.95)
+   - *See: ACADEMIC_PAPER.md Appendix B, Table B2*
 
-3. **Qualify Third Chamber claims**
-   - Report year-controlled results (OR=0.21, p=0.051)
-   - Acknowledge temporal confounding may contribute
-   - Note rapporteur-level analysis not possible without additional data collection
+3. **Qualify Third Chamber claims** ✅ DONE
+   - Reported year-controlled results (OR=0.21, p=0.051)
+   - Acknowledged temporal confounding may contribute
+   - Noted rapporteur-level analysis limitations
+   - *See: ACADEMIC_PAPER.md Section 4.5, Table B3*
 
-4. **Reconcile case-level vs holding-level**
-   - Add footnote explaining power limitations
-   - Report inverse-weighted holding-level as preferred specification
+4. **Reconcile case-level vs holding-level** ✅ DONE
+   - Added explanation of power limitations in Section 3.3
+   - Reported inverse-weighted holding-level as preferred specification
+   - *See: ACADEMIC_PAPER.md Section 3.3 "Unit of Analysis Rationale"*
 
-5. **Add theoretical justification for clusters**
-   - Add subsection in Methods or Appendix
-   - Map clusters to GDPR structure
+5. **Add theoretical justification for clusters** ✅ DONE
+   - Added subsection in Methods mapping clusters to GDPR structure
+   - *See: ACADEMIC_PAPER.md Section 3.2 "Concept Cluster Construction"*
 
-### Strongly Recommended Revisions
+### Strongly Recommended Revisions — ALL COMPLETED
 
-6. **Add temporal trend section**
-   - New subsection in Results
-   - Report yearly rates descriptively
-   - Note non-significant trend test
+6. **Add temporal trend section** ✅ DONE
+   - Added Section 4.6 "Temporal Trends" in Results
+   - Reported yearly rates descriptively
+   - Noted non-significant trend test (OR=0.83, p=0.103)
+   - *Additional: Full temporal analysis in TEMPORAL_ANALYSIS_SYNTHESIS.md*
 
-7. **Acknowledge coding reliability limitation**
-   - Expand limitations section
-   - Note single-coder design
-   - Recommend inter-coder reliability for future work
+7. **Acknowledge coding reliability limitation** ✅ DONE
+   - Expanded limitations section (Section 5.4)
+   - Noted single-coder design explicitly
+   - Recommended inter-coder reliability for future work
+   - *See: ACADEMIC_PAPER.md Sections 3.1, 5.4*
 
-8. **Revise "paradox" framing**
-   - Consider alternative interpretation: Court may view effective enforcement through DPA route
-   - Engage with doctrinal literature on compensatory vs deterrent functions
+8. **Revise "paradox" framing** ✅ DONE
+   - Added alternative interpretation (Court may view DPA route as primary)
+   - Engaged with compensatory vs deterrent functions
+   - Presented "Restrictive View" vs "Alternative View"
+   - *See: ACADEMIC_PAPER.md Section 5.2*
 
 ### Not Addressable Without New Data
 
-9. **Inter-coder reliability**: Would require second coder
-10. **Rapporteur-level analysis**: Would require systematic judge data extraction
-11. **Advocate General analysis**: Would require coding AG opinions
+9. **Inter-coder reliability**: Would require second coder — *Acknowledged as limitation*
+10. **Rapporteur-level analysis**: Partially addressed — *See JUDICIAL_ANALYSIS_REPORT.md*
+11. **Advocate General analysis**: Would require coding AG opinions — *Acknowledged as limitation*
 
 ---
 
 ## Summary Table: Reviewer Concerns Addressed
 
-| # | Concern | Addressed? | Action |
+| # | Concern | Addressed? | Status |
 |---|---------|------------|--------|
-| 1 | Endogeneity | ✓ Diagnostics run | Reframe language |
-| 2 | Coding reliability | ✗ | Acknowledge limitation |
-| 3 | Unit of analysis | ✓ Weighted analysis | Report as robustness |
-| 4 | Third Chamber | ✓ Year FE | Qualify claims |
-| 5 | Multiple testing | Partial | Note exploration |
-| 6 | Concept clusters | ✓ Justified | Add section |
-| 7 | AG analysis | ✗ | Acknowledge limitation |
-| 8 | Temporal trends | ✓ Analyzed | Add section |
-| 9 | Paradox framing | ✓ Engaged | Revise discussion |
+| 1 | Endogeneity | ✅ Complete | Language reframed throughout |
+| 2 | Coding reliability | ✅ Acknowledged | Limitation noted in paper |
+| 3 | Unit of analysis | ✅ Complete | Inverse-weighted in Table B2 |
+| 4 | Third Chamber | ✅ Complete | Year FE in Table B3 |
+| 5 | Multiple testing | ✅ Complete | FDR + exploratory noted |
+| 6 | Concept clusters | ✅ Complete | Section 3.2 added |
+| 7 | AG analysis | ⚠️ Acknowledged | Listed as future work |
+| 8 | Temporal trends | ✅ Complete | Section 4.6 + full analysis |
+| 9 | Paradox framing | ✅ Complete | Section 5.2 revised |
 
 ---
 
@@ -166,11 +174,20 @@ We conducted comprehensive robustness analyses (`08_reviewer_response_analysis.p
 
 ## Conclusion
 
-The peer review raises valid methodological concerns. Our robustness analyses demonstrate that:
+**Status: ALL ESSENTIAL REVISIONS COMPLETED** (January 2026)
 
-1. **The main finding (pro-DS purpose effect) is robust** to inverse weighting
-2. **Third Chamber effect is partially confounded** by temporal factors
-3. **Endogeneity concern is valid** and requires reframing
-4. **Concept clusters are theoretically justified**
+The peer review raised valid methodological concerns. All essential and strongly recommended revisions have been implemented:
 
-The paper should be revised to address these concerns, primarily through reframing causal language and adding robustness checks. The core findings remain substantively important even with appropriate qualifications.
+1. **The main finding (pro-DS purpose effect) is robust** — confirmed via inverse weighting (Table B2)
+2. **Third Chamber effect qualified** — year-controlled results reported (Table B3, p=0.051)
+3. **Endogeneity acknowledged** — causal language reframed throughout; Section 5.4 discusses explicitly
+4. **Concept clusters justified** — theoretical rationale in Section 3.2
+5. **Temporal analysis complete** — Section 4.6 + comprehensive TEMPORAL_ANALYSIS_SYNTHESIS.md
+6. **Coding limitations acknowledged** — Sections 3.1, 5.4
+
+The paper now appropriately frames findings as associations rather than causal effects, reports robustness checks, and acknowledges limitations. The core findings remain substantively important with these appropriate qualifications.
+
+### Remaining Future Work
+- Inter-coder reliability assessment (requires second coder)
+- Advocate General opinion analysis (requires new coding)
+- Rapporteur-level causal identification (partially addressed in JUDICIAL_ANALYSIS_REPORT.md)
