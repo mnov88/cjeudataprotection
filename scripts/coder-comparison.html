@@ -33,6 +33,7 @@
             --amber: #f59e0b;
             --amber-dim: rgba(245, 158, 11, 0.15);
             --purple: #a855f7;
+            --purple-dim: rgba(168, 85, 247, 0.15);
             --cyan: #06b6d4;
         }
 
@@ -71,8 +72,13 @@
         .btn-ghost { background: transparent; border-color: var(--border); color: var(--text-1); }
         .btn-ghost:hover { border-color: var(--text-2); background: var(--bg-2); }
         .btn-sm { padding: 4px 10px; font-size: 12px; }
+        .btn-xs { padding: 2px 6px; font-size: 11px; }
         .btn-green { background: var(--green); color: white; }
         .btn-green:hover { background: #16a34a; }
+        .btn-amber { background: var(--amber); color: white; }
+        .btn-amber:hover { background: #d97706; }
+        .btn-red { background: var(--red); color: white; }
+        .btn-red:hover { background: #dc2626; }
 
         .tag {
             display: inline-flex;
@@ -88,6 +94,7 @@
         .tag-match { background: var(--green-dim); color: var(--green); border: 1px solid rgba(34, 197, 94, 0.3); }
         .tag-diff { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
         .tag-selected { background: var(--accent); color: white; }
+        .tag-group { background: var(--purple-dim); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.3); }
 
         .card {
             background: var(--bg-1);
@@ -116,6 +123,18 @@
         .field-row.diff { background: var(--amber-dim); }
         .field-row.selected { background: rgba(59, 130, 246, 0.1); }
 
+        .group-header {
+            padding: 8px 12px;
+            background: var(--bg-2);
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+        .group-header:hover { background: var(--bg-3); }
+
         .progress-bar {
             height: 4px;
             background: var(--bg-3);
@@ -141,6 +160,39 @@
             font-size: 11px;
             font-family: 'IBM Plex Mono', monospace;
         }
+
+        .toggle {
+            position: relative;
+            width: 40px;
+            height: 22px;
+            background: var(--bg-3);
+            border-radius: 11px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .toggle.active { background: var(--accent); }
+        .toggle::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 18px;
+            height: 18px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.2s;
+        }
+        .toggle.active::after { transform: translateX(18px); }
+
+        .stat-box {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+        .stat-value { font-size: 24px; font-weight: 600; color: var(--text-0); }
+        .stat-label { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.5px; }
 
         .markdown-content {
             font-family: 'Crimson Pro', serif;
@@ -196,26 +248,31 @@
             flex-direction: column;
         }
 
-        .tooltip {
-            position: relative;
-        }
-        .tooltip::after {
-            content: attr(data-tip);
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 4px 8px;
-            background: var(--bg-3);
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--bg-2);
             border: 1px solid var(--border);
-            border-radius: 4px;
-            font-size: 11px;
-            white-space: nowrap;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.15s;
+            padding: 12px 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 200;
+            animation: slideIn 0.2s ease;
         }
-        .tooltip:hover::after { opacity: 1; }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -224,14 +281,20 @@
     <script type="text/babel">
         const { useState, useEffect, useCallback, useMemo, useRef } = React;
 
-        // Field definitions with labels
+        // Field definitions with labels and groups
+        const FIELD_GROUPS = {
+            'Content': ['A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11'],
+            'Interpretation': ['A12', 'A13', 'A14', 'A15', 'A16', 'A17', 'A18', 'A19', 'A20', 'A21'],
+            'Reasoning': ['A22', 'A23', 'A24', 'A25', 'A26', 'A27', 'A28', 'A29', 'A30', 'A31'],
+            'Outcome': ['A32', 'A33'],
+            'Balancing': ['A34', 'A35', 'A36', 'A37', 'A38', 'A39', 'A40', 'A41', 'A42', 'A43']
+        };
+
         const FIELD_DEFINITIONS = {
-            // Case metadata
             A1: { label: 'Case Number', type: 'text' },
             A2: { label: 'Judgment Date', type: 'date' },
             A3: { label: 'Chamber', type: 'select', options: ['GRAND_CHAMBER', 'FIRST', 'SECOND', 'THIRD', 'FOURTH', 'FIFTH', 'SIXTH', 'SEVENTH', 'EIGHTH', 'NINTH', 'TENTH', 'FULL_COURT'] },
             A4: { label: 'Holding Count', type: 'number' },
-            // Per-holding
             A5: { label: 'Holding ID', type: 'number' },
             A6: { label: 'Paragraphs', type: 'text' },
             A7: { label: 'Core Holding', type: 'longtext' },
@@ -282,32 +345,45 @@
             'RIGHT_TO_RESTRICTION', 'RIGHT_TO_PORTABILITY', 'RIGHT_TO_OBJECT', 'AUTOMATED_DECISION_MAKING', 'SECURITY',
             'INTERNATIONAL_TRANSFER', 'OTHER_CONTROLLER_OBLIGATIONS', 'DPA_INDEPENDENCE', 'DPA_POWERS', 'DPA_OBLIGATIONS',
             'ONE_STOP_SHOP', 'DPA_OTHER', 'ADMINISTRATIVE_FINES', 'REMEDIES_COMPENSATION', 'REPRESENTATIVE_ACTIONS',
-            'MEMBER_STATE_DISCRETION', 'OTHER'
+            'MEMBER_STATE_DISCRETION', 'OTHER', 'NULL'
         ];
 
-        // Keyboard shortcuts info
         const SHORTCUTS = [
             { key: '1', desc: 'Select Coder A' },
             { key: '2', desc: 'Select Coder B' },
             { key: 'c', desc: 'Enter custom value' },
             { key: 'j/k', desc: 'Next/Previous field' },
             { key: 'n/p', desc: 'Next/Previous holding' },
-            { key: 'Enter', desc: 'Confirm & advance' },
+            { key: 'd', desc: 'Toggle differences only' },
+            { key: 'a', desc: 'Toggle auto-advance' },
+            { key: 'g', desc: 'Toggle field groups' },
+            { key: 'z', desc: 'Undo last selection' },
+            { key: 'm', desc: 'View decision markdown' },
+            { key: '?', desc: 'Show shortcuts' },
             { key: 'Esc', desc: 'Close modal' }
         ];
 
-        // Load demo data from external file or use fallback
+        // LocalStorage helpers
+        const STORAGE_KEY = 'coder-comparison-state';
+        const saveToStorage = (data) => {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            } catch (e) { console.warn('Failed to save to localStorage'); }
+        };
+        const loadFromStorage = () => {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                return saved ? JSON.parse(saved) : null;
+            } catch (e) { return null; }
+        };
+
+        // Load demo data
         async function loadDemoData() {
             try {
                 const response = await fetch('demo_comparison_data.json');
-                if (response.ok) {
-                    return await response.json();
-                }
-            } catch (e) {
-                console.log('Demo file not found, using embedded data');
-            }
+                if (response.ok) return await response.json();
+            } catch (e) { console.log('Demo file not found, using embedded data'); }
 
-            // Fallback embedded demo data
             return {
                 case_id: 'C-129/21',
                 judgment_date: '2022-10-27',
@@ -359,7 +435,7 @@
                         holding_id: 2,
                         coders: {
                             'Dr. Smith': {
-                                A5: '2', A6: '57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71',
+                                A5: '2', A6: '57-71',
                                 A7: 'Withdrawal of consent constitutes exercise of right to erasure under Article 17 GDPR.',
                                 A8: 'Article 17 GDPR, Article 12(2) Directive 2002/58, Article 6(1)(a) GDPR',
                                 A9: '17, 12, 6', A10: 'RIGHT_TO_ERASURE', A11: 'CONSENT_BASIS',
@@ -397,14 +473,81 @@
             };
         }
 
-        // Header component
-        function Header({ caseId, progress, onExport, onLoadData, onShowHelp }) {
+        // Toast notification component
+        function Toast({ message, onClose }) {
+            useEffect(() => {
+                const timer = setTimeout(onClose, 2500);
+                return () => clearTimeout(timer);
+            }, [onClose]);
+
             return (
-                <header className="sticky top-0 z-50 bg-[var(--bg-0)] border-b border-[var(--border)] px-6 py-4">
-                    <div className="flex items-center justify-between max-w-[1600px] mx-auto">
+                <div className="toast">
+                    <span className="text-[var(--green)]">✓</span>
+                    <span>{message}</span>
+                </div>
+            );
+        }
+
+        // Statistics Panel
+        function StatsPanel({ data, currentHolding }) {
+            const stats = useMemo(() => {
+                if (!data?.holdings) return null;
+                const holding = data.holdings[currentHolding];
+                if (!holding) return null;
+
+                const coderNames = Object.keys(holding.coders);
+                const coderA = holding.coders[coderNames[0]] || {};
+                const coderB = holding.coders[coderNames[1]] || {};
+
+                const fieldKeys = Object.keys(FIELD_DEFINITIONS).filter(k => !['A1', 'A2', 'A3', 'A4'].includes(k));
+                let matches = 0, diffs = 0, selected = 0;
+
+                fieldKeys.forEach(key => {
+                    const valA = coderA[key] || 'NULL';
+                    const valB = coderB[key] || 'NULL';
+                    if (valA === valB) matches++;
+                    else diffs++;
+                    if (holding.selected?.[key]) selected++;
+                });
+
+                const agreementRate = Math.round((matches / fieldKeys.length) * 100);
+                const progressRate = Math.round((selected / fieldKeys.length) * 100);
+
+                return { matches, diffs, selected, total: fieldKeys.length, agreementRate, progressRate };
+            }, [data, currentHolding]);
+
+            if (!stats) return null;
+
+            return (
+                <div className="grid grid-cols-4 gap-3 p-4 bg-[var(--bg-1)] border-b border-[var(--border)]">
+                    <div className="stat-box">
+                        <div className="stat-value text-[var(--green)]">{stats.agreementRate}%</div>
+                        <div className="stat-label">Agreement</div>
+                    </div>
+                    <div className="stat-box">
+                        <div className="stat-value text-[var(--amber)]">{stats.diffs}</div>
+                        <div className="stat-label">Differences</div>
+                    </div>
+                    <div className="stat-box">
+                        <div className="stat-value">{stats.selected}/{stats.total}</div>
+                        <div className="stat-label">Reviewed</div>
+                    </div>
+                    <div className="stat-box">
+                        <div className="stat-value text-[var(--accent)]">{stats.progressRate}%</div>
+                        <div className="stat-label">Complete</div>
+                    </div>
+                </div>
+            );
+        }
+
+        // Header component
+        function Header({ caseId, progress, onExport, onLoadData, onShowHelp, settings, onToggleSetting, onBulkSelect, coderNames }) {
+            return (
+                <header className="sticky top-0 z-50 bg-[var(--bg-0)] border-b border-[var(--border)] px-6 py-3">
+                    <div className="flex items-center justify-between max-w-[1800px] mx-auto">
                         <div className="flex items-center gap-4">
                             <h1 className="text-lg font-semibold text-[var(--text-0)]">
-                                Coder Comparison Tool
+                                Coder Comparison
                             </h1>
                             {caseId && (
                                 <span className="mono text-[var(--accent)] text-sm">{caseId}</span>
@@ -412,26 +555,70 @@
                         </div>
 
                         <div className="flex items-center gap-6">
+                            {/* Settings toggles */}
+                            <div className="flex items-center gap-4">
+                                <label className="flex items-center gap-2 cursor-pointer text-sm">
+                                    <div
+                                        className={`toggle ${settings.showDiffsOnly ? 'active' : ''}`}
+                                        onClick={() => onToggleSetting('showDiffsOnly')}
+                                    />
+                                    <span className="text-[var(--text-2)]">Diffs only</span>
+                                    <span className="kbd">d</span>
+                                </label>
+                                <label className="flex items-center gap-2 cursor-pointer text-sm">
+                                    <div
+                                        className={`toggle ${settings.autoAdvance ? 'active' : ''}`}
+                                        onClick={() => onToggleSetting('autoAdvance')}
+                                    />
+                                    <span className="text-[var(--text-2)]">Auto-advance</span>
+                                    <span className="kbd">a</span>
+                                </label>
+                                <label className="flex items-center gap-2 cursor-pointer text-sm">
+                                    <div
+                                        className={`toggle ${settings.showGroups ? 'active' : ''}`}
+                                        onClick={() => onToggleSetting('showGroups')}
+                                    />
+                                    <span className="text-[var(--text-2)]">Groups</span>
+                                    <span className="kbd">g</span>
+                                </label>
+                            </div>
+
+                            {/* Progress */}
                             <div className="flex items-center gap-3">
-                                <span className="text-sm text-[var(--text-2)]">Progress:</span>
-                                <div className="w-32 progress-bar">
+                                <div className="w-24 progress-bar">
                                     <div className="progress-fill" style={{ width: `${progress}%` }}></div>
                                 </div>
                                 <span className="mono text-sm text-[var(--text-1)]">{progress}%</span>
                             </div>
 
+                            {/* Bulk actions */}
+                            {coderNames && coderNames.length >= 2 && (
+                                <div className="flex items-center gap-1">
+                                    <button
+                                        className="btn btn-ghost btn-xs"
+                                        onClick={() => onBulkSelect(coderNames[0])}
+                                        title={`Accept all from ${coderNames[0]}`}
+                                    >
+                                        All {coderNames[0].split(' ')[0]}
+                                    </button>
+                                    <button
+                                        className="btn btn-ghost btn-xs"
+                                        onClick={() => onBulkSelect(coderNames[1])}
+                                        title={`Accept all from ${coderNames[1]}`}
+                                    >
+                                        All {coderNames[1].split(' ')[0]}
+                                    </button>
+                                </div>
+                            )}
+
+                            {/* Actions */}
                             <div className="flex items-center gap-2">
                                 <label className="btn btn-ghost btn-sm cursor-pointer">
-                                    <input
-                                        type="file"
-                                        accept=".json"
-                                        onChange={onLoadData}
-                                        className="hidden"
-                                    />
-                                    Load Data
+                                    <input type="file" accept=".json" onChange={onLoadData} className="hidden" />
+                                    Load
                                 </label>
                                 <button className="btn btn-ghost btn-sm" onClick={onShowHelp}>
-                                    Shortcuts
+                                    <span className="kbd">?</span>
                                 </button>
                                 <button className="btn btn-green btn-sm" onClick={onExport}>
                                     Export
@@ -444,16 +631,16 @@
         }
 
         // Holding selector sidebar
-        function HoldingSidebar({ holdings, currentHolding, onSelect, selections }) {
+        function HoldingSidebar({ holdings, currentHolding, onSelect }) {
             return (
-                <aside className="w-64 border-r border-[var(--border)] bg-[var(--bg-1)] overflow-y-auto">
+                <aside className="w-56 border-r border-[var(--border)] bg-[var(--bg-1)] overflow-y-auto flex-shrink-0">
                     <div className="p-4">
                         <h2 className="text-xs font-semibold uppercase tracking-wide text-[var(--text-3)] mb-3">
                             Holdings
                         </h2>
                         <div className="space-y-2">
                             {holdings.map((h, idx) => {
-                                const totalFields = Object.keys(FIELD_DEFINITIONS).length - 4; // Exclude metadata
+                                const totalFields = Object.keys(FIELD_DEFINITIONS).length - 4;
                                 const selectedCount = Object.keys(h.selected || {}).length;
                                 const pct = Math.round((selectedCount / totalFields) * 100);
                                 const isActive = idx === currentHolding;
@@ -477,11 +664,8 @@
                                         <div className={`progress-bar ${isActive ? 'bg-white/20' : ''}`}>
                                             <div
                                                 className="progress-fill"
-                                                style={{
-                                                    width: `${pct}%`,
-                                                    background: isActive ? 'white' : undefined
-                                                }}
-                                            ></div>
+                                                style={{ width: `${pct}%`, background: isActive ? 'white' : undefined }}
+                                            />
                                         </div>
                                     </button>
                                 );
@@ -493,7 +677,7 @@
         }
 
         // Field comparison row
-        function FieldRow({ fieldKey, coderA, coderB, coderAName, coderBName, selected, customValue, onSelect, isActive, onClick }) {
+        function FieldRow({ fieldKey, coderA, coderB, coderAName, coderBName, selected, onSelect, isActive, onClick }) {
             const def = FIELD_DEFINITIONS[fieldKey];
             const valA = coderA?.[fieldKey] || 'NULL';
             const valB = coderB?.[fieldKey] || 'NULL';
@@ -505,51 +689,63 @@
                     className={`field-row ${isDiff ? 'diff' : ''} ${isActive ? 'selected' : ''}`}
                     onClick={onClick}
                 >
-                    <div className="w-40 flex-shrink-0">
+                    <div className="w-36 flex-shrink-0">
                         <div className="mono text-xs text-[var(--text-3)]">{fieldKey}</div>
-                        <div className="text-sm text-[var(--text-1)]">{def?.label || fieldKey}</div>
+                        <div className="text-sm text-[var(--text-1)] truncate" title={def?.label}>{def?.label || fieldKey}</div>
                     </div>
 
-                    <div className="flex-1 grid grid-cols-2 gap-4">
-                        {/* Coder A */}
+                    <div className="flex-1 grid grid-cols-2 gap-3 min-w-0">
                         <div
-                            className={`coder-panel p-3 ${selected === coderAName ? 'selected' : ''}`}
+                            className={`coder-panel p-2 ${selected === coderAName ? 'selected' : ''}`}
                             onClick={(e) => { e.stopPropagation(); onSelect(coderAName); }}
                         >
                             <div className="flex items-center justify-between mb-1">
-                                <span className="text-xs text-[var(--text-3)]">{coderAName}</span>
+                                <span className="text-xs text-[var(--text-3)] truncate">{coderAName}</span>
                                 <span className="kbd">1</span>
                             </div>
-                            <div className={`text-sm ${isLongText ? 'line-clamp-3' : ''}`}>
+                            <div className={`text-sm break-words ${isLongText ? 'line-clamp-3' : ''}`}>
                                 {valA}
                             </div>
                         </div>
 
-                        {/* Coder B */}
                         <div
-                            className={`coder-panel p-3 ${selected === coderBName ? 'selected' : ''}`}
+                            className={`coder-panel p-2 ${selected === coderBName ? 'selected' : ''}`}
                             onClick={(e) => { e.stopPropagation(); onSelect(coderBName); }}
                         >
                             <div className="flex items-center justify-between mb-1">
-                                <span className="text-xs text-[var(--text-3)]">{coderBName}</span>
+                                <span className="text-xs text-[var(--text-3)] truncate">{coderBName}</span>
                                 <span className="kbd">2</span>
                             </div>
-                            <div className={`text-sm ${isLongText ? 'line-clamp-3' : ''}`}>
+                            <div className={`text-sm break-words ${isLongText ? 'line-clamp-3' : ''}`}>
                                 {valB}
                             </div>
                         </div>
                     </div>
 
-                    <div className="w-32 flex-shrink-0 flex items-center justify-end gap-2">
+                    <div className="w-28 flex-shrink-0 flex items-center justify-end gap-1">
                         {isDiff ? (
-                            <span className="tag tag-diff">DIFFERS</span>
+                            <span className="tag tag-diff">DIFF</span>
                         ) : (
                             <span className="tag tag-match">MATCH</span>
                         )}
                         {selected && (
-                            <span className="tag tag-selected">
-                                {selected === 'custom' ? 'CUSTOM' : 'SELECTED'}
-                            </span>
+                            <span className="tag tag-selected">✓</span>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        // Group header
+        function GroupHeader({ name, fieldCount, diffCount, isExpanded, onToggle }) {
+            return (
+                <div className="group-header" onClick={onToggle}>
+                    <div className="flex items-center gap-3">
+                        <span className="text-[var(--text-2)]">{isExpanded ? '▼' : '▶'}</span>
+                        <span className="font-medium text-[var(--text-0)]">{name}</span>
+                        <span className="tag tag-group">{fieldCount} fields</span>
+                        {diffCount > 0 && (
+                            <span className="tag tag-diff">{diffCount} diffs</span>
                         )}
                     </div>
                 </div>
@@ -559,10 +755,6 @@
         // Custom value input modal
         function CustomValueModal({ fieldKey, fieldDef, currentValue, onSave, onClose }) {
             const [value, setValue] = useState(currentValue || '');
-
-            const handleSave = () => {
-                onSave(value);
-            };
 
             return (
                 <div className="modal-overlay" onClick={onClose}>
@@ -611,7 +803,6 @@
                                     onChange={e => setValue(e.target.value)}
                                     className="w-full p-3 bg-[var(--bg-2)] border border-[var(--border)] rounded-lg text-[var(--text-1)] min-h-[200px]"
                                     autoFocus
-                                    placeholder="Enter value..."
                                 />
                             ) : (
                                 <input
@@ -620,14 +811,13 @@
                                     onChange={e => setValue(e.target.value)}
                                     className="w-full p-3 bg-[var(--bg-2)] border border-[var(--border)] rounded-lg text-[var(--text-1)]"
                                     autoFocus
-                                    placeholder="Enter value..."
                                 />
                             )}
                         </div>
 
                         <div className="p-4 border-t border-[var(--border)] flex justify-end gap-2">
                             <button className="btn btn-ghost" onClick={onClose}>Cancel</button>
-                            <button className="btn btn-primary" onClick={handleSave}>
+                            <button className="btn btn-primary" onClick={() => onSave(value)}>
                                 Save <span className="kbd">Enter</span>
                             </button>
                         </div>
@@ -639,9 +829,7 @@
         // Markdown viewer modal
         function MarkdownModal({ content, title, onClose }) {
             const htmlContent = useMemo(() => {
-                if (typeof marked !== 'undefined') {
-                    return marked.parse(content || '');
-                }
+                if (typeof marked !== 'undefined') return marked.parse(content || '');
                 return content;
             }, [content]);
 
@@ -654,14 +842,7 @@
                         <title>${title}</title>
                         <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
                         <style>
-                            body {
-                                font-family: 'Crimson Pro', serif;
-                                max-width: 800px;
-                                margin: 40px auto;
-                                padding: 20px;
-                                line-height: 1.7;
-                                font-size: 18px;
-                            }
+                            body { font-family: 'Crimson Pro', serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.7; font-size: 18px; }
                             h1, h2, h3 { font-weight: 600; margin-top: 24px; }
                             p { margin: 16px 0; }
                             blockquote { border-left: 3px solid #3b82f6; padding-left: 16px; color: #666; font-style: italic; }
@@ -679,7 +860,7 @@
                             <h3 className="font-semibold text-[var(--text-0)]">{title}</h3>
                             <div className="flex items-center gap-2">
                                 <button className="btn btn-ghost btn-sm" onClick={openInNewWindow}>
-                                    Open in New Window
+                                    New Window
                                 </button>
                                 <button className="btn btn-ghost btn-sm" onClick={onClose}>
                                     Close <span className="kbd">Esc</span>
@@ -726,45 +907,91 @@
         }
 
         // Main comparison view
-        function ComparisonView({ holding, coderNames, onUpdateSelection, activeField, setActiveField }) {
+        function ComparisonView({ holding, coderNames, onUpdateSelection, activeField, setActiveField, settings }) {
+            const [expandedGroups, setExpandedGroups] = useState(
+                Object.fromEntries(Object.keys(FIELD_GROUPS).map(g => [g, true]))
+            );
+
             if (!holding) return null;
 
             const [coderAName, coderBName] = coderNames;
             const coderA = holding.coders?.[coderAName] || {};
             const coderB = holding.coders?.[coderBName] || {};
 
-            const fieldKeys = Object.keys(FIELD_DEFINITIONS).filter(k => !['A1', 'A2', 'A3', 'A4'].includes(k));
+            const allFieldKeys = Object.keys(FIELD_DEFINITIONS).filter(k => !['A1', 'A2', 'A3', 'A4'].includes(k));
 
+            // Filter to show only diffs if enabled
+            const fieldKeys = settings.showDiffsOnly
+                ? allFieldKeys.filter(key => (coderA[key] || 'NULL') !== (coderB[key] || 'NULL'))
+                : allFieldKeys;
+
+            const toggleGroup = (group) => {
+                setExpandedGroups(prev => ({ ...prev, [group]: !prev[group] }));
+            };
+
+            // Render with groups
+            if (settings.showGroups) {
+                let fieldIndex = 0;
+                return (
+                    <div className="flex-1 overflow-y-auto">
+                        {Object.entries(FIELD_GROUPS).map(([groupName, groupFields]) => {
+                            const visibleFields = groupFields.filter(k => fieldKeys.includes(k));
+                            if (visibleFields.length === 0) return null;
+
+                            const diffCount = visibleFields.filter(k =>
+                                (coderA[k] || 'NULL') !== (coderB[k] || 'NULL')
+                            ).length;
+
+                            const startIndex = fieldIndex;
+                            fieldIndex += visibleFields.length;
+
+                            return (
+                                <div key={groupName}>
+                                    <GroupHeader
+                                        name={groupName}
+                                        fieldCount={visibleFields.length}
+                                        diffCount={diffCount}
+                                        isExpanded={expandedGroups[groupName]}
+                                        onToggle={() => toggleGroup(groupName)}
+                                    />
+                                    {expandedGroups[groupName] && visibleFields.map((key, idx) => (
+                                        <FieldRow
+                                            key={key}
+                                            fieldKey={key}
+                                            coderA={coderA}
+                                            coderB={coderB}
+                                            coderAName={coderAName}
+                                            coderBName={coderBName}
+                                            selected={holding.selected?.[key]}
+                                            onSelect={(coder) => onUpdateSelection(key, coder)}
+                                            isActive={activeField === startIndex + idx}
+                                            onClick={() => setActiveField(startIndex + idx)}
+                                        />
+                                    ))}
+                                </div>
+                            );
+                        })}
+                    </div>
+                );
+            }
+
+            // Render flat
             return (
                 <div className="flex-1 overflow-y-auto">
-                    <div className="p-4 border-b border-[var(--border)] bg-[var(--bg-1)] sticky top-0 z-10">
-                        <div className="flex items-center justify-between">
-                            <h2 className="font-semibold text-[var(--text-0)]">Holding {holding.holding_id}</h2>
-                            <div className="flex items-center gap-4">
-                                <span className="text-sm text-[var(--text-2)]">
-                                    {Object.values(coderA).filter((v, i) => v !== Object.values(coderB)[i]).length} differences
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        {fieldKeys.map((key, idx) => (
-                            <FieldRow
-                                key={key}
-                                fieldKey={key}
-                                coderA={coderA}
-                                coderB={coderB}
-                                coderAName={coderAName}
-                                coderBName={coderBName}
-                                selected={holding.selected?.[key]}
-                                customValue={holding.customValues?.[key]}
-                                onSelect={(coder) => onUpdateSelection(key, coder)}
-                                isActive={activeField === idx}
-                                onClick={() => setActiveField(idx)}
-                            />
-                        ))}
-                    </div>
+                    {fieldKeys.map((key, idx) => (
+                        <FieldRow
+                            key={key}
+                            fieldKey={key}
+                            coderA={coderA}
+                            coderB={coderB}
+                            coderAName={coderAName}
+                            coderBName={coderBName}
+                            selected={holding.selected?.[key]}
+                            onSelect={(coder) => onUpdateSelection(key, coder)}
+                            isActive={activeField === idx}
+                            onClick={() => setActiveField(idx)}
+                        />
+                    ))}
                 </div>
             );
         }
@@ -779,11 +1006,48 @@
             const [markdownContent, setMarkdownContent] = useState('');
             const [showCustomInput, setShowCustomInput] = useState(false);
             const [customInputField, setCustomInputField] = useState(null);
+            const [toast, setToast] = useState(null);
+            const [undoStack, setUndoStack] = useState([]);
+            const [settings, setSettings] = useState({
+                showDiffsOnly: false,
+                autoAdvance: true,
+                showGroups: false
+            });
 
-            // Load demo data on mount
+            // Load data on mount
             useEffect(() => {
-                loadDemoData().then(data => setData(data));
+                const saved = loadFromStorage();
+                if (saved?.data) {
+                    setData(saved.data);
+                    setCurrentHolding(saved.currentHolding || 0);
+                    setSettings(prev => ({ ...prev, ...saved.settings }));
+                } else {
+                    loadDemoData().then(d => setData(d));
+                }
             }, []);
+
+            // Save to localStorage on changes
+            useEffect(() => {
+                if (data) {
+                    saveToStorage({ data, currentHolding, settings });
+                }
+            }, [data, currentHolding, settings]);
+
+            const coderNames = useMemo(() => {
+                if (!data?.holdings?.[0]) return [];
+                return Object.keys(data.holdings[0].coders);
+            }, [data]);
+
+            const fieldKeys = useMemo(() => {
+                if (!data?.holdings?.[currentHolding]) return [];
+                const holding = data.holdings[currentHolding];
+                const coderA = holding.coders?.[coderNames[0]] || {};
+                const coderB = holding.coders?.[coderNames[1]] || {};
+                const allKeys = Object.keys(FIELD_DEFINITIONS).filter(k => !['A1', 'A2', 'A3', 'A4'].includes(k));
+                return settings.showDiffsOnly
+                    ? allKeys.filter(k => (coderA[k] || 'NULL') !== (coderB[k] || 'NULL'))
+                    : allKeys;
+            }, [data, currentHolding, coderNames, settings.showDiffsOnly]);
 
             // Keyboard navigation
             useEffect(() => {
@@ -797,20 +1061,12 @@
                         return;
                     }
 
-                    const fieldKeys = Object.keys(FIELD_DEFINITIONS).filter(k => !['A1', 'A2', 'A3', 'A4'].includes(k));
-
                     switch (e.key) {
                         case '1':
-                            if (data?.holdings?.[currentHolding]) {
-                                const coderNames = Object.keys(data.holdings[currentHolding].coders);
-                                handleUpdateSelection(fieldKeys[activeField], coderNames[0]);
-                            }
+                            if (coderNames[0]) handleUpdateSelection(fieldKeys[activeField], coderNames[0]);
                             break;
                         case '2':
-                            if (data?.holdings?.[currentHolding]) {
-                                const coderNames = Object.keys(data.holdings[currentHolding].coders);
-                                handleUpdateSelection(fieldKeys[activeField], coderNames[1]);
-                            }
+                            if (coderNames[1]) handleUpdateSelection(fieldKeys[activeField], coderNames[1]);
                             break;
                         case 'c':
                             setCustomInputField(fieldKeys[activeField]);
@@ -836,8 +1092,22 @@
                             setCurrentHolding(prev => Math.max(prev - 1, 0));
                             setActiveField(0);
                             break;
-                        case 'Enter':
-                            setActiveField(prev => Math.min(prev + 1, fieldKeys.length - 1));
+                        case 'd':
+                            setSettings(prev => ({ ...prev, showDiffsOnly: !prev.showDiffsOnly }));
+                            setActiveField(0);
+                            break;
+                        case 'a':
+                            setSettings(prev => ({ ...prev, autoAdvance: !prev.autoAdvance }));
+                            break;
+                        case 'g':
+                            setSettings(prev => ({ ...prev, showGroups: !prev.showGroups }));
+                            break;
+                        case 'z':
+                            if (e.ctrlKey || e.metaKey) {
+                                handleUndo();
+                            } else {
+                                handleUndo();
+                            }
                             break;
                         case '?':
                             setShowHelp(true);
@@ -850,9 +1120,18 @@
 
                 window.addEventListener('keydown', handleKeyDown);
                 return () => window.removeEventListener('keydown', handleKeyDown);
-            }, [data, currentHolding, activeField, showCustomInput, showHelp, showMarkdown]);
+            }, [data, currentHolding, activeField, showCustomInput, showHelp, showMarkdown, fieldKeys, coderNames, settings]);
 
             const handleUpdateSelection = useCallback((fieldKey, coderOrCustom) => {
+                if (!fieldKey) return;
+
+                // Save to undo stack
+                setUndoStack(prev => [...prev.slice(-50), {
+                    holdingIdx: currentHolding,
+                    fieldKey,
+                    previousValue: data?.holdings?.[currentHolding]?.selected?.[fieldKey]
+                }]);
+
                 setData(prev => {
                     const newData = { ...prev };
                     newData.holdings = [...prev.holdings];
@@ -865,7 +1144,66 @@
                     };
                     return newData;
                 });
-            }, [currentHolding]);
+
+                // Auto-advance
+                if (settings.autoAdvance) {
+                    setTimeout(() => {
+                        setActiveField(prev => Math.min(prev + 1, fieldKeys.length - 1));
+                    }, 100);
+                }
+            }, [currentHolding, settings.autoAdvance, fieldKeys, data]);
+
+            const handleUndo = useCallback(() => {
+                if (undoStack.length === 0) return;
+
+                const lastAction = undoStack[undoStack.length - 1];
+                setUndoStack(prev => prev.slice(0, -1));
+
+                setData(prev => {
+                    const newData = { ...prev };
+                    newData.holdings = [...prev.holdings];
+                    const newSelected = { ...newData.holdings[lastAction.holdingIdx].selected };
+
+                    if (lastAction.previousValue === undefined) {
+                        delete newSelected[lastAction.fieldKey];
+                    } else {
+                        newSelected[lastAction.fieldKey] = lastAction.previousValue;
+                    }
+
+                    newData.holdings[lastAction.holdingIdx] = {
+                        ...newData.holdings[lastAction.holdingIdx],
+                        selected: newSelected
+                    };
+                    return newData;
+                });
+
+                setToast('Undone');
+            }, [undoStack]);
+
+            const handleBulkSelect = useCallback((coderName) => {
+                const holding = data?.holdings?.[currentHolding];
+                if (!holding) return;
+
+                setData(prev => {
+                    const newData = { ...prev };
+                    newData.holdings = [...prev.holdings];
+                    const newSelected = { ...newData.holdings[currentHolding].selected };
+
+                    fieldKeys.forEach(key => {
+                        if (!newSelected[key]) {
+                            newSelected[key] = coderName;
+                        }
+                    });
+
+                    newData.holdings[currentHolding] = {
+                        ...newData.holdings[currentHolding],
+                        selected: newSelected
+                    };
+                    return newData;
+                });
+
+                setToast(`Selected all unreviewed from ${coderName}`);
+            }, [data, currentHolding, fieldKeys]);
 
             const handleCustomSave = useCallback((value) => {
                 setData(prev => {
@@ -885,7 +1223,12 @@
                     return newData;
                 });
                 setShowCustomInput(false);
-            }, [currentHolding, customInputField]);
+                if (settings.autoAdvance) {
+                    setTimeout(() => {
+                        setActiveField(prev => Math.min(prev + 1, fieldKeys.length - 1));
+                    }, 100);
+                }
+            }, [currentHolding, customInputField, settings.autoAdvance, fieldKeys]);
 
             const handleLoadData = useCallback((e) => {
                 const file = e.target.files?.[0];
@@ -897,6 +1240,8 @@
                             setData(parsed);
                             setCurrentHolding(0);
                             setActiveField(0);
+                            setUndoStack([]);
+                            setToast('Data loaded');
                         } catch (err) {
                             alert('Failed to parse JSON file');
                         }
@@ -908,34 +1253,27 @@
             const handleExport = useCallback(() => {
                 if (!data) return;
 
-                // Build consolidated output
                 const output = {
                     case_id: data.case_id,
                     judgment_date: data.judgment_date,
                     exported_at: new Date().toISOString(),
                     holdings: data.holdings.map(h => {
-                        const coderNames = Object.keys(h.coders);
+                        const cNames = Object.keys(h.coders);
                         const consolidated = {};
 
                         Object.keys(FIELD_DEFINITIONS).forEach(key => {
                             if (['A1', 'A2', 'A3', 'A4'].includes(key)) return;
-
                             const selection = h.selected?.[key];
                             if (selection === 'custom') {
                                 consolidated[key] = h.customValues?.[key];
                             } else if (selection) {
                                 consolidated[key] = h.coders[selection]?.[key];
                             } else {
-                                // Default to first coder if no selection
-                                consolidated[key] = h.coders[coderNames[0]]?.[key];
+                                consolidated[key] = h.coders[cNames[0]]?.[key];
                             }
                         });
 
-                        return {
-                            holding_id: h.holding_id,
-                            selections: h.selected,
-                            consolidated
-                        };
+                        return { holding_id: h.holding_id, selections: h.selected, consolidated };
                     })
                 };
 
@@ -943,19 +1281,19 @@
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = `${data.case_id}_comparison_result.json`;
+                a.download = `${data.case_id.replace(/\//g, '-')}_comparison_result.json`;
                 a.click();
                 URL.revokeObjectURL(url);
+                setToast('Exported successfully');
             }, [data]);
 
             const handleViewDecision = useCallback(async () => {
                 if (!data?.decision_file) {
-                    // Generate markdown from current data
                     const content = `# Case ${data?.case_id}\n\n**Date:** ${data?.judgment_date}\n\n## Holdings\n\n${
                         data?.holdings?.map(h => {
-                            const coderNames = Object.keys(h.coders);
-                            const coderA = h.coders[coderNames[0]];
-                            return `### Holding ${h.holding_id}\n\n**Core Holding:** ${coderA?.A7 || 'N/A'}\n\n**Primary Concept:** ${coderA?.A10 || 'N/A'}\n\n**Ruling Direction:** ${coderA?.A32 || 'N/A'}\n`;
+                            const cNames = Object.keys(h.coders);
+                            const coder = h.coders[cNames[0]];
+                            return `### Holding ${h.holding_id}\n\n**Core:** ${coder?.A7 || 'N/A'}\n\n**Concept:** ${coder?.A10 || 'N/A'}\n\n**Direction:** ${coder?.A32 || 'N/A'}\n`;
                         }).join('\n') || ''
                     }`;
                     setMarkdownContent(content);
@@ -973,15 +1311,17 @@
                 }
             }, [data]);
 
-            // Calculate progress
+            const handleToggleSetting = useCallback((key) => {
+                setSettings(prev => ({ ...prev, [key]: !prev[key] }));
+                if (key === 'showDiffsOnly') setActiveField(0);
+            }, []);
+
             const progress = useMemo(() => {
                 if (!data?.holdings) return 0;
                 const totalFields = (Object.keys(FIELD_DEFINITIONS).length - 4) * data.holdings.length;
                 const selectedFields = data.holdings.reduce((acc, h) => acc + Object.keys(h.selected || {}).length, 0);
                 return Math.round((selectedFields / totalFields) * 100);
             }, [data]);
-
-            const coderNames = data?.holdings?.[0] ? Object.keys(data.holdings[0].coders) : [];
 
             return (
                 <div className="h-screen flex flex-col">
@@ -991,6 +1331,10 @@
                         onExport={handleExport}
                         onLoadData={handleLoadData}
                         onShowHelp={() => setShowHelp(true)}
+                        settings={settings}
+                        onToggleSetting={handleToggleSetting}
+                        onBulkSelect={handleBulkSelect}
+                        coderNames={coderNames}
                     />
 
                     {data ? (
@@ -999,20 +1343,16 @@
                                 holdings={data.holdings}
                                 currentHolding={currentHolding}
                                 onSelect={setCurrentHolding}
-                                selections={data.holdings.map(h => h.selected)}
                             />
 
-                            <div className="flex-1 flex flex-col overflow-hidden">
-                                <div className="p-4 border-b border-[var(--border)] bg-[var(--bg-1)] flex items-center justify-between">
-                                    <div className="flex items-center gap-4">
-                                        <span className="text-sm text-[var(--text-2)]">
-                                            Comparing: <span className="text-[var(--text-0)] font-medium">{coderNames.join(' vs ')}</span>
-                                        </span>
-                                    </div>
-                                    <button
-                                        className="btn btn-ghost btn-sm"
-                                        onClick={handleViewDecision}
-                                    >
+                            <div className="flex-1 flex flex-col overflow-hidden min-w-0">
+                                <StatsPanel data={data} currentHolding={currentHolding} />
+
+                                <div className="p-3 border-b border-[var(--border)] bg-[var(--bg-1)] flex items-center justify-between">
+                                    <span className="text-sm text-[var(--text-2)]">
+                                        Comparing: <span className="text-[var(--text-0)] font-medium">{coderNames.join(' vs ')}</span>
+                                    </span>
+                                    <button className="btn btn-ghost btn-sm" onClick={handleViewDecision}>
                                         View Decision <span className="kbd">m</span>
                                     </button>
                                 </div>
@@ -1023,25 +1363,16 @@
                                     onUpdateSelection={handleUpdateSelection}
                                     activeField={activeField}
                                     setActiveField={setActiveField}
+                                    settings={settings}
                                 />
                             </div>
                         </div>
                     ) : (
                         <div className="flex-1 flex items-center justify-center">
                             <div className="text-center">
-                                <h2 className="text-xl font-semibold text-[var(--text-0)] mb-4">
-                                    Load Comparison Data
-                                </h2>
-                                <p className="text-[var(--text-2)] mb-6">
-                                    Load a JSON file with coder comparison data, or use the demo data.
-                                </p>
+                                <h2 className="text-xl font-semibold text-[var(--text-0)] mb-4">Load Comparison Data</h2>
                                 <label className="btn btn-primary cursor-pointer">
-                                    <input
-                                        type="file"
-                                        accept=".json"
-                                        onChange={handleLoadData}
-                                        className="hidden"
-                                    />
+                                    <input type="file" accept=".json" onChange={handleLoadData} className="hidden" />
                                     Load JSON File
                                 </label>
                             </div>
@@ -1049,7 +1380,6 @@
                     )}
 
                     {showHelp && <HelpModal onClose={() => setShowHelp(false)} />}
-
                     {showMarkdown && (
                         <MarkdownModal
                             content={markdownContent}
@@ -1057,7 +1387,6 @@
                             onClose={() => setShowMarkdown(false)}
                         />
                     )}
-
                     {showCustomInput && (
                         <CustomValueModal
                             fieldKey={customInputField}
@@ -1067,6 +1396,7 @@
                             onClose={() => setShowCustomInput(false)}
                         />
                     )}
+                    {toast && <Toast message={toast} onClose={() => setToast(null)} />}
                 </div>
             );
         }
