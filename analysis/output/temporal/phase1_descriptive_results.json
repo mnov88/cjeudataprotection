@@ -1,0 +1,2440 @@
+{
+  "annual_statistics": {
+    "sample_size": {
+      "holdings": {
+        "2019": 4,
+        "2020": 7,
+        "2021": 12,
+        "2022": 29,
+        "2023": 54,
+        "2024": 50,
+        "2025": 25
+      },
+      "cases": {
+        "2019": 2,
+        "2020": 3,
+        "2021": 3,
+        "2022": 11,
+        "2023": 19,
+        "2024": 19,
+        "2025": 10
+      },
+      "holdings_per_case": {
+        "2019": 2.0,
+        "2020": 2.33,
+        "2021": 4.0,
+        "2022": 2.64,
+        "2023": 2.84,
+        "2024": 2.63,
+        "2025": 2.5
+      }
+    },
+    "outcome": {
+      "pro_ds_n": {
+        "2019": 3,
+        "2020": 6,
+        "2021": 7,
+        "2022": 20,
+        "2023": 33,
+        "2024": 27,
+        "2025": 14
+      },
+      "pro_ds_pct": {
+        "2019": 75.0,
+        "2020": 85.7,
+        "2021": 58.3,
+        "2022": 69.0,
+        "2023": 61.1,
+        "2024": 54.0,
+        "2025": 56.0
+      },
+      "pro_controller_n": {
+        "2019": 0,
+        "2020": 0,
+        "2021": 1,
+        "2022": 3,
+        "2023": 6,
+        "2024": 11,
+        "2025": 2
+      },
+      "pro_controller_pct": {
+        "2019": 0.0,
+        "2020": 0.0,
+        "2021": 8.3,
+        "2022": 10.3,
+        "2023": 11.1,
+        "2024": 22.0,
+        "2025": 8.0
+      }
+    },
+    "binary_variables": {
+      "teleological_present": {
+        "sum": {
+          "2019": 4,
+          "2020": 7,
+          "2021": 8,
+          "2022": 28,
+          "2023": 46,
+          "2024": 49,
+          "2025": 25
+        },
+        "pct": {
+          "2019": 100.0,
+          "2020": 100.0,
+          "2021": 66.7,
+          "2022": 96.6,
+          "2023": 85.2,
+          "2024": 98.0,
+          "2025": 100.0
+        }
+      },
+      "semantic_present": {
+        "sum": {
+          "2019": 4,
+          "2020": 7,
+          "2021": 10,
+          "2022": 28,
+          "2023": 52,
+          "2024": 49,
+          "2025": 23
+        },
+        "pct": {
+          "2019": 100.0,
+          "2020": 100.0,
+          "2021": 83.3,
+          "2022": 96.6,
+          "2023": 96.3,
+          "2024": 98.0,
+          "2025": 92.0
+        }
+      },
+      "systematic_present": {
+        "sum": {
+          "2019": 4,
+          "2020": 7,
+          "2021": 12,
+          "2022": 28,
+          "2023": 50,
+          "2024": 41,
+          "2025": 25
+        },
+        "pct": {
+          "2019": 100.0,
+          "2020": 100.0,
+          "2021": 100.0,
+          "2022": 96.6,
+          "2023": 92.6,
+          "2024": 82.0,
+          "2025": 100.0
+        }
+      },
+      "rule_based_present": {
+        "sum": {
+          "2019": 4,
+          "2020": 7,
+          "2021": 12,
+          "2022": 29,
+          "2023": 53,
+          "2024": 47,
+          "2025": 25
+        },
+        "pct": {
+          "2019": 100.0,
+          "2020": 100.0,
+          "2021": 100.0,
+          "2022": 100.0,
+          "2023": 98.1,
+          "2024": 94.0,
+          "2025": 100.0
+        }
+      },
+      "case_law_present": {
+        "sum": {
+          "2019": 2,
+          "2020": 7,
+          "2021": 11,
+          "2022": 24,
+          "2023": 43,
+          "2024": 49,
+          "2025": 24
+        },
+        "pct": {
+          "2019": 50.0,
+          "2020": 100.0,
+          "2021": 91.7,
+          "2022": 82.8,
+          "2023": 79.6,
+          "2024": 98.0,
+          "2025": 96.0
+        }
+      },
+      "principle_based_present": {
+        "sum": {
+          "2019": 2,
+          "2020": 5,
+          "2021": 6,
+          "2022": 18,
+          "2023": 24,
+          "2024": 19,
+          "2025": 16
+        },
+        "pct": {
+          "2019": 50.0,
+          "2020": 71.4,
+          "2021": 50.0,
+          "2022": 62.1,
+          "2023": 44.4,
+          "2024": 38.0,
+          "2025": 64.0
+        }
+      },
+      "level_shifting": {
+        "sum": {
+          "2019": 0,
+          "2020": 1,
+          "2021": 1,
+          "2022": 7,
+          "2023": 5,
+          "2024": 4,
+          "2025": 4
+        },
+        "pct": {
+          "2019": 0.0,
+          "2020": 14.3,
+          "2021": 8.3,
+          "2022": 24.1,
+          "2023": 9.3,
+          "2024": 8.0,
+          "2025": 16.0
+        }
+      },
+      "necessity_discussed": {
+        "sum": {
+          "2019": 1,
+          "2020": 1,
+          "2021": 3,
+          "2022": 11,
+          "2023": 9,
+          "2024": 10,
+          "2025": 6
+        },
+        "pct": {
+          "2019": 25.0,
+          "2020": 14.3,
+          "2021": 25.0,
+          "2022": 37.9,
+          "2023": 16.7,
+          "2024": 20.0,
+          "2025": 24.0
+        }
+      },
+      "controller_ds_balancing": {
+        "sum": {
+          "2019": 0,
+          "2020": 0,
+          "2021": 3,
+          "2022": 6,
+          "2023": 11,
+          "2024": 6,
+          "2025": 1
+        },
+        "pct": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 25.0,
+          "2022": 20.7,
+          "2023": 20.4,
+          "2024": 12.0,
+          "2025": 4.0
+        }
+      },
+      "other_rights_balancing": {
+        "sum": {
+          "2019": 0,
+          "2020": 3,
+          "2021": 4,
+          "2022": 9,
+          "2023": 9,
+          "2024": 4,
+          "2025": 5
+        },
+        "pct": {
+          "2019": 0.0,
+          "2020": 42.9,
+          "2021": 33.3,
+          "2022": 31.0,
+          "2023": 16.7,
+          "2024": 8.0,
+          "2025": 20.0
+        }
+      },
+      "pro_ds_purpose": {
+        "sum": {
+          "2019": 3,
+          "2020": 7,
+          "2021": 7,
+          "2022": 23,
+          "2023": 38,
+          "2024": 36,
+          "2025": 24
+        },
+        "pct": {
+          "2019": 75.0,
+          "2020": 100.0,
+          "2021": 58.3,
+          "2022": 79.3,
+          "2023": 70.4,
+          "2024": 72.0,
+          "2025": 96.0
+        }
+      }
+    },
+    "categorical_variables": {
+      "chamber_grouped": {
+        "FIFTH": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 25.0,
+          "2022": 20.7,
+          "2023": 5.6,
+          "2024": 4.0,
+          "2025": 4.0
+        },
+        "FIRST": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 0.0,
+          "2022": 13.8,
+          "2023": 31.5,
+          "2024": 14.0,
+          "2025": 64.0
+        },
+        "FOURTH": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 0.0,
+          "2022": 13.8,
+          "2023": 0.0,
+          "2024": 16.0,
+          "2025": 16.0
+        },
+        "GRAND_CHAMBER": {
+          "2019": 75.0,
+          "2020": 71.4,
+          "2021": 75.0,
+          "2022": 41.4,
+          "2023": 25.9,
+          "2024": 6.0,
+          "2025": 12.0
+        },
+        "OTHER": {
+          "2019": 0.0,
+          "2020": 14.3,
+          "2021": 0.0,
+          "2022": 6.9,
+          "2023": 5.6,
+          "2024": 18.0,
+          "2025": 4.0
+        },
+        "THIRD": {
+          "2019": 25.0,
+          "2020": 14.3,
+          "2021": 0.0,
+          "2022": 3.4,
+          "2023": 31.5,
+          "2024": 42.0,
+          "2025": 0.0
+        }
+      },
+      "dominant_source": {
+        "PRINCIPLE_BASED": {
+          "2019": 0.0,
+          "2020": 14.3,
+          "2021": 0.0,
+          "2022": 0.0,
+          "2023": 0.0,
+          "2024": 0.0,
+          "2025": 0.0
+        },
+        "RULE_BASED": {
+          "2019": 25.0,
+          "2020": 0.0,
+          "2021": 0.0,
+          "2022": 0.0,
+          "2023": 0.0,
+          "2024": 0.0,
+          "2025": 4.0
+        },
+        "SEMANTIC": {
+          "2019": 25.0,
+          "2020": 28.6,
+          "2021": 25.0,
+          "2022": 17.2,
+          "2023": 24.1,
+          "2024": 28.0,
+          "2025": 8.0
+        },
+        "SYSTEMATIC": {
+          "2019": 25.0,
+          "2020": 28.6,
+          "2021": 50.0,
+          "2022": 41.4,
+          "2023": 33.3,
+          "2024": 26.0,
+          "2025": 44.0
+        },
+        "TELEOLOGICAL": {
+          "2019": 25.0,
+          "2020": 28.6,
+          "2021": 25.0,
+          "2022": 41.4,
+          "2023": 42.6,
+          "2024": 46.0,
+          "2025": 44.0
+        }
+      },
+      "dominant_structure": {
+        "CASE_LAW_BASED": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 25.0,
+          "2022": 6.9,
+          "2023": 13.0,
+          "2024": 40.0,
+          "2025": 28.0
+        },
+        "MIXED": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 0.0,
+          "2022": 6.9,
+          "2023": 14.8,
+          "2024": 8.0,
+          "2025": 16.0
+        },
+        "PRINCIPLE_BASED": {
+          "2019": 25.0,
+          "2020": 28.6,
+          "2021": 8.3,
+          "2022": 31.0,
+          "2023": 9.3,
+          "2024": 18.0,
+          "2025": 16.0
+        },
+        "RULE_BASED": {
+          "2019": 75.0,
+          "2020": 71.4,
+          "2021": 58.3,
+          "2022": 55.2,
+          "2023": 63.0,
+          "2024": 34.0,
+          "2025": 36.0
+        },
+        "SYSTEMATIC": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 0.0,
+          "2022": 0.0,
+          "2023": 0.0,
+          "2024": 0.0,
+          "2025": 4.0
+        },
+        "TELEOLOGICAL": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 8.3,
+          "2022": 0.0,
+          "2023": 0.0,
+          "2024": 0.0,
+          "2025": 0.0
+        }
+      },
+      "concept_cluster": {
+        "ACTORS": {
+          "2019": 0.0,
+          "2020": 14.3,
+          "2021": 0.0,
+          "2022": 0.0,
+          "2023": 3.7,
+          "2024": 8.0,
+          "2025": 12.0
+        },
+        "ENFORCEMENT": {
+          "2019": 0.0,
+          "2020": 14.3,
+          "2021": 41.7,
+          "2022": 20.7,
+          "2023": 29.6,
+          "2024": 54.0,
+          "2025": 40.0
+        },
+        "LAWFULNESS": {
+          "2019": 25.0,
+          "2020": 14.3,
+          "2021": 8.3,
+          "2022": 10.3,
+          "2023": 13.0,
+          "2024": 8.0,
+          "2025": 0.0
+        },
+        "OTHER": {
+          "2019": 0.0,
+          "2020": 42.9,
+          "2021": 25.0,
+          "2022": 3.4,
+          "2023": 11.1,
+          "2024": 10.0,
+          "2025": 16.0
+        },
+        "PRINCIPLES": {
+          "2019": 50.0,
+          "2020": 0.0,
+          "2021": 16.7,
+          "2022": 27.6,
+          "2023": 3.7,
+          "2024": 4.0,
+          "2025": 4.0
+        },
+        "RIGHTS": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 0.0,
+          "2022": 13.8,
+          "2023": 20.4,
+          "2024": 2.0,
+          "2025": 20.0
+        },
+        "SCOPE": {
+          "2019": 25.0,
+          "2020": 14.3,
+          "2021": 0.0,
+          "2022": 20.7,
+          "2023": 3.7,
+          "2024": 10.0,
+          "2025": 8.0
+        },
+        "SPECIAL": {
+          "2019": 0.0,
+          "2020": 0.0,
+          "2021": 8.3,
+          "2022": 3.4,
+          "2023": 14.8,
+          "2024": 4.0,
+          "2025": 0.0
+        }
+      },
+      "necessity_standard": {
+        "NONE": {
+          "2019": 75.0,
+          "2020": 85.7,
+          "2021": 75.0,
+          "2022": 62.1,
+          "2023": 83.3,
+          "2024": 80.0,
+          "2025": 76.0
+        },
+        "REGULAR": {
+          "2019": 25.0,
+          "2020": 0.0,
+          "2021": 8.3,
+          "2022": 20.7,
+          "2023": 7.4,
+          "2024": 8.0,
+          "2025": 12.0
+        },
+        "STRICT": {
+          "2019": 0.0,
+          "2020": 14.3,
+          "2021": 16.7,
+          "2022": 17.2,
+          "2023": 9.3,
+          "2024": 12.0,
+          "2025": 12.0
+        }
+      }
+    },
+    "count_variables": {
+      "cited_case_count": {
+        "mean": {
+          "2019": 3.75,
+          "2020": 2.0,
+          "2021": 4.83,
+          "2022": 4.07,
+          "2023": 2.74,
+          "2024": 3.44,
+          "2025": 4.56
+        },
+        "median": {
+          "2019": 3.0,
+          "2020": 1.0,
+          "2021": 3.5,
+          "2022": 3.0,
+          "2023": 2.0,
+          "2024": 3.0,
+          "2025": 4.0
+        },
+        "std": {
+          "2019": 4.5,
+          "2020": 1.83,
+          "2021": 4.63,
+          "2022": 3.93,
+          "2023": 2.46,
+          "2024": 2.52,
+          "2025": 3.37
+        },
+        "min": {
+          "2019": 0,
+          "2020": 1,
+          "2021": 0,
+          "2022": 0,
+          "2023": 0,
+          "2024": 0,
+          "2025": 0
+        },
+        "max": {
+          "2019": 9,
+          "2020": 6,
+          "2021": 12,
+          "2022": 16,
+          "2023": 12,
+          "2024": 12,
+          "2025": 15
+        }
+      },
+      "paragraph_count": {
+        "mean": {
+          "2019": 17.25,
+          "2020": 21.86,
+          "2021": 20.67,
+          "2022": 22.86,
+          "2023": 16.19,
+          "2024": 13.76,
+          "2025": 17.56
+        },
+        "median": {
+          "2019": 16.0,
+          "2020": 16.0,
+          "2021": 16.0,
+          "2022": 17.0,
+          "2023": 14.5,
+          "2024": 11.0,
+          "2025": 14.0
+        },
+        "std": {
+          "2019": 11.41,
+          "2020": 14.5,
+          "2021": 13.41,
+          "2022": 25.3,
+          "2023": 9.09,
+          "2024": 7.54,
+          "2025": 12.09
+        },
+        "min": {
+          "2019": 6,
+          "2020": 10,
+          "2021": 7,
+          "2022": 7,
+          "2023": 3,
+          "2024": 4,
+          "2025": 6
+        },
+        "max": {
+          "2019": 31,
+          "2020": 52,
+          "2021": 41,
+          "2022": 144,
+          "2023": 47,
+          "2024": 39,
+          "2025": 60
+        }
+      },
+      "judge_count": {
+        "mean": {
+          "2019": 11.0,
+          "2020": 10.43,
+          "2021": 12.5,
+          "2022": 8.24,
+          "2023": 7.48,
+          "2024": 4.92,
+          "2025": 5.56
+        },
+        "median": {
+          "2019": 13.0,
+          "2020": 13.0,
+          "2021": 15.0,
+          "2022": 5.0,
+          "2023": 5.0,
+          "2024": 5.0,
+          "2025": 5.0
+        },
+        "std": {
+          "2019": 4.0,
+          "2020": 4.43,
+          "2021": 4.52,
+          "2022": 4.42,
+          "2023": 4.51,
+          "2024": 2.74,
+          "2025": 2.92
+        },
+        "min": {
+          "2019": 5,
+          "2020": 3,
+          "2021": 5,
+          "2022": 3,
+          "2023": 3,
+          "2024": 3,
+          "2025": 3
+        },
+        "max": {
+          "2019": 13,
+          "2020": 13,
+          "2021": 15,
+          "2022": 15,
+          "2023": 15,
+          "2024": 15,
+          "2025": 13
+        }
+      }
+    }
+  },
+  "trend_tables": {
+    "pro_ds_trend": [
+      {
+        "year": 2019,
+        "n": 4,
+        "pro_ds_n": 3,
+        "pro_ds_rate": 75.0,
+        "ci_lower": 30.1,
+        "ci_upper": 95.4
+      },
+      {
+        "year": 2020,
+        "n": 7,
+        "pro_ds_n": 6,
+        "pro_ds_rate": 85.7,
+        "ci_lower": 48.7,
+        "ci_upper": 97.4
+      },
+      {
+        "year": 2021,
+        "n": 12,
+        "pro_ds_n": 7,
+        "pro_ds_rate": 58.3,
+        "ci_lower": 32.0,
+        "ci_upper": 80.7
+      },
+      {
+        "year": 2022,
+        "n": 29,
+        "pro_ds_n": 20,
+        "pro_ds_rate": 69.0,
+        "ci_lower": 50.8,
+        "ci_upper": 82.7
+      },
+      {
+        "year": 2023,
+        "n": 54,
+        "pro_ds_n": 33,
+        "pro_ds_rate": 61.1,
+        "ci_lower": 47.8,
+        "ci_upper": 73.0
+      },
+      {
+        "year": 2024,
+        "n": 50,
+        "pro_ds_n": 27,
+        "pro_ds_rate": 54.0,
+        "ci_lower": 40.4,
+        "ci_upper": 67.0
+      },
+      {
+        "year": 2025,
+        "n": 25,
+        "pro_ds_n": 14,
+        "pro_ds_rate": 56.0,
+        "ci_lower": 37.1,
+        "ci_upper": 73.3
+      }
+    ],
+    "period_comparison": [
+      {
+        "period": "Early (2019-2022)",
+        "n_holdings": 52,
+        "n_cases": 19,
+        "pro_ds_n": 36,
+        "pro_ds_rate": 69.2,
+        "ci_lower": 55.7,
+        "ci_upper": 80.1
+      },
+      {
+        "period": "Late (2023-2025)",
+        "n_holdings": 129,
+        "n_cases": 48,
+        "pro_ds_n": 74,
+        "pro_ds_rate": 57.4,
+        "ci_lower": 48.7,
+        "ci_upper": 65.6
+      }
+    ],
+    "period_difference_pp": -11.8,
+    "cluster_by_period": {
+      "ACTORS": {
+        "Early (2019-2022)": 1.9,
+        "Late (2023-2025)": 7.0
+      },
+      "ENFORCEMENT": {
+        "Early (2019-2022)": 23.1,
+        "Late (2023-2025)": 41.1
+      },
+      "LAWFULNESS": {
+        "Early (2019-2022)": 11.5,
+        "Late (2023-2025)": 8.5
+      },
+      "OTHER": {
+        "Early (2019-2022)": 13.5,
+        "Late (2023-2025)": 11.6
+      },
+      "PRINCIPLES": {
+        "Early (2019-2022)": 23.1,
+        "Late (2023-2025)": 3.9
+      },
+      "RIGHTS": {
+        "Early (2019-2022)": 7.7,
+        "Late (2023-2025)": 13.2
+      },
+      "SCOPE": {
+        "Early (2019-2022)": 15.4,
+        "Late (2023-2025)": 7.0
+      },
+      "SPECIAL": {
+        "Early (2019-2022)": 3.8,
+        "Late (2023-2025)": 7.8
+      }
+    },
+    "compensation_by_year": {
+      "sum": {
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 1,
+        "2023": 9,
+        "2024": 21,
+        "2025": 5
+      },
+      "pct": {
+        "2019": 0.0,
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 3.4,
+        "2023": 16.7,
+        "2024": 42.0,
+        "2025": 20.0
+      }
+    }
+  },
+  "visualization_data": {
+    "quarterly": [
+      {
+        "year_quarter": "2019-Q1",
+        "pro_ds_n": 0,
+        "total_n": 1,
+        "pro_ds_rate": 0.0,
+        "n_cases": 1,
+        "pro_ds_pct": 0.0
+      },
+      {
+        "year_quarter": "2019-Q4",
+        "pro_ds_n": 3,
+        "total_n": 3,
+        "pro_ds_rate": 1.0,
+        "n_cases": 1,
+        "pro_ds_pct": 100.0
+      },
+      {
+        "year_quarter": "2020-Q3",
+        "pro_ds_n": 5,
+        "total_n": 6,
+        "pro_ds_rate": 0.8333333333333334,
+        "n_cases": 2,
+        "pro_ds_pct": 83.3
+      },
+      {
+        "year_quarter": "2020-Q4",
+        "pro_ds_n": 1,
+        "total_n": 1,
+        "pro_ds_rate": 1.0,
+        "n_cases": 1,
+        "pro_ds_pct": 100.0
+      },
+      {
+        "year_quarter": "2021-Q2",
+        "pro_ds_n": 7,
+        "total_n": 12,
+        "pro_ds_rate": 0.5833333333333334,
+        "n_cases": 3,
+        "pro_ds_pct": 58.3
+      },
+      {
+        "year_quarter": "2022-Q1",
+        "pro_ds_n": 2,
+        "total_n": 4,
+        "pro_ds_rate": 0.5,
+        "n_cases": 2,
+        "pro_ds_pct": 50.0
+      },
+      {
+        "year_quarter": "2022-Q2",
+        "pro_ds_n": 7,
+        "total_n": 10,
+        "pro_ds_rate": 0.7,
+        "n_cases": 3,
+        "pro_ds_pct": 70.0
+      },
+      {
+        "year_quarter": "2022-Q3",
+        "pro_ds_n": 2,
+        "total_n": 2,
+        "pro_ds_rate": 1.0,
+        "n_cases": 1,
+        "pro_ds_pct": 100.0
+      },
+      {
+        "year_quarter": "2022-Q4",
+        "pro_ds_n": 9,
+        "total_n": 13,
+        "pro_ds_rate": 0.6923076923076923,
+        "n_cases": 5,
+        "pro_ds_pct": 69.2
+      },
+      {
+        "year_quarter": "2023-Q1",
+        "pro_ds_n": 6,
+        "total_n": 11,
+        "pro_ds_rate": 0.5454545454545454,
+        "n_cases": 6,
+        "pro_ds_pct": 54.5
+      },
+      {
+        "year_quarter": "2023-Q2",
+        "pro_ds_n": 4,
+        "total_n": 8,
+        "pro_ds_rate": 0.5,
+        "n_cases": 3,
+        "pro_ds_pct": 50.0
+      },
+      {
+        "year_quarter": "2023-Q3",
+        "pro_ds_n": 5,
+        "total_n": 8,
+        "pro_ds_rate": 0.625,
+        "n_cases": 1,
+        "pro_ds_pct": 62.5
+      },
+      {
+        "year_quarter": "2023-Q4",
+        "pro_ds_n": 18,
+        "total_n": 27,
+        "pro_ds_rate": 0.6666666666666666,
+        "n_cases": 9,
+        "pro_ds_pct": 66.7
+      },
+      {
+        "year_quarter": "2024-Q1",
+        "pro_ds_n": 9,
+        "total_n": 16,
+        "pro_ds_rate": 0.5625,
+        "n_cases": 6,
+        "pro_ds_pct": 56.2
+      },
+      {
+        "year_quarter": "2024-Q2",
+        "pro_ds_n": 4,
+        "total_n": 12,
+        "pro_ds_rate": 0.3333333333333333,
+        "n_cases": 3,
+        "pro_ds_pct": 33.3
+      },
+      {
+        "year_quarter": "2024-Q3",
+        "pro_ds_n": 4,
+        "total_n": 6,
+        "pro_ds_rate": 0.6666666666666666,
+        "n_cases": 4,
+        "pro_ds_pct": 66.7
+      },
+      {
+        "year_quarter": "2024-Q4",
+        "pro_ds_n": 10,
+        "total_n": 16,
+        "pro_ds_rate": 0.625,
+        "n_cases": 6,
+        "pro_ds_pct": 62.5
+      },
+      {
+        "year_quarter": "2025-Q1",
+        "pro_ds_n": 7,
+        "total_n": 11,
+        "pro_ds_rate": 0.6363636363636364,
+        "n_cases": 6,
+        "pro_ds_pct": 63.6
+      },
+      {
+        "year_quarter": "2025-Q2",
+        "pro_ds_n": 2,
+        "total_n": 7,
+        "pro_ds_rate": 0.2857142857142857,
+        "n_cases": 2,
+        "pro_ds_pct": 28.6
+      },
+      {
+        "year_quarter": "2025-Q3",
+        "pro_ds_n": 2,
+        "total_n": 4,
+        "pro_ds_rate": 0.5,
+        "n_cases": 1,
+        "pro_ds_pct": 50.0
+      },
+      {
+        "year_quarter": "2025-Q4",
+        "pro_ds_n": 3,
+        "total_n": 3,
+        "pro_ds_rate": 1.0,
+        "n_cases": 1,
+        "pro_ds_pct": 100.0
+      }
+    ],
+    "cumulative": [
+      {
+        "case_id": "C-129/21",
+        "judgment_date": "2022-10-27T00:00:00",
+        "cumulative_pro_ds": 34,
+        "cumulative_total": 47,
+        "cumulative_rate": 0.723404255319149
+      },
+      {
+        "case_id": "C-132/21",
+        "judgment_date": "2023-01-12T00:00:00",
+        "cumulative_pro_ds": 37,
+        "cumulative_total": 53,
+        "cumulative_rate": 0.6981132075471698
+      },
+      {
+        "case_id": "C-154/21",
+        "judgment_date": "2023-01-12T00:00:00",
+        "cumulative_pro_ds": 38,
+        "cumulative_total": 54,
+        "cumulative_rate": 0.7037037037037037
+      },
+      {
+        "case_id": "C-169/23",
+        "judgment_date": "2024-11-28T00:00:00",
+        "cumulative_pro_ds": 94,
+        "cumulative_total": 154,
+        "cumulative_rate": 0.6103896103896104
+      },
+      {
+        "case_id": "C-17/22 & C-18/22",
+        "judgment_date": "2024-09-12T00:00:00",
+        "cumulative_pro_ds": 86,
+        "cumulative_total": 139,
+        "cumulative_rate": 0.6187050359712231
+      },
+      {
+        "case_id": "C-175/20",
+        "judgment_date": "2022-02-24T00:00:00",
+        "cumulative_pro_ds": 18,
+        "cumulative_total": 26,
+        "cumulative_rate": 0.6923076923076923
+      },
+      {
+        "case_id": "C-180/21",
+        "judgment_date": "2022-12-08T00:00:00",
+        "cumulative_pro_ds": 36,
+        "cumulative_total": 51,
+        "cumulative_rate": 0.7058823529411765
+      },
+      {
+        "case_id": "C-182/22 & C-189/22",
+        "judgment_date": "2024-06-20T00:00:00",
+        "cumulative_pro_ds": 82,
+        "cumulative_total": 133,
+        "cumulative_rate": 0.6165413533834586
+      },
+      {
+        "case_id": "C-184/20",
+        "judgment_date": "2022-08-01T00:00:00",
+        "cumulative_pro_ds": 27,
+        "cumulative_total": 39,
+        "cumulative_rate": 0.6923076923076923
+      },
+      {
+        "case_id": "C-200/23",
+        "judgment_date": "2024-10-04T00:00:00",
+        "cumulative_pro_ds": 92,
+        "cumulative_total": 150,
+        "cumulative_rate": 0.6133333333333333
+      },
+      {
+        "case_id": "C-203/22",
+        "judgment_date": "2025-02-27T00:00:00",
+        "cumulative_pro_ds": 101,
+        "cumulative_total": 165,
+        "cumulative_rate": 0.6121212121212121
+      },
+      {
+        "case_id": "C-205/21",
+        "judgment_date": "2023-01-26T00:00:00",
+        "cumulative_pro_ds": 39,
+        "cumulative_total": 57,
+        "cumulative_rate": 0.6842105263157895
+      },
+      {
+        "case_id": "C-231/22",
+        "judgment_date": "2024-01-11T00:00:00",
+        "cumulative_pro_ds": 70,
+        "cumulative_total": 108,
+        "cumulative_rate": 0.6481481481481481
+      },
+      {
+        "case_id": "C-245/20",
+        "judgment_date": "2022-03-24T00:00:00",
+        "cumulative_pro_ds": 18,
+        "cumulative_total": 27,
+        "cumulative_rate": 0.6666666666666666
+      },
+      {
+        "case_id": "C-247/23",
+        "judgment_date": "2025-03-13T00:00:00",
+        "cumulative_pro_ds": 103,
+        "cumulative_total": 167,
+        "cumulative_rate": 0.6167664670658682
+      },
+      {
+        "case_id": "C-252/21",
+        "judgment_date": "2023-07-04T00:00:00",
+        "cumulative_pro_ds": 51,
+        "cumulative_total": 79,
+        "cumulative_rate": 0.6455696202531646
+      },
+      {
+        "case_id": "C-26/22 & C-64/22",
+        "judgment_date": "2023-12-07T00:00:00",
+        "cumulative_pro_ds": 64,
+        "cumulative_total": 94,
+        "cumulative_rate": 0.6808510638297872
+      },
+      {
+        "case_id": "C-268/21",
+        "judgment_date": "2023-03-02T00:00:00",
+        "cumulative_pro_ds": 41,
+        "cumulative_total": 61,
+        "cumulative_rate": 0.6721311475409836
+      },
+      {
+        "case_id": "C-272/19",
+        "judgment_date": "2020-07-09T00:00:00",
+        "cumulative_pro_ds": 4,
+        "cumulative_total": 5,
+        "cumulative_rate": 0.8
+      },
+      {
+        "case_id": "C-300/21",
+        "judgment_date": "2023-05-04T00:00:00",
+        "cumulative_pro_ds": 44,
+        "cumulative_total": 68,
+        "cumulative_rate": 0.6470588235294118
+      },
+      {
+        "case_id": "C-306/21",
+        "judgment_date": "2022-10-20T00:00:00",
+        "cumulative_pro_ds": 29,
+        "cumulative_total": 41,
+        "cumulative_rate": 0.7073170731707317
+      },
+      {
+        "case_id": "C-307/22",
+        "judgment_date": "2023-10-26T00:00:00",
+        "cumulative_pro_ds": 55,
+        "cumulative_total": 83,
+        "cumulative_rate": 0.6626506024096386
+      },
+      {
+        "case_id": "C-311/18",
+        "judgment_date": "2020-07-16T00:00:00",
+        "cumulative_pro_ds": 8,
+        "cumulative_total": 10,
+        "cumulative_rate": 0.8
+      },
+      {
+        "case_id": "C-313/23, C-316/23 & C-332/23",
+        "judgment_date": "2025-04-30T00:00:00",
+        "cumulative_pro_ds": 105,
+        "cumulative_total": 174,
+        "cumulative_rate": 0.603448275862069
+      },
+      {
+        "case_id": "C-319/20",
+        "judgment_date": "2022-04-28T00:00:00",
+        "cumulative_pro_ds": 19,
+        "cumulative_total": 28,
+        "cumulative_rate": 0.6785714285714286
+      },
+      {
+        "case_id": "C-33/22",
+        "judgment_date": "2024-01-16T00:00:00",
+        "cumulative_pro_ds": 73,
+        "cumulative_total": 111,
+        "cumulative_rate": 0.6576576576576577
+      },
+      {
+        "case_id": "C-34/21",
+        "judgment_date": "2023-03-30T00:00:00",
+        "cumulative_pro_ds": 42,
+        "cumulative_total": 63,
+        "cumulative_rate": 0.6666666666666666
+      },
+      {
+        "case_id": "C-340/21",
+        "judgment_date": "2023-12-14T00:00:00",
+        "cumulative_pro_ds": 68,
+        "cumulative_total": 101,
+        "cumulative_rate": 0.6732673267326733
+      },
+      {
+        "case_id": "C-383/23",
+        "judgment_date": "2025-02-13T00:00:00",
+        "cumulative_pro_ds": 100,
+        "cumulative_total": 162,
+        "cumulative_rate": 0.6172839506172839
+      },
+      {
+        "case_id": "C-394/23",
+        "judgment_date": "2025-01-09T00:00:00",
+        "cumulative_pro_ds": 98,
+        "cumulative_total": 158,
+        "cumulative_rate": 0.620253164556962
+      },
+      {
+        "case_id": "C-416/23",
+        "judgment_date": "2025-01-09T00:00:00",
+        "cumulative_pro_ds": 99,
+        "cumulative_total": 161,
+        "cumulative_rate": 0.6149068322981367
+      },
+      {
+        "case_id": "C-439/19",
+        "judgment_date": "2021-06-22T00:00:00",
+        "cumulative_pro_ds": 16,
+        "cumulative_total": 23,
+        "cumulative_rate": 0.6956521739130435
+      },
+      {
+        "case_id": "C-446/21",
+        "judgment_date": "2024-10-04T00:00:00",
+        "cumulative_pro_ds": 94,
+        "cumulative_total": 152,
+        "cumulative_rate": 0.618421052631579
+      },
+      {
+        "case_id": "C-453/21",
+        "judgment_date": "2023-02-09T00:00:00",
+        "cumulative_pro_ds": 40,
+        "cumulative_total": 59,
+        "cumulative_rate": 0.6779661016949152
+      },
+      {
+        "case_id": "C-456/22",
+        "judgment_date": "2023-12-14T00:00:00",
+        "cumulative_pro_ds": 64,
+        "cumulative_total": 96,
+        "cumulative_rate": 0.6666666666666666
+      },
+      {
+        "case_id": "C-46/23",
+        "judgment_date": "2024-03-14T00:00:00",
+        "cumulative_pro_ds": 78,
+        "cumulative_total": 122,
+        "cumulative_rate": 0.639344262295082
+      },
+      {
+        "case_id": "C-460/20",
+        "judgment_date": "2022-12-08T00:00:00",
+        "cumulative_pro_ds": 36,
+        "cumulative_total": 52,
+        "cumulative_rate": 0.6923076923076923
+      },
+      {
+        "case_id": "C-461/22",
+        "judgment_date": "2024-07-11T00:00:00",
+        "cumulative_pro_ds": 84,
+        "cumulative_total": 136,
+        "cumulative_rate": 0.6176470588235294
+      },
+      {
+        "case_id": "C-487/21",
+        "judgment_date": "2023-05-04T00:00:00",
+        "cumulative_pro_ds": 44,
+        "cumulative_total": 67,
+        "cumulative_rate": 0.6567164179104478
+      },
+      {
+        "case_id": "C-492/23",
+        "judgment_date": "2025-12-02T00:00:00",
+        "cumulative_pro_ds": 110,
+        "cumulative_total": 181,
+        "cumulative_rate": 0.6077348066298343
+      },
+      {
+        "case_id": "C-496/17",
+        "judgment_date": "2019-01-16T00:00:00",
+        "cumulative_pro_ds": 0,
+        "cumulative_total": 1,
+        "cumulative_rate": 0.0
+      },
+      {
+        "case_id": "C-507/23",
+        "judgment_date": "2024-10-04T00:00:00",
+        "cumulative_pro_ds": 88,
+        "cumulative_total": 145,
+        "cumulative_rate": 0.6068965517241379
+      },
+      {
+        "case_id": "C-534/20",
+        "judgment_date": "2022-06-22T00:00:00",
+        "cumulative_pro_ds": 25,
+        "cumulative_total": 37,
+        "cumulative_rate": 0.6756756756756757
+      },
+      {
+        "case_id": "C-579/21",
+        "judgment_date": "2023-06-22T00:00:00",
+        "cumulative_pro_ds": 46,
+        "cumulative_total": 71,
+        "cumulative_rate": 0.647887323943662
+      },
+      {
+        "case_id": "C-590/22",
+        "judgment_date": "2024-06-20T00:00:00",
+        "cumulative_pro_ds": 82,
+        "cumulative_total": 134,
+        "cumulative_rate": 0.6119402985074627
+      },
+      {
+        "case_id": "C-597/19",
+        "judgment_date": "2021-06-17T00:00:00",
+        "cumulative_pro_ds": 13,
+        "cumulative_total": 19,
+        "cumulative_rate": 0.6842105263157895
+      },
+      {
+        "case_id": "C-604/22",
+        "judgment_date": "2024-03-07T00:00:00",
+        "cumulative_pro_ds": 75,
+        "cumulative_total": 119,
+        "cumulative_rate": 0.6302521008403361
+      },
+      {
+        "case_id": "C-61/19",
+        "judgment_date": "2020-11-11T00:00:00",
+        "cumulative_pro_ds": 9,
+        "cumulative_total": 11,
+        "cumulative_rate": 0.8181818181818182
+      },
+      {
+        "case_id": "C-621/22",
+        "judgment_date": "2024-10-04T00:00:00",
+        "cumulative_pro_ds": 93,
+        "cumulative_total": 151,
+        "cumulative_rate": 0.6158940397350994
+      },
+      {
+        "case_id": "C-634/21",
+        "judgment_date": "2023-12-07T00:00:00",
+        "cumulative_pro_ds": 62,
+        "cumulative_total": 92,
+        "cumulative_rate": 0.6739130434782609
+      },
+      {
+        "case_id": "C-638/23",
+        "judgment_date": "2025-02-27T00:00:00",
+        "cumulative_pro_ds": 100,
+        "cumulative_total": 163,
+        "cumulative_rate": 0.6134969325153374
+      },
+      {
+        "case_id": "C-645/19",
+        "judgment_date": "2021-06-15T00:00:00",
+        "cumulative_pro_ds": 13,
+        "cumulative_total": 16,
+        "cumulative_rate": 0.8125
+      },
+      {
+        "case_id": "C-65/23",
+        "judgment_date": "2024-12-19T00:00:00",
+        "cumulative_pro_ds": 96,
+        "cumulative_total": 156,
+        "cumulative_rate": 0.6153846153846154
+      },
+      {
+        "case_id": "C-655/23",
+        "judgment_date": "2025-09-04T00:00:00",
+        "cumulative_pro_ds": 107,
+        "cumulative_total": 178,
+        "cumulative_rate": 0.601123595505618
+      },
+      {
+        "case_id": "C-659/22",
+        "judgment_date": "2023-10-05T00:00:00",
+        "cumulative_pro_ds": 52,
+        "cumulative_total": 80,
+        "cumulative_rate": 0.65
+      },
+      {
+        "case_id": "C-667/21",
+        "judgment_date": "2023-12-21T00:00:00",
+        "cumulative_pro_ds": 69,
+        "cumulative_total": 106,
+        "cumulative_rate": 0.6509433962264151
+      },
+      {
+        "case_id": "C-673/17",
+        "judgment_date": "2019-10-01T00:00:00",
+        "cumulative_pro_ds": 3,
+        "cumulative_total": 4,
+        "cumulative_rate": 0.75
+      },
+      {
+        "case_id": "C-683/21",
+        "judgment_date": "2023-12-05T00:00:00",
+        "cumulative_pro_ds": 58,
+        "cumulative_total": 87,
+        "cumulative_rate": 0.6666666666666666
+      },
+      {
+        "case_id": "C-687/21",
+        "judgment_date": "2024-01-25T00:00:00",
+        "cumulative_pro_ds": 73,
+        "cumulative_total": 116,
+        "cumulative_rate": 0.6293103448275862
+      },
+      {
+        "case_id": "C-710/23",
+        "judgment_date": "2025-04-03T00:00:00",
+        "cumulative_pro_ds": 104,
+        "cumulative_total": 169,
+        "cumulative_rate": 0.6153846153846154
+      },
+      {
+        "case_id": "C-740/22",
+        "judgment_date": "2024-03-07T00:00:00",
+        "cumulative_pro_ds": 76,
+        "cumulative_total": 120,
+        "cumulative_rate": 0.6333333333333333
+      },
+      {
+        "case_id": "C-741/21",
+        "judgment_date": "2024-04-11T00:00:00",
+        "cumulative_pro_ds": 79,
+        "cumulative_total": 125,
+        "cumulative_rate": 0.632
+      },
+      {
+        "case_id": "C-757/22",
+        "judgment_date": "2024-07-11T00:00:00",
+        "cumulative_pro_ds": 83,
+        "cumulative_total": 135,
+        "cumulative_rate": 0.6148148148148148
+      },
+      {
+        "case_id": "C-768/21",
+        "judgment_date": "2024-09-26T00:00:00",
+        "cumulative_pro_ds": 86,
+        "cumulative_total": 140,
+        "cumulative_rate": 0.6142857142857143
+      },
+      {
+        "case_id": "C-77/21",
+        "judgment_date": "2022-10-20T00:00:00",
+        "cumulative_pro_ds": 30,
+        "cumulative_total": 43,
+        "cumulative_rate": 0.6976744186046512
+      },
+      {
+        "case_id": "C-807/21",
+        "judgment_date": "2023-12-05T00:00:00",
+        "cumulative_pro_ds": 59,
+        "cumulative_total": 89,
+        "cumulative_rate": 0.6629213483146067
+      },
+      {
+        "case_id": "C-817/19",
+        "judgment_date": "2022-06-21T00:00:00",
+        "cumulative_pro_ds": 25,
+        "cumulative_total": 36,
+        "cumulative_rate": 0.6944444444444444
+      }
+    ],
+    "rolling_window": [
+      {
+        "judgment_date": "2020-07-16T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2020-11-11T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8181818181818182
+      },
+      {
+        "judgment_date": "2021-06-15T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8333333333333334
+      },
+      {
+        "judgment_date": "2021-06-15T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8461538461538461
+      },
+      {
+        "judgment_date": "2021-06-15T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8571428571428571
+      },
+      {
+        "judgment_date": "2021-06-15T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8666666666666667
+      },
+      {
+        "judgment_date": "2021-06-15T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.8125
+      },
+      {
+        "judgment_date": "2021-06-17T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.7647058823529411
+      },
+      {
+        "judgment_date": "2021-06-17T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.7222222222222222
+      },
+      {
+        "judgment_date": "2021-06-17T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6842105263157895
+      },
+      {
+        "judgment_date": "2021-06-22T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2021-06-22T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2021-06-22T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2021-06-22T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2022-02-24T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2022-02-24T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2022-02-24T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2022-03-24T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-04-28T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-06-21T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-06-21T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-06-21T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-06-21T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-06-21T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-06-21T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-06-21T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-06-21T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-06-22T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2022-08-01T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2022-08-01T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2022-10-20T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2022-10-20T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2022-10-20T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2022-10-20T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2022-10-27T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2022-10-27T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2022-10-27T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2022-10-27T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2022-12-08T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2022-12-08T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.85
+      },
+      {
+        "judgment_date": "2022-12-08T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2022-12-08T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2022-12-08T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-01-12T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-01-12T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-01-26T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-01-26T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-01-26T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-02-09T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-02-09T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2023-03-02T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2023-03-02T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2023-03-30T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2023-03-30T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2023-05-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2023-05-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2023-05-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2023-05-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2023-05-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2023-06-22T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2023-06-22T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2023-06-22T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2023-07-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2023-07-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2023-07-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2023-07-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2023-07-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2023-07-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2023-07-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2023-07-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2023-10-05T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2023-10-26T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2023-10-26T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2023-10-26T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2023-12-05T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2023-12-05T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2023-12-05T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2023-12-05T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-12-05T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-12-05T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-12-07T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2023-12-07T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2023-12-07T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2023-12-07T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2023-12-07T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2023-12-14T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2023-12-14T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2023-12-14T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2023-12-14T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2023-12-14T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.8
+      },
+      {
+        "judgment_date": "2023-12-14T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2023-12-14T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.75
+      },
+      {
+        "judgment_date": "2023-12-21T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-12-21T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2023-12-21T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2023-12-21T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2023-12-21T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-01-11T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-01-11T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-01-16T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-01-16T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-01-16T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-01-25T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2024-01-25T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-01-25T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-01-25T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-01-25T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-03-07T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-03-07T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.4
+      },
+      {
+        "judgment_date": "2024-03-07T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.4
+      },
+      {
+        "judgment_date": "2024-03-07T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-03-14T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-03-14T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-04-11T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-04-11T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-04-11T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-06-20T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-06-20T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-06-20T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-06-20T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-06-20T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.4
+      },
+      {
+        "judgment_date": "2024-06-20T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.4
+      },
+      {
+        "judgment_date": "2024-06-20T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.4
+      },
+      {
+        "judgment_date": "2024-06-20T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-06-20T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-07-11T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-07-11T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2024-09-12T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-09-12T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2024-09-12T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2024-09-26T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.4
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-10-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2024-11-28T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-11-28T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-12-19T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2024-12-19T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2025-01-09T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-01-09T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-01-09T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2025-01-09T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-01-09T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-02-13T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-02-27T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-02-27T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2025-02-27T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-03-13T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-03-13T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-04-03T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.7
+      },
+      {
+        "judgment_date": "2025-04-03T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.65
+      },
+      {
+        "judgment_date": "2025-04-30T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.6
+      },
+      {
+        "judgment_date": "2025-04-30T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2025-04-30T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2025-04-30T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2025-04-30T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.55
+      },
+      {
+        "judgment_date": "2025-09-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2025-09-04T00:00:00",
+        "pro_ds": 0,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2025-09-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2025-09-04T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.45
+      },
+      {
+        "judgment_date": "2025-12-02T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2025-12-02T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.5
+      },
+      {
+        "judgment_date": "2025-12-02T00:00:00",
+        "pro_ds": 1,
+        "rolling_pro_ds": 0.55
+      }
+    ]
+  },
+  "break_points": {
+    "candidate_breaks": [
+      {
+        "break_point": "2023-01-01",
+        "rationale": "Article 82 compensation case surge",
+        "pre_n": 52,
+        "post_n": 129,
+        "pre_pro_ds_rate": 69.2,
+        "post_pro_ds_rate": 57.4,
+        "difference_pp": -11.9,
+        "pre_compensation_pct": 1.9,
+        "post_compensation_pct": 27.1
+      }
+    ],
+    "evidence": {
+      "third_chamber_concentration": {
+        "2019": 25.0,
+        "2020": 14.285714285714285,
+        "2021": 0.0,
+        "2022": 3.4482758620689653,
+        "2023": 31.48148148148148,
+        "2024": 42.0,
+        "2025": 0.0
+      },
+      "pro_ds_purpose_trend": {
+        "2019": 75.0,
+        "2020": 100.0,
+        "2021": 58.333333333333336,
+        "2022": 79.3103448275862,
+        "2023": 70.37037037037037,
+        "2024": 72.0,
+        "2025": 96.0
+      },
+      "dominant_source_trend": {
+        "PRINCIPLE_BASED": {
+          "2019": 0.0,
+          "2020": 14.3,
+          "2021": 0.0,
+          "2022": 0.0,
+          "2023": 0.0,
+          "2024": 0.0,
+          "2025": 0.0
+        },
+        "RULE_BASED": {
+          "2019": 25.0,
+          "2020": 0.0,
+          "2021": 0.0,
+          "2022": 0.0,
+          "2023": 0.0,
+          "2024": 0.0,
+          "2025": 4.0
+        },
+        "SEMANTIC": {
+          "2019": 25.0,
+          "2020": 28.6,
+          "2021": 25.0,
+          "2022": 17.2,
+          "2023": 24.1,
+          "2024": 28.0,
+          "2025": 8.0
+        },
+        "SYSTEMATIC": {
+          "2019": 25.0,
+          "2020": 28.6,
+          "2021": 50.0,
+          "2022": 41.4,
+          "2023": 33.3,
+          "2024": 26.0,
+          "2025": 44.0
+        },
+        "TELEOLOGICAL": {
+          "2019": 25.0,
+          "2020": 28.6,
+          "2021": 25.0,
+          "2022": 41.4,
+          "2023": 42.6,
+          "2024": 46.0,
+          "2025": 44.0
+        }
+      }
+    }
+  },
+  "metadata": {
+    "analysis_date": "2026-01-19T13:04:06.649094",
+    "total_holdings": 181,
+    "total_cases": 67,
+    "date_range": {
+      "start": "2019-01-16",
+      "end": "2025-12-02"
+    },
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  }
+}

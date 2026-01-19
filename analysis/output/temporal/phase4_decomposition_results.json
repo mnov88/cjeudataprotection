@@ -1,0 +1,245 @@
+{
+  "blinder_oaxaca": {
+    "raw_rates": {
+      "early": 69.23,
+      "late": 57.36,
+      "difference_pp": -11.87
+    },
+    "mean_characteristics": {
+      "early": {
+        "is_compensation": 0.019230769230769232,
+        "pro_ds_purpose": 0.7692307692307693,
+        "is_third_chamber": 0.057692307692307696
+      },
+      "late": {
+        "is_compensation": 0.2713178294573643,
+        "pro_ds_purpose": 0.7596899224806202,
+        "is_third_chamber": 0.29457364341085274
+      }
+    },
+    "decomposition_lpm": {
+      "total_difference_pp": -11.87,
+      "composition_effect_pp": -8.75,
+      "coefficient_effect_pp": -7.52,
+      "interaction_pp": 4.4,
+      "composition_pct": 73.7,
+      "coefficient_pct": 63.4
+    },
+    "composition_detail": {
+      "is_compensation": {
+        "mean_diff": 25.21,
+        "pooled_coef": -0.6306,
+        "contribution": -15.9,
+        "lpm_composition_pp": -3.27,
+        "lpm_coefficient_pp": -0.69
+      },
+      "pro_ds_purpose": {
+        "mean_diff": -0.95,
+        "pooled_coef": 1.3985,
+        "contribution": -1.33,
+        "lpm_composition_pp": -0.29,
+        "lpm_coefficient_pp": -5.36
+      },
+      "is_third_chamber": {
+        "mean_diff": 23.69,
+        "pooled_coef": -1.0051,
+        "contribution": -23.81,
+        "lpm_composition_pp": -5.19,
+        "lpm_coefficient_pp": -1.47
+      }
+    }
+  },
+  "standardization": {
+    "concept_cluster_standardization": {
+      "raw_early": 69.23,
+      "raw_late": 57.36,
+      "raw_diff_pp": -11.87,
+      "standardized_early": 72.57,
+      "standardized_late": 58.93,
+      "standardized_diff_pp": -13.63,
+      "composition_explained_pp": 1.77,
+      "composition_explained_pct": 14.9,
+      "cluster_detail": {
+        "ENFORCEMENT": {
+          "weight": 35.91,
+          "early_rate": 75.0,
+          "late_rate": 39.62,
+          "within_change": -35.38
+        },
+        "OTHER": {
+          "weight": 12.15,
+          "early_rate": 42.86,
+          "late_rate": 53.33,
+          "within_change": 10.48
+        },
+        "RIGHTS": {
+          "weight": 11.6,
+          "early_rate": 75.0,
+          "late_rate": 82.35,
+          "within_change": 7.35
+        },
+        "LAWFULNESS": {
+          "weight": 9.39,
+          "early_rate": 66.67,
+          "late_rate": 63.64,
+          "within_change": -3.03
+        },
+        "PRINCIPLES": {
+          "weight": 9.39,
+          "early_rate": 66.67,
+          "late_rate": 60.0,
+          "within_change": -6.67
+        },
+        "SCOPE": {
+          "weight": 9.39,
+          "early_rate": 75.0,
+          "late_rate": 100.0,
+          "within_change": 25.0
+        },
+        "SPECIAL": {
+          "weight": 6.63,
+          "early_rate": 100.0,
+          "late_rate": 60.0,
+          "within_change": -40.0
+        },
+        "ACTORS": {
+          "weight": 5.52,
+          "early_rate": 100.0,
+          "late_rate": 66.67,
+          "within_change": -33.33
+        }
+      }
+    },
+    "compensation_standardization": {
+      "standardized_diff_pp": -15.21,
+      "composition_explained_pp": 3.34
+    }
+  },
+  "shift_share": {
+    "shift_share": {
+      "total_change_pp": -27.59,
+      "within_effect_pp": -13.63,
+      "between_effect_pp": -3.81,
+      "interaction_pp": -10.14,
+      "within_pct": 49.4,
+      "between_pct": 13.8,
+      "cluster_detail": {
+        "LAWFULNESS": {
+          "weight_early": 11.54,
+          "weight_late": 8.53,
+          "weight_change": -3.01,
+          "rate_early": 66.67,
+          "rate_late": 63.64,
+          "rate_change": -3.03,
+          "within_contrib_pp": -0.28,
+          "between_contrib_pp": -1.95
+        },
+        "RIGHTS": {
+          "weight_early": 7.69,
+          "weight_late": 13.18,
+          "weight_change": 5.49,
+          "rate_early": 75.0,
+          "rate_late": 82.35,
+          "rate_change": 7.35,
+          "within_contrib_pp": 0.85,
+          "between_contrib_pp": 4.44
+        },
+        "PRINCIPLES": {
+          "weight_early": 23.08,
+          "weight_late": 3.88,
+          "weight_change": -19.2,
+          "rate_early": 66.67,
+          "rate_late": 60.0,
+          "rate_change": -6.67,
+          "within_contrib_pp": -0.63,
+          "between_contrib_pp": -12.42
+        },
+        "ENFORCEMENT": {
+          "weight_early": 23.08,
+          "weight_late": 41.09,
+          "weight_change": 18.01,
+          "rate_early": 75.0,
+          "rate_late": 39.62,
+          "rate_change": -35.38,
+          "within_contrib_pp": -12.7,
+          "between_contrib_pp": 8.31
+        },
+        "SCOPE": {
+          "weight_early": 15.38,
+          "weight_late": 6.98,
+          "weight_change": -8.41,
+          "rate_early": 75.0,
+          "rate_late": 100.0,
+          "rate_change": 25.0,
+          "within_contrib_pp": 2.35,
+          "between_contrib_pp": -7.42
+        },
+        "OTHER": {
+          "weight_early": 13.46,
+          "weight_late": 11.63,
+          "weight_change": -1.83,
+          "rate_early": 42.86,
+          "rate_late": 53.33,
+          "rate_change": 10.48,
+          "within_contrib_pp": 1.27,
+          "between_contrib_pp": -0.92
+        },
+        "SPECIAL": {
+          "weight_early": 3.85,
+          "weight_late": 7.75,
+          "weight_change": 3.91,
+          "rate_early": 100.0,
+          "rate_late": 60.0,
+          "rate_change": -40.0,
+          "within_contrib_pp": -2.65,
+          "between_contrib_pp": 2.6
+        },
+        "ACTORS": {
+          "weight_early": 1.92,
+          "weight_late": 6.98,
+          "weight_change": 5.05,
+          "rate_early": 100.0,
+          "rate_late": 66.67,
+          "rate_change": -33.33,
+          "within_contrib_pp": -1.84,
+          "between_contrib_pp": 3.54
+        }
+      }
+    }
+  },
+  "counterfactual": {
+    "no_compensation_surge": {
+      "actual_late": 57.36,
+      "counterfactual_late": 65.35,
+      "compensation_effect_pp": -7.98
+    },
+    "no_concept_shift": {
+      "actual_late": 57.36,
+      "counterfactual_late": 62.82,
+      "concept_shift_effect_pp": -5.46
+    },
+    "full_composition_adjustment": {
+      "actual_late": 57.36,
+      "counterfactual_late": 66.4,
+      "full_composition_effect_pp": -9.04
+    }
+  },
+  "summary": {
+    "summary": {
+      "raw_early_pct": 69.23,
+      "raw_late_pct": 57.36,
+      "raw_difference_pp": -11.87,
+      "composition_effect_pp": 1.77,
+      "coefficient_effect_pp": -13.63,
+      "composition_pct_of_total": 14.9,
+      "coefficient_pct_of_total": 114.9,
+      "interpretation": "Mixed"
+    }
+  },
+  "metadata": {
+    "analysis_date": "2026-01-19T13:13:13.324876",
+    "n_holdings": 181,
+    "n_early": 52,
+    "n_late": 129
+  }
+}

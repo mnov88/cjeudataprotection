@@ -1,0 +1,273 @@
+{
+  "time_as_covariate": {
+    "models": {
+      "M_T1_year_only": {
+        "year_coef": -0.18593977877091353,
+        "year_or": 0.8303235965838645,
+        "year_se": 0.11415771232059437,
+        "year_p": 0.10335592688874279,
+        "year_ci_lower": 0.6638567472204394,
+        "year_ci_upper": 1.0385332045364155,
+        "aic": 243.6900401046263,
+        "bic": 250.08703416715795,
+        "pseudo_r2": 0.011382411194293618,
+        "n": 181,
+        "converged": true
+      },
+      "M_T2_year_compensation": {
+        "year_coef": -0.09051285501188233,
+        "year_or": 0.9134625912530124,
+        "year_se": 0.11955291178099424,
+        "year_p": 0.448993233664724,
+        "year_ci_lower": 0.7226454516441247,
+        "year_ci_upper": 1.1546656852544408,
+        "aic": 236.6346712749521,
+        "bic": 246.23016236874957,
+        "pseudo_r2": 0.04873188509913806,
+        "n": 181,
+        "converged": true
+      },
+      "M_T3_year_purpose": {
+        "year_coef": -0.24672920042403793,
+        "year_or": 0.7813522547440019,
+        "year_se": 0.12411261320052301,
+        "year_p": 0.04681763805076783,
+        "year_ci_lower": 0.6126325680823372,
+        "year_ci_upper": 0.9965375296722447,
+        "aic": 225.67142927810914,
+        "bic": 235.26692037190662,
+        "pseudo_r2": 0.09395050938440785,
+        "n": 181,
+        "converged": true
+      },
+      "M_T4_year_chamber": {
+        "year_coef": -0.1534340521423156,
+        "year_or": 0.8577573295919237,
+        "year_se": 0.1180089504407668,
+        "year_p": 0.19353587204751754,
+        "year_ci_lower": 0.6806332970658138,
+        "year_ci_upper": 1.0809750854688573,
+        "aic": 231.2098029154252,
+        "bic": 240.80529400922268,
+        "pseudo_r2": 0.07110711718989493,
+        "n": 181,
+        "converged": true
+      },
+      "M_T5_full": {
+        "year_coef": -0.18860187861129052,
+        "year_or": 0.8281161318193863,
+        "year_se": 0.13301265556442407,
+        "year_p": 0.15621286243740476,
+        "year_ci_lower": 0.6380703830144016,
+        "year_ci_upper": 1.0747659600493085,
+        "aic": 219.00560749515677,
+        "bic": 234.9980926514859,
+        "pseudo_r2": 0.13794240412100622,
+        "n": 181,
+        "converged": true
+      },
+      "M_T6_no_year": {
+        "aic": 219.0913278255458,
+        "pseudo_r2": 0.12933971123042065,
+        "n": 181
+      }
+    },
+    "interpretation": "NO_EFFECT: Year is not significant in any specification"
+  },
+  "interactions": {
+    "interactions": {
+      "purpose_x_year": {
+        "interaction_coef": 0.036690343917682146,
+        "interaction_or": 1.0373717426281188,
+        "interaction_p": 0.9051369499713043,
+        "main_purpose_or": 4.9958896139657565,
+        "main_purpose_p": 0.0006943787152282065,
+        "main_year_or": 0.7588750078804639,
+        "main_year_p": 0.3154029490250755
+      },
+      "third_chamber_x_year": {
+        "interaction_coef": -0.21984525677307382,
+        "interaction_or": 0.8026429919197832,
+        "interaction_p": 0.5297258029412817,
+        "main_chamber_or": 0.32530182684089676,
+        "main_chamber_p": 0.05346893632124066
+      },
+      "compensation_x_year": {
+        "interaction_coef": -0.4050343054747384,
+        "interaction_or": 0.666953930294805,
+        "interaction_p": 0.44649534911550115,
+        "main_compensation_or": 0.6183952561554905,
+        "main_compensation_p": 0.6332354745615312
+      }
+    }
+  },
+  "temporal_confounding": {
+    "third_chamber_confounding": {
+      "no_year_control": {
+        "or": 0.2376543209876544,
+        "p": 0.00013427039161987013
+      },
+      "linear_year_control": {
+        "or": 0.24709254227971894,
+        "p": 0.00021870771469786928
+      },
+      "year_fixed_effects": {
+        "or": 0.1959589317116935,
+        "p": 0.00010763493940892242
+      },
+      "attenuation_pct": -13.425218571686209
+    },
+    "third_chamber_compensation_control": {
+      "controlling_compensation": {
+        "or": 0.33087515834767,
+        "p": 0.009785261735535717
+      },
+      "controlling_both": {
+        "or": 0.322137682763915,
+        "p": 0.0084971188774041
+      }
+    }
+  },
+  "split_sample": {
+    "purpose_by_period": {
+      "early_or": 4.822222222222221,
+      "early_p": 0.02405917010662048,
+      "late_or": 4.814814814814815,
+      "late_p": 0.0004744335869808424,
+      "interaction_p": 0.9985217528413501
+    },
+    "compensation_late_period": {
+      "compensation_rate": 0.34285714285714286,
+      "non_compensation_rate": 0.6595744680851063,
+      "gap": -0.3167173252279635
+    }
+  },
+  "model_comparison": {
+    "models": [
+      {
+        "name": "M0: Null",
+        "formula": "pro_ds ~ 1",
+        "aic": 244.44970230403052,
+        "bic": 247.64819933529634,
+        "pseudo_r2": 2.5676127890505995e-11,
+        "llf": -121.22485115201526,
+        "year_p": null,
+        "n": 181
+      },
+      {
+        "name": "M1: Year only",
+        "formula": "pro_ds ~ year_centered",
+        "aic": 243.6900401046263,
+        "bic": 250.08703416715795,
+        "pseudo_r2": 0.011382411194293618,
+        "llf": -119.84502005231315,
+        "year_p": 0.10335592688874279,
+        "n": 181
+      },
+      {
+        "name": "M2: Compensation only",
+        "formula": "pro_ds ~ is_compensation",
+        "aic": 235.21550476725184,
+        "bic": 241.6124988297835,
+        "pseudo_r2": 0.04633619854326643,
+        "llf": -115.60775238362592,
+        "year_p": null,
+        "n": 181
+      },
+      {
+        "name": "M3: Purpose only",
+        "formula": "pro_ds ~ pro_ds_purpose",
+        "aic": 227.8693629869646,
+        "bic": 234.26635704949626,
+        "pseudo_r2": 0.0766358512559211,
+        "llf": -111.9346814934823,
+        "year_p": null,
+        "n": 181
+      },
+      {
+        "name": "M4: Chamber only",
+        "formula": "pro_ds ~ is_third_chamber",
+        "aic": 230.94045126026595,
+        "bic": 237.3374453227976,
+        "pseudo_r2": 0.06396894243302897,
+        "llf": -113.47022563013297,
+        "year_p": null,
+        "n": 181
+      },
+      {
+        "name": "M5: Year + Compensation",
+        "formula": "pro_ds ~ year_centered + is_compensation",
+        "aic": 236.6346712749521,
+        "bic": 246.23016236874957,
+        "pseudo_r2": 0.04873188509913806,
+        "llf": -115.31733563747605,
+        "year_p": 0.448993233664724,
+        "n": 181
+      },
+      {
+        "name": "M6: Year + Purpose",
+        "formula": "pro_ds ~ year_centered + pro_ds_purpose",
+        "aic": 225.67142927810914,
+        "bic": 235.26692037190662,
+        "pseudo_r2": 0.09395050938440785,
+        "llf": -109.83571463905457,
+        "year_p": 0.04681763805076783,
+        "n": 181
+      },
+      {
+        "name": "M7: Year + Chamber",
+        "formula": "pro_ds ~ year_centered + is_third_chamber",
+        "aic": 231.2098029154252,
+        "bic": 240.80529400922268,
+        "pseudo_r2": 0.07110711718989493,
+        "llf": -112.6049014577126,
+        "year_p": 0.19353587204751754,
+        "n": 181
+      },
+      {
+        "name": "M8: Compensation + Purpose",
+        "formula": "pro_ds ~ is_compensation + pro_ds_purpose",
+        "aic": 222.19889927863608,
+        "bic": 231.79439037243355,
+        "pseudo_r2": 0.10827319143509295,
+        "llf": -108.09944963931804,
+        "year_p": null,
+        "n": 181
+      },
+      {
+        "name": "M9: Full (no year)",
+        "formula": "pro_ds ~ is_compensation + pro_ds_purpose + is_third_chamber",
+        "aic": 219.0913278255458,
+        "bic": 231.88531595060908,
+        "pseudo_r2": 0.12933971123042065,
+        "llf": -105.5456639127729,
+        "year_p": null,
+        "n": 181
+      },
+      {
+        "name": "M10: Full (with year)",
+        "formula": "pro_ds ~ year_centered + is_compensation + pro_ds_purpose + is_third_chamber",
+        "aic": 219.00560749515677,
+        "bic": 234.9980926514859,
+        "pseudo_r2": 0.13794240412100622,
+        "llf": -104.50280374757838,
+        "year_p": 0.15621286243740476,
+        "n": 181
+      }
+    ],
+    "comparison": {
+      "best_by_aic": "M10: Full (with year)",
+      "lrt_year_addition": {
+        "chi2": 2.085720330389023,
+        "df": 1,
+        "p": 0.14868207354725937
+      }
+    }
+  },
+  "metadata": {
+    "analysis_date": "2026-01-19T13:09:40.422274",
+    "n_holdings": 181,
+    "n_early": 52,
+    "n_late": 129
+  }
+}
