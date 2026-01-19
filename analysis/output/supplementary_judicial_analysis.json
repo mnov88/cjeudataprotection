@@ -43,7 +43,7 @@
       "top_topic": "ENFORCEMENT",
       "top_pct": 0.6862745098039216,
       "hhi": 0.49327181853133417,
-      "spec_ratio": 2.5810698046486245,
+      "spec_ratio": 2.58437198895011,
       "is_specialized": true,
       "topics": {
         "ENFORCEMENT": 35,
@@ -60,7 +60,7 @@
       "top_topic": "SCOPE",
       "top_pct": 0.22857142857142856,
       "hhi": 0.16897959183673472,
-      "spec_ratio": 0.8841942833673959,
+      "spec_ratio": 0.8853255090617729,
       "is_specialized": false,
       "topics": {
         "OTHER": 6,
@@ -77,18 +77,17 @@
       "n": 32,
       "top_topic": "LAWFULNESS",
       "top_pct": 0.3125,
-      "hhi": 0.208984375,
-      "spec_ratio": 1.0935213399417025,
+      "hhi": 0.2109375,
+      "spec_ratio": 1.1051532764273149,
       "is_specialized": false,
       "topics": {
         "LAWFULNESS": 10,
         "RIGHTS": 2,
-        "PRINCIPLES": 1,
+        "PRINCIPLES": 2,
         "ENFORCEMENT": 9,
         "SPECIAL_CATEGORIES": 3,
         "ACTORS": 3,
-        "SCOPE": 3,
-        "OTHER": 1
+        "SCOPE": 3
       }
     },
     "I. Ziemele": {
@@ -96,7 +95,7 @@
       "top_topic": "RIGHTS",
       "top_pct": 0.4,
       "hhi": 0.31500000000000006,
-      "spec_ratio": 1.6482534738859609,
+      "spec_ratio": 1.6503622261314572,
       "is_specialized": true,
       "topics": {
         "ENFORCEMENT": 7,
@@ -110,7 +109,7 @@
       "top_topic": "OTHER",
       "top_pct": 0.25,
       "hhi": 0.1640625,
-      "spec_ratio": 0.8584653509822712,
+      "spec_ratio": 0.8595636594434671,
       "is_specialized": false,
       "topics": {
         "SCOPE": 1,
@@ -191,14 +190,14 @@
       "n": 54,
       "top_topic": "LAWFULNESS",
       "top_pct": 0.2222222222222222,
-      "hhi": 0.14814814814814814,
+      "hhi": 0.14746227709190668,
       "is_specialized": false
     },
     "L.S. Rossi": {
       "n": 53,
       "top_topic": "ENFORCEMENT",
       "top_pct": 0.2830188679245283,
-      "hhi": 0.1676753292986828,
+      "hhi": 0.1683873264506942,
       "is_specialized": false
     },
     "M. Gavalec": {
@@ -219,7 +218,7 @@
       "n": 48,
       "top_topic": "LAWFULNESS",
       "top_pct": 0.20833333333333334,
-      "hhi": 0.15538194444444445,
+      "hhi": 0.15625,
       "is_specialized": false
     },
     "M. Ile\u0161i\u010d": {
@@ -233,60 +232,114 @@
   "specialization_outcomes": {
     "N. J\u00e4\u00e4skinen": {
       "observed": 0.43137254901960786,
-      "expected": 0.5148966373879869,
-      "diff": -0.08352408836837899,
+      "expected": 0.512864451964798,
+      "diff": -0.08149190294519015,
       "n": 51
     },
     "T. von Danwitz": {
       "observed": 0.6857142857142857,
-      "expected": 0.6699627543325023,
-      "diff": 0.015751531381783423,
+      "expected": 0.6681220180379844,
+      "diff": 0.017592267676301288,
       "n": 35
     },
     "L.S. Rossi": {
       "observed": 0.8125,
-      "expected": 0.6292999892264599,
-      "diff": 0.1832000107735401,
+      "expected": 0.6351210676578325,
+      "diff": 0.1773789323421675,
       "n": 32
     },
     "I. Ziemele": {
       "observed": 0.6,
-      "expected": 0.6250538677009265,
-      "diff": -0.025053867700926546,
+      "expected": 0.6234432234432234,
+      "diff": -0.02344322344322347,
       "n": 20
     },
     "M. Ile\u0161i\u010d": {
       "observed": 0.625,
-      "expected": 0.6245690583925878,
-      "diff": 0.0004309416074121941,
+      "expected": 0.622293148028442,
+      "diff": 0.0027068519715579553,
       "n": 16
     }
   },
   "deep_dive_topic_adjusted": {
     "within_topic_comparisons": {
-      "N. J\u00e4\u00e4skinen": {
+      "N. J\u00e4\u00e4skinen_full_enforcement": {
         "topic": "ENFORCEMENT",
         "rate": 0.34285714285714286,
         "n": 35,
         "diff_from_baseline": -0.1186813186813187
       },
-      "L.S. Rossi": {
+      "L.S. Rossi_full_enforcement": {
         "topic": "ENFORCEMENT",
         "rate": 0.7777777777777778,
         "n": 9,
         "diff_from_baseline": 0.3162393162393162
       },
-      "T. von Danwitz": {
+      "T. von Danwitz_full_enforcement": {
         "topic": "ENFORCEMENT",
         "rate": 0.5714285714285714,
         "n": 7,
         "diff_from_baseline": 0.10989010989010983
       },
-      "I. Ziemele": {
+      "I. Ziemele_full_enforcement": {
         "topic": "ENFORCEMENT",
         "rate": 0.42857142857142855,
         "n": 7,
         "diff_from_baseline": -0.032967032967033016
+      },
+      "N. J\u00e4\u00e4skinen_enforcement_no_comp": {
+        "topic": "ENFORCEMENT_NO_COMP",
+        "rate": 0.5,
+        "n": 4,
+        "diff_from_baseline": -0.08620689655172409
+      },
+      "L.S. Rossi_enforcement_no_comp": {
+        "topic": "ENFORCEMENT_NO_COMP",
+        "rate": 0.7777777777777778,
+        "n": 9,
+        "diff_from_baseline": 0.1915708812260537
+      },
+      "T. von Danwitz_enforcement_no_comp": {
+        "topic": "ENFORCEMENT_NO_COMP",
+        "rate": 0.6666666666666666,
+        "n": 3,
+        "diff_from_baseline": 0.08045977011494254
+      },
+      "I. Ziemele_enforcement_no_comp": {
+        "topic": "ENFORCEMENT_NO_COMP",
+        "rate": 0.3333333333333333,
+        "n": 6,
+        "diff_from_baseline": -0.2528735632183908
+      },
+      "M. Ile\u0161i\u010d_enforcement_no_comp": {
+        "topic": "ENFORCEMENT_NO_COMP",
+        "rate": 1.0,
+        "n": 2,
+        "diff_from_baseline": 0.4137931034482759
+      },
+      "N. J\u00e4\u00e4skinen_compensation_only": {
+        "topic": "COMPENSATION",
+        "rate": 0.3225806451612903,
+        "n": 31,
+        "diff_from_baseline": -0.03853046594982079
+      },
+      "T. von Danwitz_compensation_only": {
+        "topic": "COMPENSATION",
+        "rate": 0.5,
+        "n": 4,
+        "diff_from_baseline": 0.1388888888888889
+      },
+      "L.S. Rossi_lawfulness": {
+        "topic": "LAWFULNESS",
+        "rate": 0.7,
+        "n": 10,
+        "diff_from_baseline": 0.05294117647058816
+      },
+      "M. Ile\u0161i\u010d_lawfulness": {
+        "topic": "LAWFULNESS",
+        "rate": 0.5,
+        "n": 2,
+        "diff_from_baseline": -0.1470588235294118
       }
     },
     "categories": {
@@ -304,9 +357,9 @@
     },
     "variance_decomposition": {
       "total_ss": 43.149171270718156,
-      "topic_ss": 3.96115144740429,
+      "topic_ss": 4.105409150485523,
       "rapporteur_ss": 3.9039461311217805,
-      "r2_topic": 0.09180133316007398,
+      "r2_topic": 0.09514456545939576,
       "r2_rapporteur": 0.09047557615019763
     }
   }

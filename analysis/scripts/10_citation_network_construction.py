@@ -22,7 +22,8 @@ from collections import defaultdict
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent.parent
-DATA_PATH = PROJECT_ROOT / "parsed-coded" / "holdings.csv"
+# Fixed: Updated path from "parsed-coded" to "data/parsed"
+DATA_PATH = PROJECT_ROOT / "data" / "parsed" / "holdings.csv"
 PREPARED_PATH = PROJECT_ROOT / "analysis" / "output" / "holdings_prepared.csv"
 OUTPUT_PATH = PROJECT_ROOT / "analysis" / "output" / "citation_network"
 

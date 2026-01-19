@@ -537,6 +537,18 @@ To address the concern that cases with multiple holdings are overweighted in hol
 
 *Key finding: Third Chamber effect attenuates from highly significant to marginally significant after controlling for year. This suggests temporal confounding—the concentration of recent Article 82 compensation cases in the Third Chamber—may partially explain the observed association.*
 
+**Table B4: Third Chamber Effect Excluding Compensation Cases (Critical Sensitivity)**
+
+This analysis addresses a key methodological concern: 58.5% of Third Chamber holdings are compensation cases, compared to only 2.0% of Grand Chamber holdings. The compensation gap (Section 4.7) shows these cases are systematically less likely to favor data subjects. Is the Third Chamber effect driven entirely by compensation caseload?
+
+| Sample | Third Chamber | Grand Chamber | Gap (pp) | OR | p-value |
+|--------|---------------|---------------|----------|-----|---------|
+| Full sample | 34.1% (n=41) | 77.6% (n=49) | 43.4 | 0.15 | 0.0001 |
+| Excluding compensation | 41.2% (n=17) | 77.1% (n=48) | 35.9 | 0.21 | 0.014 |
+| Gap reduction | — | — | 7.5pp | — | — |
+
+*Interpretation:* Compensation cases explain only 17.3% of the Third Chamber gap. The effect **persists** (OR=0.21, p=0.014) even when excluding all Article 82 compensation cases. This suggests the Third Chamber effect is not merely a compositional artifact of compensation case allocation, but reflects a genuine interpretive tendency distinct from the Grand Chamber—potentially related to different use of teleological reasoning (61% vs 76% pro-DS purpose invocation) and level-shifting (2.4% vs 20.4%).
+
 ## Appendix C: Replication Materials
 
 All analysis scripts are available at: `analysis/scripts/`

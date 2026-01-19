@@ -25,7 +25,8 @@ warnings.filterwarnings('ignore')
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
-DATA_PATH = Path(__file__).parent.parent.parent / "parsed-coded" / "holdings.csv"
+# Fixed: Updated path from "parsed-coded" to "data/parsed"
+DATA_PATH = Path(__file__).parent.parent.parent / "data" / "parsed" / "holdings.csv"
 OUTPUT_DIR = Path(__file__).parent.parent / "output" / "temporal"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

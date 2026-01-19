@@ -7,5 +7,18 @@
   "or_unadjusted": 0.1500974658869395,
   "or_adjusted_concept": 0.11019450470735653,
   "or_adjusted_full": 0.023675330538064795,
-  "p_adjusted_full": 0.0007409697380719376
+  "p_adjusted_full": 0.0007409697380719376,
+  "sensitivity_excl_compensation": {
+    "third_comp_pct": 58.536585365853654,
+    "grand_comp_pct": 2.0408163265306123,
+    "third_full_rate": 34.146341463414636,
+    "third_no_comp_rate": 41.17647058823529,
+    "grand_full_rate": 77.55102040816327,
+    "grand_no_comp_rate": 77.08333333333334,
+    "full_gap_pp": 43.40467894474863,
+    "no_comp_gap_pp": 35.90686274509805,
+    "gap_explained_by_comp_pct": 17.27421186364451,
+    "or_excl_compensation": 0.20810810810810812,
+    "p_excl_compensation": 0.01380799250087995
+  }
 }

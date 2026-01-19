@@ -15,9 +15,12 @@ This document provides a table of contents and summary of central claims from al
 | 60.8% of holdings favor data subjects | — | Baseline |
 | Pro-DS purpose invocation increases odds 3.89x | OR=3.89 | p=0.008 |
 | Third Chamber pro-DS rate 43pp lower than Grand Chamber | 34% vs 77% | p<0.001 |
+| **Third Chamber effect persists excluding compensation** | OR=0.21 | p=0.014 |
 | Compensation cases 31pp less likely pro-DS | 36% vs 67% | p<0.001 |
+| **ENFORCEMENT cluster: 55% is compensation** | — | Heterogeneity |
 | Purpose propagation through citations | Φ=0.396 | p<0.0001 |
 | Apparent temporal decline is compositional, not real | — | p=0.19 |
+| **Rapporteur within-topic effects: NOT significant excl. comp** | — | p>0.3 |
 
 ---
 
@@ -114,6 +117,10 @@ Statistical chamber and rapporteur effects exist but largely reflect case alloca
 
 - **Claim:** Third Chamber effect is robust across all specifications (OR 0.11-0.26)
 - **Caveat:** Reflects case-type allocation, not judicial bias
+- **NEW - Compensation-Exclusion Sensitivity (Table B4):**
+  - Excluding compensation: Third 41.2% vs Grand 77.1% (gap reduces from 43.4pp to 35.9pp)
+  - Effect **persists** (OR=0.21, p=0.014) even excluding compensation
+  - Compensation explains only 17.3% of gap—Third Chamber effect is genuine, not just compositional
 
 #### 3.2 Rapporteur Effects
 | Rapporteur | Residual | Interpretation |
@@ -124,6 +131,11 @@ Statistical chamber and rapporteur effects exist but largely reflect case alloca
 | I. Ziemele | -3pp | Topic-explained |
 
 - **Key Finding:** 86% of compensation cases assigned to Jääskinen—no apples-to-apples comparison possible
+- **NEW - Revised Within-Topic Analysis (Section 6.3):**
+  - The apparent 43.5pp Rossi-Jääskinen gap within ENFORCEMENT was a **compositional artifact**
+  - Rossi handles 0/9 compensation cases in ENFORCEMENT; Jääskinen handles 31/35 (89%)
+  - Excluding compensation: **No significant rapporteur effects** (p>0.3 for all tests)
+  - Within-topic comparisons were largely comparing different case types, not rapporteur dispositions
 
 #### 3.3 Individual Judge Effects
 - **Claim:** Not identifiable due to high network density (0.67)
@@ -280,14 +292,16 @@ Appears in: All documents
 - Propagates through citations
 - The pathway through which other factors operate
 
-### Theme 3: Chamber Effects = Case Allocation
+### Theme 3: Chamber Effects - Genuine AND Compositional
 Appears in: Academic Paper, Judicial Analysis, Citation Analysis
 
-**Core finding:** Third Chamber appears anti-DS but:
+**Core finding:** Third Chamber effect is **partially but not fully** explained by case allocation:
 - Handles 59% of compensation cases
 - 86% of compensation assigned to one rapporteur (Jääskinen)
-- Within-topic comparisons limited by specialization
-- Effect is structural, not dispositional
+- **NEW:** Excluding compensation, Third Chamber gap reduces from 43pp to 36pp (17% explained)
+- **NEW:** Effect PERSISTS (OR=0.21, p=0.014) after excluding compensation
+- Conclusion: Third Chamber effect is GENUINE interpretive tendency, not just compositional
+- **Rapporteur effects**, however, largely disappear when excluding compensation from within-topic analysis
 
 ### Theme 4: Methodological Stability
 Appears in: Temporal Analysis, Method Analysis, Academic Paper

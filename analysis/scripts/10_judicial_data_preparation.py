@@ -20,7 +20,7 @@ from datetime import datetime
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent.parent
-CASES_JSON = PROJECT_ROOT / "parsed-coded" / "cases.json"
+CASES_JSON = PROJECT_ROOT / "data" / "parsed" / "cases.json"  # FIXED: was "parsed-coded"
 HOLDINGS_CSV = PROJECT_ROOT / "analysis" / "output" / "holdings_prepared.csv"
 OUTPUT_PATH = PROJECT_ROOT / "analysis" / "output"
 

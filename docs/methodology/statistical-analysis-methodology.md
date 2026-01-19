@@ -92,6 +92,23 @@ Given sample size constraints, aggregate `primary_concept` into theoretically me
 | **ENFORCEMENT** | DPA_INDEPENDENCE, DPA_POWERS, DPA_OBLIGATIONS, ONE_STOP_SHOP, DPA_OTHER, ADMINISTRATIVE_FINES, REMEDIES_COMPENSATION, REPRESENTATIVE_ACTIONS |
 | **OTHER** | SECURITY, INTERNATIONAL_TRANSFER, OTHER_CONTROLLER_OBLIGATIONS, MEMBER_STATE_DISCRETION, OTHER |
 
+**CRITICAL NOTE ON ENFORCEMENT CLUSTER HETEROGENEITY (v2.0):**
+
+The ENFORCEMENT cluster is heterogeneous:
+- **55.4% is REMEDIES_COMPENSATION** (Article 82 damages, n=36)
+- Remaining 44.6% is DPA-related (DPA_POWERS, ADMINISTRATIVE_FINES, etc., n=29)
+
+Pro-DS rates differ substantially:
+- REMEDIES_COMPENSATION: 36.1% pro-DS
+- Non-compensation ENFORCEMENT: ~58.6% pro-DS
+
+This heterogeneity affects:
+1. **Third Chamber analysis**: 59% of Third Chamber holdings are compensation
+2. **Rapporteur within-topic comparisons**: Jääskinen handles 89% compensation within ENFORCEMENT
+3. **Temporal trends**: 97% of compensation cases appear in 2023+
+
+**Recommended approach**: Report analyses both WITH and WITHOUT compensation cases as sensitivity checks. The `is_compensation` flag variable enables this.
+
 #### 3.2.2 Chamber Grouping
 
 Collapse low-frequency chambers:
@@ -121,6 +138,16 @@ fundamental_rights_purpose = "FUNDAMENTAL_RIGHTS" in teleological_purposes
 
 # Any balancing indicator
 any_balancing = necessity_discussed | controller_ds_balancing | other_rights_balancing
+
+# Compensation flag (critical for sensitivity analyses) - v2.0
+is_compensation = (primary_concept == 'REMEDIES_COMPENSATION')
+
+# Non-compensation enforcement flag
+is_enforcement_non_comp = (concept_cluster == 'ENFORCEMENT') & (~is_compensation)
+
+# Inverse weighting (addresses within-case clustering, ICC=29.5%)
+holdings_in_case = groupby(case_id).count()
+inverse_weight = 1.0 / holdings_in_case
 ```
 
 ---
