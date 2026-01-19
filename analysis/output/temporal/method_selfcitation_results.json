@@ -1,0 +1,244 @@
+{
+  "method_presence": {
+    "method_prevalence": {
+      "semantic_present": {
+        "early_pct": 94.23,
+        "late_pct": 96.12,
+        "change_pp": 1.89,
+        "p_value": 0.575
+      },
+      "systematic_present": {
+        "early_pct": 98.08,
+        "late_pct": 89.92,
+        "change_pp": -8.15,
+        "p_value": 0.0631
+      },
+      "teleological_present": {
+        "early_pct": 90.38,
+        "late_pct": 93.02,
+        "change_pp": 2.64,
+        "p_value": 0.5476
+      },
+      "rule_based_present": {
+        "early_pct": 100.0,
+        "late_pct": 96.9,
+        "change_pp": -3.1,
+        "p_value": 0.1991
+      },
+      "case_law_present": {
+        "early_pct": 84.62,
+        "late_pct": 89.92,
+        "change_pp": 5.31,
+        "p_value": 0.3131
+      },
+      "principle_based_present": {
+        "early_pct": 59.62,
+        "late_pct": 45.74,
+        "change_pp": -13.88,
+        "p_value": 0.0911
+      }
+    },
+    "method_trends": {
+      "semantic_present": {
+        "rho": 0.014,
+        "p": 0.8514
+      },
+      "systematic_present": {
+        "rho": -0.108,
+        "p": 0.1475
+      },
+      "teleological_present": {
+        "rho": 0.162,
+        "p": 0.0291
+      },
+      "rule_based_present": {
+        "rho": -0.081,
+        "p": 0.2761
+      },
+      "case_law_present": {
+        "rho": 0.178,
+        "p": 0.0167
+      },
+      "principle_based_present": {
+        "rho": -0.053,
+        "p": 0.4752
+      }
+    }
+  },
+  "cooccurrence": {
+    "method_count": {
+      "early_mean": 2.83,
+      "late_mean": 2.79,
+      "mann_whitney_p": 0.546
+    },
+    "combo_chi2": {
+      "chi2": 6.11,
+      "dof": 5,
+      "p": 0.2956
+    },
+    "all_three_methods": {
+      "early_pct": 84.6,
+      "late_pct": 80.6
+    }
+  },
+  "selfcitation": {
+    "citation_by_period": {
+      "early_mean": 3.94,
+      "late_mean": 3.36,
+      "early_median": 3.0,
+      "late_median": 3.0,
+      "mann_whitney_p": 0.9496
+    },
+    "citation_trend": {
+      "rho": 0.119,
+      "p": 0.1109
+    },
+    "self_citation": {
+      "early_pct": 30.8,
+      "late_pct": 82.9,
+      "early_mean": 0.46,
+      "late_mean": 1.95,
+      "proportion_test_p": 0.0
+    },
+    "most_cited": [
+      {
+        "case": "C-300/21",
+        "count": 25
+      },
+      {
+        "case": "C-439/19",
+        "count": 21
+      },
+      {
+        "case": "C-667/21",
+        "count": 14
+      },
+      {
+        "case": "C-511/18",
+        "count": 13
+      },
+      {
+        "case": "C-512/18",
+        "count": 13
+      },
+      {
+        "case": "C-520/18",
+        "count": 13
+      },
+      {
+        "case": "C-252/21",
+        "count": 13
+      },
+      {
+        "case": "C-175/20",
+        "count": 13
+      },
+      {
+        "case": "C-340/21",
+        "count": 12
+      },
+      {
+        "case": "C-311/18",
+        "count": 11
+      },
+      {
+        "case": "C-136/17",
+        "count": 10
+      },
+      {
+        "case": "C-741/21",
+        "count": 9
+      },
+      {
+        "case": "C-487/21",
+        "count": 9
+      },
+      {
+        "case": "C-683/21",
+        "count": 9
+      },
+      {
+        "case": "C-687/21",
+        "count": 8
+      }
+    ]
+  },
+  "method_outcome_time": {
+    "method_effectiveness": {
+      "semantic_present": {
+        "early_pro_ds": 69.4,
+        "late_pro_ds": 59.7,
+        "change_pp": -9.7,
+        "interaction_p": 0.2364
+      },
+      "systematic_present": {
+        "early_pro_ds": 68.6,
+        "late_pro_ds": 57.8,
+        "change_pp": -10.9,
+        "interaction_p": 0.1863
+      },
+      "teleological_present": {
+        "early_pro_ds": 68.1,
+        "late_pro_ds": 56.7,
+        "change_pp": -11.4,
+        "interaction_p": 0.1777
+      },
+      "case_law_present": {
+        "early_pro_ds": 65.9,
+        "late_pro_ds": 56.0,
+        "change_pp": -9.9,
+        "interaction_p": 0.2588
+      },
+      "rule_based_present": {
+        "early_pro_ds": 69.2,
+        "late_pro_ds": 58.4,
+        "change_pp": -10.8,
+        "interaction_p": 0.179
+      },
+      "principle_based_present": {
+        "early_pro_ds": 61.3,
+        "late_pro_ds": 66.1,
+        "change_pp": 4.8,
+        "interaction_p": 0.6507
+      }
+    },
+    "interaction_model": {
+      "teleological_present_x_year": {
+        "coef": 18220152.0093,
+        "p": NaN
+      },
+      "semantic_present_x_year": {
+        "coef": -368417132.2986,
+        "p": NaN
+      },
+      "systematic_present_x_year": {
+        "coef": -787759408.1929,
+        "p": 0.0
+      }
+    },
+    "citation_outcome_interaction": {
+      "coef": 1.6144,
+      "p": 0.0461
+    }
+  },
+  "dominant_source": {
+    "dominant_source_chi2": {
+      "chi2": 4.42,
+      "dof": 4,
+      "p": 0.3517
+    }
+  },
+  "structure": {
+    "structure_chi2": {
+      "chi2": 14.34,
+      "dof": 5,
+      "p": 0.0136
+    },
+    "level_shifting": {
+      "early_pct": 17.3,
+      "late_pct": 10.1,
+      "p": 0.2732
+    }
+  },
+  "summary": "\n    1. INTERPRETIVE METHOD PRESENCE\n       - Core methods (semantic, systematic, teleological) remain >90% prevalent\n       - No significant temporal trends in method presence\n       - Method combination distribution unchanged over time\n\n    2. SELF-CITATION PATTERNS\n       - Later cases cite significantly more prior precedent\n       - Self-citation (to prior GDPR cases) increases over time\n       - Precedent accumulation indicates doctrinal consolidation\n\n    3. METHOD \u00d7 OUTCOME \u00d7 TIME\n       - No significant method \u00d7 time interactions for outcome prediction\n       - Method effectiveness (pro-DS rate when present) stable across periods\n       - Confirms interpretation methodology unchanged\n\n    4. DOMINANT SOURCE\n       - Teleological interpretation increasingly dominant\n       - No significant change in source distribution\n\n    5. OVERALL INTERPRETATION\n       The Court's interpretive methodology is stable over time.\n       The observed outcome changes are NOT driven by methodological shifts.\n    "
+}
