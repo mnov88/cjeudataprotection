@@ -547,10 +547,47 @@ All analysis scripts are available at: `analysis/scripts/`
 4. `04_quality_check.py` — Individual case validation
 5. `05_third_chamber_investigation.py` — Third Chamber deep dive
 6. `06_mixed_effects_models.py` — Cluster-robust analysis
-7. `07_compensation_paradox.py` — Article 82 paradox analysis
+7. `07_compensation_paradox.py` — Article 82 gap analysis
+8. `08_reviewer_response_analysis.py` — Robustness analyses
+9. `09_advanced_topic_analysis.py` — Supplementary variable analysis
 
 Data files: `parsed-coded/holdings.csv`, `analysis/output/holdings_prepared.csv`
 
+## Appendix D: Supplementary Findings
+
+Additional exploratory analyses reveal several underexplored variables with strong associations.
+
+**Table D1: Necessity Standard Effect**
+
+| Necessity Standard | Pro-DS Rate | N |
+|-------------------|-------------|---|
+| STRICT | 86.4% | 22 |
+| Not discussed | 60.0% | 140 |
+| REGULAR | 36.8% | 19 |
+
+The gap between STRICT and REGULAR necessity is 49.5 percentage points (Fisher's exact OR = 10.86, p = 0.001). When the Court applies strict necessity—requiring that no less intrusive alternative exists—it almost always rules for data subjects.
+
+**Table D2: Secondary Concept Effects**
+
+| Secondary Concept | Pro-DS Rate | N | Effect vs. Baseline |
+|------------------|-------------|---|---------------------|
+| TRANSPARENCY | 100.0% | 6 | +40.6pp |
+| DATA_PROTECTION_PRINCIPLES | 84.6% | 13 | +25.7pp |
+| MEMBER_STATE_DISCRETION | 12.5% | 8 | -50.5pp |
+
+The 72-percentage-point spread between DATA_PROTECTION_PRINCIPLES (84.6%) and MEMBER_STATE_DISCRETION (12.5%) as secondary concepts is the largest effect identified. When the Court frames a question in terms of principles reinforcement, it rules pro-DS; when it frames it in terms of national discretion, it rules pro-controller.
+
+**Table D3: Balancing Outcomes**
+
+| Interest Prevails | Pro-DS Rate | N |
+|------------------|-------------|---|
+| DATA_SUBJECT | 95.0% | 20 |
+| CONTROLLER | 0.0% | 3 |
+
+When explicit balancing is present, the stated outcome is near-deterministic—suggesting balancing language may be post-hoc justification rather than genuine weighing.
+
+**Note**: These exploratory findings involve small subgroups and should be interpreted as hypothesis-generating. See `analysis/SUPPLEMENTARY_FINDINGS.md` for full documentation.
+
 ---
 
-*Word count: approximately 4,500 words (excluding tables and appendices)*
+*Word count: approximately 5,000 words (excluding tables and appendices)*
