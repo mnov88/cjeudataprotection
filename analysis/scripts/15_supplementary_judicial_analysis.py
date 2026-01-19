@@ -5,6 +5,8 @@
 Supplementary analyses addressing:
 1. Systematic comparison of holding-level vs case-level effects
 2. Judge/rapporteur topic specialization analysis
+3. Does topic specialization explain outcome differences?
+4. Deep dive into topic-adjusted rapporteur effects
 """
 
 import json
@@ -541,7 +543,7 @@ def analyze_topic_specialization(holdings, cases_data):
 
 # =============================================================================
 # PART 3: DOES SPECIALIZATION EXPLAIN OUTCOME DIFFERENCES?
-# ===================================================================================
+# =============================================================================
 
 def specialization_outcome_analysis(holdings, rap_specialization):
     """Test if rapporteur outcome differences are explained by topic specialization."""
