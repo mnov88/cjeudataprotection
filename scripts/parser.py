@@ -128,6 +128,10 @@ class Case:
     source_file: str = ""
     parse_errors: List[str] = field(default_factory=list)
     parse_warnings: List[str] = field(default_factory=list)
+    # Composition data (from cases_metadata.json)
+    judges: List[str] = field(default_factory=list)
+    judge_rapporteur: Optional[str] = None
+    advocate_general: Optional[str] = None
 
 
 # ============================================================================
@@ -333,6 +337,54 @@ class CodedMDParser:
 
 
 # ============================================================================
+# COMPOSITION DATA LOADER
+# ============================================================================
+
+def load_composition_data(metadata_path: Path) -> Dict[str, Dict[str, Any]]:
+    """
+    Load composition data from cases_metadata.json.
+    Returns a dict mapping case_id patterns to composition data.
+    """
+    if not metadata_path.exists():
+        return {}
+
+    with open(metadata_path, 'r', encoding='utf-8') as f:
+        metadata = json.load(f)
+
+    compositions = {}
+    for case in metadata.get('cases', []):
+        if 'composition' not in case:
+            continue
+        # Extract case ID from caseNumber (e.g., "Case C-492/23" or "Joined Cases C-17/22 and C-18/22")
+        case_number = case.get('caseNumber', '')
+        # Extract individual case IDs like "C-492/23", "C-17/22"
+        case_ids = re.findall(r'C-\d+/\d+', case_number)
+        comp = case['composition']
+        for cid in case_ids:
+            compositions[cid] = {
+                'judges': comp.get('judges', []),
+                'judge_rapporteur': comp.get('judgeRapporteur'),
+                'advocate_general': comp.get('advocateGeneral'),
+            }
+    return compositions
+
+
+def enrich_cases_with_composition(cases: List[Case], compositions: Dict[str, Dict[str, Any]]):
+    """Add composition data to parsed cases."""
+    for case in cases:
+        # case.case_id might be "C-17/22 & C-18/22" or "C-492/23"
+        # Try to match any case ID in the string
+        case_ids = re.findall(r'C-\d+/\d+', case.case_id)
+        for cid in case_ids:
+            if cid in compositions:
+                comp = compositions[cid]
+                case.judges = comp['judges']
+                case.judge_rapporteur = comp['judge_rapporteur']
+                case.advocate_general = comp['advocate_general']
+                break  # Use first match
+
+
+# ============================================================================
 # DATA EXPORT
 # ============================================================================
 
@@ -365,7 +417,13 @@ def export_csv(cases: List[Case], output_path: Path):
                 'judgment_date': case.judgment_date,
                 'chamber': case.chamber,
                 'case_holding_count': case.holding_count,
-                
+
+                # Composition
+                'judges': ';'.join(case.judges),
+                'judge_count': len(case.judges),
+                'judge_rapporteur': case.judge_rapporteur or '',
+                'advocate_general': case.advocate_general or '',
+
                 # Holding basics
                 'holding_id': h.holding_id,
                 'paragraphs': ';'.join(map(str, h.paragraphs)),
@@ -430,7 +488,12 @@ def create_sqlite_schema(conn: sqlite3.Connection):
             judgment_year INTEGER,
             chamber TEXT,
             holding_count INTEGER,
-            source_file TEXT
+            source_file TEXT,
+            -- Composition
+            judges TEXT,
+            judge_count INTEGER,
+            judge_rapporteur TEXT,
+            advocate_general TEXT
         );
         
         -- Holdings table
@@ -536,11 +599,14 @@ def export_sqlite(cases: List[Case], output_path: Path):
         
         # Insert case
         conn.execute('''
-            INSERT OR REPLACE INTO cases 
-            (case_id, judgment_date, judgment_year, chamber, holding_count, source_file)
-            VALUES (?, ?, ?, ?, ?, ?)
-        ''', (case.case_id, case.judgment_date, year, case.chamber, 
-              case.holding_count, case.source_file))
+            INSERT OR REPLACE INTO cases
+            (case_id, judgment_date, judgment_year, chamber, holding_count, source_file,
+             judges, judge_count, judge_rapporteur, advocate_general)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (case.case_id, case.judgment_date, year, case.chamber,
+              case.holding_count, case.source_file,
+              ','.join(case.judges), len(case.judges),
+              case.judge_rapporteur, case.advocate_general))
         
         # Insert holdings
         for h in case.holdings:
@@ -634,7 +700,13 @@ def main():
         action='store_true',
         help='Strict mode: fail on validation errors'
     )
-    
+    parser.add_argument(
+        '--metadata',
+        type=Path,
+        default=None,
+        help='Path to cases_metadata.json for composition data'
+    )
+
     args = parser.parse_args()
     output_dir = Path(args.output)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -671,7 +743,15 @@ def main():
         if case.parse_warnings:
             for warn in case.parse_warnings:
                 print(f"    WARNING: {warn}")
-    
+
+    # Load and merge composition data if metadata path provided
+    if args.metadata:
+        print(f"\nLoading composition data from {args.metadata}...")
+        compositions = load_composition_data(args.metadata)
+        enrich_cases_with_composition(cases, compositions)
+        enriched_count = sum(1 for c in cases if c.judges)
+        print(f"  Enriched {enriched_count}/{len(cases)} cases with composition data")
+
     print(f"\nParsed {len(cases)} cases with {sum(len(c.holdings) for c in cases)} holdings")
     
     # Export

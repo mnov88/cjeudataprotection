@@ -323,18 +323,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-129-21_coded.md",
+    "source_file": "C-129-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "C. Lycourgos",
-      "L.S. Rossi",
-      "J.-C. Bonichot",
-      "S. Rodin",
-      "O. Spineanu-Matei"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "A.M. Collins"
+    "parse_warnings": []
   },
   {
     "case_id": "C-132/21",
@@ -440,18 +431,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-132-21_coded.md",
+    "source_file": "C-132-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "L. Bay Larsen",
-      "P.G. Xuereb",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "J. Richard de la Tour"
+    "parse_warnings": []
   },
   {
     "case_id": "C-154/21",
@@ -580,18 +562,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-154-21_coded.md",
+    "source_file": "C-154-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "L. Bay Larsen",
-      "P.G. Xuereb",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "G. Pitruzzella"
+    "parse_warnings": []
   },
   {
     "case_id": "C-169/23",
@@ -776,18 +749,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-169-23_coded.md",
+    "source_file": "C-169-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "K. Lenaerts",
-      "N. Jääskinen",
-      "M. Gavalec",
-      "N. Piçarra"
-    ],
-    "judge_rapporteur": "M. Gavalec",
-    "advocate_general": "L. Medina"
+    "parse_warnings": []
   },
   {
     "case_id": "C-17/22 & C-18/22",
@@ -1009,18 +973,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-17-22_coded.md",
+    "source_file": "C-17-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "C. Lycourgos",
-      "O. Spineanu-Matei",
-      "J.-C. Bonichot",
-      "S. Rodin",
-      "L.S. Rossi"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "J. Richard de la Tour"
+    "parse_warnings": []
   },
   {
     "case_id": "C-175/20",
@@ -1289,18 +1244,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-175-20_coded.md",
+    "source_file": "C-175-20_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "E. Regan",
-      "K. Lenaerts",
-      "C. Lycourgos",
-      "I. Jarukaitis",
-      "M. Ilešič"
-    ],
-    "judge_rapporteur": "M. Ilešič",
-    "advocate_general": "M. Bobek"
+    "parse_warnings": []
   },
   {
     "case_id": "C-180/21",
@@ -1572,18 +1518,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-180-21_coded.md",
+    "source_file": "C-180-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "E. Regan",
-      "D. Gratsias",
-      "M. Ilešič",
-      "I. Jarukaitis",
-      "Z. Csehi"
-    ],
-    "judge_rapporteur": "D. Gratsias",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-182/22 & C-189/22",
@@ -1921,16 +1858,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-182-22_coded.md",
+    "source_file": "C-182-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "N. Piçarra",
-      "N. Jääskinen"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "A.M. Collins"
+    "parse_warnings": []
   },
   {
     "case_id": "C-184/20",
@@ -2149,26 +2079,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-184-20_coded.md",
+    "source_file": "C-184-20_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "L. Bay Larsen",
-      "A. Arabadjiev",
-      "A. Prechal",
-      "K. Jürimäe",
-      "C. Lycourgos",
-      "N. Jääskinen",
-      "I. Ziemele",
-      "J. Passer",
-      "M. Ilešič",
-      "J.-C. Bonichot",
-      "A. Kumin",
-      "N. Wahl"
-    ],
-    "judge_rapporteur": "M. Ilešič",
-    "advocate_general": "P. Pikamäe"
+    "parse_warnings": []
   },
   {
     "case_id": "C-200/23",
@@ -2673,18 +2586,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-200-23_coded.md",
+    "source_file": "C-200-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "T. von Danwitz",
-      "P.G. Xuereb",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "L. Medina"
+    "parse_warnings": []
   },
   {
     "case_id": "C-203/22",
@@ -2873,18 +2777,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-203-22_coded.md",
+    "source_file": "C-203-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "T. von Danwitz",
-      "A. Kumin",
-      "N. Jääskinen",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "J. Richard de la Tour"
+    "parse_warnings": []
   },
   {
     "case_id": "C-205/21",
@@ -3171,18 +3066,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-205-21_coded.md",
+    "source_file": "C-205-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "E. Regan",
-      "D. Gratsias",
-      "M. Ilešič",
-      "I. Jarukaitis",
-      "Z. Csehi"
-    ],
-    "judge_rapporteur": "D. Gratsias",
-    "advocate_general": "G. Pitruzzella"
+    "parse_warnings": []
   },
   {
     "case_id": "C-231/22",
@@ -3344,18 +3230,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-231-22_coded.md",
+    "source_file": "C-231-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "N. Piçarra",
-      "M. Safjan",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "M. Safjan",
-    "advocate_general": "L. Medina"
+    "parse_warnings": []
   },
   {
     "case_id": "C-245/20",
@@ -3450,18 +3327,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-245-20_coded.md",
+    "source_file": "C-245-20_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "L. Bay Larsen",
-      "N. Jääskinen",
-      "J.-C. Bonichot",
-      "M. Safjan"
-    ],
-    "judge_rapporteur": "J.-C. Bonichot",
-    "advocate_general": "M. Bobek"
+    "parse_warnings": []
   },
   {
     "case_id": "C-247/23",
@@ -3639,18 +3507,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-247-23_coded.md",
+    "source_file": "C-247-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "T. von Danwitz",
-      "M.L. Arastey Sahún",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "A.M. Collins"
+    "parse_warnings": []
   },
   {
     "case_id": "C-252/21",
@@ -4262,28 +4121,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-252-21_coded.md",
+    "source_file": "C-252-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "L. Bay Larsen",
-      "A. Prechal",
-      "K. Jürimäe",
-      "C. Lycourgos",
-      "M. Safjan",
-      "L.S. Rossi",
-      "D. Gratsias",
-      "M.L. Arastey Sahún",
-      "J.-C. Bonichot",
-      "S. Rodin",
-      "F. Biltgen",
-      "M. Gavalec",
-      "Z. Csehi",
-      "O. Spineanu-Matei"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "A. Rantos"
+    "parse_warnings": []
   },
   {
     "case_id": "C-26/22 & C-64/22",
@@ -4603,18 +4443,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-26-22_coded.md",
+    "source_file": "C-26-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "T. von Danwitz",
-      "P.G. Xuereb",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "A. Kumin",
-    "advocate_general": "P. Pikamäe"
+    "parse_warnings": []
   },
   {
     "case_id": "C-268/21",
@@ -4795,18 +4626,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-268-21_coded.md",
+    "source_file": "C-268-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "M.L. Arastey Sahún",
-      "N. Piçarra",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "T. Ćapeta"
+    "parse_warnings": []
   },
   {
     "case_id": "C-272/19",
@@ -4892,18 +4714,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-272-19_coded.md",
+    "source_file": "C-272-19_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Prechal",
-      "L.S. Rossi",
-      "J. Malenovský",
-      "F. Biltgen",
-      "N. Wahl"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "M. Szpunar"
+    "parse_warnings": []
   },
   {
     "case_id": "C-300/21",
@@ -5124,18 +4937,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-300-21_coded.md",
+    "source_file": "C-300-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "M. Safjan",
-      "N. Piçarra",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-306/21",
@@ -5307,16 +5111,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-306-21_coded.md",
+    "source_file": "C-306-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "N. Piçarra",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-307/22",
@@ -5567,18 +5364,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-307-22_coded.md",
+    "source_file": "C-307-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "T. von Danwitz",
-      "P.G. Xuereb",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "N. Emiliou"
+    "parse_warnings": []
   },
   {
     "case_id": "C-311/18",
@@ -6027,28 +5815,11 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-311-18_coded.md",
+    "source_file": "C-311-18_coded.md",
     "parse_errors": [],
     "parse_warnings": [
       "A20: unknown value 'PRINCIPLE_BASED', valid: ['SEMANTIC', 'SYSTEMATIC', 'TELEOLOGICAL', 'UNCLEAR']..."
-    ],
-    "judges": [
-      "K. Lenaerts",
-      "R. Silva de Lapuerta",
-      "A. Arabadjiev",
-      "A. Prechal",
-      "M. Vilaras",
-      "M. Safjan",
-      "S. Rodin",
-      "P.G. Xuereb",
-      "L.S. Rossi",
-      "I. Jarukaitis",
-      "M. Ilešič",
-      "T. von Danwitz",
-      "D. Šváby"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "H. Saugmandsgaard Øe"
+    ]
   },
   {
     "case_id": "C-313/23, C-316/23 & C-332/23",
@@ -6459,20 +6230,11 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-313-23_coded.md",
+    "source_file": "C-313-23_coded.md",
     "parse_errors": [],
     "parse_warnings": [
       "A29: unknown value 'SYSTEMATIC', valid: ['CASE_LAW_BASED', 'MIXED', 'PRINCIPLE_BASED', 'RULE_BASED']..."
-    ],
-    "judges": [
-      "K. Lenaerts",
-      "T. von Danwitz",
-      "A. Kumin",
-      "I. Ziemele",
-      "O. Spineanu-Matei"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "P. Pikamäe"
+    ]
   },
   {
     "case_id": "C-319/20",
@@ -6588,18 +6350,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-319-20_coded.md",
+    "source_file": "C-319-20_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Prechal",
-      "J. Passer",
-      "F. Biltgen",
-      "L.S. Rossi",
-      "N. Wahl"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "J. Richard de la Tour"
+    "parse_warnings": []
   },
   {
     "case_id": "C-33/22",
@@ -6840,30 +6593,11 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-33-22_coded.md",
+    "source_file": "C-33-22_coded.md",
     "parse_errors": [],
     "parse_warnings": [
       "A11: unknown value 'RIGHT_TO_LODGE_COMPLAINT'"
-    ],
-    "judges": [
-      "K. Lenaerts",
-      "L. Bay Larsen",
-      "K. Jürimäe",
-      "C. Lycourgos",
-      "E. Regan",
-      "N. Piçarra",
-      "M. Ilešič",
-      "P.G. Xuereb",
-      "L.S. Rossi",
-      "I. Jarukaitis",
-      "A. Kumin",
-      "N. Jääskinen",
-      "N. Wahl",
-      "I. Ziemele",
-      "J. Passer"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "M. Szpunar"
+    ]
   },
   {
     "case_id": "C-34/21",
@@ -7038,18 +6772,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-34-21_coded.md",
+    "source_file": "C-34-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "K. Lenaerts",
-      "L. Bay Larsen",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-340/21",
@@ -7486,18 +7211,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-340-21_coded.md",
+    "source_file": "C-340-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "N. Piçarra",
-      "M. Safjan",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "G. Pitruzzella"
+    "parse_warnings": []
   },
   {
     "case_id": "C-383/23",
@@ -7590,16 +7306,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-383-23_coded.md",
+    "source_file": "C-383-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "I. Jarukaitis",
-      "D. Gratsias",
-      "Z. Csehi"
-    ],
-    "judge_rapporteur": "Z. Csehi",
-    "advocate_general": "L. Medina"
+    "parse_warnings": []
   },
   {
     "case_id": "C-394/23",
@@ -7791,18 +7500,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-394-23_coded.md",
+    "source_file": "C-394-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "T. von Danwitz",
-      "M.L. Arastey Sahún",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "M. Szpunar"
+    "parse_warnings": []
   },
   {
     "case_id": "C-416/23",
@@ -8055,16 +7755,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-416-23_coded.md",
+    "source_file": "C-416-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "T. von Danwitz",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "J. Richard de la Tour"
+    "parse_warnings": []
   },
   {
     "case_id": "C-439/19",
@@ -8440,28 +8133,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-439-19_coded.md",
+    "source_file": "C-439-19_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "R. Silva de Lapuerta",
-      "J.-C. Bonichot",
-      "A. Arabadjiev",
-      "E. Regan",
-      "M. Ilešič",
-      "N. Piçarra",
-      "E. Juhász",
-      "M. Safjan",
-      "D. Šváby",
-      "S. Rodin",
-      "F. Biltgen",
-      "K. Jürimäe",
-      "C. Lycourgos",
-      "P.G. Xuereb"
-    ],
-    "judge_rapporteur": "M. Ilešič",
-    "advocate_general": "M. Szpunar"
+    "parse_warnings": []
   },
   {
     "case_id": "C-446/21",
@@ -8647,20 +8321,11 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-446-21_coded.md",
+    "source_file": "C-446-21_coded.md",
     "parse_errors": [],
     "parse_warnings": [
       "A10: unknown value 'DATA_MINIMISATION', valid: ['ACCOUNTABILITY', 'ADMINISTRATIVE_FINES', 'AUTOMATED_DECISION_MAKING', 'CONSENT_BASIS', 'CONTRACT_BASIS']..."
-    ],
-    "judges": [
-      "C. Lycourgos",
-      "O. Spineanu-Matei",
-      "J.-C. Bonichot",
-      "S. Rodin",
-      "L.S. Rossi"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "A. Rantos"
+    ]
   },
   {
     "case_id": "C-453/21",
@@ -8820,16 +8485,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-453-21_coded.md",
+    "source_file": "C-453-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "P.G. Xuereb",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "J. Richard de la Tour"
+    "parse_warnings": []
   },
   {
     "case_id": "C-456/22",
@@ -8910,18 +8568,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-456-22_coded.md",
+    "source_file": "C-456-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "N. Piçarra",
-      "M. Safjan",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "N. Emiliou"
+    "parse_warnings": []
   },
   {
     "case_id": "C-46/23",
@@ -9093,18 +8742,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-46-23_coded.md",
+    "source_file": "C-46-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "E. Regan",
-      "Z. Csehi",
-      "M. Ilešič",
-      "I. Jarukaitis",
-      "D. Gratsias"
-    ],
-    "judge_rapporteur": "M. Ilešič",
-    "advocate_general": "L. Medina"
+    "parse_warnings": []
   },
   {
     "case_id": "C-460/20",
@@ -9296,28 +8936,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-460-20_coded.md",
+    "source_file": "C-460-20_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "L. Bay Larsen",
-      "A. Prechal",
-      "K. Jürimäe",
-      "C. Lycourgos",
-      "P.G. Xuereb",
-      "L.S. Rossi",
-      "D. Gratsias",
-      "M. Ilešič",
-      "F. Biltgen",
-      "N. Piçarra",
-      "N. Jääskinen",
-      "N. Wahl",
-      "I. Ziemele",
-      "J. Passer"
-    ],
-    "judge_rapporteur": "M. Ilešič",
-    "advocate_general": "G. Pitruzzella"
+    "parse_warnings": []
   },
   {
     "case_id": "C-461/22",
@@ -9401,16 +9022,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-461-22_coded.md",
+    "source_file": "C-461-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "O. Spineanu-Matei",
-      "J.-C. Bonichot",
-      "L.S. Rossi"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "P. Pikamäe"
+    "parse_warnings": []
   },
   {
     "case_id": "C-487/21",
@@ -9586,18 +9200,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-487-21_coded.md",
+    "source_file": "C-487-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "P.G. Xuereb",
-      "T. von Danwitz",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "G. Pitruzzella"
+    "parse_warnings": []
   },
   {
     "case_id": "C-492/23",
@@ -9918,28 +9523,11 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-492-23_coded.md",
+    "source_file": "C-492-23_coded.md",
     "parse_errors": [],
     "parse_warnings": [
       "A20: unknown value 'RULE_BASED', valid: ['SEMANTIC', 'SYSTEMATIC', 'TELEOLOGICAL', 'UNCLEAR']..."
-    ],
-    "judges": [
-      "K. Lenaerts",
-      "T. von Danwitz",
-      "F. Biltgen",
-      "K. Jürimäe",
-      "C. Lycourgos",
-      "I. Jarukaitis",
-      "M.L. Arastey Sahún",
-      "I. Ziemele",
-      "J. Passer",
-      "S. Rodin",
-      "E. Regan",
-      "N. Jääskinen",
-      "D. Gratsias"
-    ],
-    "judge_rapporteur": "K. Jürimäe",
-    "advocate_general": "M. Szpunar"
+    ]
   },
   {
     "case_id": "C-496/17",
@@ -10053,20 +9641,11 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-496-17_coded.md",
+    "source_file": "C-496-17_coded.md",
     "parse_errors": [],
     "parse_warnings": [
       "A20: unknown value 'RULE_BASED', valid: ['SEMANTIC', 'SYSTEMATIC', 'TELEOLOGICAL', 'UNCLEAR']..."
-    ],
-    "judges": [
-      "M. Vilaras",
-      "J. Malenovský",
-      "L. Bay Larsen",
-      "M. Safjan",
-      "D. Šváby"
-    ],
-    "judge_rapporteur": "M. Vilaras",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    ]
   },
   {
     "case_id": "C-507/23",
@@ -10285,16 +9864,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-507-23_coded.md",
+    "source_file": "C-507-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "N. Piçarra",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "M. Szpunar"
+    "parse_warnings": []
   },
   {
     "case_id": "C-534/20",
@@ -10393,16 +9965,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-534-20_coded.md",
+    "source_file": "C-534-20_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "I. Ziemele",
-      "P.G. Xuereb"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "J. Richard de la Tour"
+    "parse_warnings": []
   },
   {
     "case_id": "C-579/21",
@@ -10660,18 +10225,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-579-21_coded.md",
+    "source_file": "C-579-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "P.G. Xuereb",
-      "T. von Danwitz",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-590/22",
@@ -10943,18 +10499,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-590-22_coded.md",
+    "source_file": "C-590-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "K. Lenaerts",
-      "N. Piçarra",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-597/19",
@@ -11272,20 +10819,11 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-597-19_coded.md",
+    "source_file": "C-597-19_coded.md",
     "parse_errors": [],
     "parse_warnings": [
       "A29: unknown value 'TELEOLOGICAL', valid: ['CASE_LAW_BASED', 'MIXED', 'PRINCIPLE_BASED', 'RULE_BASED']..."
-    ],
-    "judges": [
-      "E. Regan",
-      "M. Ilešič",
-      "E. Juhász",
-      "C. Lycourgos",
-      "I. Jarukaitis"
-    ],
-    "judge_rapporteur": "M. Ilešič",
-    "advocate_general": "M. Szpunar"
+    ]
   },
   {
     "case_id": "C-604/22",
@@ -11464,18 +11002,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-604-22_coded.md",
+    "source_file": "C-604-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "C. Lycourgos",
-      "O. Spineanu-Matei",
-      "J.-C. Bonichot",
-      "S. Rodin",
-      "L.S. Rossi"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "T. Ćapeta"
+    "parse_warnings": []
   },
   {
     "case_id": "C-61/19",
@@ -11576,16 +11105,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-61-19_coded.md",
+    "source_file": "C-61-19_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "T. von Danwitz",
-      "P.G. Xuereb"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "M. Szpunar"
+    "parse_warnings": []
   },
   {
     "case_id": "C-621/22",
@@ -11703,16 +11225,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-621-22_coded.md",
+    "source_file": "C-621-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "O. Spineanu-Matei",
-      "J.-C. Bonichot",
-      "L.S. Rossi"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "L. Medina"
+    "parse_warnings": []
   },
   {
     "case_id": "C-634/21",
@@ -11834,18 +11349,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-634-21_coded.md",
+    "source_file": "C-634-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "T. von Danwitz",
-      "P.G. Xuereb",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "A. Kumin",
-    "advocate_general": "P. Pikamäe"
+    "parse_warnings": []
   },
   {
     "case_id": "C-638/23",
@@ -11949,16 +11455,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-638-23_coded.md",
+    "source_file": "C-638-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "N. Jääskinen",
-      "M. Gavalec",
-      "N. Piçarra"
-    ],
-    "judge_rapporteur": "M. Gavalec",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-645/19",
@@ -12359,28 +11858,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-645-19_coded.md",
+    "source_file": "C-645-19_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "R. Silva de Lapuerta",
-      "A. Arabadjiev",
-      "A. Prechal",
-      "M. Vilaras",
-      "M. Ilešič",
-      "N. Wahl",
-      "E. Juhász",
-      "D. Šváby",
-      "S. Rodin",
-      "F. Biltgen",
-      "K. Jürimäe",
-      "C. Lycourgos",
-      "P.G. Xuereb",
-      "L.S. Rossi"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "M. Bobek"
+    "parse_warnings": []
   },
   {
     "case_id": "C-65/23",
@@ -12554,16 +12034,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-65-23_coded.md",
+    "source_file": "C-65-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "N. Jääskinen",
-      "M. Gavalec",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "L. Medina"
+    "parse_warnings": []
   },
   {
     "case_id": "C-655/23",
@@ -12868,18 +12341,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-655-23_coded.md",
+    "source_file": "C-655-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "I. Jarukaitis",
-      "N. Jääskinen",
-      "A. Arabadjiev",
-      "M. Condinanzi",
-      "R. Frendo"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-659/22",
@@ -12966,16 +12430,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-659-22_coded.md",
+    "source_file": "C-659-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "M. Safjan",
-      "N. Piçarra",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "M. Gavalec",
-    "advocate_general": "L. Medina"
+    "parse_warnings": []
   },
   {
     "case_id": "C-667/21",
@@ -13368,18 +12825,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-667-21_coded.md",
+    "source_file": "C-667-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "N. Piçarra",
-      "M. Safjan",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-673/17",
@@ -13617,26 +13065,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-673-17_coded.md",
+    "source_file": "C-673-17_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "R. Silva de Lapuerta",
-      "J.-C. Bonichot",
-      "M. Vilaras",
-      "T. von Danwitz",
-      "C. Toader",
-      "F. Biltgen",
-      "K. Jürimäe",
-      "C. Lycourgos",
-      "A. Rosas",
-      "L. Bay Larsen",
-      "M. Safjan",
-      "S. Rodin"
-    ],
-    "judge_rapporteur": "A. Rosas",
-    "advocate_general": "M. Szpunar"
+    "parse_warnings": []
   },
   {
     "case_id": "C-683/21",
@@ -13952,28 +13383,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-683-21_coded.md",
+    "source_file": "C-683-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "L. Bay Larsen",
-      "A. Arabadjiev",
-      "C. Lycourgos",
-      "E. Regan",
-      "T. von Danwitz",
-      "Z. Csehi",
-      "O. Spineanu-Matei",
-      "M. Ilešič",
-      "J.-C. Bonichot",
-      "L.S. Rossi",
-      "A. Kumin",
-      "N. Jääskinen",
-      "N. Wahl",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "N. Emiliou"
+    "parse_warnings": []
   },
   {
     "case_id": "C-687/21",
@@ -14316,18 +13728,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-687-21_coded.md",
+    "source_file": "C-687-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "N. Piçarra",
-      "M. Safjan",
-      "N. Jääskinen",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-710/23",
@@ -14502,18 +13905,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-710-23_coded.md",
+    "source_file": "C-710-23_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "F. Biltgen",
-      "T. von Danwitz",
-      "A. Kumin",
-      "I. Ziemele",
-      "S. Gervasoni"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "J. Richard de la Tour"
+    "parse_warnings": []
   },
   {
     "case_id": "C-740/22",
@@ -14693,16 +14087,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-740-22_coded.md",
+    "source_file": "C-740-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "T. von Danwitz",
-      "P.G. Xuereb",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "T. Ćapeta"
+    "parse_warnings": []
   },
   {
     "case_id": "C-741/21",
@@ -14942,16 +14329,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-741-21_coded.md",
+    "source_file": "C-741-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Jürimäe",
-      "N. Piçarra",
-      "N. Jääskinen"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-757/22",
@@ -15070,18 +14450,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-757-22_coded.md",
+    "source_file": "C-757-22_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "C. Lycourgos",
-      "O. Spineanu-Matei",
-      "J.-C. Bonichot",
-      "S. Rodin",
-      "L.S. Rossi"
-    ],
-    "judge_rapporteur": "L.S. Rossi",
-    "advocate_general": "J. Richard de la Tour"
+    "parse_warnings": []
   },
   {
     "case_id": "C-768/21",
@@ -15181,18 +14552,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-768-21_coded.md",
+    "source_file": "C-768-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "T. von Danwitz",
-      "P.G. Xuereb",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "A. Kumin",
-    "advocate_general": "P. Pikamäe"
+    "parse_warnings": []
   },
   {
     "case_id": "C-77/21",
@@ -15374,18 +14736,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-77-21_coded.md",
+    "source_file": "C-77-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "A. Arabadjiev",
-      "L. Bay Larsen",
-      "P.G. Xuereb",
-      "A. Kumin",
-      "I. Ziemele"
-    ],
-    "judge_rapporteur": "I. Ziemele",
-    "advocate_general": "P. Pikamäe"
+    "parse_warnings": []
   },
   {
     "case_id": "C-807/21",
@@ -15569,28 +14922,9 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-807-21_coded.md",
+    "source_file": "C-807-21_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "L. Bay Larsen",
-      "A. Arabadjiev",
-      "C. Lycourgos",
-      "E. Regan",
-      "T. von Danwitz",
-      "Z. Csehi",
-      "O. Spineanu-Matei",
-      "M. Ilešič",
-      "J.-C. Bonichot",
-      "L.S. Rossi",
-      "A. Kumin",
-      "N. Jääskinen",
-      "N. Wahl",
-      "M. Gavalec"
-    ],
-    "judge_rapporteur": "N. Jääskinen",
-    "advocate_general": "M. Campos Sánchez-Bordona"
+    "parse_warnings": []
   },
   {
     "case_id": "C-817/19",
@@ -16357,25 +15691,8 @@
         }
       }
     ],
-    "source_file": "coded-decisions/C-817-19_coded.md",
+    "source_file": "C-817-19_coded.md",
     "parse_errors": [],
-    "parse_warnings": [],
-    "judges": [
-      "K. Lenaerts",
-      "A. Arabadjiev",
-      "S. Rodin",
-      "I. Jarukaitis",
-      "N. Jääskinen",
-      "T. von Danwitz",
-      "M. Safjan",
-      "F. Biltgen",
-      "P.G. Xuereb",
-      "N. Piçarra",
-      "L.S. Rossi",
-      "A. Kumin",
-      "N. Wahl"
-    ],
-    "judge_rapporteur": "T. von Danwitz",
-    "advocate_general": "G. Pitruzzella"
+    "parse_warnings": []
   }
 ]
