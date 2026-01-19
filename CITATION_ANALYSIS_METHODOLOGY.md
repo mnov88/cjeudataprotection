@@ -390,13 +390,13 @@ Following Simmons, Nelson & Simonsohn (2011), we commit to reporting:
 
 ```
 analysis/scripts/
-├── 10_citation_network_construction.py      # Build graphs from data
-├── 11_citation_bivariate_analysis.py        # Bivariate tests (Section 4)
-├── 12_citation_multivariate_analysis.py     # Regression models (Section 5)
-├── 13_network_metrics.py                    # Compute network statistics (Section 6)
-├── 14_influence_propagation.py              # Diffusion models (Section 7)
-├── 15_citation_robustness.py                # Robustness checks (Section 8)
-└── 16_citation_visualization.py             # Generate figures
+├── 10_citation_network_construction.py      # ✓ IMPLEMENTED - Build graphs from data
+├── 11_citation_bivariate_analysis.py        # ✓ IMPLEMENTED - Bivariate tests (Section 4)
+├── 12_citation_multivariate_analysis.py     # ✓ IMPLEMENTED - Regression models (Section 5)
+├── 13_network_metrics.py                    # ⊘ MERGED INTO 10 - Network statistics
+├── 14_influence_propagation.py              # ✓ IMPLEMENTED - Diffusion models (Section 7)
+├── 15_citation_robustness.py                # ✓ IMPLEMENTED - Robustness checks (Section 8)
+└── 16_advanced_deep_dives.py                # ✓ IMPLEMENTED - Extended analyses (chamber anomaly, mediation, cascades)
 ```
 
 ### 9.3 Output Artifacts
@@ -510,6 +510,46 @@ Successful execution of this methodology will yield:
 
 ---
 
-*Document version: 1.0*
+## 12. Implementation Status
+
+This methodology has been **fully implemented** with results documented in `CITATION_ANALYSIS_FINDINGS.md`.
+
+### Implemented Analyses
+
+| Section | Status | Key Findings |
+|---------|--------|--------------|
+| §4 Bivariate | ✓ Complete | H1.2 (purpose propagation) strongly supported (Φ=0.396, p<0.0001) |
+| §5 Multivariate | ✓ Complete | Pro-DS purpose OR=7.15 robust; precedent effect attenuates |
+| §6 Network Metrics | ✓ Complete | Density 0.050, PageRank computed, centralities analyzed |
+| §7 Influence Propagation | ✓ Complete | 59.4% direction concordance, C-300/21 cascade traced |
+| §8 Robustness | ✓ Complete | Permutation p<0.0001; Third Chamber exclusion eliminates effect |
+
+### Extended Analyses (Beyond Proposal)
+
+1. **Third Chamber Anomaly**: Deep dive revealing chamber-specific citation dynamics
+2. **Formal Mediation Analysis**: Baron-Kenny procedure confirming 25.9% mediated effect
+3. **C-300/21 Influence Cascade**: Traced 22-case influence chain
+4. **Temporal Structural Breaks**: Identified effect emergence in 2023-2024
+5. **Counter-Citation Analysis**: 26.8% rate, concentrated in PRINCIPLES/ENFORCEMENT
+
+### Output Files Generated
+
+```
+analysis/output/citation_network/
+├── citation_edges.csv
+├── case_attributes.csv
+├── holding_citation_vars.csv
+├── network_metrics.json
+├── bivariate_citation_results.json
+├── multivariate_citation_results.json
+├── influence_propagation_results.json
+├── robustness_results.json
+└── advanced_deep_dives.json
+```
+
+---
+
+*Document version: 2.0*
 *Created: 2025-01-19*
-*Status: Methodology Proposal (Pre-implementation)*
+*Updated: 2026-01-19*
+*Status: FULLY IMPLEMENTED - See CITATION_ANALYSIS_FINDINGS.md for results*
