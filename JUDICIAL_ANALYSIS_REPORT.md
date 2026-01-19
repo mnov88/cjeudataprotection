@@ -236,6 +236,56 @@ TELEOLOGICAL interpretation is associated with 73.3% pro-DS rate vs. 44.4% for S
 
 **Partial mediation suggested**: Third Chamber uses less TELEOLOGICAL interpretation, which is associated with lower pro-DS rates. However, the direct chamber effect persists, indicating interpretation style is NOT the only mechanism.
 
+### 6.2 Topic Specialization Analysis
+
+Do rapporteur outcome differences simply reflect their topic assignment patterns?
+
+#### Rapporteur Topic Specialization
+
+| Rapporteur | Top Topic | % in Top Topic | HHI | Specialized? |
+|------------|-----------|----------------|-----|--------------|
+| N. Jääskinen | ENFORCEMENT | 68.6% | 0.493 | **YES** |
+| I. Ziemele | RIGHTS | 40.0% | 0.315 | **YES** |
+| L.S. Rossi | LAWFULNESS | 31.2% | 0.209 | No |
+| T. von Danwitz | SCOPE | 22.9% | 0.169 | No |
+
+Chi-square test (5 rapporteurs × 5 topics): χ²(16) = 78.05, p < 0.0001 — **strong evidence of topic specialization/assignment patterns**.
+
+#### Expected vs Observed Pro-DS Rates
+
+| Rapporteur | Observed | Expected | Residual | Category |
+|------------|----------|----------|----------|----------|
+| L.S. Rossi | 81.2% | 62.9% | **+18.3pp** | Strong Residual |
+| N. Jääskinen | 43.1% | 51.5% | -8.4pp | Partial Residual |
+| I. Ziemele | 60.0% | 62.5% | -2.5pp | Topic-Explained |
+| T. von Danwitz | 68.6% | 67.0% | +1.6pp | Topic-Explained |
+| M. Ilešič | 62.5% | 62.5% | +0.0pp | Topic-Explained |
+
+**Key finding**: Three of five rapporteurs show outcome rates fully explained by their topic mix. L.S. Rossi shows a strong genuine pro-data subject disposition (+18pp beyond topic prediction). N. Jääskinen's effect is partially explained by ENFORCEMENT specialization but retains -8pp residual.
+
+### 6.3 Within-Topic Comparison
+
+Comparing rapporteur rates within ENFORCEMENT (the largest topic, n=65, baseline=46.2%):
+
+| Rapporteur | ENFORCEMENT Rate | n | vs. Baseline |
+|------------|------------------|---|--------------|
+| L.S. Rossi | 77.8% | 9 | **+31.6pp** |
+| T. von Danwitz | 57.1% | 7 | +11.0pp |
+| I. Ziemele | 42.9% | 7 | -3.3pp |
+| N. Jääskinen | 34.3% | 35 | **-11.9pp** |
+
+**Within-topic gap**: Even within ENFORCEMENT cases, L.S. Rossi rules 43.5pp more pro-DS than N. Jääskinen. This cannot be attributed to topic assignment.
+
+### 6.4 Variance Decomposition
+
+| Component | Sum of Squares | % of Total Variance |
+|-----------|----------------|---------------------|
+| Topic | 3.96 | 9.2% |
+| Rapporteur | 3.90 | 9.0% |
+| Total | 43.15 | 100% |
+
+Topic and rapporteur explain roughly equal variance (~9% each), suggesting **rapporteur identity matters as much as case characteristics** for predicting outcomes.
+
 ---
 
 ## 7. Conclusions
@@ -247,9 +297,10 @@ TELEOLOGICAL interpretation is associated with 73.3% pro-DS rate vs. 44.4% for S
    - Grand Chamber: OR = 2.88 (pro-data subject tendency)
    - Effects persist after controlling for year, concept, and rapporteur
 
-2. **Rapporteur effects exist but are smaller**:
-   - N. Jääskinen: OR = 0.36, effect robust to controls
-   - L.S. Rossi: OR = 3.35, effect strengthens with controls
+2. **Rapporteur effects exist with varying mechanisms**:
+   - N. Jääskinen: OR = 0.36, partially explained by ENFORCEMENT specialization (-8pp residual)
+   - L.S. Rossi: OR = 3.35, genuine disposition effect (+18pp beyond topic mix)
+   - T. von Danwitz, I. Ziemele, M. Ilešič: Topic-explained (residual < 5pp)
 
 3. **Individual judge effects are not identifiable**:
    - High network density (0.67) creates severe confounding
@@ -297,6 +348,7 @@ For **policy**:
 | 3 | `12_judicial_bivariate_analysis.py` | Chi-square tests, FDR correction |
 | 4 | `13_judicial_multivariate_analysis.py` | Stratified and logistic models |
 | 5 | `14_judicial_robustness_checks.py` | Sensitivity analyses |
+| 6 | `15_supplementary_judicial_analysis.py` | Topic specialization, variance decomposition |
 
 ### 8.2 Output Files
 
@@ -310,6 +362,7 @@ For **policy**:
 | `bivariate_judicial_analysis.json` | Phase 3 results |
 | `multivariate_judicial_analysis.json` | Phase 4 results |
 | `robustness_judicial_analysis.json` | Phase 5 results |
+| `supplementary_judicial_analysis.json` | Topic specialization, variance decomposition |
 
 ### 8.3 Statistical Methods
 
@@ -320,6 +373,8 @@ For **policy**:
 - **Stratified analysis**: Mantel-Haenszel pooled odds ratio
 - **Bootstrap**: 500 resamples, percentile method for CIs
 - **Specification curve**: 6 specifications varying sample, weights
+- **Herfindahl-Hirschman Index (HHI)**: Topic concentration measure for specialization
+- **Variance decomposition**: Sum of squares analysis for topic vs rapporteur effects
 
 ---
 

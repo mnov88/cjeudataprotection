@@ -261,5 +261,53 @@
       "diff": 0.0004309416074121941,
       "n": 16
     }
+  },
+  "deep_dive_topic_adjusted": {
+    "within_topic_comparisons": {
+      "N. J\u00e4\u00e4skinen": {
+        "topic": "ENFORCEMENT",
+        "rate": 0.34285714285714286,
+        "n": 35,
+        "diff_from_baseline": -0.1186813186813187
+      },
+      "L.S. Rossi": {
+        "topic": "ENFORCEMENT",
+        "rate": 0.7777777777777778,
+        "n": 9,
+        "diff_from_baseline": 0.3162393162393162
+      },
+      "T. von Danwitz": {
+        "topic": "ENFORCEMENT",
+        "rate": 0.5714285714285714,
+        "n": 7,
+        "diff_from_baseline": 0.10989010989010983
+      },
+      "I. Ziemele": {
+        "topic": "ENFORCEMENT",
+        "rate": 0.42857142857142855,
+        "n": 7,
+        "diff_from_baseline": -0.032967032967033016
+      }
+    },
+    "categories": {
+      "topic_explained": [
+        "I. Ziemele",
+        "T. von Danwitz",
+        "M. Ile\u0161i\u010d"
+      ],
+      "partial_residual": [
+        "N. J\u00e4\u00e4skinen"
+      ],
+      "strong_residual": [
+        "L.S. Rossi"
+      ]
+    },
+    "variance_decomposition": {
+      "total_ss": 43.149171270718156,
+      "topic_ss": 3.96115144740429,
+      "rapporteur_ss": 3.9039461311217805,
+      "r2_topic": 0.09180133316007398,
+      "r2_rapporteur": 0.09047557615019763
+    }
   }
 }

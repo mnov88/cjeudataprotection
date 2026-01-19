@@ -652,6 +652,233 @@ def specialization_outcome_analysis(holdings, rap_specialization):
     return results
 
 # =============================================================================
+# PART 4: DEEP DIVE INTO TOPIC-ADJUSTED EFFECTS
+# =============================================================================
+
+def deep_dive_topic_adjusted_effects(holdings, spec_outcome_results):
+    """Deep dive into rapporteurs whose effects are 'as expected' vs those with residuals."""
+    print("\n" + "=" * 80)
+    print("PART 4: DEEP DIVE INTO TOPIC-ADJUSTED RAPPORTEUR EFFECTS")
+    print("=" * 80)
+
+    # Calculate topic-specific rates
+    topic_rates = {}
+    for h in holdings:
+        topic = h.get('concept_cluster', 'OTHER')
+        if topic not in topic_rates:
+            topic_rates[topic] = {'pro_ds': 0, 'total': 0}
+        topic_rates[topic]['pro_ds'] += h['pro_ds']
+        topic_rates[topic]['total'] += 1
+
+    for topic in topic_rates:
+        n = topic_rates[topic]['total']
+        topic_rates[topic]['rate'] = topic_rates[topic]['pro_ds'] / n if n > 0 else 0
+
+    # ===================
+    # WITHIN-TOPIC COMPARISONS
+    # ===================
+    print("\n" + "-" * 80)
+    print("WITHIN-TOPIC COMPARISONS")
+    print("-" * 80)
+    print("  Comparing rapporteur rates WITHIN the same topic isolates rapporteur effect")
+
+    main_topic = 'ENFORCEMENT'  # Largest topic
+    topic_h = [h for h in holdings if h.get('concept_cluster') == main_topic]
+    baseline_rate = topic_rates[main_topic]['rate']
+
+    print(f"\n  Focus: {main_topic} (n={len(topic_h)}, baseline={baseline_rate:.1%})")
+
+    within_topic = {}
+    key_raps = ['N. Jääskinen', 'L.S. Rossi', 'T. von Danwitz', 'I. Ziemele', 'M. Ilešič']
+
+    print(f"\n  {'Rapporteur':<20} {'Rate':>10} {'n':>6} {'vs Baseline':>15}")
+    print("  " + "-" * 55)
+
+    for rap in key_raps:
+        rap_topic_h = [h for h in topic_h if h.get('judge_rapporteur') == rap]
+        if len(rap_topic_h) >= 3:
+            rate = sum(h['pro_ds'] for h in rap_topic_h) / len(rap_topic_h)
+            diff = rate - baseline_rate
+            diff_str = f"{diff:+.1%}" if diff != 0 else "0"
+
+            within_topic[rap] = {
+                'topic': main_topic,
+                'rate': rate,
+                'n': len(rap_topic_h),
+                'diff_from_baseline': diff
+            }
+
+            print(f"  {rap:<20} {rate:>9.1%} {len(rap_topic_h):>6} {diff_str:>15}")
+
+    # Chi-square test for within-ENFORCEMENT variation
+    print("\n  Statistical test (within ENFORCEMENT):")
+
+    for rap in ['N. Jääskinen', 'L.S. Rossi']:
+        rap_h = [h for h in topic_h if h.get('judge_rapporteur') == rap]
+        other_h = [h for h in topic_h if h.get('judge_rapporteur') != rap]
+
+        if len(rap_h) >= 3 and len(other_h) >= 3:
+            a = sum(h['pro_ds'] for h in rap_h)
+            b = len(rap_h) - a
+            c = sum(h['pro_ds'] for h in other_h)
+            d = len(other_h) - c
+
+            chi2, p = chi_square_test(a, b, c, d)
+            sig = "*" if p < 0.05 else ""
+            print(f"    {rap} vs others: χ²={chi2:.2f}, p={p:.3f}{sig}")
+
+    # ===================
+    # RAPPORTEUR CATEGORIZATION
+    # ===================
+    print("\n" + "-" * 80)
+    print("RAPPORTEUR CATEGORIZATION BY RESIDUAL EFFECT")
+    print("-" * 80)
+
+    categories = {
+        'topic_explained': [],  # |residual| < 5pp
+        'partial_residual': [],  # 5pp <= |residual| < 15pp
+        'strong_residual': []   # |residual| >= 15pp
+    }
+
+    print(f"\n  {'Rapporteur':<20} {'Residual':>12} {'Category':<20}")
+    print("  " + "-" * 55)
+
+    for rap, data in sorted(spec_outcome_results.items(), key=lambda x: -abs(x[1]['diff'])):
+        residual = data['diff']
+        abs_residual = abs(residual)
+
+        if abs_residual < 0.05:
+            category = 'topic_explained'
+            cat_name = "Topic-Explained"
+        elif abs_residual < 0.15:
+            category = 'partial_residual'
+            cat_name = "Partial Residual"
+        else:
+            category = 'strong_residual'
+            cat_name = "Strong Residual"
+
+        categories[category].append({
+            'rapporteur': rap,
+            'residual': residual,
+            'n': data['n']
+        })
+
+        print(f"  {rap:<20} {residual:>+11.1%} {cat_name:<20}")
+
+    print("\n  Summary:")
+    print(f"    Topic-Explained (|res| < 5pp): {len(categories['topic_explained'])} rapporteurs")
+    print(f"    Partial Residual (5-15pp): {len(categories['partial_residual'])} rapporteurs")
+    print(f"    Strong Residual (≥15pp): {len(categories['strong_residual'])} rapporteurs")
+
+    # ===================
+    # VARIANCE DECOMPOSITION
+    # ===================
+    print("\n" + "-" * 80)
+    print("VARIANCE DECOMPOSITION: TOPIC vs RAPPORTEUR")
+    print("-" * 80)
+    print("  How much of outcome variance is explained by topic vs rapporteur?")
+
+    # Overall mean and variance
+    overall_mean = sum(h['pro_ds'] for h in holdings) / len(holdings)
+    total_ss = sum((h['pro_ds'] - overall_mean)**2 for h in holdings)
+
+    # Variance explained by topic
+    topic_ss = 0
+    topic_means = {}
+    topic_counts = {}
+    for h in holdings:
+        topic = h.get('concept_cluster', 'OTHER')
+        if topic not in topic_means:
+            topic_h = [hh for hh in holdings if hh.get('concept_cluster') == topic]
+            topic_means[topic] = sum(hh['pro_ds'] for hh in topic_h) / len(topic_h)
+            topic_counts[topic] = len(topic_h)
+
+    for topic, mean in topic_means.items():
+        topic_ss += topic_counts[topic] * (mean - overall_mean)**2
+
+    # Variance explained by rapporteur
+    rap_ss = 0
+    rap_means = {}
+    rap_counts = {}
+    for h in holdings:
+        rap = h.get('judge_rapporteur', '')
+        if rap and rap not in rap_means:
+            rap_h = [hh for hh in holdings if hh.get('judge_rapporteur') == rap]
+            if len(rap_h) >= 5:  # Only count rapporteurs with sufficient n
+                rap_means[rap] = sum(hh['pro_ds'] for hh in rap_h) / len(rap_h)
+                rap_counts[rap] = len(rap_h)
+
+    for rap, mean in rap_means.items():
+        rap_ss += rap_counts[rap] * (mean - overall_mean)**2
+
+    # Calculate R-squared equivalents
+    r2_topic = topic_ss / total_ss if total_ss > 0 else 0
+    r2_rap = rap_ss / total_ss if total_ss > 0 else 0
+
+    print(f"\n  Total variance (SS): {total_ss:.2f}")
+    print(f"  Topic-explained SS: {topic_ss:.2f} ({r2_topic:.1%} of total)")
+    print(f"  Rapporteur-explained SS: {rap_ss:.2f} ({r2_rap:.1%} of total)")
+
+    if r2_rap > r2_topic:
+        print(f"\n  → Rapporteur identity explains MORE variance ({r2_rap:.1%}) than topic ({r2_topic:.1%})")
+        print("     Judicial disposition matters beyond case assignment patterns")
+    else:
+        print(f"\n  → Topic explains more variance ({r2_topic:.1%}) than rapporteur ({r2_rap:.1%})")
+        print("     Case characteristics are the primary driver")
+
+    # ===================
+    # DETAILED RESIDUAL ANALYSIS
+    # ===================
+    print("\n" + "-" * 80)
+    print("DETAILED RESIDUAL ANALYSIS")
+    print("-" * 80)
+
+    # For rapporteurs with notable residuals, show topic breakdown
+    print("\n  L.S. Rossi (+18pp residual) - Topic breakdown:")
+    rossi_h = [h for h in holdings if h.get('judge_rapporteur') == 'L.S. Rossi']
+    rossi_topics = {}
+    for h in rossi_h:
+        topic = h.get('concept_cluster', 'OTHER')
+        if topic not in rossi_topics:
+            rossi_topics[topic] = {'pro_ds': 0, 'total': 0}
+        rossi_topics[topic]['pro_ds'] += h['pro_ds']
+        rossi_topics[topic]['total'] += 1
+
+    for topic, data in sorted(rossi_topics.items(), key=lambda x: -x[1]['total']):
+        rate = data['pro_ds'] / data['total'] if data['total'] > 0 else 0
+        baseline = topic_rates.get(topic, {}).get('rate', 0)
+        diff = rate - baseline
+        print(f"    {topic}: {rate:.1%} vs {baseline:.1%} baseline ({diff:+.1%}), n={data['total']}")
+
+    print("\n  N. Jääskinen (-8pp residual) - Topic breakdown:")
+    jaaskinen_h = [h for h in holdings if h.get('judge_rapporteur') == 'N. Jääskinen']
+    jaaskinen_topics = {}
+    for h in jaaskinen_h:
+        topic = h.get('concept_cluster', 'OTHER')
+        if topic not in jaaskinen_topics:
+            jaaskinen_topics[topic] = {'pro_ds': 0, 'total': 0}
+        jaaskinen_topics[topic]['pro_ds'] += h['pro_ds']
+        jaaskinen_topics[topic]['total'] += 1
+
+    for topic, data in sorted(jaaskinen_topics.items(), key=lambda x: -x[1]['total']):
+        rate = data['pro_ds'] / data['total'] if data['total'] > 0 else 0
+        baseline = topic_rates.get(topic, {}).get('rate', 0)
+        diff = rate - baseline
+        print(f"    {topic}: {rate:.1%} vs {baseline:.1%} baseline ({diff:+.1%}), n={data['total']}")
+
+    return {
+        'within_topic_comparisons': within_topic,
+        'categories': {k: [r['rapporteur'] for r in v] for k, v in categories.items()},
+        'variance_decomposition': {
+            'total_ss': total_ss,
+            'topic_ss': topic_ss,
+            'rapporteur_ss': rap_ss,
+            'r2_topic': r2_topic,
+            'r2_rapporteur': r2_rap
+        }
+    }
+
+# =============================================================================
 # MAIN
 # =============================================================================
 
@@ -674,12 +901,16 @@ def main():
     # Part 3: Does specialization explain differences?
     spec_outcome = specialization_outcome_analysis(holdings, rap_spec)
 
+    # Part 4: Deep dive into topic-adjusted effects
+    deep_dive = deep_dive_topic_adjusted_effects(holdings, spec_outcome)
+
     # Save results
     all_results = {
         'holding_vs_case': level_results,
         'rapporteur_specialization': rap_spec,
         'judge_specialization': judge_spec,
-        'specialization_outcomes': spec_outcome
+        'specialization_outcomes': spec_outcome,
+        'deep_dive_topic_adjusted': deep_dive
     }
 
     with open(OUTPUT_PATH / "supplementary_judicial_analysis.json", 'w') as f:
@@ -709,6 +940,17 @@ def main():
         if abs(data['diff']) > 0.10:
             direction = "more" if data['diff'] > 0 else "less"
             print(f"   - {rap}: {abs(data['diff']):.1%} {direction} than expected")
+
+    print("\n4. VARIANCE DECOMPOSITION:")
+    r2_topic = deep_dive['variance_decomposition']['r2_topic']
+    r2_rap = deep_dive['variance_decomposition']['r2_rapporteur']
+    print(f"   - Topic explains {r2_topic:.1%} of variance")
+    print(f"   - Rapporteur explains {r2_rap:.1%} of variance")
+
+    print("\n5. RAPPORTEUR CATEGORIZATION:")
+    for cat, raps in deep_dive['categories'].items():
+        if raps:
+            print(f"   - {cat.replace('_', ' ').title()}: {', '.join(raps)}")
 
     return all_results
 
