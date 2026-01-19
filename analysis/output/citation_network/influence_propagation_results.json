@@ -1,0 +1,184 @@
+{
+  "timestamp": "2026-01-19T13:09:27.798044",
+  "foundational_cases": [
+    {
+      "case_id": "C-439/19",
+      "in_degree": 17,
+      "year": 2021,
+      "chamber": "GRAND_CHAMBER",
+      "pro_ds_rate": 0.75,
+      "pro_ds_purpose_rate": 0.5
+    },
+    {
+      "case_id": "C-175/20",
+      "in_degree": 12,
+      "year": 2022,
+      "chamber": "FIFTH",
+      "pro_ds_rate": 0.6666666666666666,
+      "pro_ds_purpose_rate": 1.0
+    },
+    {
+      "case_id": "C-300/21",
+      "in_degree": 11,
+      "year": 2023,
+      "chamber": "THIRD",
+      "pro_ds_rate": 0.3333333333333333,
+      "pro_ds_purpose_rate": 0.3333333333333333
+    },
+    {
+      "case_id": "C-311/18",
+      "in_degree": 10,
+      "year": 2020,
+      "chamber": "GRAND_CHAMBER",
+      "pro_ds_rate": 0.8,
+      "pro_ds_purpose_rate": 1.0
+    },
+    {
+      "case_id": "C-252/21",
+      "in_degree": 9,
+      "year": 2023,
+      "chamber": "GRAND_CHAMBER",
+      "pro_ds_rate": 0.625,
+      "pro_ds_purpose_rate": 0.75
+    },
+    {
+      "case_id": "C-340/21",
+      "in_degree": 9,
+      "year": 2023,
+      "chamber": "THIRD",
+      "pro_ds_rate": 0.6666666666666666,
+      "pro_ds_purpose_rate": 1.0
+    },
+    {
+      "case_id": "C-667/21",
+      "in_degree": 9,
+      "year": 2023,
+      "chamber": "THIRD",
+      "pro_ds_rate": 0.2,
+      "pro_ds_purpose_rate": 0.4
+    },
+    {
+      "case_id": "C-579/21",
+      "in_degree": 8,
+      "year": 2023,
+      "chamber": "FIRST",
+      "pro_ds_rate": 0.6666666666666666,
+      "pro_ds_purpose_rate": 0.6666666666666666
+    },
+    {
+      "case_id": "C-487/21",
+      "in_degree": 7,
+      "year": 2023,
+      "chamber": "FIRST",
+      "pro_ds_rate": 0.5,
+      "pro_ds_purpose_rate": 0.5
+    },
+    {
+      "case_id": "C-604/22",
+      "in_degree": 7,
+      "year": 2024,
+      "chamber": "FOURTH",
+      "pro_ds_rate": 0.5,
+      "pro_ds_purpose_rate": 1.0
+    },
+    {
+      "case_id": "C-683/21",
+      "in_degree": 7,
+      "year": 2023,
+      "chamber": "GRAND_CHAMBER",
+      "pro_ds_rate": 0.75,
+      "pro_ds_purpose_rate": 0.5
+    },
+    {
+      "case_id": "C-687/21",
+      "in_degree": 7,
+      "year": 2024,
+      "chamber": "THIRD",
+      "pro_ds_rate": 0.0,
+      "pro_ds_purpose_rate": 0.4
+    },
+    {
+      "case_id": "C-645/19",
+      "in_degree": 6,
+      "year": 2021,
+      "chamber": "GRAND_CHAMBER",
+      "pro_ds_rate": 0.8,
+      "pro_ds_purpose_rate": 0.4
+    },
+    {
+      "case_id": "C-132/21",
+      "in_degree": 5,
+      "year": 2023,
+      "chamber": "FIRST",
+      "pro_ds_rate": 1.0,
+      "pro_ds_purpose_rate": 1.0
+    },
+    {
+      "case_id": "C-154/21",
+      "in_degree": 5,
+      "year": 2023,
+      "chamber": "FIRST",
+      "pro_ds_rate": 1.0,
+      "pro_ds_purpose_rate": 1.0
+    }
+  ],
+  "H4_1_teleological_propagation": {
+    "correlation_r": -0.11306669807973749,
+    "correlation_p": 0.3938597833920594,
+    "n_cases": 59,
+    "interpretation": "No significant propagation"
+  },
+  "purpose_propagation": {
+    "purpose_propagation": {
+      "r": 0.015322096142813097,
+      "p": 0.9083025846220333
+    },
+    "purpose_to_outcome": {
+      "r": -0.02320817329943275,
+      "p": 0.8614924745018265
+    },
+    "n_cases": 59
+  },
+  "H4_2_compensation_gap_lineage": {
+    "n_compensation_cases": 14,
+    "most_cited_case": "C-300/21",
+    "most_cited_pro_ds_rate": 0.3333333333333333,
+    "early_avg_pro_ds": 0.4916666666666667
+  },
+  "third_chamber_citations": {
+    "third_citation_distribution": {
+      "FIRST": 7,
+      "EIGHTH": 1,
+      "FOURTH": 1,
+      "THIRD": 25,
+      "GRAND_CHAMBER": 10,
+      "FIFTH": 2
+    },
+    "gc_citation_distribution": {
+      "GRAND_CHAMBER": 15,
+      "FIFTH": 4,
+      "THIRD": 9,
+      "EIGHTH": 1,
+      "FIRST": 2,
+      "FOURTH": 1
+    },
+    "third_gc_citation_rate": 0.21739130434782608,
+    "gc_gc_citation_rate": 0.46875
+  },
+  "direction_concordance": {
+    "concordant": 164,
+    "discordant": 112,
+    "concordance_rate": 0.5942028985507246,
+    "p_value": 0.0010428715792158445
+  },
+  "summary": [
+    "H4.1 NOT SUPPORTED: No significant teleological propagation",
+    "  r = -0.113, p = 0.3939",
+    "\nPurpose Propagation:",
+    "  Cited purpose \u2192 Own purpose: r = 0.015, p = 0.9083",
+    "  Cited purpose \u2192 Own outcome: r = -0.023, p = 0.8615",
+    "\nCitation Concordance:",
+    "  59.4% of citations are direction-concordant",
+    "  Significantly above chance: p = 0.0010"
+  ]
+}
