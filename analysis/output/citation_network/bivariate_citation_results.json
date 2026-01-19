@@ -1,0 +1,201 @@
+{
+  "timestamp": "2026-01-19T13:06:03.565910",
+  "n_holdings": 181,
+  "n_holdings_with_citations": 123,
+  "hypotheses": {
+    "H1_1_precedent_direction": {
+      "predictor": "predominantly_pro_ds_precedents",
+      "test": "Chi-square",
+      "p_value": 0.06214526993113959,
+      "odds_ratio": 2.1857142857142855,
+      "phi": 0.16818463660793642,
+      "rate_predictor_1": 0.6455696202531646,
+      "rate_predictor_0": 0.45454545454545453,
+      "n_predictor_1": 79,
+      "n_predictor_0": 44,
+      "rate_difference": 0.19102416570771003,
+      "correlation_r": 0.2859643282383183,
+      "correlation_p": 0.0013443149262785297,
+      "quartile_rates": {
+        "pro_ds_count": {
+          "Q1 (low)": 12,
+          "Q2": 20,
+          "Q3": 17,
+          "Q4 (high)": 22
+        },
+        "total": {
+          "Q1 (low)": 31,
+          "Q2": 31,
+          "Q3": 32,
+          "Q4 (high)": 29
+        },
+        "pro_ds_rate": {
+          "Q1 (low)": 0.3870967741935484,
+          "Q2": 0.6451612903225806,
+          "Q3": 0.53125,
+          "Q4 (high)": 0.7586206896551724
+        }
+      }
+    },
+    "H1_2_purpose_propagation": {
+      "predictor": "high_precedent_purpose",
+      "test": "Chi-square",
+      "p_value": 1.148313942272946e-05,
+      "odds_ratio": 8.2875,
+      "phi": 0.39557841897701995,
+      "rate_predictor_1": 0.9069767441860465,
+      "rate_predictor_0": 0.5405405405405406,
+      "n_predictor_1": 86,
+      "n_predictor_0": 37,
+      "rate_difference": 0.3664362036455059,
+      "outcome_test": {
+        "predictor": "high_precedent_purpose",
+        "test": "Chi-square",
+        "p_value": 0.05319361755630473,
+        "odds_ratio": 2.3286290322580645,
+        "phi": 0.17432391699544122,
+        "rate_predictor_1": 0.6395348837209303,
+        "rate_predictor_0": 0.43243243243243246,
+        "n_predictor_1": 86,
+        "n_predictor_0": 37,
+        "rate_difference": 0.2071024512884978
+      }
+    },
+    "H1_3_grand_chamber": {
+      "predictor": "cites_gc_precedent",
+      "test": "Chi-square",
+      "p_value": 0.04233364321212328,
+      "odds_ratio": 2.2670068027210886,
+      "phi": 0.18305925050729474,
+      "rate_predictor_1": 0.671875,
+      "rate_predictor_0": 0.4745762711864407,
+      "n_predictor_1": 64,
+      "n_predictor_0": 59,
+      "rate_difference": 0.1972987288135593
+    }
+  },
+  "exploratory": {
+    "citation_intensity": {
+      "category_rates": {
+        "pro_ds_count": {
+          "0": 39,
+          "1-2": 48,
+          "3-5": 21,
+          "6+": 2
+        },
+        "total": {
+          "0": 58,
+          "1-2": 80,
+          "3-5": 39,
+          "6+": 4
+        },
+        "pro_ds_rate": {
+          "0": 0.6724137931034483,
+          "1-2": 0.6,
+          "3-5": 0.5384615384615384,
+          "6+": 0.5
+        }
+      },
+      "correlation_r": -0.0038270517437410776,
+      "correlation_p": 0.9664900603076978
+    },
+    "centrality_effects": {
+      "avg_cited_pagerank": {
+        "predictor": "high_cited_pagerank",
+        "test": "Chi-square",
+        "p_value": 0.20841428970726097,
+        "odds_ratio": 1.6998556998557,
+        "phi": 0.11342442222361275,
+        "rate_predictor_1": 0.6440677966101694,
+        "rate_predictor_0": 0.515625,
+        "n_predictor_1": 59,
+        "n_predictor_0": 64,
+        "rate_difference": 0.12844279661016944
+      },
+      "citing_authority": {
+        "predictor": "high_authority",
+        "test": "Chi-square",
+        "p_value": 0.08544256329223898,
+        "odds_ratio": 0.4956726986624705,
+        "phi": 0.1550821566410083,
+        "rate_predictor_1": 0.4918032786885246,
+        "rate_predictor_0": 0.6612903225806451,
+        "n_predictor_1": 61,
+        "n_predictor_0": 62,
+        "rate_difference": -0.16948704389212055
+      }
+    },
+    "concept_specific": {
+      "ENFORCEMENT": {
+        "predictor": "predominantly_pro_ds_precedents",
+        "test": "Chi-square",
+        "p_value": 0.36956477197389326,
+        "odds_ratio": 2.0202020202020203,
+        "phi": 0.12689581476328834,
+        "rate_predictor_1": 0.47619047619047616,
+        "rate_predictor_0": 0.3103448275862069,
+        "n_predictor_1": 21,
+        "n_predictor_0": 29,
+        "rate_difference": 0.16584564860426926
+      }
+    }
+  },
+  "fdr_correction": [
+    {
+      "test": "H1.1: Precedent Direction",
+      "p_raw": 0.06214526993113959,
+      "p_adjusted": 0.08544256329223898,
+      "significant_fdr": false,
+      "effect_size": 0.19102416570771003
+    },
+    {
+      "test": "H1.2: Purpose Propagation",
+      "p_raw": 1.148313942272946e-05,
+      "p_adjusted": 3.4449418268188377e-05,
+      "significant_fdr": true,
+      "effect_size": 0.3664362036455059
+    },
+    {
+      "test": "H1.3: Grand Chamber Citation",
+      "p_raw": 0.04233364321212328,
+      "p_adjusted": 0.08466728642424655,
+      "significant_fdr": false,
+      "effect_size": 0.1972987288135593
+    },
+    {
+      "test": "Exploratory: Citation Intensity",
+      "p_raw": 0.9664900603076978,
+      "p_adjusted": 1.0,
+      "significant_fdr": false,
+      "effect_size": -0.0038270517437410776
+    },
+    {
+      "test": "Exploratory: avg_cited_pagerank",
+      "p_raw": 0.20841428970726097,
+      "p_adjusted": 0.25009714764871316,
+      "significant_fdr": false,
+      "effect_size": 0.12844279661016944
+    },
+    {
+      "test": "Exploratory: citing_authority",
+      "p_raw": 0.08544256329223898,
+      "p_adjusted": 0.08544256329223898,
+      "significant_fdr": false,
+      "effect_size": -0.16948704389212055
+    }
+  ],
+  "summary": [
+    "H1.1 Precedent Direction: NOT SUPPORTED",
+    "  - Pro-DS precedents \u2192 64.6% pro-DS",
+    "  - Other precedents \u2192 45.5% pro-DS",
+    "  - Gap: 19.1pp (p=0.0621)",
+    "\nH1.2 Purpose Propagation: SUPPORTED",
+    "  - High purpose precedents \u2192 90.7% invoke purpose",
+    "  - Low purpose precedents \u2192 54.1% invoke purpose",
+    "  - Gap: 36.6pp (p=0.0000)",
+    "\nH1.3 Grand Chamber Citation: SUPPORTED",
+    "  - Cites GC \u2192 67.2% pro-DS",
+    "  - No GC \u2192 47.5% pro-DS",
+    "  - Gap: 19.7pp (p=0.0423)"
+  ]
+}

@@ -1,0 +1,538 @@
+{
+  "C-621/22": {
+    "in_degree": 1,
+    "out_degree": 3,
+    "pagerank": 0.0073877997143860855,
+    "betweenness": 0.002470862470862471,
+    "hub_score": 0.004006352952416281,
+    "authority_score": 0.0005258863302977157
+  },
+  "C-46/23": {
+    "in_degree": 2,
+    "out_degree": 2,
+    "pagerank": 0.007270715638474654,
+    "betweenness": 0.0004079254079254079,
+    "hub_score": 0.0005971726675981773,
+    "authority_score": 0.0020677689416291225
+  },
+  "C-184/20": {
+    "in_degree": 5,
+    "out_degree": 2,
+    "pagerank": 0.021281147496361688,
+    "betweenness": 0.003451178451178451,
+    "hub_score": 0.002339869940968956,
+    "authority_score": 0.014015407214789914
+  },
+  "C-456/22": {
+    "in_degree": 5,
+    "out_degree": 2,
+    "pagerank": 0.008885989509286525,
+    "betweenness": 0.0008391608391608392,
+    "hub_score": 0.025957806747517267,
+    "authority_score": 0.06448526393631707
+  },
+  "C-683/21": {
+    "in_degree": 7,
+    "out_degree": 3,
+    "pagerank": 0.02313723659639132,
+    "betweenness": 0.011946016946016946,
+    "hub_score": 0.020381175948410404,
+    "authority_score": 0.00699195920104718
+  },
+  "C-741/21": {
+    "in_degree": 4,
+    "out_degree": 5,
+    "pagerank": 0.010429512150068928,
+    "betweenness": 0.004020979020979021,
+    "hub_score": 0.05329060129541441,
+    "authority_score": 0.098982128200063
+  },
+  "C-200/23": {
+    "in_degree": 2,
+    "out_degree": 14,
+    "pagerank": 0.007106994024015165,
+    "betweenness": 0.006314981314981315,
+    "hub_score": 0.08923610424682073,
+    "authority_score": 0.021692195663995894
+  },
+  "C-132/21": {
+    "in_degree": 5,
+    "out_degree": 1,
+    "pagerank": 0.011196865648217808,
+    "betweenness": 0.0010900210900210898,
+    "hub_score": 0.00013465440110730154,
+    "authority_score": 0.010834708702049162
+  },
+  "C-182/22 & C-189/22": {
+    "in_degree": 0,
+    "out_degree": 5,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.12834503389140092,
+    "authority_score": -0.0
+  },
+  "C-245/20": {
+    "in_degree": 3,
+    "out_degree": 0,
+    "pagerank": 0.009088951974547798,
+    "betweenness": 0.0,
+    "hub_score": -0.0,
+    "authority_score": 0.002709637464294748
+  },
+  "C-175/20": {
+    "in_degree": 12,
+    "out_degree": 2,
+    "pagerank": 0.04301638548020276,
+    "betweenness": 0.008650726377999103,
+    "hub_score": 0.003487251609920217,
+    "authority_score": 0.008365117207864946
+  },
+  "C-416/23": {
+    "in_degree": 0,
+    "out_degree": 4,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.001995239440595174,
+    "authority_score": -0.0
+  },
+  "C-180/21": {
+    "in_degree": 4,
+    "out_degree": 3,
+    "pagerank": 0.009679977295224757,
+    "betweenness": 0.0009965034965034964,
+    "hub_score": 0.0045963679009624475,
+    "authority_score": 0.012380772522867936
+  },
+  "C-461/22": {
+    "in_degree": 0,
+    "out_degree": 1,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.00016045292293308228,
+    "authority_score": -0.0
+  },
+  "C-496/17": {
+    "in_degree": 2,
+    "out_degree": 0,
+    "pagerank": 0.03183833892711268,
+    "betweenness": 0.0,
+    "hub_score": -0.0,
+    "authority_score": 0.00012183972407442468
+  },
+  "C-655/23": {
+    "in_degree": 0,
+    "out_degree": 8,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.06254183697103977,
+    "authority_score": -0.0
+  },
+  "C-307/22": {
+    "in_degree": 2,
+    "out_degree": 4,
+    "pagerank": 0.007070676187164317,
+    "betweenness": 0.0011902239174966447,
+    "hub_score": 0.0039988125089650455,
+    "authority_score": 0.0004975066480723304
+  },
+  "C-247/23": {
+    "in_degree": 0,
+    "out_degree": 2,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.0015905203157669284,
+    "authority_score": -0.0
+  },
+  "C-311/18": {
+    "in_degree": 10,
+    "out_degree": 0,
+    "pagerank": 0.12140636894604184,
+    "betweenness": 0.0,
+    "hub_score": -0.0,
+    "authority_score": 0.001948008733677941
+  },
+  "C-659/22": {
+    "in_degree": 2,
+    "out_degree": 2,
+    "pagerank": 0.0067722190567971585,
+    "betweenness": 0.001486013986013986,
+    "hub_score": 0.002339869940968956,
+    "authority_score": 0.008284540627375358
+  },
+  "C-687/21": {
+    "in_degree": 7,
+    "out_degree": 4,
+    "pagerank": 0.011367550556675262,
+    "betweenness": 0.0037678062678062675,
+    "hub_score": 0.11342501434222137,
+    "authority_score": 0.057754678344606084
+  },
+  "C-61/19": {
+    "in_degree": 0,
+    "out_degree": 1,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.0005914454909661264,
+    "authority_score": -0.0
+  },
+  "C-306/21": {
+    "in_degree": 2,
+    "out_degree": 1,
+    "pagerank": 0.009321729414019961,
+    "betweenness": 0.0,
+    "hub_score": 0.001665052469027365,
+    "authority_score": 0.001286802599546419
+  },
+  "C-231/22": {
+    "in_degree": 3,
+    "out_degree": 2,
+    "pagerank": 0.007224772333315114,
+    "betweenness": 0.0013209013209013207,
+    "hub_score": 0.001157584006888413,
+    "authority_score": 0.011870820021174965
+  },
+  "C-383/23": {
+    "in_degree": 0,
+    "out_degree": 1,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 2.949551399001652e-05,
+    "authority_score": -0.0
+  },
+  "C-439/19": {
+    "in_degree": 17,
+    "out_degree": 4,
+    "pagerank": 0.0894259145658621,
+    "betweenness": 0.031265510583692396,
+    "hub_score": 0.0009582974773407854,
+    "authority_score": 0.02064018736886587
+  },
+  "C-446/21": {
+    "in_degree": 2,
+    "out_degree": 7,
+    "pagerank": 0.007957484929939874,
+    "betweenness": 0.010296673023945751,
+    "hub_score": 0.01802093310026481,
+    "authority_score": 0.0008073570291453636
+  },
+  "C-268/21": {
+    "in_degree": 3,
+    "out_degree": 3,
+    "pagerank": 0.007700667283815665,
+    "betweenness": 0.002532845941936851,
+    "hub_score": 0.002882402096660182,
+    "authority_score": 0.0019114418564952023
+  },
+  "C-453/21": {
+    "in_degree": 1,
+    "out_degree": 1,
+    "pagerank": 0.010444883035534428,
+    "betweenness": 0.006293706293706293,
+    "hub_score": 5.966345446557805e-20,
+    "authority_score": 8.329503570660742e-05
+  },
+  "C-492/23": {
+    "in_degree": 0,
+    "out_degree": 8,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.0321213480758653,
+    "authority_score": -0.0
+  },
+  "C-507/23": {
+    "in_degree": 1,
+    "out_degree": 4,
+    "pagerank": 0.006413347092294561,
+    "betweenness": 0.00010360010360010359,
+    "hub_score": 0.08859242133424006,
+    "authority_score": 0.02031528373195879
+  },
+  "C-710/23": {
+    "in_degree": 1,
+    "out_degree": 6,
+    "pagerank": 0.005712196057766822,
+    "betweenness": 0.003477078477078477,
+    "hub_score": 0.0127167214664309,
+    "authority_score": 0.006771761243986266
+  },
+  "C-34/21": {
+    "in_degree": 4,
+    "out_degree": 6,
+    "pagerank": 0.010426139035024604,
+    "betweenness": 0.011884504384504384,
+    "hub_score": 0.00401711928723237,
+    "authority_score": 0.009934323817148632
+  },
+  "C-638/23": {
+    "in_degree": 1,
+    "out_degree": 4,
+    "pagerank": 0.005665452655464972,
+    "betweenness": 0.00011655011655011655,
+    "hub_score": 0.0021897619764445916,
+    "authority_score": 0.0019716202602970837
+  },
+  "C-667/21": {
+    "in_degree": 9,
+    "out_degree": 6,
+    "pagerank": 0.015904796295798822,
+    "betweenness": 0.02344738594738595,
+    "hub_score": 0.05355669707392856,
+    "authority_score": 0.10391041268830703
+  },
+  "C-740/22": {
+    "in_degree": 1,
+    "out_degree": 6,
+    "pagerank": 0.006055267472223557,
+    "betweenness": 0.0021473896473896475,
+    "hub_score": 0.004630949951829994,
+    "authority_score": 0.0013769119320371217
+  },
+  "C-252/21": {
+    "in_degree": 9,
+    "out_degree": 5,
+    "pagerank": 0.023100926094618515,
+    "betweenness": 0.013439060939060938,
+    "hub_score": 0.005823141726796473,
+    "authority_score": 0.038233514084567134
+  },
+  "C-579/21": {
+    "in_degree": 8,
+    "out_degree": 4,
+    "pagerank": 0.017607771983562143,
+    "betweenness": 0.012538311856493674,
+    "hub_score": 0.001372866004826262,
+    "authority_score": 0.015490372407668058
+  },
+  "C-17/22 & C-18/22": {
+    "in_degree": 0,
+    "out_degree": 1,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.009252940279330282,
+    "authority_score": -0.0
+  },
+  "C-154/21": {
+    "in_degree": 5,
+    "out_degree": 2,
+    "pagerank": 0.026530754096006266,
+    "betweenness": 0.003616585434767253,
+    "hub_score": 0.00016697553290100935,
+    "authority_score": 0.0010877542795912876
+  },
+  "C-634/21": {
+    "in_degree": 2,
+    "out_degree": 2,
+    "pagerank": 0.007358856154483392,
+    "betweenness": 0.0007999576181394362,
+    "hub_score": 0.0014575154867879575,
+    "authority_score": 0.0010643607503305736
+  },
+  "C-768/21": {
+    "in_degree": 1,
+    "out_degree": 3,
+    "pagerank": 0.005665452655464972,
+    "betweenness": 5.8275058275058275e-05,
+    "hub_score": 0.0008879986957882114,
+    "authority_score": 0.0019716202602970837
+  },
+  "C-129/21": {
+    "in_degree": 1,
+    "out_degree": 0,
+    "pagerank": 0.005868007398772985,
+    "betweenness": 0.0,
+    "hub_score": -0.0,
+    "authority_score": 0.0034779614820949333
+  },
+  "C-65/23": {
+    "in_degree": 0,
+    "out_degree": 4,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.010422946181856274,
+    "authority_score": -0.0
+  },
+  "C-340/21": {
+    "in_degree": 9,
+    "out_degree": 5,
+    "pagerank": 0.018056056536676027,
+    "betweenness": 0.013886206386206388,
+    "hub_score": 0.061566480203903345,
+    "authority_score": 0.08840292085533226
+  },
+  "C-604/22": {
+    "in_degree": 7,
+    "out_degree": 4,
+    "pagerank": 0.013128052124359621,
+    "betweenness": 0.00970788470788471,
+    "hub_score": 0.003923954805292668,
+    "authority_score": 0.007916139389144853
+  },
+  "C-205/21": {
+    "in_degree": 0,
+    "out_degree": 1,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.0011306287084685595,
+    "authority_score": -0.0
+  },
+  "C-33/22": {
+    "in_degree": 2,
+    "out_degree": 5,
+    "pagerank": 0.010222934379895276,
+    "betweenness": 0.0022727272727272726,
+    "hub_score": 0.003933690495977361,
+    "authority_score": 0.001988993413015734
+  },
+  "C-272/19": {
+    "in_degree": 2,
+    "out_degree": 0,
+    "pagerank": 0.021804816888270184,
+    "betweenness": 0.0,
+    "hub_score": -0.0,
+    "authority_score": 0.0005296834274167899
+  },
+  "C-319/20": {
+    "in_degree": 5,
+    "out_degree": 1,
+    "pagerank": 0.026927333914559114,
+    "betweenness": 0.0018592518592518593,
+    "hub_score": 0.00013465440110730154,
+    "authority_score": 0.005454614294767454
+  },
+  "C-77/21": {
+    "in_degree": 3,
+    "out_degree": 3,
+    "pagerank": 0.010474250248116023,
+    "betweenness": 0.0018683336865155048,
+    "hub_score": 0.0031718340847760335,
+    "authority_score": 0.0025771619793415607
+  },
+  "C-394/23": {
+    "in_degree": 3,
+    "out_degree": 4,
+    "pagerank": 0.009534042124429348,
+    "betweenness": 0.010267047767047767,
+    "hub_score": 0.00485691918981751,
+    "authority_score": 0.006404000048418339
+  },
+  "C-645/19": {
+    "in_degree": 6,
+    "out_degree": 1,
+    "pagerank": 0.04750151279707306,
+    "betweenness": 0.0012140637140637142,
+    "hub_score": 0.00015714667186548663,
+    "authority_score": 0.0016691918846981667
+  },
+  "C-817/19": {
+    "in_degree": 1,
+    "out_degree": 1,
+    "pagerank": 0.0075542696720103004,
+    "betweenness": 0.00021367521367521368,
+    "hub_score": 0.001665052469027365,
+    "authority_score": 0.00666615380623523
+  },
+  "C-300/21": {
+    "in_degree": 11,
+    "out_degree": 3,
+    "pagerank": 0.03530205830399602,
+    "betweenness": 0.014680689680689678,
+    "hub_score": 0.0019099487294290758,
+    "authority_score": 0.2333731221942527
+  },
+  "C-460/20": {
+    "in_degree": 3,
+    "out_degree": 1,
+    "pagerank": 0.00850212070158102,
+    "betweenness": 0.0003108003108003108,
+    "hub_score": 0.0011306287084685595,
+    "authority_score": 0.013312277932055064
+  },
+  "C-313/23, C-316/23 & C-332/23": {
+    "in_degree": 0,
+    "out_degree": 15,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.018209258780026383,
+    "authority_score": -0.0
+  },
+  "C-597/19": {
+    "in_degree": 3,
+    "out_degree": 0,
+    "pagerank": 0.012556458875173504,
+    "betweenness": 0.0,
+    "hub_score": -0.0,
+    "authority_score": 0.006854262632820277
+  },
+  "C-757/22": {
+    "in_degree": 3,
+    "out_degree": 5,
+    "pagerank": 0.00921197393427468,
+    "betweenness": 0.00520979020979021,
+    "hub_score": 0.003996371818078345,
+    "authority_score": 0.0035135716449446065
+  },
+  "C-203/22": {
+    "in_degree": 0,
+    "out_degree": 6,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.002599574014084768,
+    "authority_score": -0.0
+  },
+  "C-534/20": {
+    "in_degree": 1,
+    "out_degree": 0,
+    "pagerank": 0.014239662386760716,
+    "betweenness": 0.0,
+    "hub_score": -0.0,
+    "authority_score": 7.39595239279567e-19
+  },
+  "C-26/22 & C-64/22": {
+    "in_degree": 0,
+    "out_degree": 4,
+    "pagerank": 0.005361620540502952,
+    "betweenness": 0.0,
+    "hub_score": 0.004323401264502524,
+    "authority_score": -0.0
+  },
+  "C-487/21": {
+    "in_degree": 7,
+    "out_degree": 3,
+    "pagerank": 0.017939911070255398,
+    "betweenness": 0.01554215986034168,
+    "hub_score": 0.000769286505528504,
+    "authority_score": 0.012313254497267377
+  },
+  "C-673/17": {
+    "in_degree": 4,
+    "out_degree": 0,
+    "pagerank": 0.02937059759992612,
+    "betweenness": 0.0,
+    "hub_score": -0.0,
+    "authority_score": 0.007331628269433883
+  },
+  "C-590/22": {
+    "in_degree": 3,
+    "out_degree": 5,
+    "pagerank": 0.007884775870783737,
+    "betweenness": 0.001811706811706812,
+    "hub_score": 0.10060679752071355,
+    "authority_score": 0.0452110825789588
+  },
+  "C-169/23": {
+    "in_degree": 2,
+    "out_degree": 5,
+    "pagerank": 0.0062351378710187606,
+    "betweenness": 0.0031274281274281273,
+    "hub_score": 0.013971550112327466,
+    "authority_score": 0.0022530909591447165
+  },
+  "C-807/21": {
+    "in_degree": 3,
+    "out_degree": 2,
+    "pagerank": 0.01317019937886215,
+    "betweenness": 0.0030691530691530694,
+    "hub_score": 0.0010040702421818888,
+    "authority_score": 0.00036562988051095464
+  }
+}

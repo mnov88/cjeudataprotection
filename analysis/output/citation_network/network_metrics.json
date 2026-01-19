@@ -1,0 +1,199 @@
+{
+  "full_network": {
+    "name": "G_case (full)",
+    "n_nodes": 261,
+    "n_edges": 551,
+    "density": 0.00811965811965812,
+    "is_dag": true,
+    "n_weakly_connected_components": 1,
+    "largest_wcc_size": 261,
+    "avg_in_degree": 2.111111111111111,
+    "max_in_degree": 17,
+    "avg_out_degree": 2.111111111111111,
+    "max_out_degree": 33
+  },
+  "internal_network": {
+    "name": "G_internal (corpus only)",
+    "n_nodes": 67,
+    "n_edges": 222,
+    "density": 0.050203527815468114,
+    "is_dag": true,
+    "n_weakly_connected_components": 1,
+    "largest_wcc_size": 67,
+    "avg_in_degree": 3.3134328358208953,
+    "max_in_degree": 17,
+    "avg_out_degree": 3.3134328358208953,
+    "max_out_degree": 15
+  },
+  "summary": {
+    "total_corpus_cases": 67,
+    "total_citation_edges": 639,
+    "internal_citations": 276,
+    "external_citations": 363,
+    "cases_with_internal_citations": 222
+  },
+  "most_cited_cases": [
+    {
+      "case_id": "C-439/19",
+      "times_cited": 17,
+      "chamber": "GRAND_CHAMBER",
+      "year": 2021,
+      "pro_ds_rate": 0.75,
+      "holding_count": 4
+    },
+    {
+      "case_id": "C-175/20",
+      "times_cited": 12,
+      "chamber": "FIFTH",
+      "year": 2022,
+      "pro_ds_rate": 0.6666666666666666,
+      "holding_count": 3
+    },
+    {
+      "case_id": "C-300/21",
+      "times_cited": 11,
+      "chamber": "THIRD",
+      "year": 2023,
+      "pro_ds_rate": 0.3333333333333333,
+      "holding_count": 3
+    },
+    {
+      "case_id": "C-311/18",
+      "times_cited": 10,
+      "chamber": "GRAND_CHAMBER",
+      "year": 2020,
+      "pro_ds_rate": 0.8,
+      "holding_count": 5
+    },
+    {
+      "case_id": "C-667/21",
+      "times_cited": 9,
+      "chamber": "THIRD",
+      "year": 2023,
+      "pro_ds_rate": 0.2,
+      "holding_count": 5
+    },
+    {
+      "case_id": "C-252/21",
+      "times_cited": 9,
+      "chamber": "GRAND_CHAMBER",
+      "year": 2023,
+      "pro_ds_rate": 0.625,
+      "holding_count": 8
+    },
+    {
+      "case_id": "C-340/21",
+      "times_cited": 9,
+      "chamber": "THIRD",
+      "year": 2023,
+      "pro_ds_rate": 0.6666666666666666,
+      "holding_count": 6
+    },
+    {
+      "case_id": "C-579/21",
+      "times_cited": 8,
+      "chamber": "FIRST",
+      "year": 2023,
+      "pro_ds_rate": 0.6666666666666666,
+      "holding_count": 3
+    },
+    {
+      "case_id": "C-683/21",
+      "times_cited": 7,
+      "chamber": "GRAND_CHAMBER",
+      "year": 2023,
+      "pro_ds_rate": 0.75,
+      "holding_count": 4
+    },
+    {
+      "case_id": "C-687/21",
+      "times_cited": 7,
+      "chamber": "THIRD",
+      "year": 2024,
+      "pro_ds_rate": 0.0,
+      "holding_count": 5
+    }
+  ],
+  "most_citing_cases": [
+    {
+      "case_id": "C-313/23, C-316/23 & C-332/23",
+      "cases_cited": 15,
+      "chamber": "FIRST",
+      "year": 2025,
+      "pro_ds_rate": 0.2,
+      "holding_count": 5
+    },
+    {
+      "case_id": "C-200/23",
+      "cases_cited": 14,
+      "chamber": "FIRST",
+      "year": 2024,
+      "pro_ds_rate": 0.6666666666666666,
+      "holding_count": 6
+    },
+    {
+      "case_id": "C-655/23",
+      "cases_cited": 8,
+      "chamber": "FOURTH",
+      "year": 2025,
+      "pro_ds_rate": 0.5,
+      "holding_count": 4
+    },
+    {
+      "case_id": "C-492/23",
+      "cases_cited": 8,
+      "chamber": "GRAND_CHAMBER",
+      "year": 2025,
+      "pro_ds_rate": 1.0,
+      "holding_count": 3
+    },
+    {
+      "case_id": "C-446/21",
+      "cases_cited": 7,
+      "chamber": "FOURTH",
+      "year": 2024,
+      "pro_ds_rate": 1.0,
+      "holding_count": 2
+    },
+    {
+      "case_id": "C-710/23",
+      "cases_cited": 6,
+      "chamber": "FIRST",
+      "year": 2025,
+      "pro_ds_rate": 0.5,
+      "holding_count": 2
+    },
+    {
+      "case_id": "C-34/21",
+      "cases_cited": 6,
+      "chamber": "FIRST",
+      "year": 2023,
+      "pro_ds_rate": 0.5,
+      "holding_count": 2
+    },
+    {
+      "case_id": "C-667/21",
+      "cases_cited": 6,
+      "chamber": "THIRD",
+      "year": 2023,
+      "pro_ds_rate": 0.2,
+      "holding_count": 5
+    },
+    {
+      "case_id": "C-740/22",
+      "cases_cited": 6,
+      "chamber": "SIXTH",
+      "year": 2024,
+      "pro_ds_rate": 1.0,
+      "holding_count": 2
+    },
+    {
+      "case_id": "C-203/22",
+      "cases_cited": 6,
+      "chamber": "FIRST",
+      "year": 2025,
+      "pro_ds_rate": 0.5,
+      "holding_count": 2
+    }
+  ]
+}
