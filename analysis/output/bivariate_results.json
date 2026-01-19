@@ -17,12 +17,12 @@
   {
     "variable": "dominant_source",
     "test": "Chi-square",
-    "chi2": 12.80216424811495,
-    "p_value": 0.012284021802226998,
-    "effect_size": 0.26595147906357786,
+    "chi2": 12.382952045072132,
+    "p_value": 0.00204680339461503,
+    "effect_size": 0.26156089099200425,
     "effect_type": "Cram\u00e9r's V",
     "n": 181,
-    "min_expected": 0.39226519337016574,
+    "min_expected": 16.475138121546962,
     "hypothesis": "H2",
     "description": "Dominant interpretive source affects ruling direction",
     "expected": "Semantic = fewer pro-DS",
@@ -41,7 +41,7 @@
     "hypothesis": "H2b",
     "description": "HIGH_LEVEL_OF_PROTECTION or FUNDAMENTAL_RIGHTS purpose invoked",
     "expected": "+",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
@@ -56,7 +56,7 @@
     "hypothesis": "H3",
     "description": "Principle-based reasoning predicts pro-DS",
     "expected": "+",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
@@ -71,22 +71,22 @@
     "hypothesis": "H4",
     "description": "Level-shifting predicts pro-DS",
     "expected": "+",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
     "variable": "dominant_structure",
     "test": "Chi-square",
-    "chi2": 9.409862939826594,
-    "p_value": 0.09379116299146108,
-    "effect_size": 0.22800919507273382,
+    "chi2": 5.9295825482407265,
+    "p_value": 0.115086901804445,
+    "effect_size": 0.18099758168526897,
     "effect_type": "Cram\u00e9r's V",
     "n": 181,
-    "min_expected": 0.39226519337016574,
+    "min_expected": 7.45303867403315,
     "hypothesis": "H4b",
     "description": "Dominant reasoning structure affects ruling direction",
     "expected": "PRINCIPLE_BASED = more pro-DS",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
@@ -101,37 +101,37 @@
     "hypothesis": "H5",
     "description": "Grand Chamber predicts pro-DS",
     "expected": "+",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
     "variable": "chamber_grouped",
     "test": "Chi-square",
-    "chi2": 19.347824173907853,
-    "p_value": 0.0006714241897400656,
-    "effect_size": 0.3269465647616375,
+    "chi2": 21.95488405027259,
+    "p_value": 0.0005340395177318889,
+    "effect_size": 0.34827819618116734,
     "effect_type": "Cram\u00e9r's V",
     "n": 181,
-    "min_expected": 6.276243093922652,
+    "min_expected": 5.883977900552487,
     "hypothesis": "H5b",
     "description": "Chamber composition affects ruling direction",
     "expected": "Varies by chamber",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
     "variable": "concept_cluster",
     "test": "Chi-square",
-    "chi2": 16.616041301973368,
-    "p_value": 0.020047031125559226,
-    "effect_size": 0.3029873481848274,
+    "chi2": 17.22116634815061,
+    "p_value": 0.016024393798176592,
+    "effect_size": 0.3084551271407166,
     "effect_type": "Cram\u00e9r's V",
     "n": 181,
     "min_expected": 3.9226519337016574,
     "hypothesis": "H6",
     "description": "Primary concept cluster affects ruling direction",
     "expected": "RIGHTS cluster = more pro-DS",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
@@ -146,7 +146,7 @@
     "hypothesis": "H7",
     "description": "Explicit balancing predicts fewer pro-DS outcomes",
     "expected": "-",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
@@ -161,7 +161,7 @@
     "hypothesis": "H8",
     "description": "Necessity analysis predicts fewer pro-DS outcomes",
     "expected": "-",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
@@ -176,7 +176,7 @@
     "hypothesis": "H9",
     "description": "Strict necessity standard predicts fewer pro-DS",
     "expected": "STRICT = fewer pro-DS",
-    "q_value": 0.0004753348989644351,
+    "q_value": 0.004005296382989167,
     "significant_fdr": "True"
   },
   {
@@ -191,8 +191,8 @@
     "hypothesis": "E1",
     "description": "Case law citation predicts ruling direction",
     "expected": "Exploratory",
-    "q_value": 0.050117577813898063,
-    "significant_fdr": "False"
+    "q_value": 0.004005296382989167,
+    "significant_fdr": "True"
   },
   {
     "variable": "interpretation_count",
@@ -207,8 +207,8 @@
     "hypothesis": "E2",
     "description": "Interpretive plurality and ruling direction",
     "expected": "Exploratory",
-    "q_value": 0.8915536870274562,
-    "significant_fdr": "False"
+    "q_value": 0.04006098449544148,
+    "significant_fdr": "True"
   },
   {
     "variable": "year",
@@ -223,7 +223,7 @@
     "hypothesis": "E3",
     "description": "Temporal trend in ruling direction",
     "expected": "Exploratory",
-    "q_value": 1.0,
-    "significant_fdr": "False"
+    "q_value": 0.04006098449544148,
+    "significant_fdr": "True"
   }
 ]
