@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-0: #09090b;
@@ -241,6 +241,108 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .animate-in { animation: fadeIn 0.2s ease; }
+
+        /* Modal/Overlay styles */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            animation: fadeIn 0.15s ease;
+        }
+        .modal-content {
+            background: var(--bg-1);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            max-width: 640px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            animation: fadeIn 0.2s ease;
+        }
+        .modal-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .modal-body {
+            padding: 24px;
+        }
+        .modal-footer {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        /* Report preview styles */
+        .report-preview {
+            background: white;
+            color: #1a1a1a;
+            padding: 24px;
+            border-radius: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .report-preview h1 { font-size: 20px; font-weight: 600; margin-bottom: 8px; font-family: 'Source Serif 4', Georgia, serif; }
+        .report-preview h2 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; color: #333; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+        .report-preview .holding-entry { margin: 12px 0; padding-left: 16px; border-left: 3px solid #3b82f6; }
+        .report-preview .holding-text { margin-bottom: 4px; }
+        .report-preview .holding-meta { font-size: 12px; color: #666; font-family: 'IBM Plex Mono', monospace; }
+        .report-preview .explanation { font-style: italic; color: #555; margin-top: 4px; font-size: 13px; }
+
+        /* Option group styles */
+        .option-group {
+            margin-bottom: 20px;
+        }
+        .option-group-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-3);
+            margin-bottom: 10px;
+        }
+        .option-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .option-chip {
+            padding: 6px 14px;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .option-chip:hover { border-color: var(--text-3); }
+        .option-chip.selected { background: rgba(59, 130, 246, 0.15); border-color: var(--accent); color: var(--accent); }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            cursor: pointer;
+        }
+        .checkbox-option input {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -782,6 +884,539 @@
         };
 
         // ============================================================================
+        // REPORT BUILDER
+        // ============================================================================
+        const ReportBuilder = ({ holdings, allHoldings, isOpen, onClose }) => {
+            const [reportConfig, setReportConfig] = useState({
+                directions: [],       // Filter by direction(s)
+                groupBy: 'case',      // 'case', 'direction', 'concept', 'year', 'none'
+                sortBy: 'date_asc',   // 'date_asc', 'date_desc', 'case'
+                includeJustification: true,
+                includeInterpretation: false,
+                includeBalancing: false,
+                includeCitations: false,
+                fontStyle: 'serif',   // 'serif', 'sans'
+                pageSize: 'a4',       // 'a4', 'letter'
+            });
+
+            const updateConfig = (key, value) => setReportConfig(prev => ({ ...prev, [key]: value }));
+            const toggleDirection = (dir) => setReportConfig(prev => ({
+                ...prev,
+                directions: prev.directions.includes(dir)
+                    ? prev.directions.filter(d => d !== dir)
+                    : [...prev.directions, dir]
+            }));
+
+            // Filter and sort holdings based on config
+            const reportHoldings = useMemo(() => {
+                let result = [...holdings];
+
+                // Filter by selected directions
+                if (reportConfig.directions.length > 0) {
+                    result = result.filter(h => reportConfig.directions.includes(h.ruling_direction));
+                }
+
+                // Sort
+                if (reportConfig.sortBy === 'date_asc') {
+                    result.sort((a, b) => (a._date || '').localeCompare(b._date || ''));
+                } else if (reportConfig.sortBy === 'date_desc') {
+                    result.sort((a, b) => (b._date || '').localeCompare(a._date || ''));
+                } else if (reportConfig.sortBy === 'case') {
+                    result.sort((a, b) => a._case_id.localeCompare(b._case_id));
+                }
+
+                return result;
+            }, [holdings, reportConfig.directions, reportConfig.sortBy]);
+
+            // Group holdings
+            const groupedHoldings = useMemo(() => {
+                if (reportConfig.groupBy === 'none') {
+                    return [{ key: 'all', label: 'All Holdings', holdings: reportHoldings }];
+                }
+
+                const groups = {};
+                reportHoldings.forEach(h => {
+                    let key, label;
+                    switch (reportConfig.groupBy) {
+                        case 'case':
+                            key = h._case_id;
+                            label = `${h._case_id} (${h._date})`;
+                            break;
+                        case 'direction':
+                            key = h.ruling_direction;
+                            label = formatDirection(h.ruling_direction);
+                            break;
+                        case 'concept':
+                            key = h.primary_concept;
+                            label = formatConcept(h.primary_concept);
+                            break;
+                        case 'year':
+                            key = h._year || 'Unknown';
+                            label = `${h._year || 'Unknown'}`;
+                            break;
+                        default:
+                            key = 'all';
+                            label = 'All';
+                    }
+                    if (!groups[key]) groups[key] = { key, label, holdings: [] };
+                    groups[key].holdings.push(h);
+                });
+
+                // Sort groups
+                const sortedGroups = Object.values(groups);
+                if (reportConfig.groupBy === 'case' || reportConfig.groupBy === 'year') {
+                    sortedGroups.sort((a, b) => a.key.toString().localeCompare(b.key.toString()));
+                }
+                return sortedGroups;
+            }, [reportHoldings, reportConfig.groupBy]);
+
+            // Generate report title based on config
+            const getReportTitle = () => {
+                const parts = [];
+                if (reportConfig.directions.length > 0) {
+                    const dirNames = reportConfig.directions.map(d => formatDirection(d)).join(' + ');
+                    parts.push(`${dirNames} Holdings`);
+                } else {
+                    parts.push('All Holdings');
+                }
+                parts.push(`(${reportHoldings.length})`);
+                return parts.join(' ');
+            };
+
+            const generateReportHTML = () => {
+                const fontFamily = reportConfig.fontStyle === 'serif'
+                    ? "'Crimson Pro', 'Source Serif 4', Georgia, serif"
+                    : "'IBM Plex Sans', -apple-system, sans-serif";
+                const monoFont = "'IBM Plex Mono', Consolas, monospace";
+
+                const directionColor = (d) => ({
+                    'PRO_DATA_SUBJECT': '#16a34a',
+                    'PRO_CONTROLLER': '#dc2626',
+                    'MIXED': '#d97706',
+                    'NEUTRAL_OR_UNCLEAR': '#6b7280'
+                }[d] || '#6b7280');
+
+                const holdingHTML = (h) => {
+                    let html = `
+                        <div class="holding" style="margin: 16px 0; padding: 12px 16px; border-left: 4px solid ${directionColor(h.ruling_direction)}; background: #fafafa;">
+                            <div style="font-size: 11px; font-family: ${monoFont}; color: #666; margin-bottom: 6px;">
+                                ${h._case_id} | H${h.holding_id} | ${h._date} |
+                                <span style="color: ${directionColor(h.ruling_direction)}; font-weight: 600;">${formatDirection(h.ruling_direction)}</span>
+                                | ${formatConcept(h.primary_concept)}
+                            </div>
+                            <div style="font-size: 15px; line-height: 1.6; color: #1a1a1a;">
+                                ${h.core_holding}
+                            </div>`;
+
+                    if (reportConfig.includeJustification && h.direction_justification) {
+                        html += `
+                            <div style="margin-top: 8px; font-style: italic; color: #555; font-size: 14px;">
+                                <strong>Justification:</strong> ${h.direction_justification}
+                            </div>`;
+                    }
+
+                    if (reportConfig.includeInterpretation) {
+                        const interp = h.interpretation;
+                        const sources = [];
+                        if (interp.semantic_present) sources.push('Semantic');
+                        if (interp.systematic_present) sources.push('Systematic');
+                        if (interp.teleological_present) sources.push('Teleological');
+                        html += `
+                            <div style="margin-top: 8px; font-size: 13px; color: #666;">
+                                <strong>Interpretation:</strong> Dominant: ${interp.dominant_source} | Present: ${sources.join(', ') || 'None'}
+                                ${interp.teleological_purposes?.length > 0 ? `| Purposes: ${interp.teleological_purposes.map(p => formatConcept(p)).join(', ')}` : ''}
+                            </div>`;
+                    }
+
+                    if (reportConfig.includeBalancing && (h.balancing.necessity_discussed || h.balancing.controller_ds_balancing || h.balancing.other_rights_balancing)) {
+                        const parts = [];
+                        if (h.balancing.necessity_discussed) parts.push(`Necessity (${h.balancing.necessity_standard})`);
+                        if (h.balancing.controller_ds_balancing) parts.push(`DS vs Ctrl: ${h.balancing.interest_prevails}`);
+                        if (h.balancing.other_rights_balancing) parts.push(`Other rights: ${h.balancing.other_rights?.join(', ')}`);
+                        html += `
+                            <div style="margin-top: 8px; font-size: 13px; color: #666;">
+                                <strong>Balancing:</strong> ${parts.join(' | ')}
+                            </div>`;
+                    }
+
+                    if (reportConfig.includeCitations && h.reasoning.cited_cases?.length > 0) {
+                        html += `
+                            <div style="margin-top: 8px; font-size: 12px; font-family: ${monoFont}; color: #888;">
+                                <strong>Cites:</strong> ${h.reasoning.cited_cases.join(', ')}
+                            </div>`;
+                    }
+
+                    html += '</div>';
+                    return html;
+                };
+
+                const groupsHTML = groupedHoldings.map(group => {
+                    const holdingsContent = group.holdings.map(holdingHTML).join('');
+                    if (reportConfig.groupBy === 'none') {
+                        return holdingsContent;
+                    }
+                    return `
+                        <div class="group" style="margin: 24px 0;">
+                            <h2 style="font-size: 18px; font-weight: 600; color: #333; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; margin-bottom: 12px; font-family: 'Source Serif 4', Georgia, serif;">
+                                ${group.label}
+                                <span style="font-size: 14px; font-weight: 400; color: #888; margin-left: 8px;">(${group.holdings.length} holding${group.holdings.length !== 1 ? 's' : ''})</span>
+                            </h2>
+                            ${holdingsContent}
+                        </div>
+                    `;
+                }).join('');
+
+                const pageWidth = reportConfig.pageSize === 'a4' ? '210mm' : '8.5in';
+                const now = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+                return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR CJEU Holdings Report - ${getReportTitle()}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+    <style>
+        @page { size: ${reportConfig.pageSize}; margin: 20mm; }
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: ${fontFamily};
+            font-size: 15px;
+            line-height: 1.7;
+            color: #1a1a1a;
+            max-width: ${pageWidth};
+            margin: 0 auto;
+            padding: 24px;
+            background: white;
+        }
+        .report-header {
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 3px double #333;
+        }
+        .report-title {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 8px;
+        }
+        .report-subtitle {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 4px;
+        }
+        .report-meta {
+            font-size: 13px;
+            color: #888;
+            font-family: ${monoFont};
+        }
+        .summary-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+        }
+        .summary-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+        .summary-stats {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: #64748b;
+        }
+        .summary-stat { display: flex; align-items: center; gap: 6px; }
+        .stat-value { font-weight: 600; color: #1e293b; }
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            transition: all 0.15s;
+        }
+        .print-btn:hover { background: #2563eb; transform: translateY(-1px); }
+        .legend {
+            margin: 16px 0 24px;
+            padding: 12px 16px;
+            background: #fefce8;
+            border: 1px solid #fef08a;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #713f12;
+        }
+        .legend-title { font-weight: 600; margin-bottom: 4px; }
+        .legend-items { display: flex; gap: 16px; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-color { width: 14px; height: 4px; border-radius: 2px; }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">Print / Save PDF</button>
+
+    <header class="report-header">
+        <h1 class="report-title">GDPR CJEU Holdings Report</h1>
+        <div class="report-subtitle">${getReportTitle()}</div>
+        <div class="report-meta">Generated ${now} | Grouped by ${reportConfig.groupBy} | Sorted ${reportConfig.sortBy === 'date_asc' ? 'chronologically (oldest first)' : reportConfig.sortBy === 'date_desc' ? 'chronologically (newest first)' : 'by case ID'}</div>
+    </header>
+
+    <div class="summary-box">
+        <div class="summary-title">Report Summary</div>
+        <div class="summary-stats">
+            <div class="summary-stat"><span>Holdings:</span> <span class="stat-value">${reportHoldings.length}</span></div>
+            <div class="summary-stat"><span>Groups:</span> <span class="stat-value">${groupedHoldings.length}</span></div>
+            <div class="summary-stat"><span>Pro DS:</span> <span class="stat-value">${reportHoldings.filter(h => h.ruling_direction === 'PRO_DATA_SUBJECT').length}</span></div>
+            <div class="summary-stat"><span>Pro Ctrl:</span> <span class="stat-value">${reportHoldings.filter(h => h.ruling_direction === 'PRO_CONTROLLER').length}</span></div>
+            <div class="summary-stat"><span>Mixed:</span> <span class="stat-value">${reportHoldings.filter(h => h.ruling_direction === 'MIXED').length}</span></div>
+            <div class="summary-stat"><span>Neutral:</span> <span class="stat-value">${reportHoldings.filter(h => h.ruling_direction === 'NEUTRAL_OR_UNCLEAR').length}</span></div>
+        </div>
+    </div>
+
+    <div class="legend no-print">
+        <div class="legend-title">Direction Color Legend</div>
+        <div class="legend-items">
+            <div class="legend-item"><span class="legend-color" style="background: #16a34a;"></span> Pro Data Subject</div>
+            <div class="legend-item"><span class="legend-color" style="background: #dc2626;"></span> Pro Controller</div>
+            <div class="legend-item"><span class="legend-color" style="background: #d97706;"></span> Mixed</div>
+            <div class="legend-item"><span class="legend-color" style="background: #6b7280;"></span> Neutral/Unclear</div>
+        </div>
+    </div>
+
+    <main>
+        ${groupsHTML}
+    </main>
+
+    <footer style="margin-top: 40px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 12px; color: #888; text-align: center;">
+        GDPR CJEU Case Analyzer | ${reportHoldings.length} holdings from ${new Set(reportHoldings.map(h => h._case_id)).size} cases
+    </footer>
+</body>
+</html>`;
+            };
+
+            const openReport = () => {
+                const html = generateReportHTML();
+                const newWindow = window.open('', '_blank');
+                newWindow.document.write(html);
+                newWindow.document.close();
+            };
+
+            if (!isOpen) return null;
+
+            const directionStats = {
+                'PRO_DATA_SUBJECT': holdings.filter(h => h.ruling_direction === 'PRO_DATA_SUBJECT').length,
+                'PRO_CONTROLLER': holdings.filter(h => h.ruling_direction === 'PRO_CONTROLLER').length,
+                'MIXED': holdings.filter(h => h.ruling_direction === 'MIXED').length,
+                'NEUTRAL_OR_UNCLEAR': holdings.filter(h => h.ruling_direction === 'NEUTRAL_OR_UNCLEAR').length,
+            };
+
+            return (
+                <div className="modal-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <div>
+                                <h2 className="text-lg font-bold">Generate Printable Report</h2>
+                                <p className="text-xs text-zinc-500 mt-1">Configure and preview your report, then print or save as PDF</p>
+                            </div>
+                            <button className="text-zinc-400 hover:text-white text-2xl leading-none" onClick={onClose}>&times;</button>
+                        </div>
+
+                        <div className="modal-body space-y-5">
+                            <div className="option-group">
+                                <div className="option-group-label">Filter by Direction</div>
+                                <div className="option-chips">
+                                    {[
+                                        ['PRO_DATA_SUBJECT', 'Pro DS', 'tag-ds'],
+                                        ['PRO_CONTROLLER', 'Pro Ctrl', 'tag-ctrl'],
+                                        ['MIXED', 'Mixed', 'tag-mixed'],
+                                        ['NEUTRAL_OR_UNCLEAR', 'Neutral', 'tag-neutral']
+                                    ].map(([val, label, cls]) => (
+                                        <div
+                                            key={val}
+                                            className={`option-chip ${reportConfig.directions.includes(val) ? 'selected' : ''}`}
+                                            onClick={() => toggleDirection(val)}
+                                        >
+                                            {label} <span className="text-zinc-500 ml-1">({directionStats[val]})</span>
+                                        </div>
+                                    ))}
+                                </div>
+                                <p className="text-xs text-zinc-500 mt-2">Leave empty to include all directions</p>
+                            </div>
+
+                            <div className="option-group">
+                                <div className="option-group-label">Group By</div>
+                                <div className="option-chips">
+                                    {[
+                                        ['case', 'Case'],
+                                        ['year', 'Year'],
+                                        ['direction', 'Direction'],
+                                        ['concept', 'Concept'],
+                                        ['none', 'No Grouping']
+                                    ].map(([val, label]) => (
+                                        <div
+                                            key={val}
+                                            className={`option-chip ${reportConfig.groupBy === val ? 'selected' : ''}`}
+                                            onClick={() => updateConfig('groupBy', val)}
+                                        >
+                                            {label}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="option-group">
+                                <div className="option-group-label">Sort Order</div>
+                                <div className="option-chips">
+                                    {[
+                                        ['date_asc', 'Chronological (Oldest)'],
+                                        ['date_desc', 'Chronological (Newest)'],
+                                        ['case', 'Case ID']
+                                    ].map(([val, label]) => (
+                                        <div
+                                            key={val}
+                                            className={`option-chip ${reportConfig.sortBy === val ? 'selected' : ''}`}
+                                            onClick={() => updateConfig('sortBy', val)}
+                                        >
+                                            {label}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="option-group">
+                                <div className="option-group-label">Include in Report</div>
+                                <div className="grid grid-cols-2 gap-2">
+                                    <label className="checkbox-option">
+                                        <input
+                                            type="checkbox"
+                                            checked={reportConfig.includeJustification}
+                                            onChange={(e) => updateConfig('includeJustification', e.target.checked)}
+                                        />
+                                        <span>Direction Justification</span>
+                                    </label>
+                                    <label className="checkbox-option">
+                                        <input
+                                            type="checkbox"
+                                            checked={reportConfig.includeInterpretation}
+                                            onChange={(e) => updateConfig('includeInterpretation', e.target.checked)}
+                                        />
+                                        <span>Interpretation Details</span>
+                                    </label>
+                                    <label className="checkbox-option">
+                                        <input
+                                            type="checkbox"
+                                            checked={reportConfig.includeBalancing}
+                                            onChange={(e) => updateConfig('includeBalancing', e.target.checked)}
+                                        />
+                                        <span>Balancing Analysis</span>
+                                    </label>
+                                    <label className="checkbox-option">
+                                        <input
+                                            type="checkbox"
+                                            checked={reportConfig.includeCitations}
+                                            onChange={(e) => updateConfig('includeCitations', e.target.checked)}
+                                        />
+                                        <span>Case Citations</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="option-group">
+                                    <div className="option-group-label">Font Style</div>
+                                    <div className="option-chips">
+                                        <div
+                                            className={`option-chip ${reportConfig.fontStyle === 'serif' ? 'selected' : ''}`}
+                                            onClick={() => updateConfig('fontStyle', 'serif')}
+                                        >
+                                            Serif (Academic)
+                                        </div>
+                                        <div
+                                            className={`option-chip ${reportConfig.fontStyle === 'sans' ? 'selected' : ''}`}
+                                            onClick={() => updateConfig('fontStyle', 'sans')}
+                                        >
+                                            Sans-serif
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="option-group">
+                                    <div className="option-group-label">Page Size</div>
+                                    <div className="option-chips">
+                                        <div
+                                            className={`option-chip ${reportConfig.pageSize === 'a4' ? 'selected' : ''}`}
+                                            onClick={() => updateConfig('pageSize', 'a4')}
+                                        >
+                                            A4
+                                        </div>
+                                        <div
+                                            className={`option-chip ${reportConfig.pageSize === 'letter' ? 'selected' : ''}`}
+                                            onClick={() => updateConfig('pageSize', 'letter')}
+                                        >
+                                            Letter
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="p-4 bg-zinc-800/50 rounded-lg">
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="text-sm font-medium">Preview</span>
+                                    <span className="text-xs text-zinc-400">{reportHoldings.length} holdings in {groupedHoldings.length} group(s)</span>
+                                </div>
+                                <div className="report-preview">
+                                    <h1>GDPR CJEU Holdings Report</h1>
+                                    <p style={{color: '#666', fontSize: '13px', marginBottom: '12px'}}>{getReportTitle()}</p>
+                                    {groupedHoldings.slice(0, 2).map(group => (
+                                        <div key={group.key}>
+                                            {reportConfig.groupBy !== 'none' && <h2>{group.label} ({group.holdings.length})</h2>}
+                                            {group.holdings.slice(0, 2).map(h => (
+                                                <div key={`${h._case_id}-${h.holding_id}`} className="holding-entry">
+                                                    <div className="holding-text">{h.core_holding}</div>
+                                                    <div className="holding-meta">{h._case_id} | {h._date} | {formatDirection(h.ruling_direction)}</div>
+                                                    {reportConfig.includeJustification && h.direction_justification && (
+                                                        <div className="explanation">{h.direction_justification}</div>
+                                                    )}
+                                                </div>
+                                            ))}
+                                            {group.holdings.length > 2 && <div style={{color: '#888', fontSize: '12px', fontStyle: 'italic'}}>...and {group.holdings.length - 2} more</div>}
+                                        </div>
+                                    ))}
+                                    {groupedHoldings.length > 2 && <div style={{color: '#888', fontSize: '12px', marginTop: '8px'}}>...and {groupedHoldings.length - 2} more groups</div>}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="modal-footer">
+                            <button className="btn btn-ghost" onClick={onClose}>Cancel</button>
+                            <button className="btn btn-primary" onClick={openReport}>
+                                Open Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // ============================================================================
         // APP
         // ============================================================================
         const App = () => {
@@ -790,6 +1425,7 @@
             const [expanded, setExpanded] = useState(new Set());
             const [view, setView] = useState('browse');
             const [sortBy, setSortBy] = useState('date');
+            const [showReportBuilder, setShowReportBuilder] = useState(false);
             
             const allHoldings = useMemo(() => data.flatMap(c => c.holdings.map(h => ({ ...h, _case_id: c.case_id, _date: c.judgment_date, _chamber: c.chamber, _year: c.judgment_date ? parseInt(c.judgment_date.split('-')[0]) : null }))), [data]);
             
@@ -850,6 +1486,10 @@
                                         <button key={k} className={`px-4 py-2 text-sm transition-colors ${view === k ? 'bg-zinc-700 text-white' : 'text-zinc-400 hover:text-zinc-200'}`} onClick={() => setView(k)}>{l}</button>
                                     ))}
                                 </div>
+                                <button className="btn btn-ghost" onClick={() => setShowReportBuilder(true)}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    Print Report
+                                </button>
                                 <label className="btn btn-primary cursor-pointer">Load JSON<input type="file" accept=".json" onChange={upload} className="hidden" /></label>
                             </div>
                         </div>
@@ -903,6 +1543,13 @@
                     </main>
                     
                     <footer className="border-t border-zinc-800 py-4 text-center text-xs text-zinc-600">Filters apply at holding level • Click tags to filter • Stats update with filters</footer>
+
+                    <ReportBuilder
+                        holdings={filteredHoldings}
+                        allHoldings={allHoldings}
+                        isOpen={showReportBuilder}
+                        onClose={() => setShowReportBuilder(false)}
+                    />
                 </div>
             );
         };
