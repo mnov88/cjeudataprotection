@@ -1,0 +1,167 @@
+{
+  "L.S. Rossi": {
+    "n_cases": 12,
+    "n_holdings": 32,
+    "group": "HIGH_VOLUME",
+    "cases": [
+      "C-129/21",
+      "C-17/22 & C-18/22",
+      "C-252/21",
+      "C-272/19",
+      "C-319/20",
+      "C-33/22",
+      "C-446/21",
+      "C-461/22",
+      "C-604/22",
+      "C-621/22",
+      "C-645/19",
+      "C-757/22"
+    ]
+  },
+  "I. Ziemele": {
+    "n_cases": 10,
+    "n_holdings": 20,
+    "group": "HIGH_VOLUME",
+    "cases": [
+      "C-132/21",
+      "C-154/21",
+      "C-307/22",
+      "C-34/21",
+      "C-416/23",
+      "C-453/21",
+      "C-487/21",
+      "C-534/20",
+      "C-579/21",
+      "C-77/21"
+    ]
+  },
+  "M. Gavalec": {
+    "n_cases": 3,
+    "n_holdings": 4,
+    "group": "MEDIUM_VOLUME",
+    "cases": [
+      "C-169/23",
+      "C-638/23",
+      "C-659/22"
+    ]
+  },
+  "M. Ilešič": {
+    "n_cases": 6,
+    "n_holdings": 16,
+    "group": "MEDIUM_VOLUME",
+    "cases": [
+      "C-175/20",
+      "C-184/20",
+      "C-439/19",
+      "C-46/23",
+      "C-460/20",
+      "C-597/19"
+    ]
+  },
+  "D. Gratsias": {
+    "n_cases": 2,
+    "n_holdings": 6,
+    "group": "LOW_VOLUME",
+    "cases": [
+      "C-180/21",
+      "C-205/21"
+    ]
+  },
+  "N. Jääskinen": {
+    "n_cases": 15,
+    "n_holdings": 51,
+    "group": "HIGH_VOLUME",
+    "cases": [
+      "C-182/22 & C-189/22",
+      "C-268/21",
+      "C-300/21",
+      "C-306/21",
+      "C-340/21",
+      "C-456/22",
+      "C-507/23",
+      "C-590/22",
+      "C-65/23",
+      "C-655/23",
+      "C-667/21",
+      "C-683/21",
+      "C-687/21",
+      "C-741/21",
+      "C-807/21"
+    ]
+  },
+  "T. von Danwitz": {
+    "n_cases": 10,
+    "n_holdings": 35,
+    "group": "HIGH_VOLUME",
+    "cases": [
+      "C-200/23",
+      "C-203/22",
+      "C-247/23",
+      "C-311/18",
+      "C-313/23, C-316/23 & C-332/23",
+      "C-394/23",
+      "C-61/19",
+      "C-710/23",
+      "C-740/22",
+      "C-817/19"
+    ]
+  },
+  "M. Safjan": {
+    "n_cases": 1,
+    "n_holdings": 2,
+    "group": "LOW_VOLUME",
+    "cases": [
+      "C-231/22"
+    ]
+  },
+  "J.-C. Bonichot": {
+    "n_cases": 1,
+    "n_holdings": 1,
+    "group": "LOW_VOLUME",
+    "cases": [
+      "C-245/20"
+    ]
+  },
+  "A. Kumin": {
+    "n_cases": 3,
+    "n_holdings": 6,
+    "group": "MEDIUM_VOLUME",
+    "cases": [
+      "C-26/22 & C-64/22",
+      "C-634/21",
+      "C-768/21"
+    ]
+  },
+  "Z. Csehi": {
+    "n_cases": 1,
+    "n_holdings": 1,
+    "group": "LOW_VOLUME",
+    "cases": [
+      "C-383/23"
+    ]
+  },
+  "K. Jürimäe": {
+    "n_cases": 1,
+    "n_holdings": 3,
+    "group": "LOW_VOLUME",
+    "cases": [
+      "C-492/23"
+    ]
+  },
+  "M. Vilaras": {
+    "n_cases": 1,
+    "n_holdings": 1,
+    "group": "LOW_VOLUME",
+    "cases": [
+      "C-496/17"
+    ]
+  },
+  "A. Rosas": {
+    "n_cases": 1,
+    "n_holdings": 3,
+    "group": "LOW_VOLUME",
+    "cases": [
+      "C-673/17"
+    ]
+  }
+}
