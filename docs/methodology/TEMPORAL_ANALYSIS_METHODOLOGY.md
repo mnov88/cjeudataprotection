@@ -933,7 +933,7 @@ import statsmodels.formula.api as smf
 
 def load_and_prepare_data():
     """Load holdings data and create temporal variables."""
-    df = pd.read_csv('parsed-coded/holdings.csv')
+    df = pd.read_csv('data/parsed/holdings.csv')
     df['judgment_date'] = pd.to_datetime(df['judgment_date'])
     df['year'] = df['judgment_date'].dt.year
     df['year_centered'] = df['year'] - 2022

@@ -488,7 +488,7 @@ import statsmodels.formula.api as smf
 from sklearn.metrics import roc_auc_score, roc_curve
 
 # Load data
-df = pd.read_csv('parsed-coded/holdings.csv')
+df = pd.read_csv('data/parsed/holdings.csv')
 
 # Create binary DV
 df['pro_ds'] = (df['ruling_direction'] == 'PRO_DATA_SUBJECT').astype(int)
