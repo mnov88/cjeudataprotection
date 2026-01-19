@@ -191,11 +191,11 @@ However, the *specific purposes* invoked show strong associations. When the Cour
 
 | Dominant Source | Pro-DS Rate | N |
 |-----------------|-------------|---|
-| TELEOLOGICAL | 73.3% | 75 |
-| SEMANTIC | 62.5% | 40 |
+| TELEOLOGICAL | 73.7% | 76 |
+| SEMANTIC | 61.9% | 42 |
 | SYSTEMATIC | 44.4% | 63 |
 
-Holdings where SYSTEMATIC interpretation dominates show the lowest pro-DS rate (44.4%), significantly below TELEOLOGICAL-dominant holdings (73.3%).
+Holdings where SYSTEMATIC interpretation dominates show the lowest pro-DS rate (44.4%), significantly below TELEOLOGICAL-dominant holdings (73.7%).
 
 **4.2.2 Institutional Factors**
 

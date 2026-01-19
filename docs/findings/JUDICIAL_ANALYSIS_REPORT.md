@@ -232,7 +232,7 @@ Do chambers influence outcomes through their choice of interpretive methods?
 | GRAND_CHAMBER | 46.9% | 32.7% | 16.3% |
 | THIRD | 31.7% | 34.1% | 31.7% |
 
-TELEOLOGICAL interpretation is associated with 73.3% pro-DS rate vs. 44.4% for SYSTEMATIC.
+TELEOLOGICAL interpretation is associated with 73.7% pro-DS rate vs. 44.4% for SYSTEMATIC.
 
 **Partial mediation suggested**: Third Chamber uses less TELEOLOGICAL interpretation, which is associated with lower pro-DS rates. However, the direct chamber effect persists, indicating interpretation style is NOT the only mechanism.
 
