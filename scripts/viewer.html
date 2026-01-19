@@ -1029,14 +1029,37 @@
                     }
 
                     if (reportConfig.includeBalancing && (h.balancing.necessity_discussed || h.balancing.controller_ds_balancing || h.balancing.other_rights_balancing)) {
-                        const parts = [];
-                        if (h.balancing.necessity_discussed) parts.push(`Necessity (${h.balancing.necessity_standard})`);
-                        if (h.balancing.controller_ds_balancing) parts.push(`DS vs Ctrl: ${h.balancing.interest_prevails}`);
-                        if (h.balancing.other_rights_balancing) parts.push(`Other rights: ${h.balancing.other_rights?.join(', ')}`);
-                        html += `
-                            <div style="margin-top: 8px; font-size: 13px; color: #666;">
-                                <strong>Balancing:</strong> ${parts.join(' | ')}
-                            </div>`;
+                        let balancingHtml = '<div style="margin-top: 10px; padding: 10px 12px; background: #f5f5f5; border-radius: 4px; font-size: 13px;">';
+                        balancingHtml += '<div style="font-weight: 600; color: #444; margin-bottom: 6px;">Balancing Analysis</div>';
+
+                        if (h.balancing.necessity_discussed) {
+                            balancingHtml += `<div style="margin-bottom: 6px;"><strong>Necessity:</strong> <span style="color: ${h.balancing.necessity_standard === 'STRICT' ? '#16a34a' : '#d97706'};">${h.balancing.necessity_standard}</span>`;
+                            if (h.balancing.necessity_summary) {
+                                balancingHtml += ` — <em>${h.balancing.necessity_summary}</em>`;
+                            }
+                            balancingHtml += '</div>';
+                        }
+
+                        if (h.balancing.controller_ds_balancing) {
+                            const prevailsColor = h.balancing.interest_prevails === 'DATA_SUBJECT' ? '#16a34a' : h.balancing.interest_prevails === 'CONTROLLER' ? '#dc2626' : '#6b7280';
+                            balancingHtml += `<div style="margin-bottom: 6px;"><strong>Controller vs Data Subject:</strong> <span style="color: ${prevailsColor};">${h.balancing.interest_prevails}</span>`;
+                            if (h.balancing.balance_summary) {
+                                balancingHtml += ` — <em>${h.balancing.balance_summary}</em>`;
+                            }
+                            balancingHtml += '</div>';
+                        }
+
+                        if (h.balancing.other_rights_balancing) {
+                            const rightColor = h.balancing.right_prevails === 'DATA_PROTECTION' ? '#16a34a' : h.balancing.right_prevails === 'OTHER_RIGHT' ? '#dc2626' : '#6b7280';
+                            balancingHtml += `<div><strong>Other Rights:</strong> ${h.balancing.other_rights?.join(', ') || 'N/A'} — <span style="color: ${rightColor};">${h.balancing.right_prevails}</span>`;
+                            if (h.balancing.rights_balance_summary) {
+                                balancingHtml += ` — <em>${h.balancing.rights_balance_summary}</em>`;
+                            }
+                            balancingHtml += '</div>';
+                        }
+
+                        balancingHtml += '</div>';
+                        html += balancingHtml;
                     }
 
                     if (reportConfig.includeCitations && h.reasoning.cited_cases?.length > 0) {
