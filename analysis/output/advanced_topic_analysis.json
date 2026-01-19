@@ -1,0 +1,114 @@
+{
+  "n_holdings": 181,
+  "n_cases": 67,
+  "analyses": {
+    "necessity_standard": {
+      "strict_pro_ds_rate": 0.864,
+      "strict_n": 22,
+      "regular_pro_ds_rate": 0.368,
+      "regular_n": 19,
+      "gap_pp": 49.5,
+      "odds_ratio": 10.86,
+      "p_value": 0.0014,
+      "interpretation": "STRICT necessity strongly associated with pro-DS outcomes",
+      "mv_strict_or": 4.06,
+      "mv_strict_p": 0.061,
+      "mv_regular_or": 0.38,
+      "mv_regular_p": 0.0818
+    },
+    "secondary_concepts": {
+      "holdings_with_secondary": 105,
+      "pct_with_secondary": 0.58,
+      "effects": {
+        "DATA_PROTECTION_PRINCIPLES": {
+          "with_rate": 0.846,
+          "with_n": 13,
+          "without_rate": 0.589,
+          "gap_pp": 25.7
+        },
+        "MEMBER_STATE_DISCRETION": {
+          "with_rate": 0.125,
+          "with_n": 8,
+          "without_rate": 0.63,
+          "gap_pp": -50.5
+        },
+        "TRANSPARENCY": {
+          "with_rate": 1.0,
+          "with_n": 6,
+          "without_rate": 0.594,
+          "gap_pp": 40.6
+        },
+        "PERSONAL_DATA_SCOPE": {
+          "with_rate": 0.8,
+          "with_n": 5,
+          "without_rate": 0.602,
+          "gap_pp": 19.8
+        }
+      }
+    },
+    "level_shifting": {
+      "bivariate_with_rate": 0.818,
+      "bivariate_without_rate": 0.579,
+      "bivariate_gap_pp": 24.0,
+      "phi": 0.143,
+      "p_value": 0.0543,
+      "correlation_with_purpose": 0.128,
+      "mv_or": 2.68,
+      "mv_p": 0.1228,
+      "purpose_mv_or": 4.83,
+      "purpose_mv_p": 0.0001,
+      "alone_or": 3.09,
+      "alone_p": 0.0625
+    },
+    "balancing": {
+      "holdings_with_balancing": 27,
+      "interest_prevails_distribution": {
+        "NONE": 158,
+        "DATA_SUBJECT": 20,
+        "CONTROLLER": 3
+      },
+      "pro_ds_when_ds_prevails": 0.95,
+      "pro_ds_when_controller_prevails": 0.0
+    },
+    "article_82": {
+      "n_holdings": 36,
+      "pro_ds_rate": 0.361,
+      "other_concepts_rate": 0.669,
+      "gap_pp": -30.8,
+      "direction_distribution": {
+        "PRO_DATA_SUBJECT": 13,
+        "PRO_CONTROLLER": 12,
+        "MIXED": 9,
+        "NEUTRAL_OR_UNCLEAR": 2
+      },
+      "doctrinal_themes": {
+        "actual_damage": 11,
+        "burden_of_proof": 1,
+        "not_punitive": 3,
+        "fault_required": 3,
+        "no_strict_liability": 0,
+        "mere_infringement_insufficient": 4
+      },
+      "n_non_pro_ds": 23
+    },
+    "citations": {
+      "mean_citations": 3.53,
+      "median_citations": 3.0,
+      "max_citations": 16,
+      "rates_by_category": {
+        "n": {
+          "0": 23,
+          "1-2": 56,
+          "3-5": 65,
+          "6+": 37
+        },
+        "pro_ds_rate": {
+          "0": 0.783,
+          "1-2": 0.643,
+          "3-5": 0.554,
+          "6+": 0.541
+        }
+      }
+    }
+  }
+}

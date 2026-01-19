@@ -1,0 +1,47 @@
+{
+  "weighted_analysis": {
+    "pro_ds_purpose_unweighted_or": 4.431219611238154,
+    "pro_ds_purpose_weighted_or": 4.9486865752080345,
+    "pro_ds_purpose_weighted_p": 0.0152486966384852,
+    "level_shifting_weighted_or": 1.8461305634396576,
+    "level_shifting_weighted_p": 0.4645862127584003
+  },
+  "year_fe_analysis": {
+    "or_no_year": 0.11019450470735653,
+    "p_no_year": 0.0002376327119912181,
+    "or_with_year": 0.21236711170936004,
+    "p_with_year": 0.050810233877547586
+  },
+  "temporal_trend": {
+    "or_per_year": 0.8303235965838879,
+    "p_value": 0.10335592755185302,
+    "yearly_rates": {
+      "2019": 0.75,
+      "2020": 0.857,
+      "2021": 0.583,
+      "2022": 0.69,
+      "2023": 0.611,
+      "2024": 0.54,
+      "2025": 0.56
+    }
+  },
+  "endogeneity": {
+    "purpose_by_chamber": {
+      "FIRST": 0.8409090909090909,
+      "FOURTH": 0.875,
+      "GRAND_CHAMBER": 0.7551020408163265,
+      "OTHER": 0.8064516129032258,
+      "THIRD": 0.6097560975609756
+    },
+    "third_purpose_rate": 0.6097560975609756,
+    "grand_purpose_rate": 0.7551020408163265,
+    "purpose_chamber_gap": 0.14534594325535088
+  },
+  "case_level": {
+    "n_cases": 67,
+    "case_with_purpose_rate": 0.546875,
+    "case_without_purpose_rate": 0.3333333333333333,
+    "fisher_or": 2.413793103448276,
+    "fisher_p": 0.5923181296315625
+  }
+}

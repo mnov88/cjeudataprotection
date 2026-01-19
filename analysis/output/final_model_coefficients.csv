@@ -1,0 +1,19 @@
+Variable,OR,95% CI,p,Sig
+Intercept,1929454636386085014788797647957991828719301213402869924120752057918425268068008152426022908778396942147809968128.000,"[0.00, inf]",0.4284,
+"C(chamber_grouped, Treatment(reference='OTHER'))[T.FIRST]",0.637,"[0.19, 2.15]",0.4679,
+"C(chamber_grouped, Treatment(reference='OTHER'))[T.FOURTH]",1.948,"[0.42, 9.06]",0.3948,
+"C(chamber_grouped, Treatment(reference='OTHER'))[T.GRAND_CHAMBER]",2.071,"[0.65, 6.60]",0.2181,
+"C(chamber_grouped, Treatment(reference='OTHER'))[T.THIRD]",0.430,"[0.14, 1.34]",0.1461,
+"C(concept_cluster, Treatment(reference='OTHER'))[T.ACTORS]",1.998,"[0.35, 11.33]",0.4345,
+"C(concept_cluster, Treatment(reference='OTHER'))[T.ENFORCEMENT]",1.427,"[0.47, 4.37]",0.5336,
+"C(concept_cluster, Treatment(reference='OTHER'))[T.LAWFULNESS]",1.486,"[0.31, 7.01]",0.6169,
+"C(concept_cluster, Treatment(reference='OTHER'))[T.PRINCIPLES]",2.189,"[0.49, 9.83]",0.3069,
+"C(concept_cluster, Treatment(reference='OTHER'))[T.RIGHTS]",7.776,"[1.43, 42.22]",0.0175,*
+"C(concept_cluster, Treatment(reference='OTHER'))[T.SCOPE]",7.691,"[1.24, 47.75]",0.0285,*
+"C(concept_cluster, Treatment(reference='OTHER'))[T.SPECIAL_CATEGORIES]",2.778,"[0.46, 16.78]",0.2654,
+"C(dominant_source, Treatment(reference='SEMANTIC'))[T.PRINCIPLE_BASED]",1551230179.853,"[0.00, inf]",0.9998,
+"C(dominant_source, Treatment(reference='SEMANTIC'))[T.RULE_BASED]",0.839,"[0.04, 19.78]",0.9131,
+"C(dominant_source, Treatment(reference='SEMANTIC'))[T.SYSTEMATIC]",0.402,"[0.15, 1.05]",0.0621,
+"C(dominant_source, Treatment(reference='SEMANTIC'))[T.TELEOLOGICAL]",1.173,"[0.44, 3.13]",0.7500,
+year,0.881,"[0.64, 1.20]",0.4267,
+pro_ds_purpose,4.488,"[1.81, 11.12]",0.0012,**
