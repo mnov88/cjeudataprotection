@@ -1,0 +1,1251 @@
+{
+  "rapporteur_profiles": {
+    "L.S. Rossi": {
+      "n_cases": 12,
+      "n_holdings": 32,
+      "pro_ds_count": 26,
+      "pro_ds_rate": 0.8125,
+      "ci_lower": 0.6469050424507756,
+      "ci_upper": 0.9111057606383721,
+      "primary_concept": "LAWFULNESS",
+      "primary_concept_pct": 31.25,
+      "concept_hhi": 0.208984375,
+      "concepts": {
+        "LAWFULNESS": 10,
+        "RIGHTS": 2,
+        "PRINCIPLES": 1,
+        "ENFORCEMENT": 9,
+        "SPECIAL_CATEGORIES": 3,
+        "ACTORS": 3,
+        "SCOPE": 3,
+        "OTHER": 1
+      },
+      "primary_chamber": "GRAND_CHAMBER",
+      "chambers": {
+        "FOURTH": 12,
+        "GRAND_CHAMBER": 16,
+        "THIRD": 2,
+        "NINTH": 2
+      },
+      "mean_year": 2022.84375,
+      "year_range": "2020-2024"
+    },
+    "I. Ziemele": {
+      "n_cases": 10,
+      "n_holdings": 20,
+      "pro_ds_count": 12,
+      "pro_ds_rate": 0.6,
+      "ci_lower": 0.3865779423152061,
+      "ci_upper": 0.7811960325858074,
+      "primary_concept": "RIGHTS",
+      "primary_concept_pct": 40.0,
+      "concept_hhi": 0.31500000000000006,
+      "concepts": {
+        "ENFORCEMENT": 7,
+        "RIGHTS": 8,
+        "OTHER": 3,
+        "PRINCIPLES": 2
+      },
+      "primary_chamber": "FIRST",
+      "chambers": {
+        "FIRST": 18,
+        "SIXTH": 2
+      },
+      "mean_year": 2023.15,
+      "year_range": "2022-2025"
+    },
+    "M. Gavalec": {
+      "n_cases": 3,
+      "n_holdings": 4,
+      "pro_ds_count": 1,
+      "pro_ds_rate": 0.25,
+      "ci_lower": 0.045586062644636216,
+      "ci_upper": 0.6993639475573634,
+      "primary_concept": "PRINCIPLES",
+      "primary_concept_pct": 25.0,
+      "concept_hhi": 0.25,
+      "concepts": {
+        "PRINCIPLES": 1,
+        "ENFORCEMENT": 1,
+        "ACTORS": 1,
+        "SCOPE": 1
+      },
+      "primary_chamber": "THIRD",
+      "chambers": {
+        "THIRD": 2,
+        "EIGHTH": 2
+      },
+      "mean_year": 2024.0,
+      "year_range": "2023-2025"
+    },
+    "M. Ilešič": {
+      "n_cases": 6,
+      "n_holdings": 16,
+      "pro_ds_count": 10,
+      "pro_ds_rate": 0.625,
+      "ci_lower": 0.3864064709793481,
+      "ci_upper": 0.815190174452472,
+      "primary_concept": "OTHER",
+      "primary_concept_pct": 25.0,
+      "concept_hhi": 0.1640625,
+      "concepts": {
+        "SCOPE": 1,
+        "OTHER": 4,
+        "PRINCIPLES": 3,
+        "LAWFULNESS": 2,
+        "SPECIAL_CATEGORIES": 2,
+        "ENFORCEMENT": 2,
+        "RIGHTS": 2
+      },
+      "primary_chamber": "FIFTH",
+      "chambers": {
+        "FIFTH": 8,
+        "GRAND_CHAMBER": 8
+      },
+      "mean_year": 2021.8125,
+      "year_range": "2021-2024"
+    },
+    "D. Gratsias": {
+      "n_cases": 2,
+      "n_holdings": 6,
+      "pro_ds_count": 2,
+      "pro_ds_rate": 0.3333333333333333,
+      "ci_lower": 0.09676933255921683,
+      "ci_upper": 0.7000116786584712,
+      "primary_concept": "SPECIAL_CATEGORIES",
+      "primary_concept_pct": 50.0,
+      "concept_hhi": 0.3333333333333333,
+      "concepts": {
+        "PRINCIPLES": 1,
+        "SCOPE": 1,
+        "LAWFULNESS": 1,
+        "SPECIAL_CATEGORIES": 3
+      },
+      "primary_chamber": "FIFTH",
+      "chambers": {
+        "FIFTH": 6
+      },
+      "mean_year": 2022.5,
+      "year_range": "2022-2023"
+    },
+    "N. Jääskinen": {
+      "n_cases": 15,
+      "n_holdings": 51,
+      "pro_ds_count": 22,
+      "pro_ds_rate": 0.43137254901960786,
+      "ci_lower": 0.3050102809233431,
+      "ci_upper": 0.5673493876494193,
+      "primary_concept": "ENFORCEMENT",
+      "primary_concept_pct": 68.62745098039215,
+      "concept_hhi": 0.49327181853133417,
+      "concepts": {
+        "ENFORCEMENT": 35,
+        "LAWFULNESS": 1,
+        "PRINCIPLES": 2,
+        "SCOPE": 2,
+        "OTHER": 6,
+        "SPECIAL_CATEGORIES": 3,
+        "ACTORS": 2
+      },
+      "primary_chamber": "THIRD",
+      "chambers": {
+        "THIRD": 34,
+        "EIGHTH": 7,
+        "FOURTH": 4,
+        "GRAND_CHAMBER": 6
+      },
+      "mean_year": 2023.549019607843,
+      "year_range": "2022-2025"
+    },
+    "T. von Danwitz": {
+      "n_cases": 10,
+      "n_holdings": 35,
+      "pro_ds_count": 24,
+      "pro_ds_rate": 0.6857142857142857,
+      "ci_lower": 0.5201992812074803,
+      "ci_upper": 0.8144934194021753,
+      "primary_concept": "SCOPE",
+      "primary_concept_pct": 22.857142857142858,
+      "concept_hhi": 0.16897959183673472,
+      "concepts": {
+        "OTHER": 6,
+        "ACTORS": 2,
+        "RIGHTS": 6,
+        "SCOPE": 8,
+        "ENFORCEMENT": 7,
+        "PRINCIPLES": 4,
+        "LAWFULNESS": 1,
+        "SPECIAL_CATEGORIES": 1
+      },
+      "primary_chamber": "FIRST",
+      "chambers": {
+        "FIRST": 19,
+        "GRAND_CHAMBER": 13,
+        "SECOND": 1,
+        "SIXTH": 2
+      },
+      "mean_year": 2023.2285714285715,
+      "year_range": "2020-2025"
+    },
+    "M. Safjan": {
+      "n_cases": 1,
+      "n_holdings": 2,
+      "pro_ds_count": 1,
+      "pro_ds_rate": 0.5,
+      "ci_lower": 0.09452865480086614,
+      "ci_upper": 0.9054713451991339,
+      "primary_concept": "ACTORS",
+      "primary_concept_pct": 50.0,
+      "concept_hhi": 0.5,
+      "concepts": {
+        "ACTORS": 1,
+        "PRINCIPLES": 1
+      },
+      "primary_chamber": "THIRD",
+      "chambers": {
+        "THIRD": 2
+      },
+      "mean_year": 2024.0,
+      "year_range": "2024-2024"
+    },
+    "J.-C. Bonichot": {
+      "n_cases": 1,
+      "n_holdings": 1,
+      "pro_ds_count": 0,
+      "pro_ds_rate": 0.0,
+      "ci_lower": 0,
+      "ci_upper": 0.7934567085261071,
+      "primary_concept": "ENFORCEMENT",
+      "primary_concept_pct": 100.0,
+      "concept_hhi": 1.0,
+      "concepts": {
+        "ENFORCEMENT": 1
+      },
+      "primary_chamber": "FIRST",
+      "chambers": {
+        "FIRST": 1
+      },
+      "mean_year": 2022.0,
+      "year_range": "2022-2022"
+    },
+    "A. Kumin": {
+      "n_cases": 3,
+      "n_holdings": 6,
+      "pro_ds_count": 5,
+      "pro_ds_rate": 0.8333333333333334,
+      "ci_lower": 0.43649056343635395,
+      "ci_upper": 0.9699474141282697,
+      "primary_concept": "RIGHTS",
+      "primary_concept_pct": 50.0,
+      "concept_hhi": 0.3888888888888889,
+      "concepts": {
+        "ENFORCEMENT": 2,
+        "LAWFULNESS": 1,
+        "RIGHTS": 3
+      },
+      "primary_chamber": "FIRST",
+      "chambers": {
+        "FIRST": 6
+      },
+      "mean_year": 2023.1666666666667,
+      "year_range": "2023-2024"
+    },
+    "Z. Csehi": {
+      "n_cases": 1,
+      "n_holdings": 1,
+      "pro_ds_count": 1,
+      "pro_ds_rate": 1.0,
+      "ci_lower": 0.20654329147389294,
+      "ci_upper": 1,
+      "primary_concept": "ENFORCEMENT",
+      "primary_concept_pct": 100.0,
+      "concept_hhi": 1.0,
+      "concepts": {
+        "ENFORCEMENT": 1
+      },
+      "primary_chamber": "FIFTH",
+      "chambers": {
+        "FIFTH": 1
+      },
+      "mean_year": 2025.0,
+      "year_range": "2025-2025"
+    },
+    "K. Jürimäe": {
+      "n_cases": 1,
+      "n_holdings": 3,
+      "pro_ds_count": 3,
+      "pro_ds_rate": 1.0,
+      "ci_lower": 0.43849391955098227,
+      "ci_upper": 1,
+      "primary_concept": "OTHER",
+      "primary_concept_pct": 66.66666666666666,
+      "concept_hhi": 0.5555555555555556,
+      "concepts": {
+        "ACTORS": 1,
+        "OTHER": 2
+      },
+      "primary_chamber": "GRAND_CHAMBER",
+      "chambers": {
+        "GRAND_CHAMBER": 3
+      },
+      "mean_year": 2025.0,
+      "year_range": "2025-2025"
+    },
+    "M. Vilaras": {
+      "n_cases": 1,
+      "n_holdings": 1,
+      "pro_ds_count": 0,
+      "pro_ds_rate": 0.0,
+      "ci_lower": 0,
+      "ci_upper": 0.7934567085261071,
+      "primary_concept": "PRINCIPLES",
+      "primary_concept_pct": 100.0,
+      "concept_hhi": 1.0,
+      "concepts": {
+        "PRINCIPLES": 1
+      },
+      "primary_chamber": "THIRD",
+      "chambers": {
+        "THIRD": 1
+      },
+      "mean_year": 2019.0,
+      "year_range": "2019-2019"
+    },
+    "A. Rosas": {
+      "n_cases": 1,
+      "n_holdings": 3,
+      "pro_ds_count": 3,
+      "pro_ds_rate": 1.0,
+      "ci_lower": 0.43849391955098227,
+      "ci_upper": 1,
+      "primary_concept": "LAWFULNESS",
+      "primary_concept_pct": 33.33333333333333,
+      "concept_hhi": 0.3333333333333333,
+      "concepts": {
+        "LAWFULNESS": 1,
+        "SCOPE": 1,
+        "PRINCIPLES": 1
+      },
+      "primary_chamber": "GRAND_CHAMBER",
+      "chambers": {
+        "GRAND_CHAMBER": 3
+      },
+      "mean_year": 2019.0,
+      "year_range": "2019-2019"
+    }
+  },
+  "chamber_profiles": {
+    "FOURTH": {
+      "n_cases": 6,
+      "n_holdings": 16,
+      "pro_ds_count": 12,
+      "pro_ds_rate": 0.75,
+      "ci_lower": 0.5050123107060135,
+      "ci_upper": 0.8981809801576265,
+      "n_rapporteurs": 2,
+      "rapporteurs": {
+        "L.S. Rossi": 12,
+        "N. Jääskinen": 4
+      },
+      "primary_rapporteur": "L.S. Rossi",
+      "concepts": {
+        "LAWFULNESS": 4,
+        "RIGHTS": 2,
+        "PRINCIPLES": 1,
+        "OTHER": 1,
+        "SPECIAL_CATEGORIES": 1,
+        "SCOPE": 1,
+        "ACTORS": 1,
+        "ENFORCEMENT": 5
+      },
+      "primary_concept": "ENFORCEMENT",
+      "mean_year": 2023.75
+    },
+    "FIRST": {
+      "n_cases": 19,
+      "n_holdings": 44,
+      "pro_ds_count": 27,
+      "pro_ds_rate": 0.6136363636363636,
+      "ci_lower": 0.46623309846201666,
+      "ci_upper": 0.7427900111329802,
+      "n_rapporteurs": 4,
+      "rapporteurs": {
+        "I. Ziemele": 18,
+        "T. von Danwitz": 19,
+        "J.-C. Bonichot": 1,
+        "A. Kumin": 6
+      },
+      "primary_rapporteur": "T. von Danwitz",
+      "concepts": {
+        "ENFORCEMENT": 12,
+        "RIGHTS": 17,
+        "OTHER": 6,
+        "ACTORS": 2,
+        "SCOPE": 3,
+        "LAWFULNESS": 1,
+        "PRINCIPLES": 3
+      },
+      "primary_concept": "RIGHTS",
+      "mean_year": 2023.7954545454545
+    },
+    "THIRD": {
+      "n_cases": 14,
+      "n_holdings": 41,
+      "pro_ds_count": 14,
+      "pro_ds_rate": 0.34146341463414637,
+      "ci_lower": 0.21558617366643462,
+      "ci_upper": 0.4945044564627312,
+      "n_rapporteurs": 5,
+      "rapporteurs": {
+        "M. Gavalec": 2,
+        "N. Jääskinen": 34,
+        "M. Safjan": 2,
+        "L.S. Rossi": 2,
+        "M. Vilaras": 1
+      },
+      "primary_rapporteur": "N. Jääskinen",
+      "concepts": {
+        "PRINCIPLES": 5,
+        "ENFORCEMENT": 26,
+        "ACTORS": 2,
+        "LAWFULNESS": 1,
+        "OTHER": 4,
+        "SPECIAL_CATEGORIES": 3
+      },
+      "primary_concept": "ENFORCEMENT",
+      "mean_year": 2023.3170731707316
+    },
+    "FIFTH": {
+      "n_cases": 6,
+      "n_holdings": 15,
+      "pro_ds_count": 7,
+      "pro_ds_rate": 0.4666666666666667,
+      "ci_lower": 0.24809225259746442,
+      "ci_upper": 0.6988336984894921,
+      "n_rapporteurs": 3,
+      "rapporteurs": {
+        "M. Ilešič": 8,
+        "D. Gratsias": 6,
+        "Z. Csehi": 1
+      },
+      "primary_rapporteur": "M. Ilešič",
+      "concepts": {
+        "SCOPE": 2,
+        "OTHER": 3,
+        "PRINCIPLES": 2,
+        "LAWFULNESS": 2,
+        "SPECIAL_CATEGORIES": 3,
+        "ENFORCEMENT": 3
+      },
+      "primary_concept": "OTHER",
+      "mean_year": 2022.4666666666667
+    },
+    "GRAND_CHAMBER": {
+      "n_cases": 12,
+      "n_holdings": 49,
+      "pro_ds_count": 38,
+      "pro_ds_rate": 0.7755102040816326,
+      "ci_lower": 0.6412094381295426,
+      "ci_upper": 0.8697516228527138,
+      "n_rapporteurs": 6,
+      "rapporteurs": {
+        "M. Ilešič": 8,
+        "L.S. Rossi": 16,
+        "T. von Danwitz": 13,
+        "K. Jürimäe": 3,
+        "A. Rosas": 3,
+        "N. Jääskinen": 6
+      },
+      "primary_rapporteur": "L.S. Rossi",
+      "concepts": {
+        "LAWFULNESS": 7,
+        "SPECIAL_CATEGORIES": 4,
+        "ENFORCEMENT": 13,
+        "SCOPE": 8,
+        "OTHER": 6,
+        "PRINCIPLES": 6,
+        "RIGHTS": 2,
+        "ACTORS": 3
+      },
+      "primary_concept": "ENFORCEMENT",
+      "mean_year": 2022.0204081632653
+    },
+    "EIGHTH": {
+      "n_cases": 5,
+      "n_holdings": 9,
+      "pro_ds_count": 6,
+      "pro_ds_rate": 0.6666666666666666,
+      "ci_lower": 0.35419734749908977,
+      "ci_upper": 0.879418401317257,
+      "n_rapporteurs": 2,
+      "rapporteurs": {
+        "N. Jääskinen": 7,
+        "M. Gavalec": 2
+      },
+      "primary_rapporteur": "N. Jääskinen",
+      "concepts": {
+        "SCOPE": 2,
+        "ENFORCEMENT": 4,
+        "ACTORS": 1,
+        "OTHER": 2
+      },
+      "primary_concept": "ENFORCEMENT",
+      "mean_year": 2023.5555555555557
+    },
+    "SIXTH": {
+      "n_cases": 2,
+      "n_holdings": 4,
+      "pro_ds_count": 3,
+      "pro_ds_rate": 0.75,
+      "ci_lower": 0.3006360524426366,
+      "ci_upper": 0.9544139373553637,
+      "n_rapporteurs": 2,
+      "rapporteurs": {
+        "I. Ziemele": 2,
+        "T. von Danwitz": 2
+      },
+      "primary_rapporteur": "I. Ziemele",
+      "concepts": {
+        "ENFORCEMENT": 2,
+        "SCOPE": 1,
+        "SPECIAL_CATEGORIES": 1
+      },
+      "primary_concept": "ENFORCEMENT",
+      "mean_year": 2023.5
+    },
+    "NINTH": {
+      "n_cases": 2,
+      "n_holdings": 2,
+      "pro_ds_count": 2,
+      "pro_ds_rate": 1.0,
+      "ci_lower": 0.34237195288961925,
+      "ci_upper": 1,
+      "n_rapporteurs": 1,
+      "rapporteurs": {
+        "L.S. Rossi": 2
+      },
+      "primary_rapporteur": "L.S. Rossi",
+      "concepts": {
+        "ACTORS": 1,
+        "LAWFULNESS": 1
+      },
+      "primary_concept": "ACTORS",
+      "mean_year": 2024.0
+    },
+    "SECOND": {
+      "n_cases": 1,
+      "n_holdings": 1,
+      "pro_ds_count": 1,
+      "pro_ds_rate": 1.0,
+      "ci_lower": 0.20654329147389294,
+      "ci_upper": 1,
+      "n_rapporteurs": 1,
+      "rapporteurs": {
+        "T. von Danwitz": 1
+      },
+      "primary_rapporteur": "T. von Danwitz",
+      "concepts": {
+        "LAWFULNESS": 1
+      },
+      "primary_concept": "LAWFULNESS",
+      "mean_year": 2020.0
+    }
+  },
+  "judge_exposure": {
+    "judge_rapporteur": {
+      "present_n": 0,
+      "present_pro_ds": 0,
+      "present_rate": 0,
+      "present_ci": [
+        0,
+        0
+      ],
+      "absent_n": 181,
+      "absent_pro_ds": 110,
+      "absent_rate": 0.6077348066298343,
+      "absent_ci": [
+        0.5350713950033462,
+        0.6759200701213876
+      ],
+      "rate_diff": 0,
+      "odds_ratio": null
+    },
+    "judge_A_Arabadjiev": {
+      "present_n": 62,
+      "present_pro_ds": 45,
+      "present_rate": 0.7258064516129032,
+      "present_ci": [
+        0.6040722415667276,
+        0.8211908140090788
+      ],
+      "absent_n": 119,
+      "absent_pro_ds": 65,
+      "absent_rate": 0.5462184873949579,
+      "absent_ci": [
+        0.45671923523240976,
+        0.6328269771256186
+      ],
+      "rate_diff": 0.17958796421794532,
+      "odds_ratio": 2.1990950226244346
+    },
+    "judge_A_Kumin": {
+      "present_n": 63,
+      "present_pro_ds": 43,
+      "present_rate": 0.6825396825396826,
+      "present_ci": [
+        0.559962360918752,
+        0.7841347283190879
+      ],
+      "absent_n": 118,
+      "absent_pro_ds": 67,
+      "absent_rate": 0.5677966101694916,
+      "absent_ci": [
+        0.4776703089507045,
+        0.6536477302083349
+      ],
+      "rate_diff": 0.11474307237019099,
+      "odds_ratio": 1.6365671641791044
+    },
+    "judge_A_Prechal": {
+      "present_n": 24,
+      "present_pro_ds": 18,
+      "present_rate": 0.75,
+      "present_ci": [
+        0.5510017468789357,
+        0.8800079652065766
+      ],
+      "absent_n": 157,
+      "absent_pro_ds": 92,
+      "absent_rate": 0.5859872611464968,
+      "absent_ci": [
+        0.5077842254873417,
+        0.6600827939902063
+      ],
+      "rate_diff": 0.1640127388535032,
+      "odds_ratio": 2.119565217391304
+    },
+    "judge_A_Rosas": {
+      "present_n": 3,
+      "present_pro_ds": 3,
+      "present_rate": 1.0,
+      "present_ci": [
+        0.43849391955098227,
+        1
+      ],
+      "absent_n": 178,
+      "absent_pro_ds": 107,
+      "absent_rate": 0.601123595505618,
+      "absent_ci": [
+        0.5277829751742322,
+        0.6701915257100539
+      ],
+      "rate_diff": 0.398876404494382,
+      "odds_ratio": null
+    },
+    "judge_C_Lycourgos": {
+      "present_n": 54,
+      "present_pro_ds": 40,
+      "present_rate": 0.7407407407407407,
+      "present_ci": [
+        0.610688551197827,
+        0.8388149203520608
+      ],
+      "absent_n": 127,
+      "absent_pro_ds": 70,
+      "absent_rate": 0.5511811023622047,
+      "absent_ci": [
+        0.46444036529260213,
+        0.6349164142026043
+      ],
+      "rate_diff": 0.18955963837853596,
+      "odds_ratio": 2.326530612244898
+    },
+    "judge_C_Toader": {
+      "present_n": 3,
+      "present_pro_ds": 3,
+      "present_rate": 1.0,
+      "present_ci": [
+        0.43849391955098227,
+        1
+      ],
+      "absent_n": 178,
+      "absent_pro_ds": 107,
+      "absent_rate": 0.601123595505618,
+      "absent_ci": [
+        0.5277829751742322,
+        0.6701915257100539
+      ],
+      "rate_diff": 0.398876404494382,
+      "odds_ratio": null
+    },
+    "judge_D_Gratsias": {
+      "present_n": 22,
+      "present_pro_ds": 14,
+      "present_rate": 0.6363636363636364,
+      "present_ci": [
+        0.4295134934371804,
+        0.802670272273921
+      ],
+      "absent_n": 159,
+      "absent_pro_ds": 96,
+      "absent_rate": 0.6037735849056604,
+      "absent_ci": [
+        0.526160983800349,
+        0.6764899358663702
+      ],
+      "rate_diff": 0.032590051457976,
+      "odds_ratio": 1.1484375
+    },
+    "judge_D_Šváby": {
+      "present_n": 15,
+      "present_pro_ds": 11,
+      "present_rate": 0.7333333333333333,
+      "present_ci": [
+        0.4804911034231324,
+        0.8910272389681718
+      ],
+      "absent_n": 166,
+      "absent_pro_ds": 99,
+      "absent_rate": 0.5963855421686747,
+      "absent_ci": [
+        0.5203860388719281,
+        0.6680248098247397
+      ],
+      "rate_diff": 0.1369477911646586,
+      "odds_ratio": 1.8611111111111112
+    },
+    "judge_E_Juhász": {
+      "present_n": 12,
+      "present_pro_ds": 7,
+      "present_rate": 0.5833333333333334,
+      "present_ci": [
+        0.3195073356553728,
+        0.8067425380947535
+      ],
+      "absent_n": 169,
+      "absent_pro_ds": 103,
+      "absent_rate": 0.6094674556213018,
+      "absent_ci": [
+        0.5342600136016108,
+        0.6798088216787846
+      ],
+      "rate_diff": -0.02613412228796841,
+      "odds_ratio": 0.8970873786407767
+    },
+    "judge_E_Regan": {
+      "present_n": 30,
+      "present_pro_ds": 19,
+      "present_rate": 0.6333333333333333,
+      "present_ci": [
+        0.45513246433604937,
+        0.7812629779598231
+      ],
+      "absent_n": 151,
+      "absent_pro_ds": 91,
+      "absent_rate": 0.6026490066225165,
+      "absent_ci": [
+        0.522982027231788,
+        0.6772225689490832
+      ],
+      "rate_diff": 0.03068432671081678,
+      "odds_ratio": 1.138861138861139
+    },
+    "judge_F_Biltgen": {
+      "present_n": 37,
+      "present_pro_ds": 28,
+      "present_rate": 0.7567567567567568,
+      "present_ci": [
+        0.5988239750929105,
+        0.8663879656733671
+      ],
+      "absent_n": 144,
+      "absent_pro_ds": 82,
+      "absent_rate": 0.5694444444444444,
+      "absent_ci": [
+        0.4878020836248655,
+        0.6474778375881083
+      ],
+      "rate_diff": 0.18731231231231238,
+      "odds_ratio": 2.3523035230352303
+    },
+    "judge_I_Jarukaitis": {
+      "present_n": 38,
+      "present_pro_ds": 25,
+      "present_rate": 0.6578947368421053,
+      "present_ci": [
+        0.49891811629074545,
+        0.7878777997354105
+      ],
+      "absent_n": 143,
+      "absent_pro_ds": 85,
+      "absent_rate": 0.5944055944055944,
+      "absent_ci": [
+        0.5124794070008641,
+        0.6713921934175459
+      ],
+      "rate_diff": 0.06348914243651094,
+      "odds_ratio": 1.3122171945701357
+    },
+    "judge_I_Ziemele": {
+      "present_n": 59,
+      "present_pro_ds": 41,
+      "present_rate": 0.6949152542372882,
+      "present_ci": [
+        0.5685343274025617,
+        0.7974652652239788
+      ],
+      "absent_n": 122,
+      "absent_pro_ds": 69,
+      "absent_rate": 0.5655737704918032,
+      "absent_ci": [
+        0.4769431254810574,
+        0.6502008396306385
+      ],
+      "rate_diff": 0.12934148374548493,
+      "odds_ratio": 1.749597423510467
+    },
+    "judge_J_Malenovský": {
+      "present_n": 2,
+      "present_pro_ds": 1,
+      "present_rate": 0.5,
+      "present_ci": [
+        0.09452865480086614,
+        0.9054713451991339
+      ],
+      "absent_n": 179,
+      "absent_pro_ds": 109,
+      "absent_rate": 0.6089385474860335,
+      "absent_ci": [
+        0.535878735334743,
+        0.677420645112595
+      ],
+      "rate_diff": -0.10893854748603349,
+      "odds_ratio": 0.6422018348623854
+    },
+    "judge_J_Passer": {
+      "present_n": 11,
+      "present_pro_ds": 10,
+      "present_rate": 0.9090909090909091,
+      "present_ci": [
+        0.6226353745137962,
+        0.9837682477371741
+      ],
+      "absent_n": 170,
+      "absent_pro_ds": 100,
+      "absent_rate": 0.5882352941176471,
+      "absent_ci": [
+        0.5130985211097917,
+        0.6594723710126923
+      ],
+      "rate_diff": 0.320855614973262,
+      "odds_ratio": 7.0
+    },
+    "judge_J_C_Bonichot": {
+      "present_n": 38,
+      "present_pro_ds": 29,
+      "present_rate": 0.7631578947368421,
+      "present_ci": [
+        0.6079288083466214,
+        0.8700643850303049
+      ],
+      "absent_n": 143,
+      "absent_pro_ds": 81,
+      "absent_rate": 0.5664335664335665,
+      "absent_ci": [
+        0.4845211293810815,
+        0.6448699968392811
+      ],
+      "rate_diff": 0.1967243283032757,
+      "odds_ratio": 2.46639231824417
+    },
+    "judge_K_Jürimäe": {
+      "present_n": 68,
+      "present_pro_ds": 36,
+      "present_rate": 0.5294117647058824,
+      "present_ci": [
+        0.4124071581374707,
+        0.643270889122056
+      ],
+      "absent_n": 113,
+      "absent_pro_ds": 74,
+      "absent_rate": 0.6548672566371682,
+      "absent_ci": [
+        0.5634212472892778,
+        0.7361295976152767
+      ],
+      "rate_diff": -0.1254554919312858,
+      "odds_ratio": 0.5929054054054054
+    },
+    "judge_K_Lenaerts": {
+      "present_n": 72,
+      "present_pro_ds": 48,
+      "present_rate": 0.6666666666666666,
+      "present_ci": [
+        0.5517938807199863,
+        0.7646551393428815
+      ],
+      "absent_n": 109,
+      "absent_pro_ds": 62,
+      "absent_rate": 0.5688073394495413,
+      "absent_ci": [
+        0.47505723335545325,
+        0.6578724663297693
+      ],
+      "rate_diff": 0.09785932721712531,
+      "odds_ratio": 1.5161290322580645
+    },
+    "judge_L_Bay_Larsen": {
+      "present_n": 32,
+      "present_pro_ds": 22,
+      "present_rate": 0.6875,
+      "present_ci": [
+        0.514330003019676,
+        0.8204764788338126
+      ],
+      "absent_n": 149,
+      "absent_pro_ds": 88,
+      "absent_rate": 0.5906040268456376,
+      "absent_ci": [
+        0.5103364560820506,
+        0.6663170204583678
+      ],
+      "rate_diff": 0.09689597315436238,
+      "odds_ratio": 1.525
+    },
+    "judge_LS_Rossi": {
+      "present_n": 53,
+      "present_pro_ds": 41,
+      "present_rate": 0.7735849056603774,
+      "present_ci": [
+        0.6447347199775757,
+        0.8654550002273447
+      ],
+      "absent_n": 128,
+      "absent_pro_ds": 69,
+      "absent_rate": 0.5390625,
+      "absent_ci": [
+        0.4528282722913874,
+        0.6230203217790728
+      ],
+      "rate_diff": 0.2345224056603774,
+      "odds_ratio": 2.9214975845410627
+    },
+    "judge_M_Condinanzi": {
+      "present_n": 4,
+      "present_pro_ds": 2,
+      "present_rate": 0.5,
+      "present_ci": [
+        0.15003570882017148,
+        0.8499642911798285
+      ],
+      "absent_n": 177,
+      "absent_pro_ds": 108,
+      "absent_rate": 0.6101694915254238,
+      "absent_ci": [
+        0.5367069515095129,
+        0.6789513925883055
+      ],
+      "rate_diff": -0.11016949152542377,
+      "odds_ratio": 0.6388888888888888
+    },
+    "judge_M_Gavalec": {
+      "present_n": 53,
+      "present_pro_ds": 24,
+      "present_rate": 0.4528301886792453,
+      "present_ci": [
+        0.3265736816014746,
+        0.585462573535608
+      ],
+      "absent_n": 128,
+      "absent_pro_ds": 86,
+      "absent_rate": 0.671875,
+      "absent_ci": [
+        0.5865623991215974,
+        0.7471714147884281
+      ],
+      "rate_diff": -0.2190448113207547,
+      "odds_ratio": 0.4041700080192462
+    },
+    "judge_M_Ilešič": {
+      "present_n": 41,
+      "present_pro_ds": 27,
+      "present_rate": 0.6585365853658537,
+      "present_ci": [
+        0.5054955435372689,
+        0.7844138263335655
+      ],
+      "absent_n": 140,
+      "absent_pro_ds": 83,
+      "absent_rate": 0.5928571428571429,
+      "absent_ci": [
+        0.5100487545242445,
+        0.6707056308552286
+      ],
+      "rate_diff": 0.06567944250871083,
+      "odds_ratio": 1.3244406196213425
+    },
+    "judge_M_Safjan": {
+      "present_n": 53,
+      "present_pro_ds": 29,
+      "present_rate": 0.5471698113207547,
+      "present_ci": [
+        0.41453742646439184,
+        0.6734263183985253
+      ],
+      "absent_n": 128,
+      "absent_pro_ds": 81,
+      "absent_rate": 0.6328125,
+      "absent_ci": [
+        0.546568431638715,
+        0.7113167882008501
+      ],
+      "rate_diff": -0.0856426886792453,
+      "odds_ratio": 0.7011316872427984
+    },
+    "judge_M_Vilaras": {
+      "present_n": 14,
+      "present_pro_ds": 11,
+      "present_rate": 0.7857142857142857,
+      "present_ci": [
+        0.5241027622679172,
+        0.9242875166308363
+      ],
+      "absent_n": 167,
+      "absent_pro_ds": 99,
+      "absent_rate": 0.592814371257485,
+      "absent_ci": [
+        0.5170236617608533,
+        0.6644309722392966
+      ],
+      "rate_diff": 0.19289991445680066,
+      "odds_ratio": 2.5185185185185186
+    },
+    "judge_ML_Arastey_Sahún": {
+      "present_n": 17,
+      "present_pro_ds": 13,
+      "present_rate": 0.7647058823529411,
+      "present_ci": [
+        0.5273775411082839,
+        0.9044511092832406
+      ],
+      "absent_n": 164,
+      "absent_pro_ds": 97,
+      "absent_rate": 0.5914634146341463,
+      "absent_ci": [
+        0.5149725895781713,
+        0.6637673652363681
+      ],
+      "rate_diff": 0.1732424677187948,
+      "odds_ratio": 2.2448453608247423
+    },
+    "judge_N_Jääskinen": {
+      "present_n": 77,
+      "present_pro_ds": 39,
+      "present_rate": 0.5064935064935064,
+      "present_ci": [
+        0.39719817534305907,
+        0.6151716936352885
+      ],
+      "absent_n": 104,
+      "absent_pro_ds": 71,
+      "absent_rate": 0.6826923076923077,
+      "absent_ci": [
+        0.5880988571231228,
+        0.764269802095583
+      ],
+      "rate_diff": -0.17619880119880127,
+      "odds_ratio": 0.47702001482579687
+    },
+    "judge_N_Piçarra": {
+      "present_n": 62,
+      "present_pro_ds": 29,
+      "present_rate": 0.46774193548387094,
+      "present_ci": [
+        0.34908630867622215,
+        0.5901618262415199
+      ],
+      "absent_n": 119,
+      "absent_pro_ds": 81,
+      "absent_rate": 0.680672268907563,
+      "absent_ci": [
+        0.5923825565534712,
+        0.7576617281188224
+      ],
+      "rate_diff": -0.2129303334236921,
+      "odds_ratio": 0.41227085671530117
+    },
+    "judge_N_Wahl": {
+      "present_n": 28,
+      "present_pro_ds": 22,
+      "present_rate": 0.7857142857142857,
+      "present_ci": [
+        0.6046105292072612,
+        0.8978767829881058
+      ],
+      "absent_n": 153,
+      "absent_pro_ds": 88,
+      "absent_rate": 0.5751633986928104,
+      "absent_ci": [
+        0.49593770944079707,
+        0.6507070582738907
+      ],
+      "rate_diff": 0.21055088702147529,
+      "odds_ratio": 2.7083333333333335
+    },
+    "judge_O_Spineanu_Matei": {
+      "present_n": 33,
+      "present_pro_ds": 22,
+      "present_rate": 0.6666666666666666,
+      "present_ci": [
+        0.4960758179994997,
+        0.8024997053219629
+      ],
+      "absent_n": 148,
+      "absent_pro_ds": 88,
+      "absent_rate": 0.5945945945945946,
+      "absent_ci": [
+        0.5140709959732847,
+        0.6703316973597678
+      ],
+      "rate_diff": 0.072072072072072,
+      "odds_ratio": 1.3636363636363635
+    },
+    "judge_PG_Xuereb": {
+      "present_n": 57,
+      "present_pro_ds": 43,
+      "present_rate": 0.7543859649122807,
+      "present_ci": [
+        0.6289745615892073,
+        0.8476729953455215
+      ],
+      "absent_n": 124,
+      "absent_pro_ds": 67,
+      "absent_rate": 0.5403225806451613,
+      "absent_ci": [
+        0.4527104848592219,
+        0.6255113146176308
+      ],
+      "rate_diff": 0.21406338426711946,
+      "odds_ratio": 2.613006396588486
+    },
+    "judge_R_Frendo": {
+      "present_n": 4,
+      "present_pro_ds": 2,
+      "present_rate": 0.5,
+      "present_ci": [
+        0.15003570882017148,
+        0.8499642911798285
+      ],
+      "absent_n": 177,
+      "absent_pro_ds": 108,
+      "absent_rate": 0.6101694915254238,
+      "absent_ci": [
+        0.5367069515095129,
+        0.6789513925883055
+      ],
+      "rate_diff": -0.11016949152542377,
+      "odds_ratio": 0.6388888888888888
+    },
+    "judge_R_Silva_de_Lapuerta": {
+      "present_n": 17,
+      "present_pro_ds": 14,
+      "present_rate": 0.8235294117647058,
+      "present_ci": [
+        0.5897007098262422,
+        0.9380898628745101
+      ],
+      "absent_n": 164,
+      "absent_pro_ds": 96,
+      "absent_rate": 0.5853658536585366,
+      "absent_ci": [
+        0.5088527058857039,
+        0.6579712519411994
+      ],
+      "rate_diff": 0.2381635581061693,
+      "odds_ratio": 3.3055555555555554
+    },
+    "judge_S_Gervasoni": {
+      "present_n": 2,
+      "present_pro_ds": 1,
+      "present_rate": 0.5,
+      "present_ci": [
+        0.09452865480086614,
+        0.9054713451991339
+      ],
+      "absent_n": 179,
+      "absent_pro_ds": 109,
+      "absent_rate": 0.6089385474860335,
+      "absent_ci": [
+        0.535878735334743,
+        0.677420645112595
+      ],
+      "rate_diff": -0.10893854748603349,
+      "odds_ratio": 0.6422018348623854
+    },
+    "judge_S_Rodin": {
+      "present_n": 48,
+      "present_pro_ds": 38,
+      "present_rate": 0.7916666666666666,
+      "present_ci": [
+        0.6574082647864651,
+        0.8826985220411018
+      ],
+      "absent_n": 133,
+      "absent_pro_ds": 72,
+      "absent_rate": 0.5413533834586466,
+      "absent_ci": [
+        0.4566959107530906,
+        0.6236890014373544
+      ],
+      "rate_diff": 0.25031328320802004,
+      "odds_ratio": 3.2194444444444446
+    },
+    "judge_T_von_Danwitz": {
+      "present_n": 64,
+      "present_pro_ds": 46,
+      "present_rate": 0.71875,
+      "present_ci": [
+        0.598658376004965,
+        0.8140677389451542
+      ],
+      "absent_n": 117,
+      "absent_pro_ds": 64,
+      "absent_rate": 0.5470085470085471,
+      "absent_ci": [
+        0.45674714605677097,
+        0.6342811091136339
+      ],
+      "rate_diff": 0.17174145299145294,
+      "odds_ratio": 2.1163194444444446
+    },
+    "judge_Z_Csehi": {
+      "present_n": 23,
+      "present_pro_ds": 14,
+      "present_rate": 0.6086956521739131,
+      "present_ci": [
+        0.4078517960374599,
+        0.7784262201761787
+      ],
+      "absent_n": 158,
+      "absent_pro_ds": 96,
+      "absent_rate": 0.6075949367088608,
+      "absent_ci": [
+        0.5297686254978603,
+        0.6803133311807686
+      ],
+      "rate_diff": 0.0011007154650523043,
+      "odds_ratio": 1.0046296296296295
+    }
+  },
+  "network_stats": {
+    "n_judges": 37,
+    "n_edges": 446,
+    "density": 0.6696696696696697,
+    "avg_clustering": 0.8780362085725681,
+    "avg_degree": 24.10810810810811
+  },
+  "metadata": {
+    "generated_at": "11_judicial_descriptive_analysis.py",
+    "description": "Phase 2: Descriptive Analysis Results"
+  }
+}

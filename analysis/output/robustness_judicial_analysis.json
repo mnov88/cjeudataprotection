@@ -1,0 +1,224 @@
+{
+  "sensitivity_exclude_neutral": {
+    "THIRD": {
+      "or": 0.11217948717948718,
+      "rate": 0.5185185185185185,
+      "n": 27
+    },
+    "GRAND_CHAMBER": {
+      "or": 11.61111111111111,
+      "rate": 0.9743589743589743,
+      "n": 39
+    },
+    "FIRST": {
+      "or": 1.5451807228915662,
+      "rate": 0.8709677419354839,
+      "n": 31
+    },
+    "N. J\u00e4\u00e4skinen": {
+      "or": 0.13333333333333333,
+      "rate": 0.5945945945945946,
+      "n": 37
+    },
+    "L.S. Rossi": {
+      "or": 14.7396449704142,
+      "rate": 1.0,
+      "n": 26
+    },
+    "T. von Danwitz": {
+      "or": 6.1395348837209305,
+      "rate": 0.96,
+      "n": 25
+    }
+  },
+  "sensitivity_case_level": {
+    "THIRD_case": {
+      "or": 0.1652892561983471,
+      "rate": 0.21428571428571427,
+      "n": 14
+    },
+    "GRAND_CHAMBER_case": {
+      "or": 5.576923076923077,
+      "rate": 0.8333333333333334,
+      "n": 12
+    },
+    "FIRST_case": {
+      "or": 0.7,
+      "rate": 0.47368421052631576,
+      "n": 19
+    },
+    "N. J\u00e4\u00e4skinen_case": {
+      "or": 0.22727272727272727,
+      "rate": 0.26666666666666666,
+      "n": 15
+    },
+    "L.S. Rossi_case": {
+      "or": 13.2,
+      "rate": 0.9166666666666666,
+      "n": 12
+    }
+  },
+  "sensitivity_temporal_split": {
+    "THIRD_EARLY": {
+      "or": 0.8823529411764706,
+      "rate": 0.6666666666666666,
+      "n": 3
+    },
+    "GRAND_CHAMBER_EARLY": {
+      "or": 2.948717948717949,
+      "rate": 0.7931034482758621,
+      "n": 29
+    },
+    "THIRD_LATE": {
+      "or": 0.21588089330024815,
+      "rate": 0.3157894736842105,
+      "n": 38
+    },
+    "GRAND_CHAMBER_LATE": {
+      "or": 2.542372881355932,
+      "rate": 0.75,
+      "n": 20
+    }
+  },
+  "sensitivity_inverse_weighting": {
+    "THIRD_weighted": {
+      "weighted_rate": 0.3702380952380954,
+      "or": 0.2616903960218709,
+      "effective_n": 13.999999999999995
+    },
+    "GRAND_CHAMBER_weighted": {
+      "weighted_rate": 0.7895833333333332,
+      "or": 2.6207457081271732,
+      "effective_n": 12.000000000000002
+    },
+    "FIRST_weighted": {
+      "weighted_rate": 0.5982456140350877,
+      "or": 0.855032336369857,
+      "effective_n": 19.0
+    },
+    "N. J\u00e4\u00e4skinen_weighted": {
+      "weighted_rate": 0.4511111111111112,
+      "or": 0.3960006422354419,
+      "effective_n": 14.999999999999995
+    },
+    "L.S. Rossi_weighted": {
+      "weighted_rate": 0.8826388888888888,
+      "or": 5.70868396815585,
+      "effective_n": 11.999999999999996
+    }
+  },
+  "bootstrap_analysis": {
+    "Third Chamber": {
+      "observed": -0.34425087108013935,
+      "ci_low": -0.5031358885017422,
+      "ci_high": -0.1690647482014388,
+      "se": 0.0843382480261498,
+      "significant": true
+    },
+    "Grand Chamber": {
+      "observed": 0.2300556586270872,
+      "ci_low": 0.07417027417027422,
+      "ci_high": 0.367420349434738,
+      "se": 0.07447638266643937,
+      "significant": true
+    },
+    "N. J\u00e4\u00e4skinen": {
+      "observed": -0.2455505279034691,
+      "ci_low": -0.39726897427754837,
+      "ci_high": -0.08169350029815148,
+      "se": 0.07923244716984201,
+      "significant": true
+    },
+    "L.S. Rossi": {
+      "observed": 0.24874161073825507,
+      "ci_low": 0.07032590051457976,
+      "ci_high": 0.40861056751467706,
+      "se": 0.0836934487319269,
+      "significant": true
+    }
+  },
+  "specification_curve": [
+    {
+      "spec": "2023+ only | Inverse holding weight",
+      "effect": -0.42884930384930386,
+      "n": 129
+    },
+    {
+      "spec": "Clear only | Unweighted",
+      "effect": -0.3871418588399721,
+      "n": 133
+    },
+    {
+      "spec": "2023+ only | Unweighted",
+      "effect": -0.36552920763447083,
+      "n": 129
+    },
+    {
+      "spec": "All holdings | Unweighted",
+      "effect": -0.34425087108013935,
+      "n": 181
+    },
+    {
+      "spec": "All holdings | Inverse holding weight",
+      "effect": -0.32174303683737565,
+      "n": 181
+    },
+    {
+      "spec": "Clear only | Inverse holding weight",
+      "effect": -0.2674836601307191,
+      "n": 133
+    }
+  ],
+  "leave_one_out": [
+    {
+      "case_id": "C-340/21",
+      "effect": -0.4,
+      "change": -0.05574912891986067
+    },
+    {
+      "case_id": "C-687/21",
+      "effect": -0.2968253968253968,
+      "change": 0.04742547425474253
+    },
+    {
+      "case_id": "C-667/21",
+      "effect": -0.3246031746031746,
+      "change": 0.019647696476964738
+    },
+    {
+      "case_id": "C-313/23, C-316/23 & C-332/23",
+      "effect": -0.36224028906955735,
+      "change": -0.017989417989418
+    },
+    {
+      "case_id": "C-169/23",
+      "effect": -0.32673992673992674,
+      "change": 0.01751094434021261
+    },
+    {
+      "case_id": "C-319/20",
+      "effect": -0.3607142857142857,
+      "change": -0.016463414634146356
+    },
+    {
+      "case_id": "C-272/19",
+      "effect": -0.3607142857142857,
+      "change": -0.016463414634146356
+    },
+    {
+      "case_id": "C-597/19",
+      "effect": -0.35926651237315294,
+      "change": -0.015015641293013582
+    },
+    {
+      "case_id": "C-590/22",
+      "effect": -0.33436293436293435,
+      "change": 0.009887936717205004
+    },
+    {
+      "case_id": "C-129/21",
+      "effect": -0.3350071736011478,
+      "change": 0.009243697478991564
+    }
+  ]
+}

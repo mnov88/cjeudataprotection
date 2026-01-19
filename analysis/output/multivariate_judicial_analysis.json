@@ -1,0 +1,116 @@
+{
+  "rapporteur_effects": {
+    "N. J\u00e4\u00e4skinen": {
+      "n": 51,
+      "crude_or": 0.3620689655172414,
+      "year_adjusted_or": 0.3623987893525105,
+      "concept_adjusted_or": 0.5406738888404258,
+      "change_pct": 0.08962584179247943
+    },
+    "T. von Danwitz": {
+      "n": 35,
+      "crude_or": 1.522198731501057,
+      "year_adjusted_or": 1.4795264472683831,
+      "concept_adjusted_or": 1.1088110144833405,
+      "change_pct": -6.767430894247839
+    },
+    "L.S. Rossi": {
+      "n": 32,
+      "crude_or": 3.3531746031746033,
+      "year_adjusted_or": 3.8087792606585005,
+      "concept_adjusted_or": 4.0635858978256705,
+      "change_pct": 10.529828910903728
+    },
+    "I. Ziemele": {
+      "n": 20,
+      "crude_or": 0.9642857142857143,
+      "year_adjusted_or": 0.9248846997152146,
+      "concept_adjusted_or": 0.8648105879039022,
+      "change_pct": -114.71338046718759
+    },
+    "M. Ile\u0161i\u010d": {
+      "n": 16,
+      "crude_or": 1.0833333333333333,
+      "year_adjusted_or": 1.0038349514563107,
+      "concept_adjusted_or": 1.0021260146888287,
+      "change_pct": -95.21803186406372
+    }
+  },
+  "chamber_effects": {
+    "GRAND_CHAMBER": {
+      "n": 49,
+      "crude_or": 2.878787878787879,
+      "year_adjusted_or": 2.668428163939349,
+      "concept_adjusted_or": 2.6034220779734674,
+      "rapporteur_adjusted_or": 1.600950358912142
+    },
+    "FIRST": {
+      "n": 44,
+      "crude_or": 1.0333097094259391,
+      "year_adjusted_or": 1.1759970905564312,
+      "concept_adjusted_or": 0.6972856697355514,
+      "rapporteur_adjusted_or": 0.44946236559139785
+    },
+    "THIRD": {
+      "n": 41,
+      "crude_or": 0.23765432098765432,
+      "year_adjusted_or": 0.20461450122519445,
+      "concept_adjusted_or": 0.32930403716785783,
+      "rapporteur_adjusted_or": 0.30565529622980253
+    },
+    "FOURTH": {
+      "n": 16,
+      "crude_or": 2.0510204081632653,
+      "year_adjusted_or": 2.4896551724137934,
+      "concept_adjusted_or": 2.0437647362811275,
+      "rapporteur_adjusted_or": 1.293956043956044
+    },
+    "FIFTH": {
+      "n": 15,
+      "crude_or": 0.5351941747572816,
+      "year_adjusted_or": 0.49694034419427247,
+      "concept_adjusted_or": 0.5202487174587308,
+      "rapporteur_adjusted_or": 0.3333333333333333
+    }
+  },
+  "hierarchical_models": [
+    {
+      "name": "Null",
+      "log_likelihood": -121.25580330521966,
+      "pseudo_r2": -0.0002553287475255406,
+      "n_params": 1
+    },
+    {
+      "name": "Chamber",
+      "log_likelihood": -114.74496490458135,
+      "pseudo_r2": 0.05345344747046299,
+      "n_params": 9
+    },
+    {
+      "name": "Chamber + Year",
+      "log_likelihood": -1634.8354160147678,
+      "pseudo_r2": -12.485975861936804,
+      "n_params": 10
+    },
+    {
+      "name": "Chamber + Year + Concept",
+      "log_likelihood": -1634.8354160147678,
+      "pseudo_r2": -12.485975861936804,
+      "n_params": 17
+    },
+    {
+      "name": "Full Model",
+      "log_likelihood": -1634.8354160147678,
+      "pseudo_r2": -12.485975861936804,
+      "n_params": 21
+    }
+  ],
+  "mediation_analysis": {
+    "mediator_tested": "dominant_source",
+    "source_effects": {
+      "TELEOLOGICAL": 73.33333333333333,
+      "SYSTEMATIC": 44.44444444444444,
+      "SEMANTIC": 62.5
+    }
+  }
+}
