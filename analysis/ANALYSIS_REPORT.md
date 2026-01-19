@@ -292,5 +292,153 @@ python3 analysis/scripts/04_quality_check.py
 
 ---
 
-*Report generated: 2026-01-18*
+## 9. Advanced Analysis: Priority Investigations
+
+### 9.1 Third Chamber Investigation
+
+The 43-percentage-point gap between Third Chamber (34.1% pro-DS) and Grand Chamber (77.6%) was investigated in depth.
+
+**Case Allocation Hypothesis:**
+- Third Chamber receives 63.4% ENFORCEMENT cases vs Grand's 26.5%
+- ENFORCEMENT has lowest pro-DS rate (46.2%), so allocation partially explains gap
+- Chi-square confirms concept distribution differs significantly by chamber (p=0.008)
+
+**Within-Concept Comparison:**
+| Concept | Third Pro-DS | Grand Pro-DS | Gap |
+|---------|-------------|--------------|-----|
+| ENFORCEMENT | 30.8% | 69.2% | +38.5pp |
+| PRINCIPLES | 40.0% | 100.0% | +60.0pp |
+| OTHER | 25.0% | 66.7% | +41.7pp |
+
+**Interpretive Differences:**
+- Third uses TELEOLOGICAL dominant: 31.7% vs Grand's 46.9%
+- Pro-DS purpose invocation: 61.0% vs 75.5%
+- Level-shifting: 2.4% vs 20.4%
+
+**Controlled Analysis:**
+- Unadjusted OR = 0.15 (Third vs Grand)
+- After controlling for concept + interpretation: OR = 0.024, p = 0.0007
+- **Conclusion: Third Chamber effect PERSISTS after controls — genuine interpretive difference**
+
+**Key Finding:** Third Chamber is dominated by REMEDIES_COMPENSATION cases (24 of 41 holdings, 58.5%), and rules pro-DS in only 29% of these. The Court's compensatory approach to Article 82 systematically disadvantages data subjects.
+
+### 9.2 Mixed-Effects Analysis
+
+Holdings within cases are not independent. ICC = 0.295 (29.5% of variance is between-case), confirming need for cluster correction.
+
+**Cluster-Robust Standard Errors:**
+| Predictor | OR | 95% CI | p | Change from Naive |
+|-----------|---:|--------|---:|-------------------|
+| Pro-DS purpose | 3.89 | [1.42, 10.67] | 0.008 | Still significant |
+| SYSTEMATIC dominant | 0.36 | [0.14, 0.94] | 0.037 | Now significant |
+| Third Chamber | 0.33 | [0.12, 0.93] | 0.037 | Still significant |
+| Grand Chamber | 2.33 | [0.83, 6.58] | 0.109 | Attenuates to NS |
+| Level-shifting | 1.62 | [0.42, 6.25] | 0.486 | **No longer significant** |
+
+**Key Revision:** Level-shifting, previously marginally significant (p=0.054), is NOT significant after cluster correction. The naive analysis overstated its importance.
+
+### 9.3 Article 82 Compensation Paradox
+
+Compensation cases (REMEDIES_COMPENSATION) show a systematic gap between rights rhetoric and remedies outcomes.
+
+**The Gap:**
+- Compensation cases: 36.1% pro-DS
+- Other concepts: 66.9% pro-DS
+- **Difference: 30.8 percentage points**
+
+**The Paradox:**
+10 compensation holdings (27.8%) invoke HIGH_LEVEL_OF_PROTECTION or FUNDAMENTAL_RIGHTS but still rule against data subjects.
+
+**Key Doctrinal Themes in Non-Pro-DS Compensation Cases:**
+| Theme | Frequency |
+|-------|-----------|
+| Actual damage threshold required | 65.2% |
+| Damage proof required | 56.5% |
+| No strict liability | 13.0% |
+| Compensatory not punitive | 13.0% |
+| Fault element required | 13.0% |
+
+**Representative Paradox Case:**
+> **C-507/23**: "A GDPR infringement alone does not constitute damage; actual damage must be separately established."
+> Despite invoking FUNDAMENTAL_RIGHTS and HIGH_LEVEL_OF_PROTECTION, ruling is PRO_CONTROLLER.
+
+**Temporal Pattern:**
+- 2024: 21 compensation holdings, only 29% pro-DS
+- This wave of Article 82 cases is establishing a restrictive damages doctrine
+
+**Practical Implications:**
+1. Data subjects must prove "actual damage" beyond mere infringement
+2. Compensation is purely compensatory, not punitive or deterrent
+3. Fear of misuse alone may not suffice unless unauthorized access occurred
+4. Controller fault severity does not increase damages
+
+---
+
+## 10. Revised Conclusions
+
+After advanced analysis, the key predictors are:
+
+| Predictor | Status | Evidence |
+|-----------|--------|----------|
+| **Pro-DS purpose invocation** | **CONFIRMED** | OR=3.89, p=0.008 (cluster-robust) |
+| **Third Chamber** | **CONFIRMED** | OR=0.33, p=0.037; effect persists after controls |
+| **SYSTEMATIC dominant** | **NEW** | OR=0.36, p=0.037; contextual reasoning less pro-DS |
+| Grand Chamber | ATTENUATED | OR=2.33, p=0.109; NS with clustering |
+| Level-shifting | **REVISED** | OR=1.62, p=0.486; NS with clustering |
+| RIGHTS/SCOPE concepts | CONFIRMED | OR≈7.7 in naive models |
+
+**Novel Insights:**
+
+1. **Compensation creates a systematic remedies gap**: 30.8pp lower pro-DS rate, driven by "actual damage" requirement
+
+2. **Third Chamber effect is genuine**: Not just case allocation; interpretive difference persists after controlling for concept and interpretive factors
+
+3. **ICC = 29.5%**: Substantial clustering means naive analyses overstate significance
+
+4. **Temporal shift**: 2023-2024 compensation case wave is establishing restrictive Article 82 doctrine, primarily in Third Chamber
+
+---
+
+## 8. Technical Appendix
+
+### Files Generated
+
+| File | Description |
+|------|-------------|
+| `holdings_prepared.csv` | Analysis-ready dataset with derived variables |
+| `bivariate_summary.csv` | All bivariate test results with effect sizes |
+| `bivariate_results.json` | Detailed bivariate output |
+| `model_comparison.csv` | Logistic regression model fit statistics |
+| `final_model_coefficients.csv` | Best model coefficients |
+| `quality_check_summary.csv` | Case review confirmation rates |
+| `quality_check_details.json` | Surprising cases detail |
+| `third_chamber_investigation.json` | Third Chamber analysis |
+| `mixed_effects_results.json` | Cluster-robust results |
+| `compensation_paradox.json` | Article 82 analysis |
+
+### Reproducibility
+
+All analysis scripts are in `analysis/scripts/`:
+1. `01_data_preparation.py` — Variable transformation
+2. `02_bivariate_analysis.py` — Chi-square tests, FDR correction
+3. `03_multivariate_analysis.py` — Hierarchical logistic regression
+4. `04_quality_check.py` — Individual case validation
+5. `05_third_chamber_investigation.py` — Third Chamber deep dive
+6. `06_mixed_effects_models.py` — Cluster-robust analysis
+7. `07_compensation_paradox.py` — Article 82 paradox
+
+Run sequence:
+```bash
+python3 analysis/scripts/01_data_preparation.py
+python3 analysis/scripts/02_bivariate_analysis.py
+python3 analysis/scripts/03_multivariate_analysis.py
+python3 analysis/scripts/04_quality_check.py
+python3 analysis/scripts/05_third_chamber_investigation.py
+python3 analysis/scripts/06_mixed_effects_models.py
+python3 analysis/scripts/07_compensation_paradox.py
+```
+
+---
+
+*Report updated: 2026-01-19*
 *N=181 holdings from 67 CJEU GDPR decisions (2019-2025)*

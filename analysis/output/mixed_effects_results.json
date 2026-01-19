@@ -1,0 +1,107 @@
+{
+  "icc": 0.29502236334441917,
+  "n_holdings": 181,
+  "n_cases": 67,
+  "gee": {
+    "method": "GEE",
+    "n_obs": 181,
+    "n_clusters": 67,
+    "coefficients": {
+      "Intercept": {
+        "or": NaN,
+        "p": NaN
+      },
+      "C(dominant_source, Treatment(reference='SEMANTIC'))[T.PRINCIPLE_BASED]": {
+        "or": NaN,
+        "p": NaN
+      },
+      "C(dominant_source, Treatment(reference='SEMANTIC'))[T.RULE_BASED]": {
+        "or": NaN,
+        "p": NaN
+      },
+      "C(dominant_source, Treatment(reference='SEMANTIC'))[T.SYSTEMATIC]": {
+        "or": NaN,
+        "p": NaN
+      },
+      "C(dominant_source, Treatment(reference='SEMANTIC'))[T.TELEOLOGICAL]": {
+        "or": NaN,
+        "p": NaN
+      },
+      "C(chamber_grouped, Treatment(reference='OTHER'))[T.FIRST]": {
+        "or": NaN,
+        "p": NaN
+      },
+      "C(chamber_grouped, Treatment(reference='OTHER'))[T.FOURTH]": {
+        "or": NaN,
+        "p": NaN
+      },
+      "C(chamber_grouped, Treatment(reference='OTHER'))[T.GRAND_CHAMBER]": {
+        "or": NaN,
+        "p": NaN
+      },
+      "C(chamber_grouped, Treatment(reference='OTHER'))[T.THIRD]": {
+        "or": NaN,
+        "p": NaN
+      },
+      "pro_ds_purpose": {
+        "or": NaN,
+        "p": NaN
+      },
+      "level_shifting": {
+        "or": NaN,
+        "p": NaN
+      }
+    }
+  },
+  "cluster_robust": {
+    "method": "Cluster-Robust Logistic",
+    "n_obs": 181,
+    "pseudo_r2": 0.1795647035698471,
+    "coefficients": {
+      "Intercept": {
+        "or": 0.8584496308502109,
+        "p": 0.8163201183003727
+      },
+      "C(dominant_source, Treatment(reference='SEMANTIC'))[T.PRINCIPLE_BASED]": {
+        "or": 594816298.1810113,
+        "p": 1.3322519332115579e-48
+      },
+      "C(dominant_source, Treatment(reference='SEMANTIC'))[T.RULE_BASED]": {
+        "or": 0.6700165222250641,
+        "p": 0.6774401641022387
+      },
+      "C(dominant_source, Treatment(reference='SEMANTIC'))[T.SYSTEMATIC]": {
+        "or": 0.3604848410221137,
+        "p": 0.03712610924345603
+      },
+      "C(dominant_source, Treatment(reference='SEMANTIC'))[T.TELEOLOGICAL]": {
+        "or": 0.8712342872891776,
+        "p": 0.7787651956144725
+      },
+      "C(chamber_grouped, Treatment(reference='OTHER'))[T.FIRST]": {
+        "or": 0.8184161628728502,
+        "p": 0.7416520103857194
+      },
+      "C(chamber_grouped, Treatment(reference='OTHER'))[T.FOURTH]": {
+        "or": 1.8134102643675727,
+        "p": 0.45787145211083824
+      },
+      "C(chamber_grouped, Treatment(reference='OTHER'))[T.GRAND_CHAMBER]": {
+        "or": 2.333652857968972,
+        "p": 0.1092787294033512
+      },
+      "C(chamber_grouped, Treatment(reference='OTHER'))[T.THIRD]": {
+        "or": 0.3327742861926096,
+        "p": 0.03647886751969558
+      },
+      "pro_ds_purpose": {
+        "or": 3.8923629081066866,
+        "p": 0.008252058770438919
+      },
+      "level_shifting": {
+        "or": 1.6168875759233292,
+        "p": 0.48609406983293046
+      }
+    }
+  }
+}

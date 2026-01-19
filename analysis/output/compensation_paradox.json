@@ -1,0 +1,13 @@
+{
+  "total_compensation_holdings": 36,
+  "pro_ds_rate_compensation": 0.3611111111111111,
+  "pro_ds_rate_other": 0.6689655172413793,
+  "paradox_cases": 10,
+  "themes": {
+    "damage_proof_required": 13,
+    "no_strict_liability": 3,
+    "compensatory_not_punitive": 3,
+    "actual_damage_threshold": 15,
+    "fault_element": 3
+  }
+}
