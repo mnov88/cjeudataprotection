@@ -163,15 +163,65 @@ The observed pattern reflects:
 
 ---
 
-## 5. Methodological Notes
+## 5. Deep Dive: Time × Topics, Articles, and Methods
 
-### 5.1 Sample Size Limitations
+### 5.1 Time × Concept Clusters
+
+| Cluster | Early Rate | Late Rate | Δ | Significant? |
+|---------|------------|-----------|---|--------------|
+| ENFORCEMENT | 75.0% | 39.6% | -35.4 | No (after FDR) |
+| RIGHTS | 75.0% | 82.4% | **+7.4** | No |
+| SCOPE | 75.0% | 100.0% | **+25.0** | No |
+| LAWFULNESS | 66.7% | 63.6% | -3.0 | No |
+| PRINCIPLES | 66.7% | 60.0% | -6.7 | No |
+
+**Finding:** No cluster shows FDR-significant temporal trend. ENFORCEMENT decline is driven by compensation cases (36.1% pro-DS) vs non-compensation ENFORCEMENT (58.6% pro-DS).
+
+### 5.2 Time × GDPR Articles
+
+| Article | Early Rate | Late Rate | Δ | Trend p |
+|---------|------------|-----------|---|---------|
+| Art. 4 (Definitions) | 68.8% | 70.6% | +1.8 | 0.92 |
+| Art. 5 (Principles) | 71.4% | 77.8% | +6.3 | 0.96 |
+| Art. 6 (Lawfulness) | 66.7% | 69.2% | +2.6 | 0.90 |
+| **Art. 82 (Compensation)** | 100.0% | 36.1% | **-63.9** | — |
+
+**Finding:** Core GDPR articles (4, 5, 6) show **stable or improving** pro-DS rates. Only Article 82 shows dramatic decline.
+
+### 5.3 Time × Interpretive Methods
+
+| Method | Early Prevalence | Late Prevalence | Δ |
+|--------|------------------|-----------------|---|
+| Teleological | 90.4% | 93.0% | +2.6 |
+| Semantic | 94.2% | 96.1% | +1.9 |
+| Systematic | 98.1% | 89.9% | -8.2 |
+
+**Effectiveness Stability:**
+- Teleological × Time interaction: p = 0.294
+- Pro-DS Purpose × Time interaction: p = **0.905**
+- Dominant source distribution change: χ² p = 0.352
+
+**Finding:** Interpretive methodology is completely stable across periods—no change in method prevalence, effectiveness, or dominant source distribution.
+
+### 5.4 Deep Dive Conclusions
+
+The deep dive confirms that temporal patterns are:
+- **Localized** to Article 82 compensation cases
+- **Specific** to the ENFORCEMENT cluster
+- **NOT** related to interpretive methodology changes
+- **NOT** evidence of broader doctrinal evolution
+
+---
+
+## 6. Methodological Notes
+
+### 6.1 Sample Size Limitations
 
 - N = 181 holdings provides ~70% power for medium effects
 - Early period (N = 52) limits precision of period-specific estimates
 - Case clustering addressed through multiple methods
 
-### 5.2 Robustness of Findings
+### 6.2 Robustness of Findings
 
 | Finding | Robustness Check | Result |
 |---------|------------------|--------|
@@ -180,7 +230,7 @@ The observed pattern reflects:
 | Stable purpose effect | Split-sample | Confirmed (p = 0.999) |
 | Third Chamber effect | Year fixed effects | Strengthens |
 
-### 5.3 Limitations
+### 6.3 Limitations
 
 1. **Endogeneity:** Cannot establish causal effect of time
 2. **Short time span:** 7 years may not capture long-term evolution
@@ -189,23 +239,23 @@ The observed pattern reflects:
 
 ---
 
-## 6. Conclusions
+## 7. Conclusions
 
-### 6.1 Primary Conclusion
+### 7.1 Primary Conclusion
 
 **There is no evidence of a genuine temporal shift in CJEU GDPR jurisprudence.** The apparent decline in pro-data subject rulings from 69% to 57% is:
 - Not statistically significant after proper testing
 - Primarily explained by the surge in Article 82 compensation cases
 - Not accompanied by any change in how the Court reasons about rights
 
-### 6.2 Secondary Conclusions
+### 7.2 Secondary Conclusions
 
 1. **Pro-DS purpose effect is remarkably stable** (OR = 4.8 in both periods)
 2. **Compensation doctrine is a specific, localized development**
 3. **Chamber composition has shifted but chamber effects persist**
 4. **Interpretive methods remain stable**
 
-### 6.3 Policy Implications
+### 7.3 Policy Implications
 
 - The Court's commitment to high-level data protection remains intact
 - Compensation claims face specific evidentiary barriers
@@ -214,7 +264,7 @@ The observed pattern reflects:
 
 ---
 
-## 7. Files Generated
+## 8. Files Generated
 
 | Phase | Script | Output |
 |-------|--------|--------|
@@ -222,12 +272,14 @@ The observed pattern reflects:
 | 2 | `11_temporal_phase2_bivariate.py` | `phase2_bivariate_results.json` |
 | 3 | `12_temporal_phase3_multivariate.py` | `phase3_multivariate_results.json` |
 | 4 | `13_temporal_phase4_decomposition.py` | `phase4_decomposition_results.json` |
+| 5 (Deep Dive) | `14_temporal_deep_dive.py` | `deep_dive_results.json` |
 
 ### Documentation
 - `PHASE1_FINDINGS.md` - Descriptive analysis findings
 - `PHASE2_FINDINGS.md` - Bivariate test findings
 - `PHASE3_FINDINGS.md` - Multivariate model findings
 - `PHASE4_FINDINGS.md` - Decomposition findings
+- `DEEP_DIVE_FINDINGS.md` - Time × topics, articles, methods analysis
 - `TEMPORAL_ANALYSIS_SYNTHESIS.md` - This document
 
 ---

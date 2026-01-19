@@ -1,0 +1,325 @@
+{
+  "time_by_concept": {
+    "by_cluster": {
+      "ACTORS": {
+        "n": 10,
+        "n_early": 1,
+        "n_late": 9,
+        "early_rate": 100.0,
+        "late_rate": 66.67,
+        "change_pp": -33.33,
+        "trend_or": null,
+        "trend_p": null,
+        "interaction_p": 0.1923
+      },
+      "ENFORCEMENT": {
+        "n": 65,
+        "n_early": 12,
+        "n_late": 53,
+        "early_rate": 75.0,
+        "late_rate": 39.62,
+        "change_pp": -35.38,
+        "trend_or": 0.624,
+        "trend_p": 0.0432,
+        "interaction_p": 0.0763
+      },
+      "LAWFULNESS": {
+        "n": 17,
+        "n_early": 6,
+        "n_late": 11,
+        "early_rate": 66.67,
+        "late_rate": 63.64,
+        "change_pp": -3.03,
+        "trend_or": 0.891,
+        "trend_p": 0.7623,
+        "interaction_p": 0.8522
+      },
+      "OTHER": {
+        "n": 22,
+        "n_early": 7,
+        "n_late": 15,
+        "early_rate": 42.86,
+        "late_rate": 53.33,
+        "change_pp": 10.48,
+        "trend_or": 1.105,
+        "trend_p": 0.7006,
+        "interaction_p": 0.2066
+      },
+      "PRINCIPLES": {
+        "n": 17,
+        "n_early": 12,
+        "n_late": 5,
+        "early_rate": 66.67,
+        "late_rate": 60.0,
+        "change_pp": -6.67,
+        "trend_or": 0.929,
+        "trend_p": 0.8285,
+        "interaction_p": 0.7222
+      },
+      "RIGHTS": {
+        "n": 21,
+        "n_early": 4,
+        "n_late": 17,
+        "early_rate": 75.0,
+        "late_rate": 82.35,
+        "change_pp": 7.35,
+        "trend_or": 1.102,
+        "trend_p": 0.8586,
+        "interaction_p": 0.5718
+      },
+      "SCOPE": {
+        "n": 17,
+        "n_early": 8,
+        "n_late": 9,
+        "early_rate": 75.0,
+        "late_rate": 100.0,
+        "change_pp": 25.0,
+        "trend_or": 1.37,
+        "trend_p": 0.4804,
+        "interaction_p": 0.2574
+      },
+      "SPECIAL": {
+        "n": 12,
+        "n_early": 2,
+        "n_late": 10,
+        "early_rate": 100.0,
+        "late_rate": 60.0,
+        "change_pp": -40.0,
+        "trend_or": null,
+        "trend_p": null,
+        "interaction_p": 0.9609
+      }
+    },
+    "interactions": {},
+    "enforcement_detail": {
+      "compensation_rate": 36.11,
+      "compensation_n": 36,
+      "non_compensation_rate": 58.62,
+      "non_compensation_n": 29
+    }
+  },
+  "time_by_articles": {
+    "by_article": {
+      "4": {
+        "n": 50,
+        "early_rate": 68.75,
+        "late_rate": 70.59,
+        "change_pp": 1.84,
+        "trend_p": 0.9181
+      },
+      "6": {
+        "n": 47,
+        "early_rate": 66.67,
+        "late_rate": 69.23,
+        "change_pp": 2.56,
+        "trend_p": 0.9042
+      },
+      "5": {
+        "n": 41,
+        "early_rate": 71.43,
+        "late_rate": 77.78,
+        "change_pp": 6.35,
+        "trend_p": 0.9619
+      },
+      "82": {
+        "n": 37,
+        "early_rate": 100.0,
+        "late_rate": 36.11,
+        "change_pp": -63.89,
+        "trend_p": null
+      },
+      "2": {
+        "n": 21,
+        "early_rate": 78.57,
+        "late_rate": 100.0,
+        "change_pp": 21.43,
+        "trend_p": 0.9199
+      },
+      "58": {
+        "n": 17,
+        "early_rate": 85.71,
+        "late_rate": 50.0,
+        "change_pp": -35.71,
+        "trend_p": 0.1141
+      },
+      "12": {
+        "n": 16,
+        "early_rate": 100.0,
+        "late_rate": 80.0,
+        "change_pp": -20.0,
+        "trend_p": 0.2311
+      },
+      "9": {
+        "n": 15,
+        "early_rate": 66.67,
+        "late_rate": 66.67,
+        "change_pp": 0.0,
+        "trend_p": 0.1558
+      },
+      "15": {
+        "n": 15,
+        "early_rate": 100.0,
+        "late_rate": 78.57,
+        "change_pp": -21.43,
+        "trend_p": null
+      },
+      "23": {
+        "n": 13,
+        "early_rate": 40.0,
+        "late_rate": 75.0,
+        "change_pp": 35.0,
+        "trend_p": 0.4607
+      },
+      "83": {
+        "n": 12,
+        "early_rate": null,
+        "late_rate": 25.0,
+        "change_pp": null,
+        "trend_p": null
+      },
+      "32": {
+        "n": 12,
+        "early_rate": null,
+        "late_rate": 41.67,
+        "change_pp": null,
+        "trend_p": null
+      },
+      "17": {
+        "n": 12,
+        "early_rate": 75.0,
+        "late_rate": 75.0,
+        "change_pp": 0.0,
+        "trend_p": 0.3314
+      },
+      "13": {
+        "n": 11,
+        "early_rate": 66.67,
+        "late_rate": 87.5,
+        "change_pp": 20.83,
+        "trend_p": 0.7941
+      }
+    },
+    "article_trends": []
+  },
+  "time_by_interpretation": {
+    "method_trends": {
+      "teleological_present": {
+        "early_rate": 90.38,
+        "late_rate": 93.02,
+        "change": 2.64,
+        "trend_p": 0.0862
+      },
+      "semantic_present": {
+        "early_rate": 94.23,
+        "late_rate": 96.12,
+        "change": 1.89,
+        "trend_p": 0.9089
+      },
+      "systematic_present": {
+        "early_rate": 98.08,
+        "late_rate": 89.92,
+        "change": -8.15,
+        "trend_p": 0.154
+      }
+    },
+    "effectiveness": {
+      "teleological_present": {
+        "early_pro_ds": 68.09,
+        "late_pro_ds": 56.67,
+        "change": -11.42,
+        "interaction_p": 0.2942
+      },
+      "semantic_present": {
+        "early_pro_ds": 69.39,
+        "late_pro_ds": 59.68,
+        "change": -9.71,
+        "interaction_p": 0.2488
+      },
+      "systematic_present": {
+        "early_pro_ds": 68.63,
+        "late_pro_ds": 57.76,
+        "change": -10.87,
+        "interaction_p": 0.9986
+      }
+    },
+    "dominant_source_trends": {
+      "distribution": {
+        "PRINCIPLE_BASED": {
+          "early": 1.9230769230769231,
+          "late": 0.0
+        },
+        "RULE_BASED": {
+          "early": 1.9230769230769231,
+          "late": 0.7751937984496124
+        },
+        "SEMANTIC": {
+          "early": 21.153846153846153,
+          "late": 22.48062015503876
+        },
+        "SYSTEMATIC": {
+          "early": 40.38461538461539,
+          "late": 32.55813953488372
+        },
+        "TELEOLOGICAL": {
+          "early": 34.61538461538461,
+          "late": 44.18604651162791
+        }
+      },
+      "chi2": 4.424,
+      "chi2_p": 0.3517,
+      "PRINCIPLE_BASED_effectiveness": {
+        "early_pro_ds": 100.0,
+        "late_pro_ds": null,
+        "interaction_p": null
+      },
+      "RULE_BASED_effectiveness": {
+        "early_pro_ds": 0.0,
+        "late_pro_ds": 100.0,
+        "interaction_p": 1.0
+      },
+      "SEMANTIC_effectiveness": {
+        "early_pro_ds": 81.82,
+        "late_pro_ds": 55.17,
+        "interaction_p": 0.0921
+      },
+      "SYSTEMATIC_effectiveness": {
+        "early_pro_ds": 52.38,
+        "late_pro_ds": 40.48,
+        "interaction_p": 0.3397
+      },
+      "TELEOLOGICAL_effectiveness": {
+        "early_pro_ds": 83.33,
+        "late_pro_ds": 70.18,
+        "interaction_p": 0.5326
+      }
+    },
+    "purpose_effectiveness": {
+      "early_pro_ds": 77.5,
+      "late_pro_ds": 66.33,
+      "change": -11.17,
+      "interaction_p": 0.9051
+    }
+  },
+  "comprehensive_interactions": {
+    "joint_model": {
+      "interactions": {
+        "year_centered:pro_ds_purpose": {
+          "coef": -1.349,
+          "p": 0.0888
+        },
+        "year_centered:teleological_present": {
+          "coef": 2.1854,
+          "p": 0.0644
+        },
+        "year_centered:is_enforcement": {
+          "coef": -0.1754,
+          "p": 0.6223
+        },
+        "year_centered:is_compensation": {
+          "coef": -0.2497,
+          "p": 0.6853
+        }
+      }
+    }
+  }
+}
