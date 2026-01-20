@@ -32,6 +32,10 @@ This document provides a table of contents and summary of central claims from al
 | Analysis Report | `analysis/ANALYSIS_REPORT.md` | Core statistical findings |
 | Judicial Analysis | `docs/findings/JUDICIAL_ANALYSIS_REPORT.md` | Chamber & rapporteur effects |
 | Citation Analysis | `docs/findings/CITATION_ANALYSIS_FINDINGS.md` | Precedent networks |
+| Pro-Controller Analysis | `docs/findings/PRO_CONTROLLER_ANALYSIS.md` | Pro-controller outcome patterns |
+| Pro-Controller Narrative | `docs/findings/PRO_CONTROLLER_NARRATIVE_ANALYSIS.md` | Non-compensation pro-controller rulings |
+| Balancing Jurisprudence | `docs/findings/BALANCING_JURISPRUDENCE_ANALYSIS.md` | Data protection balancing analysis |
+| Proportionality Analysis | `docs/findings/MEANS_ENDS_PROPORTIONALITY_ANALYSIS.md` | Means-ends proportionality methodology |
 | Temporal Analysis | `analysis/output/temporal/TEMPORAL_ANALYSIS_SYNTHESIS.md` | Time trends |
 | Supplementary Findings | `analysis/SUPPLEMENTARY_FINDINGS.md` | Additional variables |
 | Method Analysis | `analysis/output/temporal/METHOD_SELFCITATION_FINDINGS.md` | Interpretive methods |
