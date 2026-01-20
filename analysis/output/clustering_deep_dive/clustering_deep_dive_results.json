@@ -1,0 +1,371 @@
+{
+  "lawfulness_deep_dive": {
+    "concept_breakdown": {
+      "n": {
+        "CONTRACT_BASIS": 2,
+        "VITAL_INTERESTS_BASIS": 1,
+        "LEGITIMATE_INTERESTS": 5,
+        "CONSENT_BASIS": 4,
+        "LEGAL_OBLIGATION_BASIS": 4,
+        "PUBLIC_INTEREST_BASIS": 1
+      },
+      "pro_ds_rate": {
+        "CONTRACT_BASIS": 1.0,
+        "VITAL_INTERESTS_BASIS": 1.0,
+        "LEGITIMATE_INTERESTS": 0.8,
+        "CONSENT_BASIS": 0.75,
+        "LEGAL_OBLIGATION_BASIS": 0.25,
+        "PUBLIC_INTEREST_BASIS": 0.0
+      },
+      "std": {
+        "CONTRACT_BASIS": 0.0,
+        "VITAL_INTERESTS_BASIS": null,
+        "LEGITIMATE_INTERESTS": 0.447,
+        "CONSENT_BASIS": 0.5,
+        "LEGAL_OBLIGATION_BASIS": 0.5,
+        "PUBLIC_INTEREST_BASIS": null
+      }
+    },
+    "consent_vs_legit": {
+      "consent_n": 4,
+      "consent_pro_ds": 0.75,
+      "legit_n": 5,
+      "legit_pro_ds": 0.8,
+      "odds_ratio": 1.3333333333333333,
+      "p_value": 1.0
+    },
+    "lawfulness_model": {
+      "aic": 26.50006770623328,
+      "n": 17,
+      "coefficients": {
+        "Intercept": {
+          "coef": 1.0986122886681098,
+          "p": 0.3413880904342417
+        },
+        "is_consent": {
+          "coef": -2.5886018235305572e-17,
+          "p": 1.0
+        },
+        "is_legit_int": {
+          "coef": 0.2876820724517805,
+          "p": 0.8579475579423572
+        },
+        "is_legal_oblig": {
+          "coef": -2.1972245773362196,
+          "p": 0.17845744247698148
+        }
+      }
+    }
+  },
+  "model_comparison": {
+    "models": {
+      "M0_no_clustering": {
+        "converged": true,
+        "n": 181,
+        "aic": 216.88041235888562,
+        "bic": 255.26237673407553,
+        "pseudo_r2": 0.2044518491012116,
+        "n_params": 12,
+        "llf": -96.44020617944281
+      },
+      "M1_compensation_only": {
+        "converged": true,
+        "n": 181,
+        "aic": 217.0785149999274,
+        "bic": 258.65897640638315,
+        "pseudo_r2": 0.2118838951783497,
+        "n_params": 13,
+        "llf": -95.5392574999637
+      },
+      "M2_original_clustering": {
+        "converged": true,
+        "n": 181,
+        "aic": 217.41936051200884,
+        "bic": 278.19080410605955,
+        "pseudo_r2": 0.2599728570406278,
+        "n_params": 19,
+        "llf": -89.70968025600442
+      },
+      "M3_split_clustering": {
+        "converged": true,
+        "n": 181,
+        "aic": 220.46580868474632,
+        "bic": 287.63424634132866,
+        "pseudo_r2": 0.2639058452776778,
+        "n_params": 21,
+        "llf": -89.23290434237316
+      },
+      "M4_granular_clustering": {
+        "converged": false,
+        "n": 181,
+        "aic": 225.40009781530543,
+        "bic": 308.5610206282169,
+        "pseudo_r2": 0.28479970829821655,
+        "n_params": 26,
+        "llf": -86.70004890765271
+      },
+      "M5_empirical_clustering": {
+        "converged": true,
+        "n": 181,
+        "aic": 208.0096765767485,
+        "bic": 255.98713204573588,
+        "pseudo_r2": 0.2657871926402501,
+        "n_params": 15,
+        "llf": -89.00483828837424
+      },
+      "M6_original_plus_compensation": {
+        "converged": true,
+        "n": 181,
+        "aic": 219.34390028024623,
+        "bic": 283.31384090556276,
+        "pseudo_r2": 0.26028409780951123,
+        "n_params": 20,
+        "llf": -89.67195014012312
+      }
+    },
+    "best_aic": "M5_empirical_clustering",
+    "best_bic": "M0_no_clustering"
+  },
+  "scheme_comparison": {
+    "Original (8 clusters)": {
+      "n_clusters": 8,
+      "chi2": 17.22116634815061,
+      "p_value": 0.016024393798176592,
+      "cramers_v": 0.3084551271407166,
+      "cluster_stats": {
+        "n": {
+          "SCOPE": 17,
+          "RIGHTS": 21,
+          "ACTORS": 10,
+          "PRINCIPLES": 18,
+          "SPECIAL_CATEGORIES": 12,
+          "LAWFULNESS": 17,
+          "OTHER": 21,
+          "ENFORCEMENT": 65
+        },
+        "pro_ds_rate": {
+          "SCOPE": 0.882,
+          "RIGHTS": 0.81,
+          "ACTORS": 0.7,
+          "PRINCIPLES": 0.667,
+          "SPECIAL_CATEGORIES": 0.667,
+          "LAWFULNESS": 0.647,
+          "OTHER": 0.476,
+          "ENFORCEMENT": 0.462
+        }
+      }
+    },
+    "Split (10 clusters)": {
+      "n_clusters": 10,
+      "chi2": 24.46325097261486,
+      "p_value": 0.003625985473625198,
+      "cramers_v": 0.36763580174083843,
+      "cluster_stats": {
+        "n": {
+          "SCOPE": 17,
+          "LAWFULNESS_CONSENT": 11,
+          "RIGHTS": 21,
+          "ACTORS": 10,
+          "SPECIAL_CATEGORIES": 12,
+          "PRINCIPLES": 18,
+          "ENFORCEMENT_DPA": 29,
+          "OTHER": 21,
+          "ENFORCEMENT_COMPENSATION": 36,
+          "LAWFULNESS_OBLIGATION": 6
+        },
+        "pro_ds_rate": {
+          "SCOPE": 0.882,
+          "LAWFULNESS_CONSENT": 0.818,
+          "RIGHTS": 0.81,
+          "ACTORS": 0.7,
+          "SPECIAL_CATEGORIES": 0.667,
+          "PRINCIPLES": 0.667,
+          "ENFORCEMENT_DPA": 0.586,
+          "OTHER": 0.476,
+          "ENFORCEMENT_COMPENSATION": 0.361,
+          "LAWFULNESS_OBLIGATION": 0.333
+        }
+      }
+    },
+    "Granular (14 clusters)": {
+      "n_clusters": 15,
+      "chi2": 26.220445803676533,
+      "p_value": 0.024265417310225794,
+      "cramers_v": 0.38061048521654844,
+      "cluster_stats": {
+        "n": {
+          "CONTRACT": 2,
+          "RIGHTS_OTHER": 2,
+          "RIGHTS_ERASURE": 9,
+          "SCOPE": 17,
+          "LEGITIMATE_INTERESTS": 5,
+          "CONSENT": 4,
+          "ACTORS": 10,
+          "RIGHTS_ACCESS": 10,
+          "PRINCIPLES": 18,
+          "SPECIAL_CATEGORIES": 12,
+          "DPA": 29,
+          "PUBLIC_VITAL": 2,
+          "OTHER": 21,
+          "COMPENSATION": 36,
+          "LEGAL_OBLIGATION": 4
+        },
+        "pro_ds_rate": {
+          "CONTRACT": 1.0,
+          "RIGHTS_OTHER": 1.0,
+          "RIGHTS_ERASURE": 0.889,
+          "SCOPE": 0.882,
+          "LEGITIMATE_INTERESTS": 0.8,
+          "CONSENT": 0.75,
+          "ACTORS": 0.7,
+          "RIGHTS_ACCESS": 0.7,
+          "PRINCIPLES": 0.667,
+          "SPECIAL_CATEGORIES": 0.667,
+          "DPA": 0.586,
+          "PUBLIC_VITAL": 0.5,
+          "OTHER": 0.476,
+          "COMPENSATION": 0.361,
+          "LEGAL_OBLIGATION": 0.25
+        }
+      }
+    },
+    "Empirical (4 clusters)": {
+      "n_clusters": 4,
+      "chi2": 28.888350815982214,
+      "p_value": 2.363723185842107e-06,
+      "cramers_v": 0.39950487876194685,
+      "cluster_stats": {
+        "n": {
+          "HIGH_PRO_DS": 29,
+          "MEDIUM_PRO_DS": 27,
+          "MEDIUM_HIGH_PRO_DS": 76,
+          "LOW_PRO_DS": 49
+        },
+        "pro_ds_rate": {
+          "HIGH_PRO_DS": 0.862,
+          "MEDIUM_PRO_DS": 0.704,
+          "MEDIUM_HIGH_PRO_DS": 0.671,
+          "LOW_PRO_DS": 0.306
+        }
+      }
+    }
+  },
+  "no_clustering_analysis": {
+    "concept_distribution": {
+      "n": {
+        "AUTOMATED_DECISION_MAKING": 1,
+        "VITAL_INTERESTS_BASIS": 1,
+        "CONTRACT_BASIS": 2,
+        "DPA_INDEPENDENCE": 1,
+        "DATA_MINIMISATION": 1,
+        "RIGHT_TO_OBJECT": 1,
+        "REPRESENTATIVE_ACTIONS": 2,
+        "PERSONAL_DATA_SCOPE": 5,
+        "OTHER_CONTROLLER_OBLIGATIONS": 1,
+        "SPECIAL_CATEGORIES_DEFINITION": 2,
+        "RIGHT_TO_RECTIFICATION": 2,
+        "RIGHT_TO_ERASURE": 7,
+        "SCOPE_MATERIAL": 12,
+        "LEGITIMATE_INTERESTS": 5,
+        "CONSENT_BASIS": 4,
+        "CONTROLLER_DEFINITION": 7,
+        "MEMBER_STATE_DISCRETION": 7,
+        "RIGHT_OF_ACCESS": 10,
+        "ACCOUNTABILITY": 3,
+        "DATA_PROTECTION_PRINCIPLES": 12,
+        "JOINT_CONTROLLERS_DEFINITION": 3,
+        "INTERNATIONAL_TRANSFER": 3,
+        "DPA_POWERS": 17,
+        "SPECIAL_CATEGORIES_CONDITIONS": 10,
+        "ADMINISTRATIVE_FINES": 4,
+        "TRANSPARENCY": 2,
+        "SECURITY": 5,
+        "REMEDIES_COMPENSATION": 36,
+        "DPA_OTHER": 4,
+        "LEGAL_OBLIGATION_BASIS": 4,
+        "ONE_STOP_SHOP": 1,
+        "OTHER": 5,
+        "PUBLIC_INTEREST_BASIS": 1
+      },
+      "pro_ds_rate": {
+        "AUTOMATED_DECISION_MAKING": 1.0,
+        "VITAL_INTERESTS_BASIS": 1.0,
+        "CONTRACT_BASIS": 1.0,
+        "DPA_INDEPENDENCE": 1.0,
+        "DATA_MINIMISATION": 1.0,
+        "RIGHT_TO_OBJECT": 1.0,
+        "REPRESENTATIVE_ACTIONS": 1.0,
+        "PERSONAL_DATA_SCOPE": 1.0,
+        "OTHER_CONTROLLER_OBLIGATIONS": 1.0,
+        "SPECIAL_CATEGORIES_DEFINITION": 1.0,
+        "RIGHT_TO_RECTIFICATION": 1.0,
+        "RIGHT_TO_ERASURE": 0.857,
+        "SCOPE_MATERIAL": 0.833,
+        "LEGITIMATE_INTERESTS": 0.8,
+        "CONSENT_BASIS": 0.75,
+        "CONTROLLER_DEFINITION": 0.714,
+        "MEMBER_STATE_DISCRETION": 0.714,
+        "RIGHT_OF_ACCESS": 0.7,
+        "ACCOUNTABILITY": 0.667,
+        "DATA_PROTECTION_PRINCIPLES": 0.667,
+        "JOINT_CONTROLLERS_DEFINITION": 0.667,
+        "INTERNATIONAL_TRANSFER": 0.667,
+        "DPA_POWERS": 0.647,
+        "SPECIAL_CATEGORIES_CONDITIONS": 0.6,
+        "ADMINISTRATIVE_FINES": 0.5,
+        "TRANSPARENCY": 0.5,
+        "SECURITY": 0.4,
+        "REMEDIES_COMPENSATION": 0.361,
+        "DPA_OTHER": 0.25,
+        "LEGAL_OBLIGATION_BASIS": 0.25,
+        "ONE_STOP_SHOP": 0.0,
+        "OTHER": 0.0,
+        "PUBLIC_INTEREST_BASIS": 0.0
+      }
+    },
+    "bivariate": {
+      "chi2": 27.122084809533572,
+      "p_value": 0.007420422501266433,
+      "cramers_v": 0.4433247640792193,
+      "n_holdings": 138,
+      "n_concepts": 13
+    },
+    "multivariate_concepts": {
+      "aic": 225.0573931387011,
+      "pseudo_r2": 0.22022014736578255,
+      "n": 181,
+      "concept_effects": {
+        "is_remediescompensation": {
+          "coef": -0.5628361850862043,
+          "odds_ratio": 0.56959130443781,
+          "p": 0.3098872905470985
+        },
+        "is_dpapowers": {
+          "coef": 0.13112979543576528,
+          "odds_ratio": 1.1401157535297755,
+          "p": 0.83299267790733
+        },
+        "is_dataprotectionprinciples": {
+          "coef": 0.4350843903619394,
+          "odds_ratio": 1.5450934444446285,
+          "p": 0.5887561801573371
+        },
+        "is_scopematerial": {
+          "coef": 0.8591580976129375,
+          "odds_ratio": 2.361171980345481,
+          "p": 0.3343284296709247
+        },
+        "is_rightofaccess": {
+          "coef": 0.5808146118285816,
+          "odds_ratio": 1.787493951543802,
+          "p": 0.5044556173472134
+        },
+        "is_specialcategoriesconditions": {
+          "coef": 0.7137116783227215,
+          "odds_ratio": 2.041554807957782,
+          "p": 0.41890210174436915
+        }
+      }
+    }
+  }
+}
