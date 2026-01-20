@@ -102,13 +102,18 @@ See [`docs/coding-agent-instructions.md`](docs/coding-agent-instructions.md) for
 ### Methodology
 - [Statistical Analysis Methodology](docs/methodology/statistical-analysis-methodology.md)
 - [Judicial Analysis Methodology](docs/methodology/judicial-analysis-methodology.md)
-- [Citation Analysis Methodology](docs/methodology/CITATION_ANALYSIS_METHODOLOGY.md)
-- [Temporal Analysis Methodology](docs/methodology/TEMPORAL_ANALYSIS_METHODOLOGY.md)
+- [Citation Analysis Methodology](docs/methodology/citation-analysis-methodology.md)
+- [Temporal Analysis Methodology](docs/methodology/temporal-analysis-methodology.md)
 
 ### Findings
 - [Academic Paper](docs/findings/ACADEMIC_PAPER.md) - Main research paper
 - [Judicial Analysis Report](docs/findings/JUDICIAL_ANALYSIS_REPORT.md)
 - [Citation Analysis Findings](docs/findings/CITATION_ANALYSIS_FINDINGS.md)
+- [Pro-Controller Analysis](docs/findings/PRO_CONTROLLER_ANALYSIS.md)
+- [Pro-Controller Narrative Analysis](docs/findings/PRO_CONTROLLER_NARRATIVE_ANALYSIS.md)
+- [Balancing Jurisprudence Analysis](docs/findings/BALANCING_JURISPRUDENCE_ANALYSIS.md)
+- [Means-Ends Proportionality Analysis](docs/findings/MEANS_ENDS_PROPORTIONALITY_ANALYSIS.md)
+- [Findings Overview](docs/FINDINGS_OVERVIEW.md) - Summary of all findings
 
 ## Dependencies
 
