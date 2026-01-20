@@ -18,7 +18,7 @@ from collections import defaultdict
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 HOLDINGS_JUDICIAL = PROJECT_ROOT / "analysis" / "output" / "holdings_judicial.csv"
-CASES_JSON = PROJECT_ROOT / "parsed-coded" / "cases.json"
+CASES_JSON = PROJECT_ROOT / "data" / "parsed" / "cases.json"  # FIXED: was "parsed-coded"
 OUTPUT_PATH = PROJECT_ROOT / "analysis" / "output"
 
 # =============================================================================
@@ -677,24 +677,47 @@ def deep_dive_topic_adjusted_effects(holdings, spec_outcome_results):
         topic_rates[topic]['rate'] = topic_rates[topic]['pro_ds'] / n if n > 0 else 0
 
     # ===================
-    # WITHIN-TOPIC COMPARISONS
+    # WITHIN-TOPIC COMPARISONS (REVISED v2.0)
     # ===================
     print("\n" + "-" * 80)
-    print("WITHIN-TOPIC COMPARISONS")
+    print("WITHIN-TOPIC COMPARISONS (REVISED)")
     print("-" * 80)
     print("  Comparing rapporteur rates WITHIN the same topic isolates rapporteur effect")
 
-    main_topic = 'ENFORCEMENT'  # Largest topic
-    topic_h = [h for h in holdings if h.get('concept_cluster') == main_topic]
-    baseline_rate = topic_rates[main_topic]['rate']
-
-    print(f"\n  Focus: {main_topic} (n={len(topic_h)}, baseline={baseline_rate:.1%})")
+    # CRITICAL WARNING: ENFORCEMENT cluster composition issue
+    print("\n  *** METHODOLOGICAL NOTE ***")
+    print("  ENFORCEMENT cluster is 55% compensation cases (REMEDIES_COMPENSATION).")
+    print("  Jääskinen handles 86% of all compensation cases.")
+    print("  Therefore, 'within ENFORCEMENT' comparisons are mostly within-compensation.")
+    print("  We provide THREE analyses below for transparency:")
+    print("    1. Full ENFORCEMENT (for reference, but misleading)")
+    print("    2. ENFORCEMENT excluding compensation (true apples-to-apples)")
+    print("    3. Alternative topic (LAWFULNESS) with better rapporteur coverage")
 
     within_topic = {}
     key_raps = ['N. Jääskinen', 'L.S. Rossi', 'T. von Danwitz', 'I. Ziemele', 'M. Ilešič']
 
-    print(f"\n  {'Rapporteur':<20} {'Rate':>10} {'n':>6} {'vs Baseline':>15}")
-    print("  " + "-" * 55)
+    # Check if is_compensation column exists
+    has_compensation_flag = any('is_compensation' in h for h in holdings[:1])
+
+    # ----- ANALYSIS 1: Full ENFORCEMENT (for reference) -----
+    print("\n  " + "=" * 70)
+    print("  ANALYSIS 1: Full ENFORCEMENT (includes compensation - USE WITH CAUTION)")
+    print("  " + "=" * 70)
+
+    main_topic = 'ENFORCEMENT'
+    topic_h = [h for h in holdings if h.get('concept_cluster') == main_topic]
+    baseline_rate = topic_rates[main_topic]['rate']
+
+    # Count compensation within ENFORCEMENT
+    if has_compensation_flag:
+        comp_in_enf = sum(1 for h in topic_h if h.get('is_compensation') == 1 or str(h.get('is_compensation')) == '1')
+        print(f"\n  ENFORCEMENT composition: {comp_in_enf}/{len(topic_h)} = {comp_in_enf/len(topic_h)*100:.1f}% compensation")
+
+    print(f"\n  Focus: {main_topic} (n={len(topic_h)}, baseline={baseline_rate:.1%})")
+
+    print(f"\n  {'Rapporteur':<20} {'Rate':>10} {'n':>6} {'vs Baseline':>15} {'Note':<20}")
+    print("  " + "-" * 75)
 
     for rap in key_raps:
         rap_topic_h = [h for h in topic_h if h.get('judge_rapporteur') == rap]
@@ -703,18 +726,133 @@ def deep_dive_topic_adjusted_effects(holdings, spec_outcome_results):
             diff = rate - baseline_rate
             diff_str = f"{diff:+.1%}" if diff != 0 else "0"
 
-            within_topic[rap] = {
+            # Count compensation for this rapporteur
+            if has_compensation_flag:
+                rap_comp = sum(1 for h in rap_topic_h if h.get('is_compensation') == 1 or str(h.get('is_compensation')) == '1')
+                note = f"({rap_comp}/{len(rap_topic_h)} comp)"
+            else:
+                note = ""
+
+            within_topic[f'{rap}_full_enforcement'] = {
                 'topic': main_topic,
                 'rate': rate,
                 'n': len(rap_topic_h),
                 'diff_from_baseline': diff
             }
 
-            print(f"  {rap:<20} {rate:>9.1%} {len(rap_topic_h):>6} {diff_str:>15}")
+            print(f"  {rap:<20} {rate:>9.1%} {len(rap_topic_h):>6} {diff_str:>15} {note:<20}")
 
-    # Chi-square test for within-ENFORCEMENT variation
-    print("\n  Statistical test (within ENFORCEMENT):")
+    # ----- ANALYSIS 2: ENFORCEMENT excluding compensation (TRUE COMPARISON) -----
+    if has_compensation_flag:
+        print("\n  " + "=" * 70)
+        print("  ANALYSIS 2: ENFORCEMENT EXCLUDING COMPENSATION (TRUE APPLES-TO-APPLES)")
+        print("  " + "=" * 70)
 
+        enf_no_comp = [h for h in topic_h if h.get('is_compensation') != 1 and str(h.get('is_compensation')) != '1']
+
+        if len(enf_no_comp) >= 5:
+            enf_no_comp_rate = sum(h['pro_ds'] for h in enf_no_comp) / len(enf_no_comp)
+            print(f"\n  Focus: ENFORCEMENT excl. compensation (n={len(enf_no_comp)}, baseline={enf_no_comp_rate:.1%})")
+            print(f"  (This includes: DPA_POWERS, ADMINISTRATIVE_FINES, DPA_OTHER, etc.)")
+
+            print(f"\n  {'Rapporteur':<20} {'Rate':>10} {'n':>6} {'vs Baseline':>15}")
+            print("  " + "-" * 55)
+
+            for rap in key_raps:
+                rap_enf_no_comp = [h for h in enf_no_comp if h.get('judge_rapporteur') == rap]
+                if len(rap_enf_no_comp) >= 2:  # Lower threshold since smaller sample
+                    rate = sum(h['pro_ds'] for h in rap_enf_no_comp) / len(rap_enf_no_comp)
+                    diff = rate - enf_no_comp_rate
+                    diff_str = f"{diff:+.1%}" if diff != 0 else "0"
+
+                    within_topic[f'{rap}_enforcement_no_comp'] = {
+                        'topic': 'ENFORCEMENT_NO_COMP',
+                        'rate': rate,
+                        'n': len(rap_enf_no_comp),
+                        'diff_from_baseline': diff
+                    }
+
+                    print(f"  {rap:<20} {rate:>9.1%} {len(rap_enf_no_comp):>6} {diff_str:>15}")
+                else:
+                    print(f"  {rap:<20} {'N/A':>10} {len(rap_enf_no_comp):>6} {'(n<2)':>15}")
+        else:
+            print(f"\n  Insufficient non-compensation ENFORCEMENT holdings (n={len(enf_no_comp)})")
+
+        # ----- COMPENSATION-ONLY ANALYSIS -----
+        print("\n  " + "=" * 70)
+        print("  ANALYSIS 2b: COMPENSATION CASES ONLY (Article 82)")
+        print("  " + "=" * 70)
+
+        comp_only = [h for h in holdings if h.get('is_compensation') == 1 or str(h.get('is_compensation')) == '1']
+
+        if len(comp_only) >= 5:
+            comp_rate = sum(h['pro_ds'] for h in comp_only) / len(comp_only)
+            print(f"\n  Focus: COMPENSATION only (n={len(comp_only)}, baseline={comp_rate:.1%})")
+
+            print(f"\n  {'Rapporteur':<20} {'Rate':>10} {'n':>6} {'vs Baseline':>15}")
+            print("  " + "-" * 55)
+
+            for rap in key_raps:
+                rap_comp = [h for h in comp_only if h.get('judge_rapporteur') == rap]
+                if len(rap_comp) >= 2:
+                    rate = sum(h['pro_ds'] for h in rap_comp) / len(rap_comp)
+                    diff = rate - comp_rate
+                    diff_str = f"{diff:+.1%}" if diff != 0 else "0"
+
+                    within_topic[f'{rap}_compensation_only'] = {
+                        'topic': 'COMPENSATION',
+                        'rate': rate,
+                        'n': len(rap_comp),
+                        'diff_from_baseline': diff
+                    }
+
+                    print(f"  {rap:<20} {rate:>9.1%} {len(rap_comp):>6} {diff_str:>15}")
+                else:
+                    n_rap = len(rap_comp)
+                    print(f"  {rap:<20} {'N/A':>10} {n_rap:>6} {'(n<2)':>15}")
+
+            print("\n  NOTE: 86% of compensation cases assigned to Jääskinen - limited comparison possible.")
+
+    # ----- ANALYSIS 3: Alternative topic with better coverage -----
+    print("\n  " + "=" * 70)
+    print("  ANALYSIS 3: LAWFULNESS (alternative topic with better rapporteur spread)")
+    print("  " + "=" * 70)
+
+    alt_topic = 'LAWFULNESS'
+    alt_topic_h = [h for h in holdings if h.get('concept_cluster') == alt_topic]
+
+    if len(alt_topic_h) >= 5:
+        alt_baseline = topic_rates.get(alt_topic, {}).get('rate', 0)
+        print(f"\n  Focus: {alt_topic} (n={len(alt_topic_h)}, baseline={alt_baseline:.1%})")
+
+        print(f"\n  {'Rapporteur':<20} {'Rate':>10} {'n':>6} {'vs Baseline':>15}")
+        print("  " + "-" * 55)
+
+        for rap in key_raps:
+            rap_alt_h = [h for h in alt_topic_h if h.get('judge_rapporteur') == rap]
+            if len(rap_alt_h) >= 2:
+                rate = sum(h['pro_ds'] for h in rap_alt_h) / len(rap_alt_h)
+                diff = rate - alt_baseline
+                diff_str = f"{diff:+.1%}" if diff != 0 else "0"
+
+                within_topic[f'{rap}_lawfulness'] = {
+                    'topic': alt_topic,
+                    'rate': rate,
+                    'n': len(rap_alt_h),
+                    'diff_from_baseline': diff
+                }
+
+                print(f"  {rap:<20} {rate:>9.1%} {len(rap_alt_h):>6} {diff_str:>15}")
+            else:
+                print(f"  {rap:<20} {'N/A':>10} {len(rap_alt_h):>6} {'(n<2)':>15}")
+
+    # ----- STATISTICAL TESTS -----
+    print("\n  " + "-" * 70)
+    print("  STATISTICAL TESTS")
+    print("  " + "-" * 70)
+
+    # Test within full ENFORCEMENT (for reference)
+    print("\n  Test 1: Within full ENFORCEMENT (includes compensation):")
     for rap in ['N. Jääskinen', 'L.S. Rossi']:
         rap_h = [h for h in topic_h if h.get('judge_rapporteur') == rap]
         other_h = [h for h in topic_h if h.get('judge_rapporteur') != rap]
@@ -728,6 +866,25 @@ def deep_dive_topic_adjusted_effects(holdings, spec_outcome_results):
             chi2, p = chi_square_test(a, b, c, d)
             sig = "*" if p < 0.05 else ""
             print(f"    {rap} vs others: χ²={chi2:.2f}, p={p:.3f}{sig}")
+
+    # Test within ENFORCEMENT excluding compensation
+    if has_compensation_flag and len(enf_no_comp) >= 5:
+        print("\n  Test 2: Within ENFORCEMENT excluding compensation (TRUE TEST):")
+        for rap in ['N. Jääskinen', 'L.S. Rossi']:
+            rap_h = [h for h in enf_no_comp if h.get('judge_rapporteur') == rap]
+            other_h = [h for h in enf_no_comp if h.get('judge_rapporteur') != rap]
+
+            if len(rap_h) >= 2 and len(other_h) >= 2:
+                a = sum(h['pro_ds'] for h in rap_h)
+                b = len(rap_h) - a
+                c = sum(h['pro_ds'] for h in other_h)
+                d = len(other_h) - c
+
+                chi2, p = chi_square_test(a, b, c, d)
+                sig = "*" if p < 0.05 else ""
+                print(f"    {rap} vs others: χ²={chi2:.2f}, p={p:.3f}{sig}")
+            else:
+                print(f"    {rap}: insufficient sample (n={len(rap_h)})")
 
     # ===================
     # RAPPORTEUR CATEGORIZATION

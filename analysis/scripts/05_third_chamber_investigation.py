@@ -5,6 +5,12 @@
 Deep investigation into the Third Chamber effect:
 - Why does Third Chamber rule pro-DS only 34.1% vs Grand Chamber 77.6%?
 - Is it case allocation, subject matter, or genuine interpretive difference?
+
+REVISION HISTORY:
+- v2.0: Added HYPOTHESIS 6 - compensation-exclusion sensitivity analysis.
+        This is the critical test for academic rigor: does the Third Chamber
+        effect persist when removing the 59% of their holdings that are
+        compensation cases?
 """
 
 import pandas as pd
@@ -143,6 +149,107 @@ def run_investigation(df):
     print(grand_concepts.head(10).to_string())
 
     # =========================================================================
+    # HYPOTHESIS 6: COMPENSATION-EXCLUSION SENSITIVITY (CRITICAL TEST)
+    # =========================================================================
+    print("\n" + "-" * 70)
+    print("HYPOTHESIS 6: EXCLUDING COMPENSATION CASES (CRITICAL SENSITIVITY)")
+    print("-" * 70)
+    print("\n  This tests whether the Third Chamber effect is driven entirely by")
+    print("  their compensation caseload (59% of Third Chamber holdings).")
+
+    # Check if is_compensation column exists
+    if 'is_compensation' not in df.columns:
+        print("\n  WARNING: is_compensation column not found. Run 01_data_preparation.py first.")
+        third_comp_pct = 0
+        grand_comp_pct = 0
+        sensitivity_results = {}
+    else:
+        # Compensation breakdown by chamber
+        third_comp = third['is_compensation'].sum()
+        third_comp_pct = third_comp / len(third) * 100
+        grand_comp = grand['is_compensation'].sum()
+        grand_comp_pct = grand_comp / len(grand) * 100
+
+        print(f"\n  Compensation holdings by chamber:")
+        print(f"    Third Chamber: {third_comp}/{len(third)} = {third_comp_pct:.1f}%")
+        print(f"    Grand Chamber: {grand_comp}/{len(grand)} = {grand_comp_pct:.1f}%")
+
+        # Pro-DS rates WITH and WITHOUT compensation
+        print(f"\n  Pro-DS rates - FULL SAMPLE vs EXCLUDING COMPENSATION:")
+
+        # Third Chamber
+        third_full_rate = third['pro_ds'].mean() * 100
+        third_no_comp = third[third['is_compensation'] == 0]
+        third_no_comp_rate = third_no_comp['pro_ds'].mean() * 100 if len(third_no_comp) > 0 else 0
+
+        # Grand Chamber
+        grand_full_rate = grand['pro_ds'].mean() * 100
+        grand_no_comp = grand[grand['is_compensation'] == 0]
+        grand_no_comp_rate = grand_no_comp['pro_ds'].mean() * 100 if len(grand_no_comp) > 0 else 0
+
+        # Other chambers
+        other_full_rate = other['pro_ds'].mean() * 100
+        other_no_comp = other[other['is_compensation'] == 0]
+        other_no_comp_rate = other_no_comp['pro_ds'].mean() * 100 if len(other_no_comp) > 0 else 0
+
+        print(f"\n    {'Chamber':<18} {'Full Sample':>15} {'Excl. Compensation':>20} {'Change':>10}")
+        print(f"    {'-'*65}")
+        print(f"    {'Third':<18} {third_full_rate:>14.1f}% {third_no_comp_rate:>19.1f}% {third_no_comp_rate - third_full_rate:>+9.1f}pp")
+        print(f"    {'Grand Chamber':<18} {grand_full_rate:>14.1f}% {grand_no_comp_rate:>19.1f}% {grand_no_comp_rate - grand_full_rate:>+9.1f}pp")
+        print(f"    {'Other':<18} {other_full_rate:>14.1f}% {other_no_comp_rate:>19.1f}% {other_no_comp_rate - other_full_rate:>+9.1f}pp")
+
+        # Gap analysis
+        full_gap = grand_full_rate - third_full_rate
+        no_comp_gap = grand_no_comp_rate - third_no_comp_rate
+
+        print(f"\n  Third vs Grand Chamber gap:")
+        print(f"    Full sample: {full_gap:.1f} percentage points")
+        print(f"    Excluding compensation: {no_comp_gap:.1f} percentage points")
+        print(f"    Gap reduction: {full_gap - no_comp_gap:.1f}pp ({(full_gap - no_comp_gap)/full_gap*100:.1f}% explained by compensation)")
+
+        # Statistical test: Third Chamber effect excluding compensation
+        print(f"\n  Statistical test (excluding compensation):")
+
+        df_no_comp = df[df['is_compensation'] == 0]
+        tg_no_comp = df_no_comp[df_no_comp['chamber'].isin(['THIRD', 'GRAND_CHAMBER'])].copy()
+        tg_no_comp['is_third'] = (tg_no_comp['chamber'] == 'THIRD').astype(int)
+
+        if len(tg_no_comp[tg_no_comp['is_third'] == 1]) >= 5 and len(tg_no_comp[tg_no_comp['is_third'] == 0]) >= 5:
+            # Simple Fisher's exact test
+            a = tg_no_comp[(tg_no_comp['is_third'] == 1) & (tg_no_comp['pro_ds'] == 1)].shape[0]
+            b = tg_no_comp[(tg_no_comp['is_third'] == 1) & (tg_no_comp['pro_ds'] == 0)].shape[0]
+            c = tg_no_comp[(tg_no_comp['is_third'] == 0) & (tg_no_comp['pro_ds'] == 1)].shape[0]
+            d = tg_no_comp[(tg_no_comp['is_third'] == 0) & (tg_no_comp['pro_ds'] == 0)].shape[0]
+
+            oddsratio, pvalue = stats.fisher_exact([[a, b], [c, d]])
+            print(f"    Third (excl. comp): {a+b} holdings, {a/(a+b)*100:.1f}% pro-DS")
+            print(f"    Grand (excl. comp): {c+d} holdings, {c/(c+d)*100:.1f}% pro-DS")
+            print(f"    Fisher's exact: OR = {oddsratio:.3f}, p = {pvalue:.4f}")
+
+            if pvalue < 0.05:
+                print(f"\n    *** EFFECT PERSISTS: Third Chamber effect significant even excluding compensation ***")
+            else:
+                print(f"\n    *** EFFECT ATTENUATES: Third Chamber effect NOT significant when excluding compensation ***")
+                print(f"        This suggests the Third Chamber effect is primarily driven by compensation caseload.")
+        else:
+            print("    Insufficient sample size for test after excluding compensation")
+            oddsratio, pvalue = np.nan, np.nan
+
+        sensitivity_results = {
+            'third_comp_pct': third_comp_pct,
+            'grand_comp_pct': grand_comp_pct,
+            'third_full_rate': third_full_rate,
+            'third_no_comp_rate': third_no_comp_rate,
+            'grand_full_rate': grand_full_rate,
+            'grand_no_comp_rate': grand_no_comp_rate,
+            'full_gap_pp': full_gap,
+            'no_comp_gap_pp': no_comp_gap,
+            'gap_explained_by_comp_pct': (full_gap - no_comp_gap) / full_gap * 100 if full_gap > 0 else 0,
+            'or_excl_compensation': float(oddsratio) if not np.isnan(oddsratio) else None,
+            'p_excl_compensation': float(pvalue) if not np.isnan(pvalue) else None
+        }
+
+    # =========================================================================
     # CONTROLLING FOR CONFOUNDERS
     # =========================================================================
     print("\n" + "-" * 70)
@@ -218,25 +325,42 @@ def run_investigation(df):
         'p_adjusted_full': m_adj2.pvalues['is_third']
     }
 
+    # Add sensitivity analysis results
+    if sensitivity_results:
+        findings['sensitivity_excl_compensation'] = sensitivity_results
+
+    # Determine if effect persists after excluding compensation
+    comp_effect_persists = (sensitivity_results.get('p_excl_compensation') is not None and
+                            sensitivity_results.get('p_excl_compensation') < 0.05)
+
     print(f"""
 1. RAW GAP: Third Chamber {third['pro_ds'].mean()*100:.1f}% vs Grand Chamber {grand['pro_ds'].mean()*100:.1f}% pro-DS
    → Gap = {findings['raw_gap_pp']:.1f} percentage points
 
 2. CASE ALLOCATION:
    - Third gets {third_enforcement:.1f}% ENFORCEMENT cases vs Grand's {grand_enforcement:.1f}%
+   - Third gets {third_comp_pct:.1f}% COMPENSATION cases vs Grand's {grand_comp_pct:.1f}%
    - ENFORCEMENT has lowest pro-DS rate (46.2%), so allocation partially explains gap
 
 3. INTERPRETIVE APPROACH:
    - Third invokes pro-DS purpose {third_purpose:.1f}% vs Grand {grand_purpose:.1f}%
    - This difference in rhetorical framing may drive outcomes
 
-4. CONTROLLED EFFECT:
+4. CONTROLLED EFFECT (FULL SAMPLE):
    - Unadjusted OR = {or_unadj:.3f} (Third Chamber effect)
    - After controlling for concept + interpretation: OR = {or_adj2:.3f}, p = {m_adj2.pvalues['is_third']:.4f}
    - {"EFFECT PERSISTS after controls" if m_adj2.pvalues['is_third'] < 0.05 else "Effect ATTENUATES after controls"}
 
-5. CONCLUSION:
-   {"Third Chamber effect appears to be a GENUINE interpretive difference beyond case allocation" if m_adj2.pvalues['is_third'] < 0.05 else "Third Chamber effect is LARGELY EXPLAINED by case allocation and interpretive framing differences"}
+5. COMPENSATION-EXCLUSION SENSITIVITY (CRITICAL TEST):
+   - Full sample gap: {sensitivity_results.get('full_gap_pp', 0):.1f}pp
+   - Excluding compensation gap: {sensitivity_results.get('no_comp_gap_pp', 0):.1f}pp
+   - Gap reduction: {sensitivity_results.get('gap_explained_by_comp_pct', 0):.1f}% explained by compensation
+   - OR excluding compensation: {sensitivity_results.get('or_excl_compensation', 'N/A')}
+   - p-value: {sensitivity_results.get('p_excl_compensation', 'N/A')}
+   - {"*** EFFECT PERSISTS even without compensation ***" if comp_effect_persists else "*** EFFECT DRIVEN BY COMPENSATION CASELOAD ***"}
+
+6. CONCLUSION:
+   {"Third Chamber effect appears to be a GENUINE interpretive difference beyond compensation caseload" if comp_effect_persists else "Third Chamber effect is LARGELY EXPLAINED by compensation case allocation - the gap shrinks substantially when excluding Article 82 cases"}
 """)
 
     # Save findings

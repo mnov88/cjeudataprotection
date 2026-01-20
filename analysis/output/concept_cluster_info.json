@@ -1,0 +1,68 @@
+{
+  "concept_clusters": {
+    "SCOPE": [
+      "SCOPE_MATERIAL",
+      "SCOPE_TERRITORIAL",
+      "PERSONAL_DATA_SCOPE",
+      "HOUSEHOLD_EXEMPTION",
+      "OTHER_EXEMPTION"
+    ],
+    "ACTORS": [
+      "CONTROLLER_DEFINITION",
+      "JOINT_CONTROLLERS_DEFINITION",
+      "PROCESSOR_OBLIGATIONS",
+      "RECIPIENT_DEFINITION"
+    ],
+    "LAWFULNESS": [
+      "CONSENT_BASIS",
+      "CONTRACT_BASIS",
+      "LEGAL_OBLIGATION_BASIS",
+      "VITAL_INTERESTS_BASIS",
+      "PUBLIC_INTEREST_BASIS",
+      "LEGITIMATE_INTERESTS"
+    ],
+    "PRINCIPLES": [
+      "DATA_PROTECTION_PRINCIPLES",
+      "ACCOUNTABILITY",
+      "TRANSPARENCY",
+      "DATA_MINIMISATION"
+    ],
+    "RIGHTS": [
+      "RIGHT_OF_ACCESS",
+      "RIGHT_TO_RECTIFICATION",
+      "RIGHT_TO_ERASURE",
+      "RIGHT_TO_RESTRICTION",
+      "RIGHT_TO_PORTABILITY",
+      "RIGHT_TO_OBJECT",
+      "AUTOMATED_DECISION_MAKING"
+    ],
+    "SPECIAL_CATEGORIES": [
+      "SPECIAL_CATEGORIES_DEFINITION",
+      "SPECIAL_CATEGORIES_CONDITIONS"
+    ],
+    "ENFORCEMENT": [
+      "DPA_INDEPENDENCE",
+      "DPA_POWERS",
+      "DPA_OBLIGATIONS",
+      "ONE_STOP_SHOP",
+      "DPA_OTHER",
+      "ADMINISTRATIVE_FINES",
+      "REMEDIES_COMPENSATION",
+      "REPRESENTATIVE_ACTIONS"
+    ],
+    "OTHER": [
+      "SECURITY",
+      "INTERNATIONAL_TRANSFER",
+      "OTHER_CONTROLLER_OBLIGATIONS",
+      "MEMBER_STATE_DISCRETION",
+      "OTHER"
+    ]
+  },
+  "unmapped_concepts": [],
+  "enforcement_composition": {
+    "total": 65,
+    "compensation": 36,
+    "compensation_pct": 55.4,
+    "non_compensation": 29
+  }
+}

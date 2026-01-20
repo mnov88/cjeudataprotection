@@ -1,4 +1,14 @@
 {
   "N_holdings": 181,
   "N_cases": 67,
-  "Pro_DS_count": 
+  "Pro_DS_count": 110,
+  "Pro_DS_pct": 60.8,
+  "Year_range": "2019-2025",
+  "Year_median": 2023,
+  "Teleological_present_pct": 92.3,
+  "Level_shifting_pct": 12.2,
+  "Any_balancing_pct": 30.4,
+  "Compensation_holdings": 36,
+  "Compensation_pct": 19.9,
+  "Data_quality_issues": 0
+}

@@ -1,16 +1,16 @@
 Hypothesis,Variable,Description,Effect Size,p-value,q-value (FDR),Significant
 H1,teleological_present,Teleological interpretation predicts pro-DS,0.042,0.5720,0.0005,***
-H2,dominant_source,Dominant interpretive source affects ruling direction,0.266,0.0123,0.0005,***
-H2b,pro_ds_purpose,HIGH_LEVEL_OF_PROTECTION or FUNDAMENTAL_RIGHTS purpose invoked,0.309,0.0000,0.0005,***
-H3,principle_based_present,Principle-based reasoning predicts pro-DS,0.063,0.3933,0.0005,***
-H4,level_shifting,Level-shifting predicts pro-DS,0.143,0.0543,0.0005,***
-H4b,dominant_structure,Dominant reasoning structure affects ruling direction,0.228,0.0938,0.0005,***
-H5,is_grand_chamber,Grand Chamber predicts pro-DS,0.197,0.0082,0.0005,***
-H5b,chamber_grouped,Chamber composition affects ruling direction,0.327,0.0007,0.0005,***
-H6,concept_cluster,Primary concept cluster affects ruling direction,0.303,0.0200,0.0005,***
-H7,any_balancing,Explicit balancing predicts fewer pro-DS outcomes,0.000,1.0000,0.0005,***
-H8,necessity_discussed,Necessity analysis predicts fewer pro-DS outcomes,0.016,0.8321,0.0005,***
-H9,necessity_standard,Strict necessity standard predicts fewer pro-DS,0.462,0.0031,0.0005,***
-E1,has_case_citations,Case law citation predicts ruling direction,0.120,0.1074,0.0501,
-E2,interpretation_count,Interpretive plurality and ruling direction,0.065,0.2744,0.8916,
-E3,year,Temporal trend in ruling direction,0.136,0.1122,1.0000,
+H2,dominant_source,Dominant interpretive source affects ruling direction,0.262,0.0020,0.0005,***
+H2b,pro_ds_purpose,HIGH_LEVEL_OF_PROTECTION or FUNDAMENTAL_RIGHTS purpose invoked,0.309,0.0000,0.0040,**
+H3,principle_based_present,Principle-based reasoning predicts pro-DS,0.063,0.3933,0.0040,**
+H4,level_shifting,Level-shifting predicts pro-DS,0.143,0.0543,0.0040,**
+H4b,dominant_structure,Dominant reasoning structure affects ruling direction,0.181,0.1151,0.0040,**
+H5,is_grand_chamber,Grand Chamber predicts pro-DS,0.197,0.0082,0.0040,**
+H5b,chamber_grouped,Chamber composition affects ruling direction,0.348,0.0005,0.0040,**
+H6,concept_cluster,Primary concept cluster affects ruling direction,0.308,0.0160,0.0040,**
+H7,any_balancing,Explicit balancing predicts fewer pro-DS outcomes,0.000,1.0000,0.0040,**
+H8,necessity_discussed,Necessity analysis predicts fewer pro-DS outcomes,0.016,0.8321,0.0040,**
+H9,necessity_standard,Strict necessity standard predicts fewer pro-DS,0.462,0.0031,0.0040,**
+E1,has_case_citations,Case law citation predicts ruling direction,0.120,0.1074,0.0040,**
+E2,interpretation_count,Interpretive plurality and ruling direction,0.065,0.2744,0.0401,*
+E3,year,Temporal trend in ruling direction,0.136,0.1122,0.0401,*

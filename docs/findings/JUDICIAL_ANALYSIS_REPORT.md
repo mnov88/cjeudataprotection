@@ -232,7 +232,7 @@ Do chambers influence outcomes through their choice of interpretive methods?
 | GRAND_CHAMBER | 46.9% | 32.7% | 16.3% |
 | THIRD | 31.7% | 34.1% | 31.7% |
 
-TELEOLOGICAL interpretation is associated with 73.3% pro-DS rate vs. 44.4% for SYSTEMATIC.
+TELEOLOGICAL interpretation is associated with 73.7% pro-DS rate vs. 44.4% for SYSTEMATIC.
 
 **Partial mediation suggested**: Third Chamber uses less TELEOLOGICAL interpretation, which is associated with lower pro-DS rates. However, the direct chamber effect persists, indicating interpretation style is NOT the only mechanism.
 
@@ -263,18 +263,34 @@ Chi-square test (5 rapporteurs × 5 topics): χ²(16) = 78.05, p < 0.0001 — **
 
 **Key finding**: Three of five rapporteurs show outcome rates fully explained by their topic mix. L.S. Rossi shows a strong genuine pro-data subject disposition (+18pp beyond topic prediction). N. Jääskinen's effect is partially explained by ENFORCEMENT specialization but retains -8pp residual.
 
-### 6.3 Within-Topic Comparison
+### 6.3 Within-Topic Comparison (REVISED)
 
-Comparing rapporteur rates within ENFORCEMENT (the largest topic, n=65, baseline=46.2%):
+**Critical Methodological Note**: The ENFORCEMENT cluster is 55% compensation cases (REMEDIES_COMPENSATION). Jääskinen handles 86% of all compensation cases (31/36). Therefore, "within ENFORCEMENT" comparisons are largely comparing Rossi's DPA cases with Jääskinen's compensation cases—not an apples-to-apples comparison.
 
-| Rapporteur | ENFORCEMENT Rate | n | vs. Baseline |
-|------------|------------------|---|--------------|
-| L.S. Rossi | 77.8% | 9 | **+31.6pp** |
-| T. von Danwitz | 57.1% | 7 | +11.0pp |
-| I. Ziemele | 42.9% | 7 | -3.3pp |
-| N. Jääskinen | 34.3% | 35 | **-11.9pp** |
+**Table 6.3a: Full ENFORCEMENT (includes compensation - USE WITH CAUTION)**
 
-**Within-topic gap**: Even within ENFORCEMENT cases, L.S. Rossi rules 43.5pp more pro-DS than N. Jääskinen. This cannot be attributed to topic assignment.
+| Rapporteur | ENFORCEMENT Rate | n | Comp. Holdings | vs. Baseline |
+|------------|------------------|---|----------------|--------------|
+| L.S. Rossi | 77.8% | 9 | **0/9 (0%)** | +31.6pp |
+| T. von Danwitz | 57.1% | 7 | 4/7 (57%) | +11.0pp |
+| I. Ziemele | 42.9% | 7 | 1/7 (14%) | -3.3pp |
+| N. Jääskinen | 34.3% | 35 | **31/35 (89%)** | -11.9pp |
+
+**Table 6.3b: ENFORCEMENT Excluding Compensation (TRUE APPLES-TO-APPLES)**
+
+| Rapporteur | Rate (excl. comp.) | n | vs. Baseline (58.6%) |
+|------------|---------------------|---|---------------------|
+| L.S. Rossi | 77.8% | 9 | +19.2pp |
+| T. von Danwitz | 66.7% | 3 | +8.0pp |
+| I. Ziemele | 33.3% | 6 | -25.3pp |
+| N. Jääskinen | 50.0% | 4 | -8.6pp |
+| M. Ilešič | 100.0% | 2 | +41.4pp |
+
+**Statistical tests (excluding compensation):**
+- N. Jääskinen vs others: χ²=0.03, p=0.865 (NOT significant)
+- L.S. Rossi vs others: χ²=1.00, p=0.318 (NOT significant)
+
+**Revised interpretation**: When properly excluding compensation cases, **no statistically significant rapporteur effects remain** within ENFORCEMENT. The apparent 43.5pp Rossi-Jääskinen gap in the full ENFORCEMENT analysis was almost entirely driven by the fact that Rossi handles 0% compensation cases while Jääskinen handles 89% compensation cases within their respective ENFORCEMENT portfolios. This is a compositional artifact, not a genuine rapporteur effect.
 
 ### 6.4 Variance Decomposition
 
