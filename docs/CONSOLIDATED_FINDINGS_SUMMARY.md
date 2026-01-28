@@ -78,6 +78,17 @@ The CJEU demonstrates a clear pro-data subject orientation, with 60.8% of holdin
 | Primary tension domain | Compensation |
 | Citation concordance | 66.8% |
 
+### 9. Non-Compensation Pro-Controller Rulings (11 holdings)
+| Theme | Examples |
+|-------|----------|
+| Security: Risk management, not elimination | C-340/21, C-687/21 |
+| Administrative fines require fault | C-807/21 (Grand Chamber) |
+| Judicial independence from DPA oversight | C-245/20 |
+| DPA enforcement discretion | C-768/21 |
+| Operational flexibility (testing, litigation) | C-77/21, C-180/21 |
+
+**Key insight**: Non-compensation pro-controller rulings address structural/operational concerns (achievable standards, institutional autonomy, fault-based enforcement) rather than reflecting deregulatory impulse.
+
 ---
 
 ## Cross-Cutting Themes
@@ -91,6 +102,8 @@ The CJEU demonstrates a clear pro-data subject orientation, with 60.8% of holdin
 4. **No temporal shift**: Apparent decline is compositional, not doctrinal—the Court's protective commitment is unchanged.
 
 5. **Means-ends proportionality**: The Court accepts virtually all objectives as legitimate; outcomes turn on whether specific methods are proportionate.
+
+6. **Non-compensation pro-controller rulings serve structural purposes**: Security standards based on risk management (not elimination), fault-based fines, judicial independence, and DPA discretion reflect calibration of obligations rather than deregulation.
 
 ---
 
@@ -117,12 +130,14 @@ The CJEU demonstrates a clear pro-data subject orientation, with 60.8% of holdin
 
 | Report | Location |
 |--------|----------|
+| **Academic Paper** | `docs/findings/ACADEMIC_PAPER.md` |
 | Core Analysis | `analysis/ANALYSIS_REPORT.md` |
 | Supplementary | `analysis/SUPPLEMENTARY_FINDINGS.md` |
 | Judicial Effects | `docs/findings/JUDICIAL_ANALYSIS_REPORT.md` |
 | Citation Analysis | `docs/findings/CITATION_ANALYSIS_FINDINGS.md` |
 | Temporal Analysis | `analysis/output/temporal/TEMPORAL_ANALYSIS_SYNTHESIS.md` |
 | Pro-Controller | `docs/findings/PRO_CONTROLLER_ANALYSIS.md` |
+| **Pro-Controller Narrative** | `docs/findings/PRO_CONTROLLER_NARRATIVE_ANALYSIS.md` |
 | Balancing | `docs/findings/BALANCING_JURISPRUDENCE_ANALYSIS.md` |
 | Coherence | `docs/findings/COHERENCE_ANALYSIS.md` |
 | Proportionality | `docs/findings/MEANS_ENDS_PROPORTIONALITY_ANALYSIS.md` |
