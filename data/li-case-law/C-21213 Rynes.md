@@ -1,0 +1,167 @@
+# C-212/13 Ryneš
+
+11 December 2014
+
+## **The dispute in the main proceedings and the question referred for a preliminary ruling**
+
+**13** During the period from 5 October 2007 to 11 April 2008, Mr Ryneš installed and used a camera system located under the eaves of his family home. The camera was installed in a fixed position and could not turn; it recorded the entrance to his home, the public footpath and the entrance to the house opposite. The system allowed only a visual recording, which was stored on recording equipment in the form of a continuous loop, that is to say, on a hard disk drive. As soon as it reached full capacity, the device would record over the existing recording, erasing the old material. No monitor was installed on the recording equipment, so the images could not be studied in real time. Only Mr Ryneš had direct access to the system and the data.
+
+**14** The Nejvyšší správní soud (Supreme Administrative Court, Czech Republic; or 'the referring court') notes that Mr Ryneš's only reason for operating the camera was to protect the property, health and life of his family and himself. Indeed, both Mr Ryneš and his family had for several years been subjected to attacks by persons unknown whom it had not been possible to identify. Furthermore, the windows of the family home had been broken on several occasions between 2005 and 2007.
+
+**15** On the night of 6 to 7 October 2007, a further attack took place. One of the windows of Mr Ryneš's home was broken by a shot from a catapult. The video surveillance system at issue made it possible to identify two suspects. The recording was handed over to the police and relied on in the course of the subsequent criminal proceedings.
+
+**16** By decision of 4 August 2008, following a request from one of the suspects for confirmation that Mr Ryneš's surveillance system was lawful, the Office found that Mr Ryneš had infringed Law No 101/2000, since:
+
+as a data controller, he had used a camera system to collect, without their consent, the personal data of persons moving along the street or entering the house opposite;
+
+he had not informed those persons of the processing of that personal data, the extent and purpose of that processing, by whom and by what means the personal data would be processed, or who would have access to the personal data; and
+
+as a data controller, Mr Ryneš had not fulfilled the obligation to report that processing to the Office.
+
+**17** Mr Ryneš brought an action challenging that decision, which the Městský soud v Praze (Prague City Court) dismissed by judgment of 25 April 2012. Mr Ryneš brought an appeal on a point of law against that judgment before the referring court.
+
+**18** In those circumstances, the Nejvyšší správní soud decided to stay proceedings and refer the following question to the Court of Justice for a preliminary ruling:
+
+'Can the operation of a camera system installed on a family home for the purposes of the protection of the property, health and life of the owners of the home be classified as the processing of personal data "by a natural person in the course of a purely personal or household activity" for the purposes of Article 3 of Directive 95/46 …, even though such a system also monitors a public space?'
+
+## Consideration of the question referred
+
+**19** By its question, the referring court essentially asks whether, on a proper construction of the second indent of Article 3 of Directive 95/46, the operation of a camera system, as a result of which a video recording of people is stored on a continuous recording device such as a hard disk drive, installed by an individual on his family home for the purposes of protecting the property, health and life of the home owners, but which also monitors a public space, amounts to the processing of data in the course of a purely personal or household activity, for the purposes of that provision.
+
+**20** It should be noted that, under Article 3 of Directive 95/46, the directive is to apply to 'the processing of personal data wholly or partly by automatic means, and to the processing otherwise than by automatic means of personal data which form part of a filing system or are intended to form part of a filing system'.
+
+**21** The term 'personal data' as used in that provision covers, according to the definition under Article 2 of Directive 95/46, 'any information relating to an identified or identifiable natural person', an identifiable person being 'one who can be identified, directly or indirectly, in particular by reference … to one or more factors specific to his physical … identity'.
+
+**22** Accordingly, the image of a person recorded by a camera constitutes personal data within the meaning of Article 2 of Directive 95/46 inasmuch as it makes it possible to identify the person concerned.
+
+**23** As regards the 'processing of personal data', it should be noted that Article 2 of Directive 95/46 defines this as 'any operation or set of operations which is performed upon personal data, … such as collection, recording, … storage'.
+
+**24** As can be seen, in particular, from recitals 15 and 16 to Directive 95/46, video surveillance falls, in principle, within the scope of that directive in so far as it constitutes automatic processing.
+
+**25** Surveillance in the form of a video recording of persons, as in the case before the referring court, which is stored on a continuous recording device — the hard disk drive — constitutes, pursuant to Article 3 of Directive 95/46, the automatic processing of personal data.
+
+**26** The referring court is uncertain whether such processing should nevertheless, in circumstances such as those of the case before it, escape the application of Directive 95/46 in so far as it is carried out 'in the course of a purely personal or household activity' for the purposes of the second indent of [[Article 3]](2) of the directive.
+
+**27** As is clear from [[Article 1]] of that directive and recital 10 thereto, Directive 95/46 is intended to ensure a high level of protection of the fundamental rights and freedoms of natural persons, in particular their right to privacy, with respect to the processing of personal data (seeGoogle Spain and Google, [[C-131-12 (Google Spain and Google)]], paragraph 66).
+
+**28** In that connection, it should be noted that, according to settled case-law, the protection of the fundamental right to private life guaranteed under [[Article 7]] of the Charter of Fundamental Rights of the European Union ('the Charter') requires that derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary (seeIPI, [[C-473-12--]], paragraph 39, andDigital Rights Ireland and Others, [[C-293-12]] and [[C-594-12]], paragraph 52).
+
+**29** Since the provisions of Directive 95/46, in so far as they govern the processing of personal data liable to infringe fundamental freedoms, in particular the right to privacy, must necessarily be interpreted in the light of the fundamental rights set out in the Charter (seeGoogle Spain and Google,EU:C:2014:317, paragraph 68), the exception provided for in the second indent of [[Article 3]](2) of that directive must be narrowly construed.
+
+**30** The fact that Article 3 of Directive 95/46 falls to be narrowly construed has its basis also in the very wording of that provision, under which the directive does not cover the processing of data where the activity in the course of which that processing is carried out is a 'purely' personal or household activity, that is to say, not simply a personal or household activity.
+
+**31** In the light of the foregoing considerations, it must be held that, as the Advocate General observed in point 53 of his Opinion, the processing of personal data comes within the exception provided for in the second indent of Article 3 of Directive 95/46 only where it is carried out in the purely personal or household setting of the person processing the data.
+
+**32** Accordingly, so far as natural persons are concerned, correspondence and the keeping of address books constitute, in the light of recital 12 to Directive 95/46, a 'purely personal or household activity' even if they incidentally concern or may concern the private life of other persons.
+
+**33** To the extent that video surveillance such as that at issue in the main proceedings covers, even partially, a public space and is accordingly directed outwards from the private setting of the person processing the data in that manner, it cannot be regarded as an activity which is a purely 'personal or household' activity for the purposes of the second indent of Article 3 of Directive 95/46.
+
+**34** At the same time, the application of Directive 95/46 makes it possible, where appropriate, to take into account — in accordance, in particular, with Articles 7(f), 11(2), and 13(1)(d) and (g) of that directive — legitimate interests pursued by the controller, such as the protection of the property, health and life of his family and himself, as in the case in the main proceedings.
+
+**35** Consequently, the answer to the question referred is that the second indent of Article 3 of Directive 95/46 must be interpreted as meaning that the operation of a camera system, as a result of which a video recording of people is stored on a continuous recording device such as a hard disk drive, installed by an individual on his family home for the purposes of protecting the property, health and life of the home owners, but which also monitors a public space, does not amount to the processing of data in the course of a purely personal or household activity, for the purposes of that provision.
+
+## C-131/12 Google Spain and Google
+13 May 2014
+
+## The dispute in the main proceedings and the questions referred for a preliminary ruling
+
+**14** On 5 March 2010, Mr Costeja González, a Spanish national resident in Spain, lodged with the AEPD a complaint against La Vanguardia Ediciones SL, which publishes a daily newspaper with a large circulation, in particular in Catalonia (Spain) ('La Vanguardia'), and against Google Spain and Google Inc. The complaint was based on the fact that, when an internet user entered Mr Costeja González's name in the search engine of the Google group ('Google Search'), he would obtain links to two pages of La Vanguardia's newspaper, of 19 January and 9 March 1998 respectively, on which an announcement mentioning Mr Costeja González's name appeared for a real-estate auction connected with attachment proceedings for the recovery of social security debts.
+
+**15** By that complaint, Mr Costeja González requested, first, that La Vanguardia be required either to remove or alter those pages so that the personal data relating to him no longer appeared or to use certain tools made available by search engines in order to protect the data. Second, he requested that Google Spain or Google Inc. be required to remove or conceal the personal data relating to him so that they ceased to be included in the search results and no longer appeared in the links to La Vanguardia. Mr Costeja González stated in this context that the attachment proceedings concerning him had been fully resolved for a number of years and that reference to them was now entirely irrelevant.
+
+**16** By decision of 30 July 2010, the AEPD rejected the complaint in so far as it related to La Vanguardia, taking the view that the publication by it of the information in question was legally justified as it took place upon order of the Ministry of Labour and Social Affairs and was intended to give maximum publicity to the auction in order to secure as many bidders as possible.
+
+**17** On the other hand, the complaint was upheld in so far as it was directed against Google Spain and Google Inc. The AEPD considered in this regard that operators of search engines are subject to data protection legislation given that they carry out data processing for which they are responsible and act as intermediaries in the information society. The AEPD took the view that it has the power to require the withdrawal of data and the prohibition of access to certain data by the operators of search engines when it considers that the locating and dissemination of the data are liable to compromise the fundamental right to data protection and the dignity of persons in the broad sense, and this would also encompass the mere wish of the person concerned that such data not be known to third parties. The AEPD considered that that obligation may be owed directly by operators of search engines, without it being necessary to erase the data or information from the website where they appear, including when retention of the information on that site is justified by a statutory provision.
+
+**18** Google Spain and Google Inc. brought separate actions against that decision before the Audiencia Nacional (National High Court). The Audiencia Nacional joined the actions.
+
+**19** That court states in the order for reference that the actions raise the question of what obligations are owed by operators of search engines to protect personal data of persons concerned who do not wish that certain information, which is published on third parties' websites and contains personal data relating to them that enable that information to be linked to them, be located, indexed and made available to internet users indefinitely. The answer to that question depends on the way in which Directive 95/46 must be interpreted in the context of these technologies, which appeared after the directive's publication.
+
+**20** In those circumstances, the Audiencia Nacional decided to stay the proceedings and to refer the following questions to the Court for a preliminary ruling:
+
+**'1.** With regard to the territorial application of Directive 95/46 and, consequently, of the Spanish data protection legislation:
+
+must it be considered that an "establishment", within the meaning of Article 4 of Directive 95/46, exists when any one or more of the following circumstances arise:
+
+or
+
+when the undertaking providing the search engine sets up in a Member State an office or subsidiary for the purpose of promoting and selling advertising space on the search engine, which orientates its activity towards the inhabitants of that State,
+
+when the parent company designates a subsidiary located in that Member State as its representative and controller for two specific filing systems which relate to the data of customers who have contracted for advertising with that undertaking,
+
+when the office or subsidiary established in a Member State forwards to the parent company, located outside the European Union, requests and requirements addressed to it both by data subjects and by the authorities with responsibility for ensuring observation of the right to data protection, even where such collaboration is engaged in voluntarily?
+
+Must Article 4 of Directive 95/46 be interpreted as meaning that there is "use of equipment … situated on the territory of the said Member State":
+
+when a search engine uses crawlers or robots to locate and index information contained in web pages located on servers in that Member State,
+
+when it uses a domain name pertaining to a Member State and arranges for searches and the results thereof to be based on the language of that Member State?
+
+Is it possible to regard as a use of equipment, in the terms of Article 4 of Directive 95/46, the temporary storage of the information indexed by internet search engines? If the answer to that question is affirmative, can it be considered that that connecting factor is present when the undertaking refuses to disclose the place where it stores those indexes, invoking reasons of competition?
+
+Regardless of the answers to the foregoing questions and particularly in the event that the Court … considers that the connecting factors referred to in [[Article 4]] of Directive 95/46 are not present:
+
+must Directive 95/46 … be applied, in the light of [[Article 8]] of the Charter , in the Member State where the centre of gravity of the conflict is located and more effective protection of the rights of … Union citizens is possible?
+
+**2.** As regards the activity of search engines as providers of content in relation to Directive 95/46 …:
+
+in relation to the activity of Google Search , as a provider of content, consisting in locating information published or included on the net by third parties, indexing it automatically, storing it temporarily and finally making it available to internet users according to a particular order of preference, when that information contains personal data of third parties: must an activity like the one described be interpreted as falling within the concept of "processing of … data" used in Article 2 of Directive 95/46?
+
+If the answer to the foregoing question is affirmative, and once again in relation to an activity like the one described:
+
+must Article 2 of Directive 95/46 be interpreted as meaning that the undertaking managing Google Search is to be regarded as the "controller" of the personal data contained in the web pages that it indexes?
+
+In the event that the answer to the foregoing question is affirmative:
+
+may the AEPD , protecting the rights embodied in Article 12(b) and subparagraph (a) of the first paragraph of [[Article 14]] of Directive 95/46, directly impose on Google Search a requirement that it withdraw from its indexes an item of information published by third parties, without addressing itself in advance or simultaneously to the owner of the web page on which that information is located?
+
+would the obligation of search engines to protect those rights be excluded when the information that contains the personal data has been lawfully published by third parties and is kept on the web page from which it originates?
+
+**3.** Regarding the scope of the right of erasure and/or the right to object, in relation to the "derecho al olvido" (the "right to be forgotten"), the following question is asked:
+
+must it be considered that the rights to erasure and blocking of data, provided for in [[Article 12]](b), and the right to object, provided for by subparagraph (a) of the first paragraph of [[Article 14]] of Directive 95/46, extend to enabling the data subject to address himself to search engines in order to prevent indexing of the information relating to him personally, published on third parties' web pages, invoking his wish that such information should not be known to internet users when he considers that it might be prejudicial to him or he wishes it to be consigned to oblivion, even though the information in question has been lawfully published by third parties?'
+
+## Ruling
+
+
+**68** The Court has already held that the provisions of Directive 95/46, in so far as they govern the processing of personal data liable to infringe fundamental freedoms, in particular the right to privacy, must necessarily be interpreted in the light of fundamental rights, which, according to settled case-law, form an integral part of the general principles of law whose observance the Court ensures and which are now set out in the Charter (see, in particular, Case [[C-274-99]] PConnollyvCommissionEU:C:2001:127, paragraph 37, andÖsterreichischer Rundfunk and OthersEU:C:2003:294, paragraph 68).
+
+**69** [[Article 7]] of the Charter guarantees the right to respect for private life, whilst [[Article 8]] of the Charter expressly proclaims the right to the protection of personal data. [[Article 8]](2) and (3) specify that such data must be processed fairly for specified purposes and on the basis of the consent of the person concerned or some other legitimate basis laid down by law, that everyone has the right of access to data which have been collected concerning him or her and the right to have the data rectified, and that compliance with these rules is to be subject to control by an independent authority. Those requirements are implemented inter alia by Articles 6, 7, 12, 14 and Article 28 of Directive 95/46.
+
+**70** Article 12 of Directive 95/46 provides that Member States are to guarantee every data subject the right to obtain from the controller, as appropriate, the rectification, erasure or blocking of data the processing of which does not comply with the provisions of Directive 95/46, in particular because of the incomplete or inaccurate nature of the data. As this final point relating to the case where certain requirements referred to in Article 6 of Directive 95/46 are not observed is stated by way of example and is not exhaustive, it follows that non-compliant nature of the processing, which is capable of conferring upon the data subject the right guaranteed in [[Article 12]](b) of the directive, may also arise from non-observance of the other conditions of lawfulness that are imposed by the directive upon the processing of personal data.
+
+**71** In this connection, it should be noted that, subject to the exceptions permitted under Article 13 of Directive 95/46, all processing of personal data must comply, first, with the principles relating to data quality set out in Article 6 of the directive and, secondly, with one of the criteria for making data processing legitimate listed in Article 7 of the directive (seeÖsterreichischer Rundfunk and OthersEU:C:2003:294, paragraph 65; Joined Cases [[C-468-10 (ASNEF v FECEMD)]] and [[C-469-10]]ASNEF and FECEMDEU:C:2011:777, paragraph 26; and Case [[CJEU/C-342-12 (Worten v Autoridade para as Condições de Trabalho (ACT))]]WortenEU:C:2013:355, paragraph 33).
+
+**72** Under Article 6 of Directive 95/46 and without prejudice to specific provisions that the Member States may lay down in respect of processing for historical, statistical or scientific purposes, the controller has the task of ensuring that personal data are processed 'fairly and lawfully', that they are 'collected for specified, explicit and legitimate purposes and not further processed in a way incompatible with those purposes', that they are 'adequate, relevant and not excessive in relation to the purposes for which they are collected and/or further processed', that they are 'accurate and, where necessary, kept up to date' and, finally, that they are 'kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the data were collected or for which they are further processed'. In this context, the controller must take every reasonable step to ensure that data which do not meet the requirements of that provision are erased or rectified.
+
+**73** As regards legitimation, under Article 7 of Directive 95/46, of processing such as that at issue in the main proceedings carried out by the operator of a search engine, that processing is capable of being covered by the ground in [[Article 7]](f).
+
+**74** This provision permits the processing of personal data where it is necessary for the purposes of the legitimate interests pursued by the controller or by the third party or parties to whom the data are disclosed, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject — in particular his right to privacy with respect to the processing of personal data — which require protection under [[Article 1]](1) of the directive. Application of [[Article 7]](f) thus necessitates a balancing of the opposing rights and interests concerned, in the context of which account must be taken of the significance of the data subject's rights arising from Articles 7 and 8 of the Charter (seeASNEF and FECEMD,EU:C:2011:777, paragraphs 38 and 40).
+
+**75** Whilst the question whether the processing complies with Articles 6 and Article 7 of Directive 95/46 may be determined in the context of a request as provided for in [[Article 12]](b) of the directive, the data subject may, in addition, rely in certain conditions on the right to object laid down in subparagraph (a) of the first paragraph of Article 14 of the directive.
+
+**76** Under subparagraph (a) of the first paragraph of Article 14 of Directive 95/46, Member States are to grant the data subject the right, at least in the cases referred to in [[Article 7]](e) and (f) of the directive, to object at any time on compelling legitimate grounds relating to his particular situation to the processing of data relating to him, save where otherwise provided by national legislation. The balancing to be carried out under subparagraph (a) of the first paragraph of [[Article 14]] thus enables account to be taken in a more specific manner of all the circumstances surrounding the data subject's particular situation. Where there is a justified objection, the processing instigated by the controller may no longer involve those data.
+
+**77** Requests under [[Article 12]](b) and subparagraph (a) of the first paragraph of Article 14 of Directive 95/46 may be addressed by the data subject directly to the controller who must then duly examine their merits and, as the case may be, end processing of the data in question. Where the controller does not grant the request, the data subject may bring the matter before the supervisory authority or the judicial authority so that it carries out the necessary checks and orders the controller to take specific measures accordingly.
+
+**78** In this connection, it is to be noted that it is clear from [[Article 28]](3) and (4) of Directive 95/46 that each supervisory authority is to hear claims lodged by any person concerning the protection of his rights and freedoms in regard to the processing of personal data and that it has investigative powers and effective powers of intervention enabling it to order in particular the blocking, erasure or destruction of data or to impose a temporary or definitive ban on such processing.
+
+**79** It is in the light of those considerations that it is necessary to interpret and apply the provisions of Directive 95/46 governing the data subject's rights when he lodges with the supervisory authority or judicial authority a request such as that at issue in the main proceedings.
+
+**80** It must be pointed out at the outset that, as has been found in paragraphs 36 to 38 of the present judgment, processing of personal data, such as that at issue in the main proceedings, carried out by the operator of a search engine is liable to affect significantly the fundamental rights to privacy and to the protection of personal data when the search by means of that engine is carried out on the basis of an individual's name, since that processing enables any internet user to obtain through the list of results a structured overview of the information relating to that individual that can be found on the internet — information which potentially concerns a vast number of aspects of his private life and which, without the search engine, could not have been interconnected or could have been only with great difficulty — and thereby to establish a more or less detailed profile of him. Furthermore, the effect of the interference with those rights of the data subject is heightened on account of the important role played by the internet and search engines in modern society, which render the information contained in such a list of results ubiquitous (see, to this effect, Joined Cases [[C-509-09]] and [[C-161-10]]eDate Advertising and OthersEU:C:2011:685, paragraph 45).
+
+**81** In the light of the potential seriousness of that interference, it is clear that it cannot be justified by merely the economic interest which the operator of such an engine has in that processing. However, inasmuch as the removal of links from the list of results could, depending on the information at issue, have effects upon the legitimate interest of internet users potentially interested in having access to that information, in situations such as that at issue in the main proceedings a fair balance should be sought in particular between that interest and the data subject's fundamental rights under Articles 7 and 8 of the Charter. Whilst it is true that the data subject's rights protected by those articles also override, as a general rule, that interest of internet users, that balance may however depend, in specific cases, on the nature of the information in question and its sensitivity for the data subject's private life and on the interest of the public in having that information, an interest which may vary, in particular, according to the role played by the data subject in public life.
+
+**82** Following the appraisal of the conditions for the application of [[Article 12]](b) and subparagraph (a) of the first paragraph of Article 14 of Directive 95/46 which is to be carried out when a request such as that at issue in the main proceedings is lodged with it, the supervisory authority or judicial authority may order the operator of the search engine to remove from the list of results displayed following a search made on the basis of a person's name links to web pages published by third parties containing information relating to that person, without an order to that effect presupposing the previous or simultaneous removal of that name and information — of the publisher's own accord or following an order of one of those authorities — from the web page on which they were published.
+
+**83** As has been established in paragraphs 35 to 38 of the present judgment, inasmuch as the data processing carried out in the context of the activity of a search engine can be distinguished from and is additional to that carried out by publishers of websites and affects the data subject's fundamental rights additionally, the operator of the search engine as the controller in respect of that processing must ensure, within the framework of its responsibilities, powers and capabilities, that that processing meets the requirements of Directive 95/46, in order that the guarantees laid down by the directive may have full effect.
+
+**84** Given the ease with which information published on a website can be replicated on other sites and the fact that the persons responsible for its publication are not always subject to European Union legislation, effective and complete protection of data users could not be achieved if the latter had to obtain first or in parallel the erasure of the information relating to them from the publishers of websites.
+
+**85** Furthermore, the processing by the publisher of a web page consisting in the publication of information relating to an individual may, in some circumstances, be carried out 'solely for journalistic purposes' and thus benefit, by virtue of Article 9 of Directive 95/46, from derogations from the requirements laid down by the directive, whereas that does not appear to be so in the case of the processing carried out by the operator of a search engine. It cannot therefore be ruled out that in certain circumstances the data subject is capable of exercising the rights referred to in [[Article 12]](b) and subparagraph (a) of the first paragraph of Article 14 of Directive 95/46 against that operator but not against the publisher of the web page.
+
+**86** Finally, it must be stated that not only does the ground, under Article 7 of Directive 95/46, justifying the publication of a piece of personal data on a website not necessarily coincide with that which is applicable to the activity of search engines, but also, even where that is the case, the outcome of the weighing of the interests at issue to be carried out under [[Article 7]](f) and subparagraph (a) of the first paragraph of Article 14 of the directive may differ according to whether the processing carried out by the operator of a search engine or that carried out by the publisher of the web page is at issue, given that, first, the legitimate interests justifying the processing may be different and, second, the consequences of the processing for the data subject, and in particular for his private life, are not necessarily the same.
+
+**87** Indeed, since the inclusion in the list of results, displayed following a search made on the basis of a person's name, of a web page and of the information contained on it relating to that person makes access to that information appreciably easier for any internet user making a search in respect of the person concerned and may play a decisive role in the dissemination of that information, it is liable to constitute a more significant interference with the data subject's fundamental right to privacy than the publication on the web page.
+
+**88** In the light of all the foregoing considerations, the answer to Question 2(c) and (d) is that [[Article 12]](b) and subparagraph (a) of the first paragraph of Article 14 of Directive 95/46 are to be interpreted as meaning that, in order to comply with the rights laid down in those provisions and in so far as the conditions laid down by those provisions are in fact satisfied, the operator of a search engine is obliged to remove from the list of results displayed following a search made on the basis of a person's name links to web pages, published by third parties and containing information relating to that person, also in a case where that name or information is not erased beforehand or simultaneously from those web pages, and even, as the case may be, when its publication in itself on those pages is lawful.

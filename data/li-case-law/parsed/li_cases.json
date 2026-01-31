@@ -1,0 +1,1440 @@
+[
+  {
+    "_source_file": "C-27506 Productores de Musica Espana_coded.md",
+    "case_number": "C-275/06",
+    "case_date": "2008-01-29",
+    "factual_summary": "Promusicae, a Spanish music producers' organisation, sought a court order requiring the internet service provider Telefonica to disclose the identities and physical addresses of users of the KaZaA peer-to-peer file-sharing program who were allegedly infringing copyright. Telefonica argued that Spanish law only permitted such data disclosure in criminal investigations or for public security and national defence purposes, not in civil proceedings.",
+    "li_discussed": "Y",
+    "controller_interests": "protection of intellectual property (copyright) | effective judicial protection | protection of personal data and private life",
+    "controller_interests_parsed": [
+      "protection of intellectual property (copyright)",
+      "effective judicial protection",
+      "protection of personal data and private life"
+    ],
+    "interest_findings": "protection of intellectual property (copyright) > recognised as a fundamental right constituting a general principle of Community law, including as a component of the right to property | effective judicial protection > recognised as a fundamental right constituting a general principle of Community law | protection of personal data and private life > recognised as a fundamental right under Articles 7 and 8 of the Charter; the Court held that it must be balanced against the other rights at stake",
+    "interest_findings_parsed": [
+      {
+        "interest": "protection of intellectual property (copyright)",
+        "finding": "recognised as a fundamental right constituting a general principle of Community law, including as a component of the right to property"
+      },
+      {
+        "interest": "effective judicial protection",
+        "finding": "recognised as a fundamental right constituting a general principle of Community law"
+      },
+      {
+        "interest": "protection of personal data and private life",
+        "finding": "recognised as a fundamental right under Articles 7 and 8 of the Charter; the Court held that it must be balanced against the other rights at stake"
+      }
+    ],
+    "factual_assumptions_interest": "This is a pre-GDPR case (2008) that does not concern Article 6(1)(f) GDPR. It is included because the Court performed a balancing of fundamental rights (intellectual property and effective judicial protection vs. privacy and data protection) that is directly relevant to the development of the legitimate interest doctrine. The balancing framework applied here — requiring a \"fair balance\" between fundamental rights and invoking proportionality — prefigures the structure later codified in Article 6(1)(f) GDPR.",
+    "case_law_interest": "Case C-479/04 Laserdisken > \"the fundamental right to property, which includes intellectual property rights such as copyright\" > Intellectual property rights such as copyright form part of the fundamental right to property. | Joined Cases C-154/04 and C-155/04 Alliance for Natural Health and Others > cited for the proposition that the fundamental right to property constitutes a general principle of Community law > The right to property is a general principle of Community law. | Case C-432/05 Unibet > cited for the proposition that the fundamental right to effective judicial protection constitutes a general principle of Community law > Effective judicial protection is a general principle of Community law.",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-479/04",
+        "quote": "\"the fundamental right to property, which includes intellectual property rights such as copyright\"",
+        "conclusion": "Intellectual property rights such as copyright form part of the fundamental right to property."
+      },
+      {
+        "case": "C-154/04 and C-155/04",
+        "quote": "cited for the proposition that the fundamental right to property constitutes a general principle of Community law",
+        "conclusion": "The right to property is a general principle of Community law."
+      },
+      {
+        "case": "C-432/05",
+        "quote": "cited for the proposition that the fundamental right to effective judicial protection constitutes a general principle of Community law",
+        "conclusion": "Effective judicial protection is a general principle of Community law."
+      }
+    ],
+    "necessity_discussed": "N",
+    "necessity_found": "NA",
+    "strict_necessity": "N",
+    "less_effective_means": "N",
+    "factual_assumptions_necessity": "N",
+    "data_minimisation": "N",
+    "case_law_necessity": "N",
+    "case_law_necessity_parsed": [],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "protection of intellectual property (copyright) | right to effective judicial protection",
+    "controller_side_interests_parsed": [
+      "protection of intellectual property (copyright)",
+      "right to effective judicial protection"
+    ],
+    "ds_side_interests": "right to respect for private life | right to protection of personal data",
+    "ds_side_interests_parsed": [
+      "right to respect for private life",
+      "right to protection of personal data"
+    ],
+    "prevailing_side": "mixed",
+    "factual_assumptions_balancing": "The Court assumed that the relevant EU directives are relatively general and leave Member States with necessary discretion to define transposition measures adapted to various situations | The Court assumed that the mechanisms for balancing the different rights are contained both in the directives themselves and in national transposition measures",
+    "case_law_balancing": "Case C-101/01 Lindqvist > \"the mechanisms allowing those different rights and interests to be balanced are contained, first, in Directive 2002/58 itself ... Second, they result from the adoption by the Member States of national provisions transposing those directives and their application by the national authorities\" > The balancing of rights is achieved through the directives and their national transposition. | Case C-101/01 Lindqvist > \"the Member States must, when transposing the directives mentioned above, take care to rely on an interpretation of the directives which allows a fair balance to be struck between the various fundamental rights protected by the Community legal order\" > Member States must strike a fair balance between fundamental rights when transposing directives. | Case C-305/05 Ordre des barreaux francophones et germanophone and Others > cited alongside Lindqvist for the proposition that Member States must not rely on an interpretation of directives that conflicts with fundamental rights or the principle of proportionality > Interpretation of directives must not conflict with fundamental rights or proportionality.",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-101/01",
+        "quote": "\"the mechanisms allowing those different rights and interests to be balanced are contained, first, in Directive 2002/58 itself ... Second, they result from the adoption by the Member States of national provisions transposing those directives and their application by the national authorities\"",
+        "conclusion": "The balancing of rights is achieved through the directives and their national transposition."
+      },
+      {
+        "case": "C-101/01",
+        "quote": "\"the Member States must, when transposing the directives mentioned above, take care to rely on an interpretation of the directives which allows a fair balance to be struck between the various fundamental rights protected by the Community legal order\"",
+        "conclusion": "Member States must strike a fair balance between fundamental rights when transposing directives."
+      },
+      {
+        "case": "C-305/05",
+        "quote": "cited alongside Lindqvist for the proposition that Member States must not rely on an interpretation of directives that conflicts with fundamental rights or the principle of proportionality",
+        "conclusion": "Interpretation of directives must not conflict with fundamental rights or proportionality."
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 (respect for private life) | Art. 8 (protection of personal data) | Art. 17 (right to property, including intellectual property) | Art. 47 (right to an effective remedy)",
+    "charter_articles_parsed": [
+      "Art. 7 (respect for private life)",
+      "Art. 8 (protection of personal data)",
+      "Art. 17 (right to property, including intellectual property)",
+      "Art. 47 (right to an effective remedy)"
+    ],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "unclear",
+    "key_holdings_summary": "The Court held that EU directives do not require Member States to lay down an obligation to disclose personal data in civil proceedings to ensure effective copyright protection. However, Member States must, when transposing and implementing those directives, strike a fair balance between the fundamental rights at stake — intellectual property and effective judicial protection on one side, and privacy and data protection on the other — while respecting the principle of proportionality."
+  },
+  {
+    "_source_file": "C-9209 - Volker und Markus Schecke and Eifert_coded.md",
+    "case_number": "C-92/09 and C-93/09",
+    "case_date": "2010-11-09",
+    "factual_summary": "Agricultural fund beneficiaries (a farming partnership and a full-time farmer) challenged the mandatory publication on the internet of their names and the precise amounts of EU agricultural aid (EAGF and EAFRD) they received, arguing that this publication violated their fundamental rights to privacy and data protection. The data was published on a searchable government website accessible to the general public.",
+    "li_discussed": "Y",
+    "controller_interests": "transparency regarding the use of Community funds in the Common Agricultural Policy | reinforcing public control of the money used | ensuring sound financial management of agricultural funds",
+    "controller_interests_parsed": [
+      "transparency regarding the use of Community funds in the Common Agricultural Policy",
+      "reinforcing public control of the money used",
+      "ensuring sound financial management of agricultural funds"
+    ],
+    "interest_findings": "transparency regarding the use of Community funds in the Common Agricultural Policy > recognised as an objective of general interest by the EU | reinforcing public control of the money used > recognised as contributing to the appropriate use of public funds by the administration | ensuring sound financial management of agricultural funds > recognised as a legitimate aim, but no automatic priority can be conferred on the objective of transparency over the right to protection of personal data",
+    "interest_findings_parsed": [
+      {
+        "interest": "transparency regarding the use of Community funds in the Common Agricultural Policy",
+        "finding": "recognised as an objective of general interest by the EU"
+      },
+      {
+        "interest": "reinforcing public control of the money used",
+        "finding": "recognised as contributing to the appropriate use of public funds by the administration"
+      },
+      {
+        "interest": "ensuring sound financial management of agricultural funds",
+        "finding": "recognised as a legitimate aim, but no automatic priority can be conferred on the objective of transparency over the right to protection of personal data"
+      }
+    ],
+    "factual_assumptions_interest": "N",
+    "case_law_interest": "Case C-41/00 P Interporc v Commission > \"It enables citizens to participate more closely in the decision-making process and guarantees that the administration enjoys greater legitimacy and is more effective and more accountable to the citizen in a democratic system\" > The principle of transparency is an objective of general interest. | Joined Cases C-465/00, C-138/01 and C-139/01 Osterreichischer Rundfunk and Others > \"in a democratic society taxpayers have a right to be kept informed of the use of public funds\" > Public control of the use of funds contributes to appropriate use of public funds by the administration. | Case C-28/08 P Commission v Bavarian Lager > cited for the principle that \"No automatic priority can be conferred on the objective of transparency over the right to protection of personal data\" > Transparency does not automatically override data protection rights, even when important economic interests are at stake.",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-41/00",
+        "quote": "\"It enables citizens to participate more closely in the decision-making process and guarantees that the administration enjoys greater legitimacy and is more effective and more accountable to the citizen in a democratic system\"",
+        "conclusion": "The principle of transparency is an objective of general interest."
+      },
+      {
+        "case": "C-465/00 and C-138/01 and C-139/01",
+        "quote": "\"in a democratic society taxpayers have a right to be kept informed of the use of public funds\"",
+        "conclusion": "Public control of the use of funds contributes to appropriate use of public funds by the administration."
+      },
+      {
+        "case": "C-28/08",
+        "quote": "cited for the principle that \"No automatic priority can be conferred on the objective of transparency over the right to protection of personal data\"",
+        "conclusion": "Transparency does not automatically override data protection rights, even when important economic interests are at stake."
+      }
+    ],
+    "necessity_discussed": "Y > \"it is thus necessary to determine whether the Council of the European Union and the Commission balanced the European Union's interest in guaranteeing the transparency of its acts and ensuring the best use of public funds against the interference with the right of the beneficiaries concerned to respect for their private life in general and to the protection of their personal data in particular.\"",
+    "necessity_found": "N",
+    "strict_necessity": "Y",
+    "less_effective_means": "Y",
+    "factual_assumptions_necessity": "The aid represents between 30% and 70% of the total income of the beneficiaries concerned, allowing third parties to draw conclusions about their income | Publication was on a single freely consultable website per Member State with a search tool, without distinction based on duration, frequency, nature, or amount of aid",
+    "data_minimisation": "N",
+    "case_law_necessity": "Case C-73/07 Satakunnan Markkinaporssi and Satamedia > \"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\" > The strict necessity standard applies to limitations on data protection rights. | Case C-58/08 Vodafone and Others > \"the principle of proportionality, which is one of the general principles of European Union law, requires that measures implemented by acts of the European Union are appropriate for attaining the objective pursued and do not go beyond what is necessary to achieve it\" > Processing measures must be appropriate and not go beyond what is necessary.",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-73/07",
+        "quote": "\"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\"",
+        "conclusion": "The strict necessity standard applies to limitations on data protection rights."
+      },
+      {
+        "case": "C-58/08",
+        "quote": "\"the principle of proportionality, which is one of the general principles of European Union law, requires that measures implemented by acts of the European Union are appropriate for attaining the objective pursued and do not go beyond what is necessary to achieve it\"",
+        "conclusion": "Processing measures must be appropriate and not go beyond what is necessary."
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "transparency regarding the use of EU funds in the CAP | public control of the use of public money | enabling citizens to participate in public debate on the direction of the CAP",
+    "controller_side_interests_parsed": [
+      "transparency regarding the use of EU funds in the CAP",
+      "public control of the use of public money",
+      "enabling citizens to participate in public debate on the direction of the CAP"
+    ],
+    "ds_side_interests": "right to respect for private life (Article 7 of the Charter) | right to protection of personal data (Article 8 of the Charter)",
+    "ds_side_interests_parsed": [
+      "right to respect for private life (Article 7 of the Charter)",
+      "right to protection of personal data (Article 8 of the Charter)"
+    ],
+    "prevailing_side": "DS",
+    "factual_assumptions_balancing": "The amounts received by beneficiaries from EAGF and EAFRD represent a considerable part of their income (between 30% and 70%) | Publication of data by name on a freely consultable website allows third parties to draw conclusions about the beneficiaries' income | Less interfering measures such as limiting publication by name according to periods, frequency, nature or amount of aid were available but not considered by the institutions",
+    "case_law_balancing": "Joined Cases C-465/00, C-138/01 and C-139/01 Osterreichischer Rundfunk and Others > \"in a democratic society taxpayers have a right to be kept informed of the use of public funds\" > Taxpayers' right to be informed must be balanced against data subjects' rights. | Case C-28/08 P Commission v Bavarian Lager > \"No automatic priority can be conferred on the objective of transparency over the right to protection of personal data\" > The balancing must be conducted without giving automatic priority to transparency, even when important economic interests are at stake.",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-465/00 and C-138/01 and C-139/01",
+        "quote": "\"in a democratic society taxpayers have a right to be kept informed of the use of public funds\"",
+        "conclusion": "Taxpayers' right to be informed must be balanced against data subjects' rights."
+      },
+      {
+        "case": "C-28/08",
+        "quote": "\"No automatic priority can be conferred on the objective of transparency over the right to protection of personal data\"",
+        "conclusion": "The balancing must be conducted without giving automatic priority to transparency, even when important economic interests are at stake."
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 | Art. 8 | Art. 52(1)",
+    "charter_articles_parsed": [
+      "Art. 7",
+      "Art. 8",
+      "Art. 52(1)"
+    ],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "N",
+    "key_holdings_summary": "The Court held that the Council and Commission failed to properly balance the objective of transparency against the fundamental rights of natural persons under Articles 7 and 8 of the Charter. The blanket publication of names and exact amounts of all natural person beneficiaries, without any distinction based on duration, frequency, nature, or amount of aid, exceeded the limits imposed by the principle of proportionality and the strict necessity standard. For legal persons, however, the publication obligation was found proportionate."
+  },
+  {
+    "_source_file": "C-46810 ASNEF_coded.md",
+    "case_number": "C-468/10",
+    "case_date": "2011-11-04",
+    "factual_summary": "Spanish trade associations (ASNEF and FECEMD) challenged Spanish data protection rules that required personal data to appear in public sources as a precondition for processing based on legitimate interest without consent. The Spanish law added this requirement on top of the conditions set out in Article 7(f) of Directive 95/46, effectively excluding processing of data not found in public sources.",
+    "li_discussed": "Y",
+    "controller_interests": "Legitimate interest of the data controller or of the third party or parties to whom the data are disclosed",
+    "controller_interests_parsed": [
+      "Legitimate interest of the data controller or of the third party or parties to whom the data are disclosed"
+    ],
+    "interest_findings": "Legitimate interest of the data controller or third parties > The Court did not assess the legitimacy of any specific interest but confirmed that Article 7(f) of Directive 95/46 requires processing to be necessary for the purposes of the legitimate interests pursued, and that Member States cannot add additional conditions (such as requiring data to appear in public sources) beyond the two cumulative conditions set out in that provision.",
+    "interest_findings_parsed": [
+      {
+        "interest": "Legitimate interest of the data controller or third parties",
+        "finding": "The Court did not assess the legitimacy of any specific interest but confirmed that Article 7(f) of Directive 95/46 requires processing to be necessary for the purposes of the legitimate interests pursued, and that Member States cannot add additional conditions (such as requiring data to appear in public sources) beyond the two cumulative conditions set out in that provision."
+      }
+    ],
+    "factual_assumptions_interest": "N",
+    "case_law_interest": "N",
+    "case_law_interest_parsed": [],
+    "necessity_discussed": "Y > \"Article 7(f) sets out two cumulative conditions that must be fulfilled in order for the processing of personal data to be lawful: firstly, the processing of the personal data must be necessary for the purposes of the legitimate interests pursued by the controller or by the third party or parties to whom the data are disclosed; and, secondly, such interests must not be overridden by the fundamental rights and freedoms of the data subject.\"",
+    "necessity_found": "N",
+    "strict_necessity": "N",
+    "less_effective_means": "N",
+    "factual_assumptions_necessity": "N",
+    "data_minimisation": "N",
+    "case_law_necessity": "N",
+    "case_law_necessity_parsed": [],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "Legitimate interest of the data controller or of the third party or parties to whom the data are disclosed",
+    "controller_side_interests_parsed": [
+      "Legitimate interest of the data controller or of the third party or parties to whom the data are disclosed"
+    ],
+    "ds_side_interests": "Fundamental rights and freedoms of the data subject, including the right to protection of personal data and the right to respect for private life",
+    "ds_side_interests_parsed": [
+      "Fundamental rights and freedoms of the data subject, including the right to protection of personal data and the right to respect for private life"
+    ],
+    "prevailing_side": "mixed",
+    "factual_assumptions_balancing": "The seriousness of the infringement of the data subject's fundamental rights can vary depending on whether the data already appear in public sources | Processing of data from non-public sources necessarily implies that information relating to the data subject's private life will become known to the data controller and potentially third parties, constituting a more serious infringement",
+    "case_law_balancing": "C-92/09 and C-93/09 Volker und Markus Schecke and Eifert > \"the right to respect for private life with regard to the processing of personal data, recognised by Articles 7 and 8 of the Charter, concerns any information relating to an identified or identifiable individual\" > The right to respect for private life may be limited under certain conditions pursuant to Articles 8(2) and 52(1) of the Charter | C-275/06 Promusicae > \"Member States must, when transposing Directive 95/46, take care to rely on an interpretation of that directive which allows a fair balance to be struck between the various fundamental rights and freedoms protected by the EU legal order\" > Member States must ensure a fair balance between fundamental rights when transposing the Directive",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-92/09 and C-93/09",
+        "quote": "\"the right to respect for private life with regard to the processing of personal data, recognised by Articles 7 and 8 of the Charter, concerns any information relating to an identified or identifiable individual\"",
+        "conclusion": "The right to respect for private life may be limited under certain conditions pursuant to Articles 8(2) and 52(1) of the Charter"
+      },
+      {
+        "case": "C-275/06",
+        "quote": "\"Member States must, when transposing Directive 95/46, take care to rely on an interpretation of that directive which allows a fair balance to be struck between the various fundamental rights and freedoms protected by the EU legal order\"",
+        "conclusion": "Member States must ensure a fair balance between fundamental rights when transposing the Directive"
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 | Art. 8 | Art. 52(1)",
+    "charter_articles_parsed": [
+      "Art. 7",
+      "Art. 8",
+      "Art. 52(1)"
+    ],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "unclear",
+    "key_holdings_summary": "The Court held that Article 7(f) of Directive 95/46 sets out two cumulative conditions for lawful processing based on legitimate interest -- necessity of the processing and non-override by the data subject's fundamental rights -- and that Member States cannot add additional requirements such as requiring data to appear in public sources. The Court emphasized that the balancing of interests must be carried out on a case-by-case basis, taking into account Articles 7 and 8 of the Charter, and that Member States may not categorically and in a generalised manner exclude processing of certain categories of personal data without allowing individual balancing."
+  },
+  {
+    "_source_file": "C-7010 Scarlet Extended_coded.md",
+    "case_number": "C-70/10",
+    "case_date": "2011-11-24",
+    "factual_summary": "SABAM, a copyright management society, sought a court order requiring Scarlet, an internet service provider, to install a filtering system to block its customers from sharing copyright-protected musical works via peer-to-peer networks without authorisation. Scarlet challenged the injunction as requiring general monitoring of all network communications and infringing EU law on data protection, freedom of expression, and freedom to conduct business.",
+    "li_discussed": "Y",
+    "controller_interests": "protection of intellectual property (copyright) held by rightholders such as SABAM | freedom to conduct a business enjoyed by ISPs such as Scarlet | right to protection of personal data of ISP customers | freedom to receive or impart information of ISP customers",
+    "controller_interests_parsed": [
+      "protection of intellectual property (copyright) held by rightholders such as SABAM",
+      "freedom to conduct a business enjoyed by ISPs such as Scarlet",
+      "right to protection of personal data of ISP customers",
+      "freedom to receive or impart information of ISP customers"
+    ],
+    "interest_findings": "protection of intellectual property (copyright) > the Court recognised this as a fundamental right enshrined in Article 17(2) of the Charter, but held that it is not inviolable and must not be absolutely protected | freedom to conduct a business > the Court recognised this as a fundamental right under Article 16 of the Charter that must be balanced against intellectual property rights | right to protection of personal data > the Court recognised this as a fundamental right under Article 8 of the Charter that would be infringed by systematic analysis of content and collection of IP addresses | freedom to receive or impart information > the Court recognised this as a fundamental right under Article 11 of the Charter that could be undermined by a filtering system that cannot adequately distinguish lawful from unlawful content",
+    "interest_findings_parsed": [
+      {
+        "interest": "protection of intellectual property (copyright)",
+        "finding": "the Court recognised this as a fundamental right enshrined in Article 17(2) of the Charter, but held that it is not inviolable and must not be absolutely protected"
+      },
+      {
+        "interest": "freedom to conduct a business",
+        "finding": "the Court recognised this as a fundamental right under Article 16 of the Charter that must be balanced against intellectual property rights"
+      },
+      {
+        "interest": "right to protection of personal data",
+        "finding": "the Court recognised this as a fundamental right under Article 8 of the Charter that would be infringed by systematic analysis of content and collection of IP addresses"
+      },
+      {
+        "interest": "freedom to receive or impart information",
+        "finding": "the Court recognised this as a fundamental right under Article 11 of the Charter that could be undermined by a filtering system that cannot adequately distinguish lawful from unlawful content"
+      }
+    ],
+    "factual_assumptions_interest": "Internet users using Scarlet's services were downloading copyright-protected works without authorisation via peer-to-peer networks | Scarlet is an ISP that provides only internet access and does not offer downloading or file-sharing services",
+    "case_law_interest": "Case C-275/06 Promusicae > \"the protection of the fundamental right to property, which includes the rights linked to intellectual property, must be balanced against the protection of other fundamental rights\" > The protection of intellectual property must be balanced against other fundamental rights; national authorities must strike a fair balance | Case C-324/09 L'Oréal and Others > referenced for the proposition that national courts may order intermediaries to take measures to bring to an end and prevent infringements of intellectual property rights, but subject to limitations arising from EU directives and fundamental rights > Injunctions against intermediaries must respect limitations from Directives 2001/29, 2004/48, and 2000/31",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-275/06",
+        "quote": "\"the protection of the fundamental right to property, which includes the rights linked to intellectual property, must be balanced against the protection of other fundamental rights\"",
+        "conclusion": "The protection of intellectual property must be balanced against other fundamental rights; national authorities must strike a fair balance"
+      },
+      {
+        "case": "C-324/09",
+        "quote": "referenced for the proposition that national courts may order intermediaries to take measures to bring to an end and prevent infringements of intellectual property rights, but subject to limitations arising from EU directives and fundamental rights",
+        "conclusion": "Injunctions against intermediaries must respect limitations from Directives 2001/29, 2004/48, and 2000/31"
+      }
+    ],
+    "necessity_discussed": "Y > \"it is necessary to examine whether the injunction at issue in the main proceedings, which would require the ISP to install the contested filtering system, would oblige it, as part of that system, to actively monitor all the data of each of its customers in order to prevent any future infringement of intellectual-property rights.\"",
+    "necessity_found": "N",
+    "strict_necessity": "N",
+    "less_effective_means": "N",
+    "factual_assumptions_necessity": "Implementation of the filtering system would require the ISP to: (1) identify all electronic communications relating to peer-to-peer traffic among all customers, (2) identify files containing works claimed by rightholders, (3) determine which files are shared unlawfully, and (4) block unlawful file sharing | Such preventive monitoring would require active observation of all electronic communications on the ISP's network, encompassing all information transmitted and all customers",
+    "data_minimisation": "N",
+    "case_law_necessity": "Case C-324/09 L'Oréal and Others > \"such a general monitoring obligation would be incompatible with Article 3 of Directive 2004/48, which states that the measures referred to by the directive must be fair and proportionate and must not be excessively costly\" > A general monitoring obligation imposed on an ISP is prohibited under Article 15(1) of Directive 2000/31 and incompatible with Directive 2004/48",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-324/09",
+        "quote": "\"such a general monitoring obligation would be incompatible with Article 3 of Directive 2004/48, which states that the measures referred to by the directive must be fair and proportionate and must not be excessively costly\"",
+        "conclusion": "A general monitoring obligation imposed on an ISP is prohibited under Article 15(1) of Directive 2000/31 and incompatible with Directive 2004/48"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "protection of intellectual property right (copyright) enjoyed by copyright holders",
+    "controller_side_interests_parsed": [
+      "protection of intellectual property right (copyright) enjoyed by copyright holders"
+    ],
+    "ds_side_interests": "freedom to conduct a business enjoyed by ISPs | right to protection of personal data of ISP customers | freedom to receive or impart information of ISP customers",
+    "ds_side_interests_parsed": [
+      "freedom to conduct a business enjoyed by ISPs",
+      "right to protection of personal data of ISP customers",
+      "freedom to receive or impart information of ISP customers"
+    ],
+    "prevailing_side": "DS",
+    "factual_assumptions_balancing": "The filtering system would involve monitoring all electronic communications with no limitation in time, directed at all future infringements, and intended to protect both existing and future works not yet created | Installation of such a system would be complicated, costly, and permanent, imposed exclusively at the ISP's expense | The filtering system would involve systematic analysis of all content and collection and identification of users' IP addresses, which are protected personal data allowing precise identification of users | The system might not distinguish adequately between unlawful and lawful content, potentially blocking lawful communications",
+    "case_law_balancing": "Case C-275/06 Promusicae > \"in the context of measures adopted to protect copyright holders, national authorities and courts must strike a fair balance between the protection of copyright and the protection of the fundamental rights of individuals who are affected by such measures\" > National authorities must strike a fair balance between intellectual property protection and fundamental rights of affected individuals",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-275/06",
+        "quote": "\"in the context of measures adopted to protect copyright holders, national authorities and courts must strike a fair balance between the protection of copyright and the protection of the fundamental rights of individuals who are affected by such measures\"",
+        "conclusion": "National authorities must strike a fair balance between intellectual property protection and fundamental rights of affected individuals"
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 16 (freedom to conduct a business) | Art. 17(2) (right to intellectual property) | Art. 8 (right to protection of personal data) | Art. 11 (freedom to receive or impart information)",
+    "charter_articles_parsed": [
+      "Art. 16 (freedom to conduct a business)",
+      "Art. 17(2) (right to intellectual property)",
+      "Art. 8 (right to protection of personal data)",
+      "Art. 11 (freedom to receive or impart information)"
+    ],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "N",
+    "key_holdings_summary": "The Court held that EU directives (2000/31, 2001/29, 2004/48, 95/46, and 2002/58), read together in light of fundamental rights, preclude an injunction requiring an ISP to install a general filtering system covering all electronic communications of all customers, for an unlimited period, at the ISP's own expense. The injunction failed to strike a fair balance between copyright protection on one hand and the freedom to conduct business, the right to data protection, and freedom of information on the other. While this case does not address Article 6(1)(f) GDPR directly, the Court's balancing framework — weighing the legitimacy and proportionality of measures against competing fundamental rights — is a direct precursor to the legitimate interest balancing test."
+  },
+  {
+    "_source_file": "C-21213 Rynes_coded.md",
+    "case_number": "C-212/13",
+    "case_date": "2014-12-11",
+    "factual_summary": "Mr Rynes installed a camera system on his family home to protect his family's property, health, and life after years of attacks by unknown persons. The camera also monitored a public footpath and the entrance to the house opposite. One of the suspects identified through the recordings challenged the lawfulness of the surveillance system before the Czech data protection authority.",
+    "li_discussed": "Y",
+    "controller_interests": "protection of the property, health and life of the controller's family and himself",
+    "controller_interests_parsed": [
+      "protection of the property, health and life of the controller's family and himself"
+    ],
+    "interest_findings": "protection of the property, health and life of the controller's family and himself > The Court acknowledged these as legitimate interests that could be taken into account under Article 7(f) of Directive 95/46, but did not conduct a full assessment of their legitimacy as the case focused on the household exception question",
+    "interest_findings_parsed": [
+      {
+        "interest": "protection of the property, health and life of the controller's family and himself",
+        "finding": "The Court acknowledged these as legitimate interests that could be taken into account under Article 7(f) of Directive 95/46, but did not conduct a full assessment of their legitimacy as the case focused on the household exception question"
+      }
+    ],
+    "factual_assumptions_interest": "Mr Rynes and his family had for several years been subjected to attacks by unknown persons and the windows of the family home had been broken on several occasions between 2005 and 2007",
+    "case_law_interest": "N",
+    "case_law_interest_parsed": [],
+    "necessity_discussed": "N",
+    "necessity_found": "NA",
+    "strict_necessity": "N",
+    "less_effective_means": "N",
+    "factual_assumptions_necessity": "N",
+    "data_minimisation": "N",
+    "case_law_necessity": "N",
+    "case_law_necessity_parsed": [],
+    "balancing_discussed": "N",
+    "controller_side_interests": "N",
+    "controller_side_interests_parsed": [],
+    "ds_side_interests": "N",
+    "ds_side_interests_parsed": [],
+    "prevailing_side": "NA",
+    "factual_assumptions_balancing": "N",
+    "case_law_balancing": "N",
+    "case_law_balancing_parsed": [],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 | Art. 8",
+    "charter_articles_parsed": [
+      "Art. 7",
+      "Art. 8"
+    ],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "unclear",
+    "key_holdings_summary": "The Court did not rule on whether legitimate interest was a valid legal basis in this case. The case focused on whether the household exception in Article 3(2) of Directive 95/46 applied to home CCTV monitoring public space, which the Court answered in the negative. The Court merely noted in passing (paragraph 34) that the application of the Directive makes it possible to take into account legitimate interests pursued by the controller, such as protection of property, health and life, under Articles 7(f), 11(2), and 13(1)(d) and (g)."
+  },
+  {
+    "_source_file": "C-58013 Coty Germany GmbH_coded.md",
+    "case_number": "C-580/13",
+    "case_date": "2015-07-16",
+    "factual_summary": "Coty Germany, a perfume producer holding an exclusive licence for the Community trade mark Davidoff Hot Water, purchased a counterfeit perfume via an internet auction platform and paid into a bank account at the Stadtsparkasse. When Coty Germany asked the bank for the name and address of the account holder to pursue intellectual property enforcement, the bank refused by invoking banking secrecy.",
+    "li_discussed": "Y",
+    "controller_interests": "right to information concerning the identity of an IP infringer (Art. 8(1)(c) Directive 2004/48) | right to an effective remedy for IP right holders (Art. 47 Charter) | right to intellectual property (Art. 17(2) Charter)",
+    "controller_interests_parsed": [
+      "right to information concerning the identity of an IP infringer (Art. 8(1)(c) Directive 2004/48)",
+      "right to an effective remedy for IP right holders (Art. 47 Charter)",
+      "right to intellectual property (Art. 17(2) Charter)"
+    ],
+    "interest_findings": "right to information concerning IP infringers > The Court held this is a necessary instrument for the effective exercise of the fundamental right to intellectual property and is protected under Directive 2004/48 | right to an effective remedy > The Court found this is guaranteed under Art. 47 Charter and serves to ensure effective exercise of the right to intellectual property | right to intellectual property > The Court held that an unlimited and unconditional banking secrecy provision is capable of seriously impairing the effective exercise of this fundamental right",
+    "interest_findings_parsed": [
+      {
+        "interest": "right to information concerning IP infringers",
+        "finding": "The Court held this is a necessary instrument for the effective exercise of the fundamental right to intellectual property and is protected under Directive 2004/48"
+      },
+      {
+        "interest": "right to an effective remedy",
+        "finding": "The Court found this is guaranteed under Art. 47 Charter and serves to ensure effective exercise of the right to intellectual property"
+      },
+      {
+        "interest": "right to intellectual property",
+        "finding": "The Court held that an unlimited and unconditional banking secrecy provision is capable of seriously impairing the effective exercise of this fundamental right"
+      }
+    ],
+    "factual_assumptions_interest": "A banking institution holding a current account used by a seller of counterfeit goods falls within the scope of Art. 8(1)(c) of Directive 2004/48 as a person providing services used in infringing activities on a commercial scale | Communication of a customer's name and address by a banking institution constitutes processing of personal data under Directive 95/46",
+    "case_law_interest": "C-275/06 Promusicae > \"EU law requires that, when transposing directives, the Member States take care to rely on an interpretation of them which allows a fair balance to be struck between the various fundamental rights protected by the EU legal order.\" > Member States must strike a fair balance between fundamental rights when transposing directives | C-70/10 Scarlet Extended > \"a measure which results in serious infringement of a right protected by the Charter is to be regarded as not respecting the requirement that such a fair balance be struck between the fundamental rights which must be reconciled\" > A measure seriously infringing a Charter right fails the fair balance requirement | C-360/10 Sabam > cited alongside Scarlet Extended for same proposition regarding serious infringement of Charter rights and fair balance",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-275/06",
+        "quote": "\"EU law requires that, when transposing directives, the Member States take care to rely on an interpretation of them which allows a fair balance to be struck between the various fundamental rights protected by the EU legal order.\"",
+        "conclusion": "Member States must strike a fair balance between fundamental rights when transposing directives"
+      },
+      {
+        "case": "C-70/10",
+        "quote": "\"a measure which results in serious infringement of a right protected by the Charter is to be regarded as not respecting the requirement that such a fair balance be struck between the fundamental rights which must be reconciled\"",
+        "conclusion": "A measure seriously infringing a Charter right fails the fair balance requirement"
+      },
+      {
+        "case": "C-360/10",
+        "quote": "cited alongside Scarlet Extended for same proposition regarding serious infringement of Charter rights and fair balance",
+        "conclusion": ""
+      }
+    ],
+    "necessity_discussed": "Y > \"the competent judicial authorities may order that information on the origin and distribution networks of the goods or services which infringe an intellectual property right be provided by any person who was found to be providing on a commercial scale services used in the infringing activities\"",
+    "necessity_found": "Y",
+    "strict_necessity": "N",
+    "less_effective_means": "Y",
+    "factual_assumptions_necessity": "The Court assumed that if banking secrecy is invoked in an unlimited and unconditional manner, this frustrates the right to information and prevents competent authorities from ordering disclosure of necessary information | The Court noted it is for the referring court to determine whether other means or remedies exist in national law to obtain the necessary information",
+    "data_minimisation": "N",
+    "case_law_necessity": "N",
+    "case_law_necessity_parsed": [],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "right to an effective remedy (Art. 47 Charter) | right to intellectual property including IP enforcement (Art. 17(2) Charter) | right to information under Art. 8(1) Directive 2004/48",
+    "controller_side_interests_parsed": [
+      "right to an effective remedy (Art. 47 Charter)",
+      "right to intellectual property including IP enforcement (Art. 17(2) Charter)",
+      "right to information under Art. 8(1) Directive 2004/48"
+    ],
+    "ds_side_interests": "right to protection of personal data (Art. 8 Charter, Directive 95/46) | banking secrecy",
+    "ds_side_interests_parsed": [
+      "right to protection of personal data (Art. 8 Charter, Directive 95/46)",
+      "banking secrecy"
+    ],
+    "prevailing_side": "DC",
+    "factual_assumptions_balancing": "The Court assumed that the national provision at issue allows an unlimited and unconditional refusal to disclose information based on banking secrecy, since its wording contains no condition or qualification | The Court noted this was ultimately for the referring court to determine",
+    "case_law_balancing": "C-275/06 Promusicae > \"when implementing the measures transposing those directives, the authorities and courts of the Member States must not only interpret their national law in a manner consistent with those directives but also make sure that they do not rely on an interpretation of them which would be in conflict with those fundamental rights or with the other general principles of EU law\" > National authorities must ensure their interpretation does not conflict with fundamental rights | C-70/10 Scarlet Extended > \"a measure which results in serious infringement of a right protected by the Charter is to be regarded as not respecting the requirement that such a fair balance be struck between the fundamental rights which must be reconciled\" > Serious infringement of a Charter right fails the fair balance test | C-360/10 Sabam > cited alongside Scarlet Extended for the same proposition on serious infringement and fair balance",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-275/06",
+        "quote": "\"when implementing the measures transposing those directives, the authorities and courts of the Member States must not only interpret their national law in a manner consistent with those directives but also make sure that they do not rely on an interpretation of them which would be in conflict with those fundamental rights or with the other general principles of EU law\"",
+        "conclusion": "National authorities must ensure their interpretation does not conflict with fundamental rights"
+      },
+      {
+        "case": "C-70/10",
+        "quote": "\"a measure which results in serious infringement of a right protected by the Charter is to be regarded as not respecting the requirement that such a fair balance be struck between the fundamental rights which must be reconciled\"",
+        "conclusion": "Serious infringement of a Charter right fails the fair balance test"
+      },
+      {
+        "case": "C-360/10",
+        "quote": "cited alongside Scarlet Extended for the same proposition on serious infringement and fair balance",
+        "conclusion": ""
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 8 (protection of personal data) | Art. 17(2) (intellectual property) | Art. 47 (right to an effective remedy) | Art. 52(1) (limitations on Charter rights must respect their essence)",
+    "charter_articles_parsed": [
+      "Art. 8 (protection of personal data)",
+      "Art. 17(2) (intellectual property)",
+      "Art. 47 (right to an effective remedy)",
+      "Art. 52(1) (limitations on Charter rights must respect their essence)"
+    ],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "N",
+    "key_holdings_summary": "The Court held that Article 8(3)(e) of Directive 2004/48 precludes a national provision that allows, in an unlimited and unconditional manner, a banking institution to invoke banking secrecy to refuse to provide information concerning the name and address of an account holder suspected of IP infringement. Such a blanket refusal seriously impairs the fundamental right to an effective remedy and the right to intellectual property, failing to ensure the fair balance between competing fundamental rights that EU law requires."
+  },
+  {
+    "_source_file": "C-58214 Breyer_coded.md",
+    "case_number": "C-582/14",
+    "case_date": "2016-10-19",
+    "factual_summary": "Mr Breyer accessed publicly available websites operated by German Federal institutions. Those institutions stored dynamic IP addresses and access dates in logfiles with the aim of preventing cyber attacks and prosecuting attackers. Mr Breyer sought an injunction to prevent the Federal Republic of Germany from storing his IP address after each consultation period.",
+    "li_discussed": "N",
+    "controller_interests": "N",
+    "controller_interests_parsed": [],
+    "interest_findings": "N",
+    "interest_findings_parsed": [],
+    "factual_assumptions_interest": "N",
+    "case_law_interest": "N",
+    "case_law_interest_parsed": [],
+    "necessity_discussed": "N",
+    "necessity_found": "NA",
+    "strict_necessity": "N",
+    "less_effective_means": "N",
+    "factual_assumptions_necessity": "N",
+    "data_minimisation": "N",
+    "case_law_necessity": "N",
+    "case_law_necessity_parsed": [],
+    "balancing_discussed": "N",
+    "controller_side_interests": "N",
+    "controller_side_interests_parsed": [],
+    "ds_side_interests": "N",
+    "ds_side_interests_parsed": [],
+    "prevailing_side": "NA",
+    "factual_assumptions_balancing": "N",
+    "case_law_balancing": "N",
+    "case_law_balancing_parsed": [],
+    "charter_invoked": "N",
+    "charter_articles": "NA",
+    "charter_articles_parsed": [],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "unclear",
+    "key_holdings_summary": "The file provided contains only the factual background and the referring court's questions (paragraphs 13-28) but the Ruling section is empty. The Court's actual holdings on legitimate interest under Article 7(f) of Directive 95/46 (predecessor to Article 6(1)(f) GDPR) are not included in the document, making it impossible to code the Court's reasoning on this topic."
+  },
+  {
+    "_source_file": "C-1316 (Valsts policijas Rīgas - Rīgas satiksme)_coded.md",
+    "case_number": "C-13/16",
+    "case_date": "2017-05-04",
+    "factual_summary": "A trolleybus operated by Rīgas satiksme was damaged when a taxi passenger opened the car door, scraping the trolleybus. Rīgas satiksme sought the passenger's personal data (identity document number and address) from the national police in order to bring a civil action for damages, but the police refused to disclose the full information.",
+    "li_discussed": "Y",
+    "controller_interests": "The interest of a third party in obtaining personal data of a person who damaged their property in order to sue that person for damages",
+    "controller_interests_parsed": [
+      "The interest of a third party in obtaining personal data of a person who damaged their property in order to sue that person for damages"
+    ],
+    "interest_findings": "The interest of a third party in obtaining personal data to sue for damages > qualifies as a legitimate interest",
+    "interest_findings_parsed": [
+      {
+        "interest": "The interest of a third party in obtaining personal data to sue for damages",
+        "finding": "qualifies as a legitimate interest"
+      }
+    ],
+    "factual_assumptions_interest": "N",
+    "case_law_interest": "Case C-275/06 Promusicae > \"the interest of a third party in obtaining the personal information of a person who damaged their property in order to sue that person for damages can be qualified as a legitimate interest\" > Pursuing compensation for property damage through civil proceedings is a legitimate interest",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-275/06",
+        "quote": "\"the interest of a third party in obtaining the personal information of a person who damaged their property in order to sue that person for damages can be qualified as a legitimate interest\"",
+        "conclusion": "Pursuing compensation for property damage through civil proceedings is a legitimate interest"
+      }
+    ],
+    "necessity_discussed": "Y > \"it should be borne in mind that derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\"",
+    "necessity_found": "Y",
+    "strict_necessity": "Y",
+    "less_effective_means": "N",
+    "factual_assumptions_necessity": "Communication of merely the first name and surname of the person who caused the damage does not make it possible to identify that person with sufficient precision in order to be able to bring an action against him; accordingly it is necessary to obtain also the address and/or the identification number of that person",
+    "data_minimisation": "N",
+    "case_law_necessity": "Case C-92/09 and C-93/09 Volker und Markus Schecke and Eifert > \"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\" > The strict necessity standard applies to processing of personal data | Case C-473/12 IPI > \"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\" > Same strict necessity standard confirmed | Case C-212/13 Ryneš > \"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\" > Same strict necessity standard confirmed",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-92/09 and C-93/09",
+        "quote": "\"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\"",
+        "conclusion": "The strict necessity standard applies to processing of personal data"
+      },
+      {
+        "case": "C-473/12",
+        "quote": "\"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\"",
+        "conclusion": "Same strict necessity standard confirmed"
+      },
+      {
+        "case": "C-212/13",
+        "quote": "\"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\"",
+        "conclusion": "Same strict necessity standard confirmed"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "The interest of the injured third party (Rīgas satiksme) in obtaining personal data necessary for bringing an action for damages",
+    "controller_side_interests_parsed": [
+      "The interest of the injured third party (Rīgas satiksme) in obtaining personal data necessary for bringing an action for damages"
+    ],
+    "ds_side_interests": "The fundamental rights and freedoms of the data subject (taxi passenger) | The data subject's age (minority) as a factor in the balancing",
+    "ds_side_interests_parsed": [
+      "The fundamental rights and freedoms of the data subject (taxi passenger)",
+      "The data subject's age (minority) as a factor in the balancing"
+    ],
+    "prevailing_side": "mixed",
+    "factual_assumptions_balancing": "The age of the data subject (being a minor) does not appear to justify refusing to disclose personal data necessary for bringing an action for damages | The seriousness of the infringement of fundamental rights can vary depending on the possibility of accessing the data in public sources",
+    "case_law_balancing": "Case C-468/10 and C-469/10 Asociación Nacional de Establecimientos Financieros de Crédito (ASNEF v FECEMD) > \"it depends in principle on the specific circumstances of the particular case\" > The balancing of opposing rights and interests depends on the specific circumstances | Case C-582/14 Breyer > \"it depends in principle on the specific circumstances of the particular case\" > Same principle confirmed | Case C-468/10 and C-469/10 Asociación Nacional de Establecimientos Financieros de Crédito (ASNEF v FECEMD) > \"it is possible to take into consideration the fact that the seriousness of the infringement of the data subject's fundamental rights resulting from that processing can vary depending on the possibility of accessing the data at issue in public sources\" > Public availability of data is a relevant factor in balancing",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-468/10",
+        "quote": "\"it depends in principle on the specific circumstances of the particular case\"",
+        "conclusion": "The balancing of opposing rights and interests depends on the specific circumstances"
+      },
+      {
+        "case": "C-582/14",
+        "quote": "\"it depends in principle on the specific circumstances of the particular case\"",
+        "conclusion": "Same principle confirmed"
+      },
+      {
+        "case": "C-468/10",
+        "quote": "\"it is possible to take into consideration the fact that the seriousness of the infringement of the data subject's fundamental rights resulting from that processing can vary depending on the possibility of accessing the data at issue in public sources\"",
+        "conclusion": "Public availability of data is a relevant factor in balancing"
+      }
+    ],
+    "charter_invoked": "N",
+    "charter_articles": "NA",
+    "charter_articles_parsed": [],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "unclear",
+    "key_holdings_summary": "The Court held that Article 7(f) of Directive 95/46 does not impose an obligation to disclose personal data to a third party to enable civil proceedings, but it does not preclude such disclosure on the basis of national law. The Court confirmed that suing for property damage is a legitimate interest and that obtaining the address or identification number is necessary when a name alone is insufficient for identification, while the balancing of interests depends on the specific circumstances of the case."
+  },
+  {
+    "_source_file": "C-70818 Asociatia_coded.md",
+    "case_number": "C-708/18",
+    "case_date": "2019-12-11",
+    "factual_summary": "An association of co-owners of a residential building installed a video surveillance system (three cameras) in the common parts of the building to protect against vandalism, burglaries, and thefts. A co-owner (TK) objected to the system, claiming it infringed his right to respect for private life, and sought an order requiring the cameras to be removed.",
+    "li_discussed": "Y",
+    "controller_interests": "protecting the property, health and life of the co-owners of a building | ensuring the safety and protection of individuals and property | preventing crime",
+    "controller_interests_parsed": [
+      "protecting the property, health and life of the co-owners of a building",
+      "ensuring the safety and protection of individuals and property",
+      "preventing crime"
+    ],
+    "interest_findings": "protecting the property, health and life of the co-owners of a building > the Court found this is \"likely to be characterised as a 'legitimate interest'\" and the first condition \"appears, therefore, in principle, to be fulfilled\" | the interest must be \"present and effective\" at the date of processing and not hypothetical, but it cannot be required that safety was previously compromised",
+    "interest_findings_parsed": [
+      {
+        "interest": "protecting the property, health and life of the co-owners of a building",
+        "finding": "the Court found this is \"likely to be characterised as a 'legitimate interest'\" and the first condition \"appears, therefore, in principle, to be fulfilled\""
+      },
+      {
+        "interest": "the interest must be \"present and effective\" at the date of processing and not hypothetical, but it cannot be required that safety was previously compromised",
+        "finding": ""
+      }
+    ],
+    "factual_assumptions_interest": "The interests must be present and effective as at the date of the data processing and must not be hypothetical at that date, but it cannot be necessarily required that the safety of property and individuals was previously compromised | In this case the condition relating to the existence of a present and effective interest seemed fulfilled since thefts, burglaries and acts of vandalism had occurred before the video surveillance system was installed despite the previous installation of a security system",
+    "case_law_interest": "C-212/13 Rynes > \"The objective which the controller essentially seeks to achieve when he or she installs a video surveillance system such as that at issue in the main proceedings, namely protecting the property, health and life of the co-owners of a building, is likely to be characterised as a 'legitimate interest', within the meaning of Article 7 of Directive 95/46. The first condition laid down in that provision appears, therefore, in principle, to be fulfilled (see, by analogy, judgment of 11 December 2014, Ryneš, paragraph 34).\" > Protecting property, health and life of co-owners is likely a legitimate interest",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-212/13",
+        "quote": "\"The objective which the controller essentially seeks to achieve when he or she installs a video surveillance system such as that at issue in the main proceedings, namely protecting the property, health and life of the co-owners of a building, is likely to be characterised as a 'legitimate interest', within the meaning of Article 7 of Directive 95/46. The first condition laid down in that provision appears, therefore, in principle, to be fulfilled (see, by analogy, judgment of 11 December 2014, Ryneš, paragraph 34).\"",
+        "conclusion": "Protecting property, health and life of co-owners is likely a legitimate interest"
+      }
+    ],
+    "necessity_discussed": "Y > \"the need to process personal data for the purposes of the legitimate interests pursued\"",
+    "necessity_found": "N",
+    "strict_necessity": "Y",
+    "less_effective_means": "Y",
+    "factual_assumptions_necessity": "Alternative measures consisting in a security system comprising an intercom/magnetic card entry were initially put in place but proved insufficient | The video surveillance device was limited only to the common parts of the building and the approach to it",
+    "data_minimisation": "The Court invoked data minimisation to assess whether the processing was proportionate, requiring that it be examined in conjunction with necessity > \"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 6 of Directive 95/46, in accordance with which personal data must be 'adequate, relevant and not excessive in relation to the purposes for which they are collected and/or further processed'\"",
+    "case_law_necessity": "C-13/16 Rigas satiksme > \"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary (judgment of 4 May 2017, Rīgas satiksme, paragraph 30 and the case-law cited)\" > Processing must be strictly necessary and cannot reasonably be achieved as effectively by other less restrictive means",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-13/16",
+        "quote": "\"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary (judgment of 4 May 2017, Rīgas satiksme, paragraph 30 and the case-law cited)\"",
+        "conclusion": "Processing must be strictly necessary and cannot reasonably be achieved as effectively by other less restrictive means"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "protecting the property, health and life of co-owners of the building | ensuring the safety and protection of individuals and property | preventing crime",
+    "controller_side_interests_parsed": [
+      "protecting the property, health and life of co-owners of the building",
+      "ensuring the safety and protection of individuals and property",
+      "preventing crime"
+    ],
+    "ds_side_interests": "right to respect for private life (Article 7 of the Charter) | right to the protection of personal data (Article 8 of the Charter)",
+    "ds_side_interests_parsed": [
+      "right to respect for private life (Article 7 of the Charter)",
+      "right to the protection of personal data (Article 8 of the Charter)"
+    ],
+    "prevailing_side": "mixed",
+    "factual_assumptions_balancing": "The seriousness of the infringement varies depending on whether data comes from public or non-public sources; video surveillance of common parts of a building implies processing of data from non-public sources, constituting a more serious infringement | The nature of the personal data, the potentially sensitive nature of the data, the number of persons having access, and the methods of accessing them must be considered | The data subject's reasonable expectations that personal data will not be processed are relevant",
+    "case_law_balancing": "C-468/10 and C-469/10 ASNEF v FECEMD > \"the assessment of the condition laid down in that provision, relating to the existence of fundamental rights and freedoms of the data subject which override the legitimate interests pursued by the controller or by the third party or parties to whom the data are disclosed, necessitates a balancing of the opposing rights and interests concerned which depends on the individual circumstances of the particular case in question, and in the context of which account must be taken of the significance of the data subject's rights arising from Articles 7 and 8 of the Charter\" > Balancing must be done on a case-by-case basis taking into account the significance of the data subject's Charter rights | C-582/14 Breyer > \"Article 7 of Directive 95/46 precludes Member States from excluding, categorically and in general, the possibility of processing certain categories of personal data without allowing the opposing rights and interests at issue to be balanced against each other in a particular case.\" > Member States cannot definitively prescribe the result of balancing for certain categories of data without allowing a different result in individual cases | C-13/16 Rigas satiksme > \"it is possible to take into consideration, for the purposes of that balancing, the fact that the seriousness of the infringement of the data subject's fundamental rights resulting from that processing can vary depending on the possibility of accessing the data at issue in public sources\" > The seriousness of the infringement depends on whether data is from public or non-public sources",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-468/10",
+        "quote": "\"the assessment of the condition laid down in that provision, relating to the existence of fundamental rights and freedoms of the data subject which override the legitimate interests pursued by the controller or by the third party or parties to whom the data are disclosed, necessitates a balancing of the opposing rights and interests concerned which depends on the individual circumstances of the particular case in question, and in the context of which account must be taken of the significance of the data subject's rights arising from Articles 7 and 8 of the Charter\"",
+        "conclusion": "Balancing must be done on a case-by-case basis taking into account the significance of the data subject's Charter rights"
+      },
+      {
+        "case": "C-582/14",
+        "quote": "\"Article 7 of Directive 95/46 precludes Member States from excluding, categorically and in general, the possibility of processing certain categories of personal data without allowing the opposing rights and interests at issue to be balanced against each other in a particular case.\"",
+        "conclusion": "Member States cannot definitively prescribe the result of balancing for certain categories of data without allowing a different result in individual cases"
+      },
+      {
+        "case": "C-13/16",
+        "quote": "\"it is possible to take into consideration, for the purposes of that balancing, the fact that the seriousness of the infringement of the data subject's fundamental rights resulting from that processing can vary depending on the possibility of accessing the data at issue in public sources\"",
+        "conclusion": "The seriousness of the infringement depends on whether data is from public or non-public sources"
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 | Art. 8 | Art. 52",
+    "charter_articles_parsed": [
+      "Art. 7",
+      "Art. 8",
+      "Art. 52"
+    ],
+    "reasonable_expectations": "Y",
+    "expectations_detail": "The data subject's reasonable expectations that personal data will not be processed when the person cannot reasonably expect further processing of those data > relevant factor in the balancing exercise, but no definitive outcome stated as this was left to the referring court",
+    "expectations_detail_parsed": [
+      {
+        "expectation": "The data subject's reasonable expectations that personal data will not be processed when the person cannot reasonably expect further processing of those data",
+        "conclusion": "relevant factor in the balancing exercise, but no definitive outcome stated as this was left to the referring court"
+      }
+    ],
+    "li_valid_basis": "unclear",
+    "key_holdings_summary": "The Court held that EU law does not preclude national provisions authorising the installation of a video surveillance system in common parts of a residential building for purposes of ensuring safety and protection of individuals and property, without the data subject's consent, provided the three conditions of Article 7(f) of Directive 95/46 are met. The Court outlined the framework for assessing those conditions but left the final determination to the referring court, finding that the interest appeared legitimate in principle, that necessity must be assessed under a strict necessity standard alongside data minimisation, and that balancing must account for the seriousness of the infringement of Charter rights."
+  },
+  {
+    "_source_file": "C-59719 MICM_coded.md",
+    "case_number": "C-597/19",
+    "case_date": "2021-06-17",
+    "factual_summary": "Mircom, a company holding intellectual property rights assigned by film producers, sought to compel the internet service provider Telenet to disclose the identification data of customers whose IP addresses had been recorded by Media Protector while those customers allegedly shared copyrighted films on a peer-to-peer network using the BitTorrent protocol. Telenet and other ISPs opposed the request, questioning Mircom's standing and the lawfulness of the IP address collection under the GDPR.",
+    "li_discussed": "Y",
+    "controller_interests": "Obtaining personal information of persons who allegedly damaged property (intellectual property) in order to sue them for damages | Recovery of claims by an assignee of intellectual property rights",
+    "controller_interests_parsed": [
+      "Obtaining personal information of persons who allegedly damaged property (intellectual property) in order to sue them for damages",
+      "Recovery of claims by an assignee of intellectual property rights"
+    ],
+    "interest_findings": "Obtaining personal information of persons who allegedly damaged property in order to sue them for damages > qualifies as a legitimate interest, supported by Article 9(2)(e) and (f) of Regulation 2016/679 | Recovery of claims by an assignee > may constitute a legitimate interest justifying the processing of personal data under Article 6(1)(f) GDPR",
+    "interest_findings_parsed": [
+      {
+        "interest": "Obtaining personal information of persons who allegedly damaged property in order to sue them for damages",
+        "finding": "qualifies as a legitimate interest, supported by Article 9(2)(e) and (f) of Regulation 2016/679"
+      },
+      {
+        "interest": "Recovery of claims by an assignee",
+        "finding": "may constitute a legitimate interest justifying the processing of personal data under Article 6(1)(f) GDPR"
+      }
+    ],
+    "factual_assumptions_interest": "N",
+    "case_law_interest": "Case C-13/16 Rigas satiksme > \"the pursuit of a legitimate interest by the data controller or by a third party; second, the need to process personal data for the purposes of the legitimate interests pursued; and third, that the interests or freedoms and fundamental rights of the person concerned by the data protection do not take precedence\" > The Court relied on Rigas satiksme to set out the three cumulative conditions for lawful processing under Article 6(1)(f) and to confirm that obtaining personal data to sue for damages can be a legitimate interest | Case C-119/12 Probst > \"the recovery of claims in the prescribed manner by an assignee may constitute a legitimate interest justifying the processing of personal data in accordance with point (f) of the first subparagraph of Article 6(1) of Regulation 2016/679\" > Recovery of claims by an assignee may constitute a legitimate interest",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-13/16",
+        "quote": "\"the pursuit of a legitimate interest by the data controller or by a third party; second, the need to process personal data for the purposes of the legitimate interests pursued; and third, that the interests or freedoms and fundamental rights of the person concerned by the data protection do not take precedence\"",
+        "conclusion": "The Court relied on Rigas satiksme to set out the three cumulative conditions for lawful processing under Article 6(1)(f) and to confirm that obtaining personal data to sue for damages can be a legitimate interest"
+      },
+      {
+        "case": "C-119/12",
+        "quote": "\"the recovery of claims in the prescribed manner by an assignee may constitute a legitimate interest justifying the processing of personal data in accordance with point (f) of the first subparagraph of Article 6(1) of Regulation 2016/679\"",
+        "conclusion": "Recovery of claims by an assignee may constitute a legitimate interest"
+      }
+    ],
+    "necessity_discussed": "Y > \"As regards the condition relating to the necessity of processing personal data for the purposes of the legitimate interests pursued, it should be borne in mind that derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\"",
+    "necessity_found": "Y",
+    "strict_necessity": "Y",
+    "less_effective_means": "N",
+    "factual_assumptions_necessity": "Identification of the owner of the connection is often possible only on the basis of the IP address and the information provided by the Internet service provider",
+    "data_minimisation": "N",
+    "case_law_necessity": "Case C-13/16 Rigas satiksme > \"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\" > The strict necessity standard applies to the assessment of whether processing is necessary for the legitimate interest pursued",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-13/16",
+        "quote": "\"derogations and limitations in relation to the protection of personal data must apply only in so far as is strictly necessary\"",
+        "conclusion": "The strict necessity standard applies to the assessment of whether processing is necessary for the legitimate interest pursued"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "Right to intellectual property | Interest in obtaining personal data to bring civil claims for damages",
+    "controller_side_interests_parsed": [
+      "Right to intellectual property",
+      "Interest in obtaining personal data to bring civil claims for damages"
+    ],
+    "ds_side_interests": "Right to protection of personal data | Right to privacy | Protection of traffic data under Directive 2002/58",
+    "ds_side_interests_parsed": [
+      "Right to protection of personal data",
+      "Right to privacy",
+      "Protection of traffic data under Directive 2002/58"
+    ],
+    "prevailing_side": "mixed",
+    "factual_assumptions_balancing": "The Court assumed that data relating to the civil identity of users (names and addresses) do not normally make it possible to ascertain information on communications or private lives, so interference by a measure relating to those data cannot in principle be classified as serious | The Court assumed that Mircom's request for information presupposes that Telenet performs a match between dynamic IP addresses, which constitutes processing of traffic data",
+    "case_law_balancing": "Case C-275/06 Promusicae > \"the mechanisms allowing the different rights and interests to be balanced are contained in Regulation 2016/679 itself\" > The balancing mechanisms are already contained within the GDPR framework | Case C-13/16 Rigas satiksme > \"it depends in principle on the specific circumstances of the particular case\" > The balancing of opposing rights and interests depends on the specific circumstances of each case | Case C-264/19 Constantin Film Verleih > \"a request, in accordance with Article 8 of Directive 2004/48, limited to the disclosure of the names and addresses of users involved in infringing activities is consistent with the objective of striking a fair balance between the rights of intellectual property rightholders and the right of users to protection of personal data\" > Disclosure limited to names and addresses is consistent with fair balance | Case C-746/18 Prokuratuur > \"the interference entailed by a measure relating to those data cannot, in principle, be classified as serious\" > Disclosure of civil identity data does not in principle constitute serious interference",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-275/06",
+        "quote": "\"the mechanisms allowing the different rights and interests to be balanced are contained in Regulation 2016/679 itself\"",
+        "conclusion": "The balancing mechanisms are already contained within the GDPR framework"
+      },
+      {
+        "case": "C-13/16",
+        "quote": "\"it depends in principle on the specific circumstances of the particular case\"",
+        "conclusion": "The balancing of opposing rights and interests depends on the specific circumstances of each case"
+      },
+      {
+        "case": "C-264/19",
+        "quote": "\"a request, in accordance with Article 8 of Directive 2004/48, limited to the disclosure of the names and addresses of users involved in infringing activities is consistent with the objective of striking a fair balance between the rights of intellectual property rightholders and the right of users to protection of personal data\"",
+        "conclusion": "Disclosure limited to names and addresses is consistent with fair balance"
+      },
+      {
+        "case": "C-746/18",
+        "quote": "\"the interference entailed by a measure relating to those data cannot, in principle, be classified as serious\"",
+        "conclusion": "Disclosure of civil identity data does not in principle constitute serious interference"
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 8",
+    "charter_articles_parsed": [
+      "Art. 8"
+    ],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "unclear",
+    "key_holdings_summary": "The Court held that Article 6(1)(f) GDPR, read in conjunction with Article 15(1) of Directive 2002/58, does not in principle preclude either the systematic recording of IP addresses of peer-to-peer network users or the communication of their names and postal addresses to the rightholder for civil claims, provided that such initiatives are justified, proportionate, not abusive, and have their legal basis in a national legislative measure under Article 15(1) of Directive 2002/58. The Court left it to the referring court to verify whether such national legislative measures exist and to carry out the actual balancing of interests in the specific circumstances."
+  },
+  {
+    "_source_file": "C-43919 Latvijas_coded.md",
+    "case_number": "C-439/19",
+    "case_date": "2021-06-22",
+    "factual_summary": "A Latvian driver (B) challenged national legislation that made penalty points imposed for road traffic offences, recorded in the national vehicle register, publicly accessible to any person requesting them without needing to demonstrate a specific interest. The Road Safety Directorate (CSDD) disclosed this data to anyone providing the driver's national identification number, and commercial re-users also obtained and disseminated the data.",
+    "li_discussed": "Y",
+    "controller_interests": "Improvement of road safety through public disclosure of penalty points | Public identification of drivers who systematically and in bad faith disregard road traffic rules | Deterrence of road traffic offences through transparency | Right of access to official documents and freedom of information",
+    "controller_interests_parsed": [
+      "Improvement of road safety through public disclosure of penalty points",
+      "Public identification of drivers who systematically and in bad faith disregard road traffic rules",
+      "Deterrence of road traffic offences through transparency",
+      "Right of access to official documents and freedom of information"
+    ],
+    "interest_findings": "Improvement of road safety > recognised as an objective of general interest by the EU | Public identification of systematic offenders > not established that this must be carried out by or shared with the general public | Deterrence through transparency > not established that the downward trend in accidents is connected with the disclosure regime | Right of access to official documents > prevailed over by the fundamental rights to respect for private life and protection of personal data given the sensitivity of the data",
+    "interest_findings_parsed": [
+      {
+        "interest": "Improvement of road safety",
+        "finding": "recognised as an objective of general interest by the EU"
+      },
+      {
+        "interest": "Public identification of systematic offenders",
+        "finding": "not established that this must be carried out by or shared with the general public"
+      },
+      {
+        "interest": "Deterrence through transparency",
+        "finding": "not established that the downward trend in accidents is connected with the disclosure regime"
+      },
+      {
+        "interest": "Right of access to official documents",
+        "finding": "prevailed over by the fundamental rights to respect for private life and protection of personal data given the sensitivity of the data"
+      }
+    ],
+    "factual_assumptions_interest": "Member States have a large number of methods to improve road safety, including deterrent punishment and preventive measures, without public disclosure being necessary | Each Member State has adopted various approaches, and many do not require public disclosure of penalty point data",
+    "case_law_interest": "C-260/13 Aykul > \"The improvement of road safety is an objective of general interest recognised by the European Union\" > Road safety is a legitimate objective of general interest justifying classification as a task carried out in the public interest under Article 6(1)(e) GDPR",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-260/13",
+        "quote": "\"The improvement of road safety is an objective of general interest recognised by the European Union\"",
+        "conclusion": "Road safety is a legitimate objective of general interest justifying classification as a task carried out in the public interest under Article 6(1)(e) GDPR"
+      }
+    ],
+    "necessity_discussed": "Y > \"in order to satisfy the conditions imposed by that provision, it is necessary that the disclosure of personal data relating to penalty points entered in the register kept by the CSDD genuinely meets the objective of general interest of improving road safety, without going beyond what is necessary in order to achieve that objective.\"",
+    "necessity_found": "N",
+    "strict_necessity": "Y",
+    "less_effective_means": "Y",
+    "factual_assumptions_necessity": "It is not apparent from the documents before the Court that alternative less restrictive measures had been examined and preferred by the Latvian legislature instead of the disclosure rules at issue | Whilst a downward trend in road traffic accidents was observed in Latvia, there is no basis for concluding that trend is connected with disclosure of penalty point information rather than with the establishment of the penalty points system in itself | The CSDD discloses data on all drivers with penalty points, not only systematic offenders but also occasional offenders",
+    "data_minimisation": "The Court invoked data minimisation as part of the proportionality assessment, noting that even though it does not impose a general and absolute prohibition on disclosure, it requires processing to be limited to what is necessary > \"the principle of 'data minimisation' in Article 5(1)(c), according to which personal data are to be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed, and which gives expression to the principle of proportionality\"",
+    "case_law_necessity": "C-708/18 Asociatia de Proprietari bloc M5A-ScaraA > \"that requirement of necessity is not met where the objective of general interest pursued can reasonably be achieved just as effectively by other means less restrictive of the fundamental rights of data subjects, in particular the rights to respect for private life and to the protection of personal data guaranteed in Articles 7 and 8 of the Charter, since derogations and limitations in relation to the principle of protection of such data must apply only in so far as is strictly necessary\" > The necessity of the public disclosure system of penalty points could not be regarded as established | C-92/09 and C-93/09 Volker und Markus Schecke and Eifert > cited by analogy at paragraph 113 > The necessity of the disclosure system could not be regarded as established given that less restrictive means were available | C-136/17 GC and Others (De-referencing of sensitive data) > cited to support the principle that disclosure of data covered by Article 10 GDPR is not absolutely prohibited provided appropriate safeguards exist > Even Article 10 data may be disclosed where legislation provides appropriate safeguards",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-708/18",
+        "quote": "\"that requirement of necessity is not met where the objective of general interest pursued can reasonably be achieved just as effectively by other means less restrictive of the fundamental rights of data subjects, in particular the rights to respect for private life and to the protection of personal data guaranteed in Articles 7 and 8 of the Charter, since derogations and limitations in relation to the principle of protection of such data must apply only in so far as is strictly necessary\"",
+        "conclusion": "The necessity of the public disclosure system of penalty points could not be regarded as established"
+      },
+      {
+        "case": "C-92/09 and C-93/09",
+        "quote": "cited by analogy at paragraph 113",
+        "conclusion": "The necessity of the disclosure system could not be regarded as established given that less restrictive means were available"
+      },
+      {
+        "case": "C-136/17",
+        "quote": "cited to support the principle that disclosure of data covered by Article 10 GDPR is not absolutely prohibited provided appropriate safeguards exist",
+        "conclusion": "Even Article 10 data may be disclosed where legislation provides appropriate safeguards"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "Improvement of road safety | Public identification of systematic traffic offenders | Deterrence of road traffic offences through transparency | Public access to official documents (Article 86 GDPR) | Freedom of information (Article 85 GDPR)",
+    "controller_side_interests_parsed": [
+      "Improvement of road safety",
+      "Public identification of systematic traffic offenders",
+      "Deterrence of road traffic offences through transparency",
+      "Public access to official documents (Article 86 GDPR)",
+      "Freedom of information (Article 85 GDPR)"
+    ],
+    "ds_side_interests": "Right to respect for private life | Right to protection of personal data | Risk of social disapproval and stigmatisation from public disclosure of offence-related data",
+    "ds_side_interests_parsed": [
+      "Right to respect for private life",
+      "Right to protection of personal data",
+      "Risk of social disapproval and stigmatisation from public disclosure of offence-related data"
+    ],
+    "prevailing_side": "DS",
+    "factual_assumptions_balancing": "The public disclosure of personal data relating to road traffic offences is liable to constitute a serious interference with fundamental rights as it may give rise to social disapproval and result in stigmatisation of the data subject | The disclosure regime permits any person who knows the national identification number of a driver to obtain penalty point data without any further condition, which may lead to disclosure for reasons unrelated to road safety | The data at issue are sensitive within the meaning of Article 10 GDPR, which heightens the seriousness of the interference",
+    "case_law_balancing": "C-311/18 Facebook Ireland and Schrems > \"the fundamental rights to respect for private life and to the protection of personal data are not absolute rights, but must be considered in relation to their function in society and be weighed against other fundamental rights. Limitations may therefore be imposed, so long as, in accordance with Article 52(1) of the Charter, they are provided for by law, respect the essence of the fundamental rights and observe the principle of proportionality. Under the principle of proportionality, limitations may be made only if they are necessary and genuinely meet objectives of general interest recognised by the European Union or the need to protect the rights and freedoms of others. They must apply only in so far as is strictly necessary and the legislation which entails the interference must lay down clear and precise rules governing the scope and application of the measure in question\" > Limitations on data protection rights must satisfy strict proportionality requirements | C-92/09 and C-93/09 Volker und Markus Schecke and Eifert > cited by analogy at paragraph 113 > Where less restrictive means are available, the necessity of the public disclosure system cannot be regarded as established",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-311/18",
+        "quote": "\"the fundamental rights to respect for private life and to the protection of personal data are not absolute rights, but must be considered in relation to their function in society and be weighed against other fundamental rights. Limitations may therefore be imposed, so long as, in accordance with Article 52(1) of the Charter, they are provided for by law, respect the essence of the fundamental rights and observe the principle of proportionality. Under the principle of proportionality, limitations may be made only if they are necessary and genuinely meet objectives of general interest recognised by the European Union or the need to protect the rights and freedoms of others. They must apply only in so far as is strictly necessary and the legislation which entails the interference must lay down clear and precise rules governing the scope and application of the measure in question\"",
+        "conclusion": "Limitations on data protection rights must satisfy strict proportionality requirements"
+      },
+      {
+        "case": "C-92/09 and C-93/09",
+        "quote": "cited by analogy at paragraph 113",
+        "conclusion": "Where less restrictive means are available, the necessity of the public disclosure system cannot be regarded as established"
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 | Art. 8 | Art. 52(1)",
+    "charter_articles_parsed": [
+      "Art. 7",
+      "Art. 8",
+      "Art. 52(1)"
+    ],
+    "reasonable_expectations": "N",
+    "expectations_detail": "NA",
+    "expectations_detail_parsed": [],
+    "li_valid_basis": "N",
+    "key_holdings_summary": "The Court held that the GDPR, in particular Article 5(1), Article 6(1)(e), and Article 10, precludes national legislation obliging a public body to make penalty point data accessible to any person without requiring the requester to establish a specific interest. While road safety is a recognised objective of general interest, the necessity of unrestricted public disclosure was not established because less restrictive means exist and the regime goes beyond what is needed, with the fundamental rights to privacy and data protection prevailing over the public interest in access."
+  },
+  {
+    "_source_file": "C-25221_Meta_Platforms_coded.md",
+    "case_number": "C-252/21",
+    "case_date": "2022-09-20",
+    "factual_summary": "Meta Platforms Ireland (operator of Facebook) collected personal data of its users from other services within the Meta group (Instagram, WhatsApp, etc.) and from third-party websites and apps via Facebook Business Tools, linked those data with users' Facebook accounts, and used them for personalised advertising and other purposes. The German Federal Cartel Office found this data processing to be an abuse of Meta's dominant market position, in part because it violated GDPR requirements, including Article 6(1)(f).",
+    "li_discussed": "Y",
+    "controller_interests": "personalised advertising | network security | product improvement | sharing information with law-enforcement agencies | research and innovation for social good | the fact that the user is a minor | offering services for commercial communication and analytics tools for advertisers",
+    "controller_interests_parsed": [
+      "personalised advertising",
+      "network security",
+      "product improvement",
+      "sharing information with law-enforcement agencies",
+      "research and innovation for social good",
+      "the fact that the user is a minor",
+      "offering services for commercial communication and analytics tools for advertisers"
+    ],
+    "interest_findings": "personalised advertising > may be regarded as carried out for a legitimate interest according to recital 47 GDPR, but the interests and fundamental rights of the user override it in the circumstances of this case | network security > constitutes a legitimate interest of Meta Platforms Ireland, as stated in recital 49 GDPR | product improvement > cannot be ruled out from the outset as a legitimate interest capable of justifying processing | sharing information with law-enforcement agencies > not capable, in principle, of constituting a legitimate interest pursued by the controller, as a private operator cannot rely on an interest unrelated to its economic and commercial activity | research and innovation for social good > no ruling possible due to lack of explanation in the request for a preliminary ruling | the fact that the user is a minor > no ruling possible due to lack of explanation in the request for a preliminary ruling",
+    "interest_findings_parsed": [
+      {
+        "interest": "personalised advertising",
+        "finding": "may be regarded as carried out for a legitimate interest according to recital 47 GDPR, but the interests and fundamental rights of the user override it in the circumstances of this case"
+      },
+      {
+        "interest": "network security",
+        "finding": "constitutes a legitimate interest of Meta Platforms Ireland, as stated in recital 49 GDPR"
+      },
+      {
+        "interest": "product improvement",
+        "finding": "cannot be ruled out from the outset as a legitimate interest capable of justifying processing"
+      },
+      {
+        "interest": "sharing information with law-enforcement agencies",
+        "finding": "not capable, in principle, of constituting a legitimate interest pursued by the controller, as a private operator cannot rely on an interest unrelated to its economic and commercial activity"
+      },
+      {
+        "interest": "research and innovation for social good",
+        "finding": "no ruling possible due to lack of explanation in the request for a preliminary ruling"
+      },
+      {
+        "interest": "the fact that the user is a minor",
+        "finding": "no ruling possible due to lack of explanation in the request for a preliminary ruling"
+      }
+    ],
+    "factual_assumptions_interest": "The business model of Facebook is based on financing through online advertising tailored to individual users | Acceptance of the general terms is necessary to use the social network Facebook | The services of Facebook are free of charge for private users",
+    "case_law_interest": "C-597/19 M.I.C.M. > \"the pursuit of a legitimate interest by the data controller or by a third party; second, the need to process personal data for the purposes of the legitimate interests pursued; and third, that the interests or fundamental freedoms and rights of the person concerned by the data protection do not take precedence over the legitimate interest of the controller or of a third party\" > Three cumulative conditions for lawful processing under Article 6(1)(f) were recalled",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-597/19",
+        "quote": "\"the pursuit of a legitimate interest by the data controller or by a third party; second, the need to process personal data for the purposes of the legitimate interests pursued; and third, that the interests or fundamental freedoms and rights of the person concerned by the data protection do not take precedence over the legitimate interest of the controller or of a third party\"",
+        "conclusion": "Three cumulative conditions for lawful processing under Article 6(1)(f) were recalled"
+      }
+    ],
+    "necessity_discussed": "Y > \"that condition requires the referring court to ascertain that the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects, in particular the rights to respect for private life and to the protection of personal data guaranteed by Articles 7 and 8 of the Charter\"",
+    "necessity_found": "N",
+    "strict_necessity": "Y",
+    "less_effective_means": "Y",
+    "factual_assumptions_necessity": "The processing at issue is particularly extensive since it relates to potentially unlimited data and has a significant impact on the user, a large part -- if not almost all -- of whose online activities are monitored by Meta Platforms Ireland | As regards network security, the referring court will have to ascertain whether processing of data collected from sources outside Facebook is actually necessary to ensure internal security",
+    "data_minimisation": "The Court invoked data minimisation in conjunction with the necessity condition, requiring that personal data be adequate, relevant and limited to what is necessary > \"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be 'adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed'\"",
+    "case_law_necessity": "C-439/19 Latvijas Republikas Saeima (Penalty points) > \"the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects\" > The necessity condition requires that the interest cannot be achieved just as effectively by less restrictive means | C-708/18 Asociatia de Proprietari bloc M5A-ScaraA > \"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 5(1)(c) of the GDPR\" > The necessity condition must be examined in conjunction with the data minimisation principle",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-439/19",
+        "quote": "\"the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects\"",
+        "conclusion": "The necessity condition requires that the interest cannot be achieved just as effectively by less restrictive means"
+      },
+      {
+        "case": "C-708/18",
+        "quote": "\"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 5(1)(c) of the GDPR\"",
+        "conclusion": "The necessity condition must be examined in conjunction with the data minimisation principle"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "personalised advertising (financing the free service) | network security | product improvement",
+    "controller_side_interests_parsed": [
+      "personalised advertising (financing the free service)",
+      "network security",
+      "product improvement"
+    ],
+    "ds_side_interests": "interests and fundamental rights of users, in particular the rights to respect for private life and to the protection of personal data guaranteed by Articles 7 and 8 of the Charter | reasonable expectations of the data subject | specific protection of children",
+    "ds_side_interests_parsed": [
+      "interests and fundamental rights of users, in particular the rights to respect for private life and to the protection of personal data guaranteed by Articles 7 and 8 of the Charter",
+      "reasonable expectations of the data subject",
+      "specific protection of children"
+    ],
+    "prevailing_side": "DS",
+    "factual_assumptions_balancing": "The user of a free social network cannot reasonably expect that the operator will process personal data without consent for the purposes of personalised advertising | The processing is particularly extensive, relating to potentially unlimited data, with a large part or almost all of the user's online activities being monitored, giving rise to the feeling of continuous surveillance of private life | As regards product improvement, it appears doubtful that this objective, given the scale and impact of the processing, may override the interests of the user",
+    "case_law_balancing": "C-597/19 M.I.C.M. > \"that condition entails a balancing of the opposing rights and interests at issue which depends in principle on the specific circumstances of the particular case and that, consequently, it is for the referring court to carry out that balancing exercise, taking account of those specific circumstances\" > The balancing exercise depends on the specific circumstances of the particular case and is for the referring court to carry out",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-597/19",
+        "quote": "\"that condition entails a balancing of the opposing rights and interests at issue which depends in principle on the specific circumstances of the particular case and that, consequently, it is for the referring court to carry out that balancing exercise, taking account of those specific circumstances\"",
+        "conclusion": "The balancing exercise depends on the specific circumstances of the particular case and is for the referring court to carry out"
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 | Art. 8",
+    "charter_articles_parsed": [
+      "Art. 7",
+      "Art. 8"
+    ],
+    "reasonable_expectations": "Y",
+    "expectations_detail": "Users of a free social network cannot reasonably expect that the operator will process their personal data without consent for personalised advertising > The interests and fundamental rights of the user override the interest of the operator in personalised advertising, so that processing for such purposes cannot fall within the scope of Article 6(1)(f) GDPR | As regards product improvement, the user cannot reasonably expect those data to be processed by Meta Platforms Ireland > It appears doubtful that the product improvement objective may override the interests of the user",
+    "expectations_detail_parsed": [
+      {
+        "expectation": "Users of a free social network cannot reasonably expect that the operator will process their personal data without consent for personalised advertising",
+        "conclusion": "The interests and fundamental rights of the user override the interest of the operator in personalised advertising, so that processing for such purposes cannot fall within the scope of Article 6(1)(f) GDPR"
+      },
+      {
+        "expectation": "As regards product improvement, the user cannot reasonably expect those data to be processed by Meta Platforms Ireland",
+        "conclusion": "It appears doubtful that the product improvement objective may override the interests of the user"
+      }
+    ],
+    "li_valid_basis": "N",
+    "key_holdings_summary": "The Court held that processing under Article 6(1)(f) GDPR can only be regarded as lawful on condition that the operator has informed users of the legitimate interest pursued, that processing is carried out only in so far as is strictly necessary for that interest, and that a balancing of opposing interests shows that users' interests and fundamental rights do not override the controller's interest. In the case of personalised advertising, the Court found that users of a free social network cannot reasonably expect such processing without consent, and the interests of the data subject override those of the controller. For network security, the interest was found legitimate in principle but the necessity of processing off-Facebook data remained to be verified by the referring court."
+  },
+  {
+    "_source_file": "C-2622 and C-6422 SCHUFA Holding AG_coded.md",
+    "case_number": "C-26/22 and C-64/22",
+    "case_date": "2023-12-07",
+    "factual_summary": "SCHUFA, a private credit information agency in Germany, stored information from the public insolvency register about individuals (UF and AB) who had been granted discharge from remaining debts. While the public register deleted this information after six months, SCHUFA retained it for three years pursuant to an industry code of conduct, and refused the individuals' requests to delete the entries earlier.",
+    "li_discussed": "Y",
+    "controller_interests": "Economic interests of credit information agencies (such as SCHUFA) | Legitimate interest of SCHUFA's contractual partners (creditors) in assessing creditworthiness of individuals | Interests of the credit sector from a socio-economic point of view",
+    "controller_interests_parsed": [
+      "Economic interests of credit information agencies (such as SCHUFA)",
+      "Legitimate interest of SCHUFA's contractual partners (creditors) in assessing creditworthiness of individuals",
+      "Interests of the credit sector from a socio-economic point of view"
+    ],
+    "interest_findings": "Economic interests of credit information agencies > may qualify as legitimate in principle | Interest of contractual partners in assessing creditworthiness > recognized as legitimate, supported by EU directives requiring creditors to assess consumer creditworthiness | Interests of the credit sector from a socio-economic point of view > recognized as legitimate",
+    "interest_findings_parsed": [
+      {
+        "interest": "Economic interests of credit information agencies",
+        "finding": "may qualify as legitimate in principle"
+      },
+      {
+        "interest": "Interest of contractual partners in assessing creditworthiness",
+        "finding": "recognized as legitimate, supported by EU directives requiring creditors to assess consumer creditworthiness"
+      },
+      {
+        "interest": "Interests of the credit sector from a socio-economic point of view",
+        "finding": "recognized as legitimate"
+      }
+    ],
+    "factual_assumptions_interest": "Credit information agencies process data necessary for the assessment of creditworthiness to make it available to contractual partners | The activity of credit information agencies helps clarify business requirements and allows quick and non-bureaucratic examination of credit-related transactions | The analysis provided by a credit information agency makes it possible to assess objectively and reliably the creditworthiness of potential customers, compensating for information disparities and reducing risks of fraud",
+    "case_law_interest": "C-252/21 Meta Platforms and Others > \"processing must fall within one of the cases provided for in that provision\" > In the absence of a definition of 'legitimate interest' in the GDPR, a wide range of interests is in principle capable of being regarded as legitimate",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-252/21",
+        "quote": "\"processing must fall within one of the cases provided for in that provision\"",
+        "conclusion": "In the absence of a definition of 'legitimate interest' in the GDPR, a wide range of interests is in principle capable of being regarded as legitimate"
+      }
+    ],
+    "necessity_discussed": "Y > \"that condition requires the referring court to ascertain that the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects, in particular the rights to respect for private life and to the protection of personal data guaranteed by Articles 7 and 8 of the Charter\"",
+    "necessity_found": "N",
+    "strict_necessity": "Y",
+    "less_effective_means": "Y",
+    "factual_assumptions_necessity": "SCHUFA argued it would be impossible to provide information in a timely manner if a credit information agency had to wait for a specific request before it could start collecting data | The data at issue can be consulted in the public register without a commercial undertaking having requested information in a specific case",
+    "data_minimisation": "The Court invoked data minimisation in conjunction with the necessity condition to assess whether storage was limited to what is necessary > \"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be 'adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed'\"",
+    "case_law_necessity": "C-252/21 Meta Platforms and Others > \"the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects\" > The necessity condition requires that the interest cannot be achieved just as effectively by less restrictive means | C-13/16 Rigas satiksme > \"processing can be regarded as necessary for the purposes of the legitimate interests pursued by the controller or by a third party, within the meaning of that provision, only if such processing is carried out in so far as is strictly necessary for the purposes of that legitimate interest\" > Processing must be strictly necessary for the legitimate interest pursued",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-252/21",
+        "quote": "\"the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects\"",
+        "conclusion": "The necessity condition requires that the interest cannot be achieved just as effectively by less restrictive means"
+      },
+      {
+        "case": "C-13/16",
+        "quote": "\"processing can be regarded as necessary for the purposes of the legitimate interests pursued by the controller or by a third party, within the meaning of that provision, only if such processing is carried out in so far as is strictly necessary for the purposes of that legitimate interest\"",
+        "conclusion": "Processing must be strictly necessary for the legitimate interest pursued"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "Economic interests of credit information agencies | Interest of contractual partners in assessing creditworthiness | Interests of the credit sector in having access to information on discharge from remaining debts",
+    "controller_side_interests_parsed": [
+      "Economic interests of credit information agencies",
+      "Interest of contractual partners in assessing creditworthiness",
+      "Interests of the credit sector in having access to information on discharge from remaining debts"
+    ],
+    "ds_side_interests": "Fundamental rights under Articles 7 and 8 of the Charter (right to respect for private life and protection of personal data) | The interest of the data subject in re-entering economic life after discharge from remaining debts | The interest in not having sensitive information about private life (creditworthiness data used as a negative factor) disclosed and stored beyond the public register retention period",
+    "ds_side_interests_parsed": [
+      "Fundamental rights under Articles 7 and 8 of the Charter (right to respect for private life and protection of personal data)",
+      "The interest of the data subject in re-entering economic life after discharge from remaining debts",
+      "The interest in not having sensitive information about private life (creditworthiness data used as a negative factor) disclosed and stored beyond the public register retention period"
+    ],
+    "prevailing_side": "DS",
+    "factual_assumptions_balancing": "Data relating to discharge from remaining debts is used as a negative factor when assessing creditworthiness and therefore constitutes sensitive information about the data subject's private life | The longer the data is stored by credit information agencies, the greater the impact on the interests and private life of the data subject | The discharge from remaining debts is intended to allow the person to re-enter economic life and is therefore generally of existential importance | The presence of the same personal data in several sources reinforces the interference with the individual's right to privacy | The German legislature considered that after six months, the rights and interests of the data subject take precedence over those of the public",
+    "case_law_balancing": "C-131/12 Google Spain and Google > \"Such data is used as a negative factor when assessing the data subject's creditworthiness and therefore constitutes sensitive information about his or her private life\" > Processing of discharge-from-debt data constitutes a serious interference with fundamental rights | C-131/12 Google Spain and Google > \"the presence of the same personal data in several sources reinforces the interference with the individual's right to privacy\" > Parallel storage of data in multiple databases reinforces interference with right to privacy | C-252/21 Meta Platforms and Others > \"account must be taken, as has been noted in paragraph 80 of this judgment, in particular of the reasonable expectations of the data subject as well as the scale of the processing at issue and its impact on that person\" > Balancing must account for reasonable expectations, scale of processing, and impact on the data subject",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-131/12",
+        "quote": "\"Such data is used as a negative factor when assessing the data subject's creditworthiness and therefore constitutes sensitive information about his or her private life\"",
+        "conclusion": "Processing of discharge-from-debt data constitutes a serious interference with fundamental rights"
+      },
+      {
+        "case": "C-131/12",
+        "quote": "\"the presence of the same personal data in several sources reinforces the interference with the individual's right to privacy\"",
+        "conclusion": "Parallel storage of data in multiple databases reinforces interference with right to privacy"
+      },
+      {
+        "case": "C-252/21",
+        "quote": "\"account must be taken, as has been noted in paragraph 80 of this judgment, in particular of the reasonable expectations of the data subject as well as the scale of the processing at issue and its impact on that person\"",
+        "conclusion": "Balancing must account for reasonable expectations, scale of processing, and impact on the data subject"
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 | Art. 8",
+    "charter_articles_parsed": [
+      "Art. 7",
+      "Art. 8"
+    ],
+    "reasonable_expectations": "Y",
+    "expectations_detail": "Data subjects who have been granted discharge from remaining debts do not reasonably expect that data to continue being stored and processed by private credit information agencies beyond the six-month public register retention period > The Court held that the interests of the credit sector cannot justify processing beyond the period for which the data are kept in the public insolvency register, thereby supporting the data subjects' reasonable expectations",
+    "expectations_detail_parsed": [
+      {
+        "expectation": "Data subjects who have been granted discharge from remaining debts do not reasonably expect that data to continue being stored and processed by private credit information agencies beyond the six-month public register retention period",
+        "conclusion": "The Court held that the interests of the credit sector cannot justify processing beyond the period for which the data are kept in the public insolvency register, thereby supporting the data subjects' reasonable expectations"
+      }
+    ],
+    "li_valid_basis": "N",
+    "key_holdings_summary": "The Court held that the interests of the credit sector cannot justify the retention of personal data on discharge from remaining debts by a private credit information agency beyond the six-month period for which the data are kept in the public insolvency register. A code of conduct providing for a three-year retention period cannot override the conditions for lawfulness under Article 6(1)(f) GDPR. For the parallel storage period (while data are also in the public register), the Court left it to the referring court to determine whether such storage is strictly necessary."
+  },
+  {
+    "_source_file": "C-17-22 - HTB Neunte Immobilien Portfolio geschlossene Investment Co. KG_coded.md",
+    "case_number": "C-17/22",
+    "case_date": "2024-09-12",
+    "factual_summary": "Investment companies (HTB and Okorenta) holding indirect shares in investment funds organized as limited partnerships requested trust companies to disclose the names and addresses of all other indirect partners. The trust companies refused, arguing that the data was sought for the investment companies' economic benefit and that contractual clauses prohibited such disclosure.",
+    "li_discussed": "Y",
+    "controller_interests": "Interest of a partner with an indirect shareholding in an investment fund to obtain personal data of other indirect partners in order to enter into contract with them, negotiate the purchase of shares, or coordinate for the purpose of reaching a consensus in connection with partners' resolutions",
+    "controller_interests_parsed": [
+      "Interest of a partner with an indirect shareholding in an investment fund to obtain personal data of other indirect partners in order to enter into contract with them, negotiate the purchase of shares, or coordinate for the purpose of reaching a consensus in connection with partners' resolutions"
+    ],
+    "interest_findings": "Interest of a partner to obtain personal data of other indirect partners for contracting, share purchase negotiations, or coordination on partners' resolutions > may in principle constitute a legitimate interest, irrespective of the size of the shareholding and the powers held, but it is for the referring court to assess on a case-by-case basis",
+    "interest_findings_parsed": [
+      {
+        "interest": "Interest of a partner to obtain personal data of other indirect partners for contracting, share purchase negotiations, or coordination on partners' resolutions",
+        "finding": "may in principle constitute a legitimate interest, irrespective of the size of the shareholding and the powers held, but it is for the referring court to assess on a case-by-case basis"
+      }
+    ],
+    "factual_assumptions_interest": "The interest exists irrespective of the size of the shareholding and the powers held in the partnership by the partner which requested disclosure | The status of the partnership results from the national law of the Member State concerned",
+    "case_law_interest": "C-26/22 and C-64/22 SCHUFA Holding (Discharge from remaining debts) > \"in the absence of a definition of that concept in the GDPR, as the Court has held previously, a wide range of interests is, in principle, capable of being regarded as legitimate\" > A wide range of interests can in principle be regarded as legitimate",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-26/22 and C-64/22",
+        "quote": "\"in the absence of a definition of that concept in the GDPR, as the Court has held previously, a wide range of interests is, in principle, capable of being regarded as legitimate\"",
+        "conclusion": "A wide range of interests can in principle be regarded as legitimate"
+      }
+    ],
+    "necessity_discussed": "Y > \"with regard to the condition relating to the necessity of such processing to achieve that interest and, in particular, the existence of means less restrictive of the fundamental rights and freedoms of data subjects and equally appropriate, it must be stated that it is, in particular, possible for the partner of an investment fund wishing to obtain information concerning another partner with an indirect shareholding in that fund through a trust company to ask that fund or that company directly to transfer its request to the partner concerned\"",
+    "necessity_found": "N",
+    "strict_necessity": "N",
+    "less_effective_means": "Y",
+    "factual_assumptions_necessity": "It is possible for the requesting partner to ask the fund or trust company to transfer its request to the partner concerned, who could then freely decide whether to make contact or remain anonymous | Such a less restrictive solution could also apply where the requesting partner wishes to negotiate share purchases or coordinate on partners' resolutions",
+    "data_minimisation": "The Court invoked data minimisation to support a less intrusive alternative where the partner concerned retains control over the processing of its personal data > \"to retain control over the processing of its personal data and to thus limit their disclosure to another partner to what is in fact necessary and relevant in the light of the purposes in respect of which those data are requested and processed\"",
+    "case_law_necessity": "C-252/21 Meta Platforms and Others (General terms of use of a social network) > \"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be 'adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed'\" > Necessity must be examined in conjunction with data minimisation | C-26/22 and C-64/22 SCHUFA Holding (Discharge from remaining debts) > \"the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects, in particular the rights to respect for private life and to the protection of personal data guaranteed by Articles 7 and 8 of the Charter\" > Processing is necessary only if the interest cannot be achieved just as effectively by less restrictive means",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-252/21",
+        "quote": "\"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be 'adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed'\"",
+        "conclusion": "Necessity must be examined in conjunction with data minimisation"
+      },
+      {
+        "case": "C-26/22 and C-64/22",
+        "quote": "\"the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects, in particular the rights to respect for private life and to the protection of personal data guaranteed by Articles 7 and 8 of the Charter\"",
+        "conclusion": "Processing is necessary only if the interest cannot be achieved just as effectively by less restrictive means"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "Economic interests of partners seeking to obtain contact details of other indirect partners for contracting, share negotiations, or coordination on resolutions",
+    "controller_side_interests_parsed": [
+      "Economic interests of partners seeking to obtain contact details of other indirect partners for contracting, share negotiations, or coordination on resolutions"
+    ],
+    "ds_side_interests": "Interest of indirect partners in their personal data remaining confidential | Reasonable expectation that personal data would not be disclosed to third parties given contractual provisions prohibiting disclosure",
+    "ds_side_interests_parsed": [
+      "Interest of indirect partners in their personal data remaining confidential",
+      "Reasonable expectation that personal data would not be disclosed to third parties given contractual provisions prohibiting disclosure"
+    ],
+    "prevailing_side": "DS",
+    "factual_assumptions_balancing": "Disclosure of partners' personal data may serve the economic interests of each partner, including the indirect partners whose data is sought | It is likely that indirect partners could not reasonably expect that their personal data would be disclosed to other indirect partners, having regard to contractual provisions prohibiting disclosure",
+    "case_law_balancing": "C-252/21 Meta Platforms and Others (General terms of use of a social network) > \"that court must take account, in particular, of the reasonable expectations of the data subject as well as the scale of the processing at issue and its impact on that person\" > The referring court must consider reasonable expectations of the data subject and the scale and impact of the processing",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-252/21",
+        "quote": "\"that court must take account, in particular, of the reasonable expectations of the data subject as well as the scale of the processing at issue and its impact on that person\"",
+        "conclusion": "The referring court must consider reasonable expectations of the data subject and the scale and impact of the processing"
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 | Art. 8",
+    "charter_articles_parsed": [
+      "Art. 7",
+      "Art. 8"
+    ],
+    "reasonable_expectations": "Y",
+    "expectations_detail": "Indirect partners could not reasonably expect that their personal data would be disclosed to other indirect partners, given contractual provisions prohibiting such disclosure > The interest of indirect partners in data confidentiality may override the interest of other partners seeking contact details, and the Court expressed doubt that the processing could be justified under Art. 6(1)(f)",
+    "expectations_detail_parsed": [
+      {
+        "expectation": "Indirect partners could not reasonably expect that their personal data would be disclosed to other indirect partners, given contractual provisions prohibiting such disclosure",
+        "conclusion": "The interest of indirect partners in data confidentiality may override the interest of other partners seeking contact details, and the Court expressed doubt that the processing could be justified under Art. 6(1)(f)"
+      }
+    ],
+    "li_valid_basis": "N",
+    "key_holdings_summary": "The Court held that while a partner's interest in obtaining personal data of other indirect partners may in principle constitute a legitimate interest, the processing appeared unlikely to satisfy the necessity and balancing conditions. The Court identified a less restrictive alternative (having the fund or trust company forward requests to the partner concerned) and noted that indirect partners likely could not reasonably expect their data to be disclosed given contractual confidentiality clauses, expressing doubt that the disclosure could be justified under Article 6(1)(f) GDPR."
+  },
+  {
+    "_source_file": "C-62122 Koninklijke Nederlandse Lawn Tennisbond_coded.md",
+    "case_number": "C-621/22",
+    "case_date": "2024-10-04",
+    "factual_summary": "The KNLTB, a Dutch tennis federation, disclosed personal data (names, addresses, dates of birth, phone numbers, email addresses) of its members to two sponsors — a sports products company (TennisDirect) and a gambling provider (NLO) — for advertising and marketing purposes, in exchange for remuneration, without obtaining members' consent. The Dutch data protection authority (AP) imposed a fine of EUR 525,000 on the KNLTB for processing personal data without a lawful basis.",
+    "li_discussed": "Y",
+    "controller_interests": "commercial interest of the controller consisting in the disclosure, for consideration, of personal data of its members to third parties for advertising or marketing purposes",
+    "controller_interests_parsed": [
+      "commercial interest of the controller consisting in the disclosure, for consideration, of personal data of its members to third parties for advertising or marketing purposes"
+    ],
+    "interest_findings": "commercial interest of the controller consisting in disclosure of members' data for advertising/marketing purposes > could constitute a legitimate interest provided it is not contrary to the law; the Court has not ruled out that a commercial interest consisting in the promotion and sale of advertising space for marketing purposes may be regarded as a legitimate interest",
+    "interest_findings_parsed": [
+      {
+        "interest": "commercial interest of the controller consisting in disclosure of members' data for advertising/marketing purposes",
+        "finding": "could constitute a legitimate interest provided it is not contrary to the law; the Court has not ruled out that a commercial interest consisting in the promotion and sale of advertising space for marketing purposes may be regarded as a legitimate interest"
+      }
+    ],
+    "factual_assumptions_interest": "The EU legislature did not require that the interest pursued by a controller be provided for by law in order for the processing to be legitimate; recital 47 GDPR cites direct marketing purposes in general as legitimate interests that may be pursued by a controller",
+    "case_law_interest": "C-252/21 Meta Platforms and Others (General terms of use of a social network) > \"that provision lays down three cumulative conditions so that the processing of personal data is lawful, namely, first, the pursuit of a legitimate interest by the data controller or by a third party; second, the need to process personal data for the purposes of the legitimate interests pursued; and, third, that the interests or fundamental freedoms and rights of the person concerned by the data protection do not take precedence over the legitimate interest of the controller or of a third party\" > Reiterated the three cumulative conditions for Art. 6(1)(f) | C-26/22 and C-64/22 SCHUFA Holding (Discharge from remaining debts) > \"a wide range of interests is, in principle, capable of being regarded as legitimate\" > A wide range of interests may qualify as legitimate | C-131/12 Google Spain and Google > \"the Court has not ruled out the possibility that a commercial interest of the controller which consists in the promotion and sale of advertising space for marketing purposes may be regarded as a legitimate interest\" > A commercial interest for marketing purposes is not excluded from being a legitimate interest",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-252/21",
+        "quote": "\"that provision lays down three cumulative conditions so that the processing of personal data is lawful, namely, first, the pursuit of a legitimate interest by the data controller or by a third party; second, the need to process personal data for the purposes of the legitimate interests pursued; and, third, that the interests or fundamental freedoms and rights of the person concerned by the data protection do not take precedence over the legitimate interest of the controller or of a third party\"",
+        "conclusion": "Reiterated the three cumulative conditions for Art. 6(1)(f)"
+      },
+      {
+        "case": "C-26/22 and C-64/22",
+        "quote": "\"a wide range of interests is, in principle, capable of being regarded as legitimate\"",
+        "conclusion": "A wide range of interests may qualify as legitimate"
+      },
+      {
+        "case": "C-131/12",
+        "quote": "\"the Court has not ruled out the possibility that a commercial interest of the controller which consists in the promotion and sale of advertising space for marketing purposes may be regarded as a legitimate interest\"",
+        "conclusion": "A commercial interest for marketing purposes is not excluded from being a legitimate interest"
+      }
+    ],
+    "necessity_discussed": "Y > \"the condition that the processing of personal data be necessary for the purposes of the legitimate interests pursued, that condition requires the referring court to ascertain that the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects\"",
+    "necessity_found": "N",
+    "strict_necessity": "Y",
+    "less_effective_means": "Y",
+    "factual_assumptions_necessity": "It would be possible for a sports federation wishing to disclose its members' personal data to third parties for consideration to inform its members beforehand and to ask them whether they want their data to be transmitted to those third parties for advertising or marketing purposes — this would be a less restrictive and equally efficient alternative",
+    "data_minimisation": "The Court invoked data minimisation in conjunction with the necessity condition, noting that asking members beforehand would allow them to retain control over disclosure of their data and limit disclosure to what is necessary > \"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be 'adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed'\"",
+    "case_law_necessity": "C-26/22 and C-64/22 SCHUFA Holding (Discharge from remaining debts) > \"the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects\" > The necessity condition requires that the interest cannot be achieved just as effectively by less restrictive means | C-252/21 Meta Platforms and Others (General terms of use of a social network) > \"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be 'adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed'\" > Necessity must be examined in conjunction with data minimisation | C-17/22 and C-18/22 HTB Neunte Immobilien Portfolio and Ökorenta Neue Energien Ökostabil IV > \"A procedure such as that described in the preceding paragraph of the present judgment may involve the least intrusion in the right to protection of the confidentiality of the data subject's personal data, whilst allowing the controller to pursue, in an equally efficient manner, the legitimate interest on which it relies\" > Informing members and asking for their wishes could be a less intrusive and equally effective alternative",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-26/22 and C-64/22",
+        "quote": "\"the legitimate data processing interests pursued cannot reasonably be achieved just as effectively by other means less restrictive of the fundamental rights and freedoms of data subjects\"",
+        "conclusion": "The necessity condition requires that the interest cannot be achieved just as effectively by less restrictive means"
+      },
+      {
+        "case": "C-252/21",
+        "quote": "\"the condition relating to the need for processing must be examined in conjunction with the 'data minimisation' principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be 'adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed'\"",
+        "conclusion": "Necessity must be examined in conjunction with data minimisation"
+      },
+      {
+        "case": "C-17/22",
+        "quote": "\"A procedure such as that described in the preceding paragraph of the present judgment may involve the least intrusion in the right to protection of the confidentiality of the data subject's personal data, whilst allowing the controller to pursue, in an equally efficient manner, the legitimate interest on which it relies\"",
+        "conclusion": "Informing members and asking for their wishes could be a less intrusive and equally effective alternative"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "commercial interest of the controller (KNLTB) in disclosing members' data for consideration to sponsors for advertising and marketing purposes",
+    "controller_side_interests_parsed": [
+      "commercial interest of the controller (KNLTB) in disclosing members' data for consideration to sponsors for advertising and marketing purposes"
+    ],
+    "ds_side_interests": "right of members to privacy with respect to the processing of their personal data | risk of harmful effects on members from gambling addiction due to data disclosure to a games of chance provider",
+    "ds_side_interests_parsed": [
+      "right of members to privacy with respect to the processing of their personal data",
+      "risk of harmful effects on members from gambling addiction due to data disclosure to a games of chance provider"
+    ],
+    "prevailing_side": "mixed",
+    "factual_assumptions_balancing": "The data are transmitted to a provider of games of chance and casino games (NLO), the promotional and marketing activities of which do not appear to be characterised by a relevant and appropriate relationship between the data subjects and the controller | Processing of such data could have harmful effects on the members since those activities may expose them to the risks associated with gambling addiction",
+    "case_law_balancing": "C-252/21 Meta Platforms and Others (General terms of use of a social network) > \"that court must take account, in particular, of the reasonable expectations of the data subject as well as the scale of the processing at issue and its impact on that person\" > The balancing must account for reasonable expectations, scale of processing, and impact on the data subject",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-252/21",
+        "quote": "\"that court must take account, in particular, of the reasonable expectations of the data subject as well as the scale of the processing at issue and its impact on that person\"",
+        "conclusion": "The balancing must account for reasonable expectations, scale of processing, and impact on the data subject"
+      }
+    ],
+    "charter_invoked": "Y",
+    "charter_articles": "Art. 7 | Art. 8",
+    "charter_articles_parsed": [
+      "Art. 7",
+      "Art. 8"
+    ],
+    "reasonable_expectations": "Y",
+    "expectations_detail": "whether members could reasonably expect, at the time when their personal data were collected for becoming members of a tennis association, that those data would be disclosed, for consideration, to third parties — sponsors of the KNLTB — for advertising and marketing purposes > the Court indicated this was a question of particular importance for the balancing exercise and implied such expectations would likely not exist, especially regarding disclosure to a gambling provider with no relevant relationship to tennis",
+    "expectations_detail_parsed": [
+      {
+        "expectation": "whether members could reasonably expect, at the time when their personal data were collected for becoming members of a tennis association, that those data would be disclosed, for consideration, to third parties — sponsors of the KNLTB — for advertising and marketing purposes",
+        "conclusion": "the Court indicated this was a question of particular importance for the balancing exercise and implied such expectations would likely not exist, especially regarding disclosure to a gambling provider with no relevant relationship to tennis"
+      }
+    ],
+    "li_valid_basis": "unclear",
+    "key_holdings_summary": "The Court held that a commercial interest of a sports federation in disclosing members' personal data for consideration to sponsors for marketing purposes could constitute a legitimate interest under Article 6(1)(f) GDPR, provided it is lawful, but that processing is only permissible if strictly necessary (with no less restrictive equally effective alternative available) and if members' fundamental rights do not override that interest. The Court strongly suggested that informing members and seeking their wishes beforehand would be a less intrusive alternative, and that members likely would not reasonably expect their data to be sold to sponsors, particularly to a gambling provider with no relevant connection to tennis."
+  },
+  {
+    "_source_file": "C-394-23 - SNCF Connect_coded.md",
+    "case_number": "C-394/23",
+    "case_date": "2025-01-09",
+    "factual_summary": "SNCF Connect, a French rail ticket seller, required customers to select a title (\"Mr\" or \"Ms\") when purchasing travel documents online. The association Mousse complained to the French data protection authority (CNIL) that this mandatory collection of title/gender identity data lacked a lawful basis under the GDPR and violated data minimisation. The CNIL dismissed the complaint, and Mousse challenged that decision before the Conseil d'Etat, which referred questions to the CJEU.",
+    "li_discussed": "Y",
+    "controller_interests": "direct commercial marketing through personalised communication based on customers' gender identity",
+    "controller_interests_parsed": [
+      "direct commercial marketing through personalised communication based on customers' gender identity"
+    ],
+    "interest_findings": "direct commercial marketing through personalised communication > may in principle constitute a legitimate interest, as recital 47 GDPR states that processing for direct marketing purposes may be regarded as carried out for a legitimate interest; however, the controller must have informed data subjects of the legitimate interest pursued at the time of data collection, otherwise it cannot be justified under Article 6(1)(f)",
+    "interest_findings_parsed": [
+      {
+        "interest": "direct commercial marketing through personalised communication",
+        "finding": "may in principle constitute a legitimate interest, as recital 47 GDPR states that processing for direct marketing purposes may be regarded as carried out for a legitimate interest; however, the controller must have informed data subjects of the legitimate interest pursued at the time of data collection, otherwise it cannot be justified under Article 6(1)(f)"
+      }
+    ],
+    "factual_assumptions_interest": "SNCF Connect referred to a direct commercial marketing purpose which may require personalisation of communication and consequently the processing of title data | There is a relevant and appropriate relationship between data subject and controller where the data subject is a client of the controller",
+    "case_law_interest": "C-252/21 Meta Platforms and Others (General terms of use of a social network) > \"In particular, personalised advertising may be equated with direct commercial marketing in such a context\" > Processing for direct marketing purposes may be regarded as carried out for a legitimate interest | C-252/21 Meta Platforms and Others (General terms of use of a social network) > \"In the absence of a definition of the concept of 'legitimate interest' in the GDPR, a wide range of interests is, in principle, capable of being regarded as legitimate. In particular, that concept is not limited to interests enshrined in and determined by law\" > A wide range of interests can qualify as legitimate | C-621/22 Koninklijke Nederlandse Lawn Tennisbond > cited alongside C-252/21 for the same proposition that a wide range of interests is capable of being regarded as legitimate > concept of legitimate interest is not limited to interests enshrined in law",
+    "case_law_interest_parsed": [
+      {
+        "case": "C-252/21",
+        "quote": "\"In particular, personalised advertising may be equated with direct commercial marketing in such a context\"",
+        "conclusion": "Processing for direct marketing purposes may be regarded as carried out for a legitimate interest"
+      },
+      {
+        "case": "C-252/21",
+        "quote": "\"In the absence of a definition of the concept of 'legitimate interest' in the GDPR, a wide range of interests is, in principle, capable of being regarded as legitimate. In particular, that concept is not limited to interests enshrined in and determined by law\"",
+        "conclusion": "A wide range of interests can qualify as legitimate"
+      },
+      {
+        "case": "C-621/22",
+        "quote": "cited alongside C-252/21 for the same proposition that a wide range of interests is capable of being regarded as legitimate",
+        "conclusion": "concept of legitimate interest is not limited to interests enshrined in law"
+      }
+    ],
+    "necessity_discussed": "Y > \"it is for the referring court to ascertain whether the legitimate interest pursued by the processing of the data can reasonably be achieved just as effectively by other means less restrictive of the fundamental freedoms and rights of data subjects, since such processing must be carried out only in so far as is strictly necessary for the attainment of that legitimate interest.\"",
+    "necessity_found": "N",
+    "strict_necessity": "Y",
+    "less_effective_means": "Y",
+    "factual_assumptions_necessity": "Personalised commercial communication can be limited to the processing of customers' surnames and forenames, since their title and/or their gender identity are information which does not appear to be strictly necessary in that context | The controller can use generic, inclusive expressions when addressing customers who do not wish to indicate their title, with no correlation to their gender identity | Common practices and social conventions are not relevant for assessing necessity since Article 6(1)(f) does not provide for them to be taken into account and must be interpreted restrictively",
+    "data_minimisation": "The Court invoked data minimisation in conjunction with the necessity condition, noting that necessity must be examined together with the data minimisation principle > \"the condition relating to the need for processing must be examined in conjunction with the data minimisation principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed\"",
+    "case_law_necessity": "C-17/22 and C-18/22 HTB Neunte Immobilien Portfolio and Okorenta Neue Energien Okostabil IV > \"the condition relating to the need for processing must be examined in conjunction with the data minimisation principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed\" > Necessity must be examined in conjunction with data minimisation",
+    "case_law_necessity_parsed": [
+      {
+        "case": "C-17/22",
+        "quote": "\"the condition relating to the need for processing must be examined in conjunction with the data minimisation principle enshrined in Article 5(1)(c) of the GDPR, in accordance with which personal data must be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed\"",
+        "conclusion": "Necessity must be examined in conjunction with data minimisation"
+      }
+    ],
+    "balancing_discussed": "Y",
+    "controller_side_interests": "direct commercial marketing through personalised communication",
+    "controller_side_interests_parsed": [
+      "direct commercial marketing through personalised communication"
+    ],
+    "ds_side_interests": "fundamental freedoms and rights of data subjects | risk of discrimination on grounds of gender identity | right to respect for private life | freedom to define one's gender expression",
+    "ds_side_interests_parsed": [
+      "fundamental freedoms and rights of data subjects",
+      "risk of discrimination on grounds of gender identity",
+      "right to respect for private life",
+      "freedom to define one's gender expression"
+    ],
+    "prevailing_side": "DS",
+    "factual_assumptions_balancing": "A customer of a transport undertaking is not supposed to expect that undertaking to process data relating to his or her title or gender identity in the context of the purchase of a travel document | There is a risk that the fundamental freedoms and rights of the data subject will be infringed where processing may give rise to discrimination on grounds of gender identity",
+    "case_law_balancing": "C-252/21 Meta Platforms and Others (General terms of use of a social network) > \"account must be taken, in particular, of the reasonable expectations of the data subject as well as the scale of the processing concerned and its impact on that person\" > The balancing must consider reasonable expectations, scale of processing and impact on the data subject | C-17/22 and C-18/22 HTB Neunte Immobilien Portfolio and Okorenta Neue Energien Okostabil IV > \"the interests and fundamental rights of the data subject may in particular override the interest of the data controller where personal data are processed in circumstances where data subjects do not reasonably expect such processing\" > Data subject interests may override controller interests where processing is not reasonably expected | C-423/04 Richards > cited by analogy to establish that anti-discrimination scope extends to discrimination arising from a change in a person's gender identity > Directive 2004/113 applies to discrimination arising from gender identity",
+    "case_law_balancing_parsed": [
+      {
+        "case": "C-252/21",
+        "quote": "\"account must be taken, in particular, of the reasonable expectations of the data subject as well as the scale of the processing concerned and its impact on that person\"",
+        "conclusion": "The balancing must consider reasonable expectations, scale of processing and impact on the data subject"
+      },
+      {
+        "case": "C-17/22",
+        "quote": "\"the interests and fundamental rights of the data subject may in particular override the interest of the data controller where personal data are processed in circumstances where data subjects do not reasonably expect such processing\"",
+        "conclusion": "Data subject interests may override controller interests where processing is not reasonably expected"
+      },
+      {
+        "case": "C-423/04",
+        "quote": "cited by analogy to establish that anti-discrimination scope extends to discrimination arising from a change in a person's gender identity",
+        "conclusion": "Directive 2004/113 applies to discrimination arising from gender identity"
+      }
+    ],
+    "charter_invoked": "N",
+    "charter_articles": "NA",
+    "charter_articles_parsed": [],
+    "reasonable_expectations": "Y",
+    "expectations_detail": "A customer of a transport undertaking does not reasonably expect that undertaking to process data relating to his or her title or gender identity in the context of purchasing a travel document > This weighs against the controller's legitimate interest, particularly where processing is carried out solely for direct commercial marketing purposes",
+    "expectations_detail_parsed": [
+      {
+        "expectation": "A customer of a transport undertaking does not reasonably expect that undertaking to process data relating to his or her title or gender identity in the context of purchasing a travel document",
+        "conclusion": "This weighs against the controller's legitimate interest, particularly where processing is carried out solely for direct commercial marketing purposes"
+      }
+    ],
+    "li_valid_basis": "N",
+    "key_holdings_summary": "The Court held that processing of title data for personalising commercial communication based on gender identity cannot be regarded as necessary for the controller's legitimate interests where customers were not informed of the interest pursued, where the processing is not strictly necessary (as personalised communication can rely on names alone or generic expressions), or where data subjects' fundamental rights prevail due to a risk of discrimination on grounds of gender identity. The Court strongly suggested that the necessity and balancing conditions were not met in this case, effectively indicating that legitimate interest was not a valid basis for this processing."
+  }
+]
