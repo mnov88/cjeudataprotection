@@ -6,20 +6,25 @@ All case data for the CJEU GDPR jurisprudence analysis.
 
 ```
 data/
-├── decisions/      # Raw judgment texts (Markdown)
-├── coded/          # Coded holdings per judgment
+├── decisions/      # Raw judgment texts (Markdown) — 69 files
+├── coded/          # Coded holdings per judgment — 67 files
 ├── parsed/         # Processed data formats
 │   ├── cases.json
 │   ├── holdings.csv
 │   ├── gdpr_cjeu.db
 │   └── backup/     # Previous versions
-└── metadata/       # EUR-Lex case metadata
+├── metadata/       # EUR-Lex case metadata
+├── li-case-law/    # SECONDARY sub-study: legitimate-interest cases (separate)
+└── planned-features/  # Background note on operative-part extraction tooling
 ```
 
 ## Directories
 
 ### decisions/
-Raw CJEU judgment texts in Markdown format. 67 files covering GDPR decisions from 2019-2025.
+Raw CJEU judgment texts in Markdown format. **69 files** covering GDPR decisions from 2019-2025.
+
+> Two of these — `C-312-23` and `C-560-21` — are present as raw text but were **not coded**,
+> so the analytic dataset is **67 cases / 181 holdings**. All statistics use the 67 coded cases.
 
 Naming: `C-{number}-{year}.md` (e.g., `C-311-18.md`)
 

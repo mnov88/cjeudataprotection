@@ -4,6 +4,9 @@
 .LSOverride
 ._*
 
+# Local agent / tooling config
+.claude/
+
 # Python
 __pycache__/
 *.py[cod]
