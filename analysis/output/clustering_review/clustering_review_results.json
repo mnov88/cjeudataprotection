@@ -1,0 +1,386 @@
+{
+  "cluster_composition": {
+    "SCOPE": {
+      "n": 17,
+      "cluster_pro_ds_rate": 0.8823529411764706,
+      "n_concepts": 2,
+      "within_cluster_variance": 0.006972250000000003,
+      "within_cluster_range": 0.16700000000000004,
+      "concept_breakdown": {
+        "n": {
+          "SCOPE_MATERIAL": 12,
+          "PERSONAL_DATA_SCOPE": 5
+        },
+        "pro_ds_rate": {
+          "SCOPE_MATERIAL": 0.833,
+          "PERSONAL_DATA_SCOPE": 1.0
+        }
+      },
+      "heterogeneity_flag": "False"
+    },
+    "ACTORS": {
+      "n": 10,
+      "cluster_pro_ds_rate": 0.7,
+      "n_concepts": 2,
+      "within_cluster_variance": 0.0005522499999999984,
+      "within_cluster_range": 0.04699999999999993,
+      "concept_breakdown": {
+        "n": {
+          "CONTROLLER_DEFINITION": 7,
+          "JOINT_CONTROLLERS_DEFINITION": 3
+        },
+        "pro_ds_rate": {
+          "CONTROLLER_DEFINITION": 0.714,
+          "JOINT_CONTROLLERS_DEFINITION": 0.667
+        }
+      },
+      "heterogeneity_flag": "False"
+    },
+    "LAWFULNESS": {
+      "n": 17,
+      "cluster_pro_ds_rate": 0.6470588235294118,
+      "n_concepts": 6,
+      "within_cluster_variance": 0.14305555555555557,
+      "within_cluster_range": 1.0,
+      "concept_breakdown": {
+        "n": {
+          "LEGITIMATE_INTERESTS": 5,
+          "CONSENT_BASIS": 4,
+          "LEGAL_OBLIGATION_BASIS": 4,
+          "CONTRACT_BASIS": 2,
+          "PUBLIC_INTEREST_BASIS": 1,
+          "VITAL_INTERESTS_BASIS": 1
+        },
+        "pro_ds_rate": {
+          "LEGITIMATE_INTERESTS": 0.8,
+          "CONSENT_BASIS": 0.75,
+          "LEGAL_OBLIGATION_BASIS": 0.25,
+          "CONTRACT_BASIS": 1.0,
+          "PUBLIC_INTEREST_BASIS": 0.0,
+          "VITAL_INTERESTS_BASIS": 1.0
+        }
+      },
+      "heterogeneity_flag": "True"
+    },
+    "PRINCIPLES": {
+      "n": 18,
+      "cluster_pro_ds_rate": 0.6666666666666666,
+      "n_concepts": 4,
+      "within_cluster_variance": 0.032972249999999995,
+      "within_cluster_range": 0.5,
+      "concept_breakdown": {
+        "n": {
+          "DATA_PROTECTION_PRINCIPLES": 12,
+          "ACCOUNTABILITY": 3,
+          "TRANSPARENCY": 2,
+          "DATA_MINIMISATION": 1
+        },
+        "pro_ds_rate": {
+          "DATA_PROTECTION_PRINCIPLES": 0.667,
+          "ACCOUNTABILITY": 0.667,
+          "TRANSPARENCY": 0.5,
+          "DATA_MINIMISATION": 1.0
+        }
+      },
+      "heterogeneity_flag": "True"
+    },
+    "RIGHTS": {
+      "n": 21,
+      "cluster_pro_ds_rate": 0.8095238095238095,
+      "n_concepts": 5,
+      "within_cluster_variance": 0.014239840000000004,
+      "within_cluster_range": 0.30000000000000004,
+      "concept_breakdown": {
+        "n": {
+          "RIGHT_OF_ACCESS": 10,
+          "RIGHT_TO_ERASURE": 7,
+          "RIGHT_TO_RECTIFICATION": 2,
+          "AUTOMATED_DECISION_MAKING": 1,
+          "RIGHT_TO_OBJECT": 1
+        },
+        "pro_ds_rate": {
+          "RIGHT_OF_ACCESS": 0.7,
+          "RIGHT_TO_ERASURE": 0.857,
+          "RIGHT_TO_RECTIFICATION": 1.0,
+          "AUTOMATED_DECISION_MAKING": 1.0,
+          "RIGHT_TO_OBJECT": 1.0
+        }
+      },
+      "heterogeneity_flag": "True"
+    },
+    "SPECIAL_CATEGORIES": {
+      "n": 12,
+      "cluster_pro_ds_rate": 0.6666666666666666,
+      "n_concepts": 2,
+      "within_cluster_variance": 0.04000000000000001,
+      "within_cluster_range": 0.4,
+      "concept_breakdown": {
+        "n": {
+          "SPECIAL_CATEGORIES_CONDITIONS": 10,
+          "SPECIAL_CATEGORIES_DEFINITION": 2
+        },
+        "pro_ds_rate": {
+          "SPECIAL_CATEGORIES_CONDITIONS": 0.6,
+          "SPECIAL_CATEGORIES_DEFINITION": 1.0
+        }
+      },
+      "heterogeneity_flag": "True"
+    },
+    "ENFORCEMENT": {
+      "n": 65,
+      "cluster_pro_ds_rate": 0.46153846153846156,
+      "n_concepts": 7,
+      "within_cluster_variance": 0.1205601224489796,
+      "within_cluster_range": 1.0,
+      "concept_breakdown": {
+        "n": {
+          "REMEDIES_COMPENSATION": 36,
+          "DPA_POWERS": 17,
+          "ADMINISTRATIVE_FINES": 4,
+          "DPA_OTHER": 4,
+          "REPRESENTATIVE_ACTIONS": 2,
+          "DPA_INDEPENDENCE": 1,
+          "ONE_STOP_SHOP": 1
+        },
+        "pro_ds_rate": {
+          "REMEDIES_COMPENSATION": 0.361,
+          "DPA_POWERS": 0.647,
+          "ADMINISTRATIVE_FINES": 0.5,
+          "DPA_OTHER": 0.25,
+          "REPRESENTATIVE_ACTIONS": 1.0,
+          "DPA_INDEPENDENCE": 1.0,
+          "ONE_STOP_SHOP": 0.0
+        }
+      },
+      "heterogeneity_flag": "True"
+    },
+    "OTHER": {
+      "n": 21,
+      "cluster_pro_ds_rate": 0.47619047619047616,
+      "n_concepts": 5,
+      "within_cluster_variance": 0.11357856,
+      "within_cluster_range": 1.0,
+      "concept_breakdown": {
+        "n": {
+          "MEMBER_STATE_DISCRETION": 7,
+          "SECURITY": 5,
+          "OTHER": 5,
+          "INTERNATIONAL_TRANSFER": 3,
+          "OTHER_CONTROLLER_OBLIGATIONS": 1
+        },
+        "pro_ds_rate": {
+          "MEMBER_STATE_DISCRETION": 0.714,
+          "SECURITY": 0.4,
+          "OTHER": 0.0,
+          "INTERNATIONAL_TRANSFER": 0.667,
+          "OTHER_CONTROLLER_OBLIGATIONS": 1.0
+        }
+      },
+      "heterogeneity_flag": "True"
+    }
+  },
+  "bivariate_with_cluster": {
+    "chi2": 17.22116634815061,
+    "p_value": 0.016024393798176592,
+    "dof": 7,
+    "effect_size": 0.3084551271407166,
+    "cluster_stats": {
+      "n": {
+        "SCOPE": 17,
+        "RIGHTS": 21,
+        "ACTORS": 10,
+        "PRINCIPLES": 18,
+        "SPECIAL_CATEGORIES": 12,
+        "LAWFULNESS": 17,
+        "OTHER": 21,
+        "ENFORCEMENT": 65
+      },
+      "pro_ds_rate": {
+        "SCOPE": 0.882,
+        "RIGHTS": 0.81,
+        "ACTORS": 0.7,
+        "PRINCIPLES": 0.667,
+        "SPECIAL_CATEGORIES": 0.667,
+        "LAWFULNESS": 0.647,
+        "OTHER": 0.476,
+        "ENFORCEMENT": 0.462
+      }
+    },
+    "n_categories": 8
+  },
+  "bivariate_without_cluster": {
+    "chi2": 27.122084809533572,
+    "p_value": 0.007420422501266433,
+    "dof": 12,
+    "effect_size": 0.4433247640792193,
+    "concept_stats": {
+      "n": {
+        "AUTOMATED_DECISION_MAKING": 1,
+        "VITAL_INTERESTS_BASIS": 1,
+        "CONTRACT_BASIS": 2,
+        "DPA_INDEPENDENCE": 1,
+        "DATA_MINIMISATION": 1,
+        "RIGHT_TO_OBJECT": 1,
+        "REPRESENTATIVE_ACTIONS": 2,
+        "PERSONAL_DATA_SCOPE": 5,
+        "OTHER_CONTROLLER_OBLIGATIONS": 1,
+        "SPECIAL_CATEGORIES_DEFINITION": 2,
+        "RIGHT_TO_RECTIFICATION": 2,
+        "RIGHT_TO_ERASURE": 7,
+        "SCOPE_MATERIAL": 12,
+        "LEGITIMATE_INTERESTS": 5,
+        "CONSENT_BASIS": 4,
+        "CONTROLLER_DEFINITION": 7,
+        "MEMBER_STATE_DISCRETION": 7,
+        "RIGHT_OF_ACCESS": 10,
+        "ACCOUNTABILITY": 3,
+        "DATA_PROTECTION_PRINCIPLES": 12,
+        "JOINT_CONTROLLERS_DEFINITION": 3,
+        "INTERNATIONAL_TRANSFER": 3,
+        "DPA_POWERS": 17,
+        "SPECIAL_CATEGORIES_CONDITIONS": 10,
+        "ADMINISTRATIVE_FINES": 4,
+        "TRANSPARENCY": 2,
+        "SECURITY": 5,
+        "REMEDIES_COMPENSATION": 36,
+        "DPA_OTHER": 4,
+        "LEGAL_OBLIGATION_BASIS": 4,
+        "ONE_STOP_SHOP": 1,
+        "OTHER": 5,
+        "PUBLIC_INTEREST_BASIS": 1
+      },
+      "pro_ds_rate": {
+        "AUTOMATED_DECISION_MAKING": 1.0,
+        "VITAL_INTERESTS_BASIS": 1.0,
+        "CONTRACT_BASIS": 1.0,
+        "DPA_INDEPENDENCE": 1.0,
+        "DATA_MINIMISATION": 1.0,
+        "RIGHT_TO_OBJECT": 1.0,
+        "REPRESENTATIVE_ACTIONS": 1.0,
+        "PERSONAL_DATA_SCOPE": 1.0,
+        "OTHER_CONTROLLER_OBLIGATIONS": 1.0,
+        "SPECIAL_CATEGORIES_DEFINITION": 1.0,
+        "RIGHT_TO_RECTIFICATION": 1.0,
+        "RIGHT_TO_ERASURE": 0.857,
+        "SCOPE_MATERIAL": 0.833,
+        "LEGITIMATE_INTERESTS": 0.8,
+        "CONSENT_BASIS": 0.75,
+        "CONTROLLER_DEFINITION": 0.714,
+        "MEMBER_STATE_DISCRETION": 0.714,
+        "RIGHT_OF_ACCESS": 0.7,
+        "ACCOUNTABILITY": 0.667,
+        "DATA_PROTECTION_PRINCIPLES": 0.667,
+        "JOINT_CONTROLLERS_DEFINITION": 0.667,
+        "INTERNATIONAL_TRANSFER": 0.667,
+        "DPA_POWERS": 0.647,
+        "SPECIAL_CATEGORIES_CONDITIONS": 0.6,
+        "ADMINISTRATIVE_FINES": 0.5,
+        "TRANSPARENCY": 0.5,
+        "SECURITY": 0.4,
+        "REMEDIES_COMPENSATION": 0.361,
+        "DPA_OTHER": 0.25,
+        "LEGAL_OBLIGATION_BASIS": 0.25,
+        "ONE_STOP_SHOP": 0.0,
+        "OTHER": 0.0,
+        "PUBLIC_INTEREST_BASIS": 0.0
+      }
+    },
+    "n_categories": 13,
+    "n_excluded": 43,
+    "excluded_concepts": [
+      "CONSENT_BASIS",
+      "DPA_OTHER",
+      "LEGAL_OBLIGATION_BASIS",
+      "ADMINISTRATIVE_FINES",
+      "ACCOUNTABILITY",
+      "INTERNATIONAL_TRANSFER",
+      "JOINT_CONTROLLERS_DEFINITION",
+      "CONTRACT_BASIS",
+      "REPRESENTATIVE_ACTIONS",
+      "SPECIAL_CATEGORIES_DEFINITION",
+      "TRANSPARENCY",
+      "RIGHT_TO_RECTIFICATION",
+      "PUBLIC_INTEREST_BASIS",
+      "VITAL_INTERESTS_BASIS",
+      "RIGHT_TO_OBJECT",
+      "DATA_MINIMISATION",
+      "OTHER_CONTROLLER_OBLIGATIONS",
+      "AUTOMATED_DECISION_MAKING",
+      "ONE_STOP_SHOP",
+      "DPA_INDEPENDENCE"
+    ]
+  },
+  "mv_with_cluster": {
+    "converged": true,
+    "n": 181,
+    "aic": 217.41936051200884,
+    "bic": 278.19080410605955,
+    "pseudo_r2": 0.2599728570406278,
+    "n_params": 19,
+    "cluster_coefficients": {
+      "C(concept_cluster, Treatment(reference='OTHER'))[T.ACTORS]": {
+        "coef": 0.3133015337317447,
+        "odds_ratio": 1.3679339470736471,
+        "p": 0.7364363619783212
+      },
+      "C(concept_cluster, Treatment(reference='OTHER'))[T.ENFORCEMENT]": {
+        "coef": 0.06462055788691755,
+        "odds_ratio": 1.0667541761220827,
+        "p": 0.9139874107744429
+      },
+      "C(concept_cluster, Treatment(reference='OTHER'))[T.LAWFULNESS]": {
+        "coef": 1.0424198573041918,
+        "odds_ratio": 2.836071606030879,
+        "p": 0.23729216088904093
+      },
+      "C(concept_cluster, Treatment(reference='OTHER'))[T.PRINCIPLES]": {
+        "coef": 0.9718590294665318,
+        "odds_ratio": 2.6428530370167564,
+        "p": 0.20373540503650822
+      },
+      "C(concept_cluster, Treatment(reference='OTHER'))[T.RIGHTS]": {
+        "coef": 2.1253618017432814,
+        "odds_ratio": 8.37592736510912,
+        "p": 0.015309924465173663
+      },
+      "C(concept_cluster, Treatment(reference='OTHER'))[T.SCOPE]": {
+        "coef": 1.7043235257972402,
+        "odds_ratio": 5.49766538020916,
+        "p": 0.07411011727496343
+      },
+      "C(concept_cluster, Treatment(reference='OTHER'))[T.SPECIAL_CATEGORIES]": {
+        "coef": 1.3203482891874432,
+        "odds_ratio": 3.7447253975255035,
+        "p": 0.16257875160929458
+      }
+    }
+  },
+  "mv_without_cluster": {
+    "converged": true,
+    "n": 181,
+    "aic": 216.88041235888562,
+    "bic": 255.26237673407553,
+    "pseudo_r2": 0.2044518491012116,
+    "n_params": 12
+  },
+  "mv_with_compensation": {
+    "converged": true,
+    "n": 181,
+    "aic": 217.0785149999274,
+    "bic": 258.65897640638315,
+    "pseudo_r2": 0.2118838951783497,
+    "n_params": 13,
+    "compensation_effect": {
+      "coef": -0.7219192004976873,
+      "odds_ratio": 0.485818976649606,
+      "p": 0.1787268866324513
+    }
+  },
+  "compensation_analysis": {
+    "n_compensation": 36,
+    "n_non_compensation": 145,
+    "compensation_pro_ds_rate": 0.3611111111111111,
+    "non_compensation_pro_ds_rate": 0.6689655172413793,
+    "gap_pp": 30.78544061302682
+  }
+}
