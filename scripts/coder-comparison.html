@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coder Comparison Tool - GDPR CJEU</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-0: #09090b;
+            --bg-1: #0f0f12;
+            --bg-2: #18181b;
+            --bg-3: #27272a;
+            --border: #3f3f46;
+            --border-light: #52525b;
+            --text-0: #fafafa;
+            --text-1: #d4d4d8;
+            --text-2: #a1a1aa;
+            --text-3: #71717a;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --green: #22c55e;
+            --green-dim: rgba(34, 197, 94, 0.15);
+            --red: #ef4444;
+            --red-dim: rgba(239, 68, 68, 0.15);
+            --amber: #f59e0b;
+            --amber-dim: rgba(245, 158, 11, 0.15);
+            --purple: #a855f7;
+            --purple-dim: rgba(168, 85, 247, 0.15);
+            --cyan: #06b6d4;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--bg-0);
+            color: var(--text-1);
+            font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-1); }
+        ::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--border); }
+
+        input, select, button, textarea { font-family: inherit; font-size: inherit; }
+
+        .btn {
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+            border: 1px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-ghost { background: transparent; border-color: var(--border); color: var(--text-1); }
+        .btn-ghost:hover { border-color: var(--text-2); background: var(--bg-2); }
+        .btn-sm { padding: 4px 10px; font-size: 12px; }
+        .btn-xs { padding: 2px 6px; font-size: 11px; }
+        .btn-green { background: var(--green); color: white; }
+        .btn-green:hover { background: #16a34a; }
+        .btn-amber { background: var(--amber); color: white; }
+        .btn-amber:hover { background: #d97706; }
+        .btn-red { background: var(--red); color: white; }
+        .btn-red:hover { background: #dc2626; }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: 0.3px;
+        }
+
+        .tag-match { background: var(--green-dim); color: var(--green); border: 1px solid rgba(34, 197, 94, 0.3); }
+        .tag-diff { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+        .tag-selected { background: var(--accent); color: white; }
+        .tag-group { background: var(--purple-dim); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.3); }
+
+        .card {
+            background: var(--bg-1);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .coder-panel {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: all 0.15s;
+            cursor: pointer;
+        }
+        .coder-panel:hover { border-color: var(--border-light); }
+        .coder-panel.selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+
+        .field-row {
+            display: flex;
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.1s;
+        }
+        .field-row:last-child { border-bottom: none; }
+        .field-row:hover { background: rgba(255,255,255,0.02); }
+        .field-row.diff { background: var(--amber-dim); }
+        .field-row.selected { background: rgba(59, 130, 246, 0.1); }
+
+        .group-header {
+            padding: 8px 12px;
+            background: var(--bg-2);
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+        .group-header:hover { background: var(--bg-3); }
+
+        .progress-bar {
+            height: 4px;
+            background: var(--bg-3);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--green);
+            transition: width 0.3s ease;
+        }
+
+        .kbd {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 20px;
+            height: 20px;
+            padding: 0 6px;
+            background: var(--bg-3);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 11px;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .toggle {
+            position: relative;
+            width: 40px;
+            height: 22px;
+            background: var(--bg-3);
+            border-radius: 11px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .toggle.active { background: var(--accent); }
+        .toggle::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 18px;
+            height: 18px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.2s;
+        }
+        .toggle.active::after { transform: translateX(18px); }
+
+        .stat-box {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+        .stat-value { font-size: 24px; font-weight: 600; color: var(--text-0); }
+        .stat-label { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .markdown-content {
+            font-family: 'Crimson Pro', serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        .markdown-content h1 { font-size: 24px; font-weight: 600; margin: 24px 0 16px; color: var(--text-0); }
+        .markdown-content h2 { font-size: 20px; font-weight: 600; margin: 20px 0 12px; color: var(--text-0); }
+        .markdown-content h3 { font-size: 17px; font-weight: 600; margin: 16px 0 8px; color: var(--text-0); }
+        .markdown-content p { margin: 12px 0; }
+        .markdown-content ul, .markdown-content ol { margin: 12px 0; padding-left: 24px; }
+        .markdown-content li { margin: 4px 0; }
+        .markdown-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding-left: 16px;
+            margin: 16px 0;
+            color: var(--text-2);
+            font-style: italic;
+        }
+        .markdown-content code {
+            background: var(--bg-3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+        }
+        .markdown-content pre {
+            background: var(--bg-2);
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        .markdown-content pre code { background: none; padding: 0; }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+        .modal-content {
+            background: var(--bg-1);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            max-width: 900px;
+            max-height: 90vh;
+            width: 90%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            padding: 12px 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 200;
+            animation: slideIn 0.2s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useCallback, useMemo, useRef } = React;
+
+        // Field definitions with labels and groups
+        const FIELD_GROUPS = {
+            'Content': ['A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11'],
+            'Interpretation': ['A12', 'A13', 'A14', 'A15', 'A16', 'A17', 'A18', 'A19', 'A20', 'A21'],
+            'Reasoning': ['A22', 'A23', 'A24', 'A25', 'A26', 'A27', 'A28', 'A29', 'A30', 'A31'],
+            'Outcome': ['A32', 'A33'],
+            'Balancing': ['A34', 'A35', 'A36', 'A37', 'A38', 'A39', 'A40', 'A41', 'A42', 'A43']
+        };
+
+        const FIELD_DEFINITIONS = {
+            A1: { label: 'Case Number', type: 'text' },
+            A2: { label: 'Judgment Date', type: 'date' },
+            A3: { label: 'Chamber', type: 'select', options: ['GRAND_CHAMBER', 'FIRST', 'SECOND', 'THIRD', 'FOURTH', 'FIFTH', 'SIXTH', 'SEVENTH', 'EIGHTH', 'NINTH', 'TENTH', 'FULL_COURT'] },
+            A4: { label: 'Holding Count', type: 'number' },
+            A5: { label: 'Holding ID', type: 'number' },
+            A6: { label: 'Paragraphs', type: 'text' },
+            A7: { label: 'Core Holding', type: 'longtext' },
+            A8: { label: 'Provisions Cited', type: 'text' },
+            A9: { label: 'Article Numbers', type: 'text' },
+            A10: { label: 'Primary Concept', type: 'concept' },
+            A11: { label: 'Secondary Concepts', type: 'concept' },
+            A12: { label: 'Semantic Present', type: 'boolean' },
+            A13: { label: 'Semantic Quote', type: 'longtext' },
+            A14: { label: 'Systematic Present', type: 'boolean' },
+            A15: { label: 'Systematic Quote', type: 'longtext' },
+            A16: { label: 'Teleological Present', type: 'boolean' },
+            A17: { label: 'Teleological Quote', type: 'longtext' },
+            A18: { label: 'Teleological Purposes', type: 'text' },
+            A19: { label: 'Other Purpose', type: 'text' },
+            A20: { label: 'Dominant Source', type: 'select', options: ['SEMANTIC', 'SYSTEMATIC', 'TELEOLOGICAL', 'UNCLEAR'] },
+            A21: { label: 'Dominant Confident', type: 'boolean' },
+            A22: { label: 'Rule-Based Present', type: 'boolean' },
+            A23: { label: 'Rule-Based Quote', type: 'longtext' },
+            A24: { label: 'Case-Law Present', type: 'boolean' },
+            A25: { label: 'Case-Law Quote', type: 'longtext' },
+            A26: { label: 'Cited Cases', type: 'text' },
+            A27: { label: 'Principle-Based Present', type: 'boolean' },
+            A28: { label: 'Principle-Based Quote', type: 'longtext' },
+            A29: { label: 'Dominant Structure', type: 'select', options: ['RULE_BASED', 'CASE_LAW_BASED', 'PRINCIPLE_BASED', 'MIXED'] },
+            A30: { label: 'Level Shifting', type: 'boolean' },
+            A31: { label: 'Level Shifting Explanation', type: 'longtext' },
+            A32: { label: 'Ruling Direction', type: 'select', options: ['PRO_DATA_SUBJECT', 'PRO_CONTROLLER', 'MIXED', 'NEUTRAL_OR_UNCLEAR'] },
+            A33: { label: 'Direction Justification', type: 'longtext' },
+            A34: { label: 'Necessity Discussed', type: 'boolean' },
+            A35: { label: 'Necessity Standard', type: 'select', options: ['STRICT', 'REGULAR', 'NONE'] },
+            A36: { label: 'Necessity Summary', type: 'longtext' },
+            A37: { label: 'Controller-DS Balancing', type: 'boolean' },
+            A38: { label: 'Interest Prevails', type: 'select', options: ['DATA_SUBJECT', 'CONTROLLER', 'NEITHER', 'NONE'] },
+            A39: { label: 'Balance Summary', type: 'longtext' },
+            A40: { label: 'Other Rights Balancing', type: 'boolean' },
+            A41: { label: 'Other Rights', type: 'text' },
+            A42: { label: 'Right Prevails', type: 'select', options: ['DATA_PROTECTION', 'OTHER_RIGHT', 'NEITHER', 'NONE'] },
+            A43: { label: 'Rights Balance Summary', type: 'longtext' }
+        };
+
+        const CONCEPTS = [
+            'SCOPE_MATERIAL', 'SCOPE_TERRITORIAL', 'PERSONAL_DATA_SCOPE', 'HOUSEHOLD_EXEMPTION', 'OTHER_EXEMPTION',
+            'CONTROLLER_DEFINITION', 'JOINT_CONTROLLERS_DEFINITION', 'PROCESSOR_OBLIGATIONS', 'RECIPIENT_DEFINITION',
+            'DATA_PROTECTION_PRINCIPLES', 'ACCOUNTABILITY', 'CONSENT_BASIS', 'CONTRACT_BASIS', 'LEGAL_OBLIGATION_BASIS',
+            'VITAL_INTERESTS_BASIS', 'PUBLIC_INTEREST_BASIS', 'LEGITIMATE_INTERESTS', 'SPECIAL_CATEGORIES_DEFINITION',
+            'SPECIAL_CATEGORIES_CONDITIONS', 'TRANSPARENCY', 'RIGHT_OF_ACCESS', 'RIGHT_TO_RECTIFICATION', 'RIGHT_TO_ERASURE',
+            'RIGHT_TO_RESTRICTION', 'RIGHT_TO_PORTABILITY', 'RIGHT_TO_OBJECT', 'AUTOMATED_DECISION_MAKING', 'SECURITY',
+            'INTERNATIONAL_TRANSFER', 'OTHER_CONTROLLER_OBLIGATIONS', 'DPA_INDEPENDENCE', 'DPA_POWERS', 'DPA_OBLIGATIONS',
+            'ONE_STOP_SHOP', 'DPA_OTHER', 'ADMINISTRATIVE_FINES', 'REMEDIES_COMPENSATION', 'REPRESENTATIVE_ACTIONS',
+            'MEMBER_STATE_DISCRETION', 'OTHER', 'NULL'
+        ];
+
+        const SHORTCUTS = [
+            { key: '1', desc: 'Select Coder A' },
+            { key: '2', desc: 'Select Coder B' },
+            { key: 'c', desc: 'Enter custom value' },
+            { key: 'j/k', desc: 'Next/Previous field' },
+            { key: 'n/p', desc: 'Next/Previous holding' },
+            { key: 'd', desc: 'Toggle differences only' },
+            { key: 'a', desc: 'Toggle auto-advance' },
+            { key: 'g', desc: 'Toggle field groups' },
+            { key: 'z', desc: 'Undo last selection' },
+            { key: 'm', desc: 'View decision markdown' },
+            { key: '?', desc: 'Show shortcuts' },
+            { key: 'Esc', desc: 'Close modal' }
+        ];
+
+        // LocalStorage helpers
+        const STORAGE_KEY = 'coder-comparison-state';
+        const saveToStorage = (data) => {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            } catch (e) { console.warn('Failed to save to localStorage'); }
+        };
+        const loadFromStorage = () => {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                return saved ? JSON.parse(saved) : null;
+            } catch (e) { return null; }
+        };
+
+        // Load demo data
+        async function loadDemoData() {
+            try {
+                const response = await fetch('demo_comparison_data.json');
+                if (response.ok) return await response.json();
+            } catch (e) { console.log('Demo file not found, using embedded data'); }
+
+            return {
+                case_id: 'C-129/21',
+                judgment_date: '2022-10-27',
+                decision_file: '../data/decisions/C-129-21.md',
+                holdings: [
+                    {
+                        holding_id: 1,
+                        coders: {
+                            'Dr. Smith': {
+                                A5: '1', A6: '40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56',
+                                A7: 'GDPR consent is required for including subscriber personal data in telephone directories.',
+                                A8: 'Article 12(2) Directive 2002/58, Article 4(11) GDPR, Article 6(1)(a) GDPR',
+                                A9: '12, 4, 6', A10: 'CONSENT_BASIS', A11: 'TRANSPARENCY',
+                                A12: 'TRUE', A13: 'Article 4(11) GDPR defines consent as freely given, specific, informed and unambiguous.',
+                                A14: 'TRUE', A15: 'Contextual interpretation shows consent relates to publication purpose.',
+                                A16: 'TRUE', A17: 'Directive 2002/58 provides for harmonisation to ensure fundamental rights protection.',
+                                A18: 'HIGH_LEVEL_OF_PROTECTION, FUNDAMENTAL_RIGHTS', A19: 'NULL',
+                                A20: 'SYSTEMATIC', A21: 'TRUE',
+                                A22: 'TRUE', A23: 'Consent is necessary for subscriber data in directories.',
+                                A24: 'TRUE', A25: 'Prior information gives subscriber opportunity to consent.',
+                                A26: 'C-543/09', A27: 'FALSE', A28: 'NULL', A29: 'CASE_LAW_BASED',
+                                A30: 'FALSE', A31: 'NULL', A32: 'PRO_DATA_SUBJECT',
+                                A33: 'Confirms GDPR consent required, strengthening subscriber control.',
+                                A34: 'FALSE', A35: 'NONE', A36: 'NULL', A37: 'FALSE', A38: 'NONE',
+                                A39: 'NULL', A40: 'FALSE', A41: 'NULL', A42: 'NONE', A43: 'NULL'
+                            },
+                            'Prof. Chen': {
+                                A5: '1', A6: '40-56',
+                                A7: 'Valid GDPR consent can be given to any directory provider for telephone directory inclusion.',
+                                A8: 'Article 12(2) Directive 2002/58, Article 95 GDPR, Article 4(11) GDPR, Article 6(1)(a) GDPR',
+                                A9: '12, 95, 4, 6', A10: 'CONSENT_BASIS', A11: 'NULL',
+                                A12: 'TRUE', A13: 'Article 4(11) requires freely given, specific, informed and unambiguous indication.',
+                                A14: 'TRUE', A15: 'Systematic interpretation shows consent relates to purpose, not provider identity.',
+                                A16: 'TRUE', A17: 'Directive aims to ensure equivalent protection in electronic communications.',
+                                A18: 'HIGH_LEVEL_OF_PROTECTION', A19: 'NULL',
+                                A20: 'TELEOLOGICAL', A21: 'FALSE',
+                                A22: 'TRUE', A23: 'Consent is necessary for directory inclusion.',
+                                A24: 'TRUE', A25: 'Prior information enables consent to publication.',
+                                A26: 'C-543/09', A27: 'FALSE', A28: 'NULL', A29: 'RULE_BASED',
+                                A30: 'FALSE', A31: 'NULL', A32: 'PRO_DATA_SUBJECT',
+                                A33: 'Strengthens subscriber autonomy by clarifying GDPR consent standards apply.',
+                                A34: 'FALSE', A35: 'NONE', A36: 'NULL', A37: 'FALSE', A38: 'NONE',
+                                A39: 'NULL', A40: 'FALSE', A41: 'NULL', A42: 'NONE', A43: 'NULL'
+                            }
+                        },
+                        selected: {}
+                    },
+                    {
+                        holding_id: 2,
+                        coders: {
+                            'Dr. Smith': {
+                                A5: '2', A6: '57-71',
+                                A7: 'Withdrawal of consent constitutes exercise of right to erasure under Article 17 GDPR.',
+                                A8: 'Article 17 GDPR, Article 12(2) Directive 2002/58, Article 6(1)(a) GDPR',
+                                A9: '17, 12, 6', A10: 'RIGHT_TO_ERASURE', A11: 'CONSENT_BASIS',
+                                A12: 'TRUE', A13: 'Article 12(2) requires opportunity to withdraw from directories.',
+                                A14: 'TRUE', A15: 'Grant of opportunity does not exclude GDPR provisions.',
+                                A16: 'TRUE', A17: 'Directive lacks modalities for withdrawal requests.',
+                                A18: 'EFFECTIVE_ENFORCEMENT', A19: 'NULL', A20: 'SYSTEMATIC', A21: 'TRUE',
+                                A22: 'TRUE', A23: 'Article 17(1) provides right to erasure without undue delay.',
+                                A24: 'FALSE', A25: 'NULL', A26: 'NULL', A27: 'FALSE', A28: 'NULL',
+                                A29: 'RULE_BASED', A30: 'FALSE', A31: 'NULL', A32: 'PRO_DATA_SUBJECT',
+                                A33: 'Classifies withdrawal as erasure rights for stronger protection.',
+                                A34: 'FALSE', A35: 'NONE', A36: 'NULL', A37: 'FALSE', A38: 'NONE',
+                                A39: 'NULL', A40: 'FALSE', A41: 'NULL', A42: 'NONE', A43: 'NULL'
+                            },
+                            'Prof. Chen': {
+                                A5: '2', A6: '57-71',
+                                A7: 'Subscriber withdrawal request triggers Article 17 GDPR erasure rights.',
+                                A8: 'Article 17 GDPR, Article 7(3) GDPR, Article 95 GDPR',
+                                A9: '17, 7, 95', A10: 'RIGHT_TO_ERASURE', A11: 'NULL',
+                                A12: 'TRUE', A13: 'Subscribers must have opportunity to withdraw personal data.',
+                                A14: 'TRUE', A15: 'Opportunity does not constitute specific GDPR-excluding obligation.',
+                                A16: 'FALSE', A17: 'NULL', A18: 'NULL', A19: 'NULL',
+                                A20: 'SYSTEMATIC', A21: 'TRUE',
+                                A22: 'TRUE', A23: 'Article 17(1) grants erasure right without undue delay.',
+                                A24: 'FALSE', A25: 'NULL', A26: 'NULL', A27: 'FALSE', A28: 'NULL',
+                                A29: 'RULE_BASED', A30: 'FALSE', A31: 'NULL', A32: 'PRO_DATA_SUBJECT',
+                                A33: 'Treats withdrawal as Article 17 erasure for stronger protection.',
+                                A34: 'FALSE', A35: 'NONE', A36: 'NULL', A37: 'FALSE', A38: 'NONE',
+                                A39: 'NULL', A40: 'FALSE', A41: 'NULL', A42: 'NONE', A43: 'NULL'
+                            }
+                        },
+                        selected: {}
+                    }
+                ]
+            };
+        }
+
+        // Toast notification component
+        function Toast({ message, onClose }) {
+            useEffect(() => {
+                const timer = setTimeout(onClose, 2500);
+                return () => clearTimeout(timer);
+            }, [onClose]);
+
+            return (
+                <div className="toast">
+                    <span className="text-[var(--green)]">✓</span>
+                    <span>{message}</span>
+                </div>
+            );
+        }
+
+        // Statistics Panel
+        function StatsPanel({ data, currentHolding }) {
+            const stats = useMemo(() => {
+                if (!data?.holdings) return null;
+                const holding = data.holdings[currentHolding];
+                if (!holding) return null;
+
+                const coderNames = Object.keys(holding.coders);
+                const coderA = holding.coders[coderNames[0]] || {};
+                const coderB = holding.coders[coderNames[1]] || {};
+
+                const fieldKeys = Object.keys(FIELD_DEFINITIONS).filter(k => !['A1', 'A2', 'A3', 'A4'].includes(k));
+                let matches = 0, diffs = 0, selected = 0;
+
+                fieldKeys.forEach(key => {
+                    const valA = coderA[key] || 'NULL';
+                    const valB = coderB[key] || 'NULL';
+                    if (valA === valB) matches++;
+                    else diffs++;
+                    if (holding.selected?.[key]) selected++;
+                });
+
+                const agreementRate = Math.round((matches / fieldKeys.length) * 100);
+                const progressRate = Math.round((selected / fieldKeys.length) * 100);
+
+                return { matches, diffs, selected, total: fieldKeys.length, agreementRate, progressRate };
+            }, [data, currentHolding]);
+
+            if (!stats) return null;
+
+            return (
+                <div className="grid grid-cols-4 gap-3 p-4 bg-[var(--bg-1)] border-b border-[var(--border)]">
+                    <div className="stat-box">
+                        <div className="stat-value text-[var(--green)]">{stats.agreementRate}%</div>
+                        <div className="stat-label">Agreement</div>
+                    </div>
+                    <div className="stat-box">
+                        <div className="stat-value text-[var(--amber)]">{stats.diffs}</div>
+                        <div className="stat-label">Differences</div>
+                    </div>
+                    <div className="stat-box">
+                        <div className="stat-value">{stats.selected}/{stats.total}</div>
+                        <div className="stat-label">Reviewed</div>
+                    </div>
+                    <div className="stat-box">
+                        <div className="stat-value text-[var(--accent)]">{stats.progressRate}%</div>
+                        <div className="stat-label">Complete</div>
+                    </div>
+                </div>
+            );
+        }
+
+        // Header component
+        function Header({ caseId, progress, onExport, onLoadData, onShowHelp, settings, onToggleSetting, onBulkSelect, coderNames }) {
+            return (
+                <header className="sticky top-0 z-50 bg-[var(--bg-0)] border-b border-[var(--border)] px-6 py-3">
+                    <div className="flex items-center justify-between max-w-[1800px] mx-auto">
+                        <div className="flex items-center gap-4">
+                            <h1 className="text-lg font-semibold text-[var(--text-0)]">
+                                Coder Comparison
+                            </h1>
+                            {caseId && (
+                                <span className="mono text-[var(--accent)] text-sm">{caseId}</span>
+                            )}
+                        </div>
+
+                        <div className="flex items-center gap-6">
+                            {/* Settings toggles */}
+                            <div className="flex items-center gap-4">
+                                <label className="flex items-center gap-2 cursor-pointer text-sm">
+                                    <div
+                                        className={`toggle ${settings.showDiffsOnly ? 'active' : ''}`}
+                                        onClick={() => onToggleSetting('showDiffsOnly')}
+                                    />
+                                    <span className="text-[var(--text-2)]">Diffs only</span>
+                                    <span className="kbd">d</span>
+                                </label>
+                                <label className="flex items-center gap-2 cursor-pointer text-sm">
+                                    <div
+                                        className={`toggle ${settings.autoAdvance ? 'active' : ''}`}
+                                        onClick={() => onToggleSetting('autoAdvance')}
+                                    />
+                                    <span className="text-[var(--text-2)]">Auto-advance</span>
+                                    <span className="kbd">a</span>
+                                </label>
+                                <label className="flex items-center gap-2 cursor-pointer text-sm">
+                                    <div
+                                        className={`toggle ${settings.showGroups ? 'active' : ''}`}
+                                        onClick={() => onToggleSetting('showGroups')}
+                                    />
+                                    <span className="text-[var(--text-2)]">Groups</span>
+                                    <span className="kbd">g</span>
+                                </label>
+                            </div>
+
+                            {/* Progress */}
+                            <div className="flex items-center gap-3">
+                                <div className="w-24 progress-bar">
+                                    <div className="progress-fill" style={{ width: `${progress}%` }}></div>
+                                </div>
+                                <span className="mono text-sm text-[var(--text-1)]">{progress}%</span>
+                            </div>
+
+                            {/* Bulk actions */}
+                            {coderNames && coderNames.length >= 2 && (
+                                <div className="flex items-center gap-1">
+                                    <button
+                                        className="btn btn-ghost btn-xs"
+                                        onClick={() => onBulkSelect(coderNames[0])}
+                                        title={`Accept all from ${coderNames[0]}`}
+                                    >
+                                        All {coderNames[0].split(' ')[0]}
+                                    </button>
+                                    <button
+                                        className="btn btn-ghost btn-xs"
+                                        onClick={() => onBulkSelect(coderNames[1])}
+                                        title={`Accept all from ${coderNames[1]}`}
+                                    >
+                                        All {coderNames[1].split(' ')[0]}
+                                    </button>
+                                </div>
+                            )}
+
+                            {/* Actions */}
+                            <div className="flex items-center gap-2">
+                                <label className="btn btn-ghost btn-sm cursor-pointer">
+                                    <input type="file" accept=".json" onChange={onLoadData} className="hidden" />
+                                    Load
+                                </label>
+                                <button className="btn btn-ghost btn-sm" onClick={onShowHelp}>
+                                    <span className="kbd">?</span>
+                                </button>
+                                <button className="btn btn-green btn-sm" onClick={onExport}>
+                                    Export
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            );
+        }
+
+        // Holding selector sidebar
+        function HoldingSidebar({ holdings, currentHolding, onSelect }) {
+            return (
+                <aside className="w-56 border-r border-[var(--border)] bg-[var(--bg-1)] overflow-y-auto flex-shrink-0">
+                    <div className="p-4">
+                        <h2 className="text-xs font-semibold uppercase tracking-wide text-[var(--text-3)] mb-3">
+                            Holdings
+                        </h2>
+                        <div className="space-y-2">
+                            {holdings.map((h, idx) => {
+                                const totalFields = Object.keys(FIELD_DEFINITIONS).length - 4;
+                                const selectedCount = Object.keys(h.selected || {}).length;
+                                const pct = Math.round((selectedCount / totalFields) * 100);
+                                const isActive = idx === currentHolding;
+
+                                return (
+                                    <button
+                                        key={h.holding_id}
+                                        onClick={() => onSelect(idx)}
+                                        className={`w-full p-3 rounded-lg text-left transition-all ${
+                                            isActive
+                                                ? 'bg-[var(--accent)] text-white'
+                                                : 'bg-[var(--bg-2)] hover:bg-[var(--bg-3)] text-[var(--text-1)]'
+                                        }`}
+                                    >
+                                        <div className="flex items-center justify-between mb-1">
+                                            <span className="font-medium">Holding {h.holding_id}</span>
+                                            <span className={`text-xs ${isActive ? 'text-white/80' : 'text-[var(--text-3)]'}`}>
+                                                {pct}%
+                                            </span>
+                                        </div>
+                                        <div className={`progress-bar ${isActive ? 'bg-white/20' : ''}`}>
+                                            <div
+                                                className="progress-fill"
+                                                style={{ width: `${pct}%`, background: isActive ? 'white' : undefined }}
+                                            />
+                                        </div>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </aside>
+            );
+        }
+
+        // Field comparison row
+        function FieldRow({ fieldKey, coderA, coderB, coderAName, coderBName, selected, onSelect, isActive, onClick }) {
+            const def = FIELD_DEFINITIONS[fieldKey];
+            const valA = coderA?.[fieldKey] || 'NULL';
+            const valB = coderB?.[fieldKey] || 'NULL';
+            const isDiff = valA !== valB;
+            const isLongText = def?.type === 'longtext';
+
+            return (
+                <div
+                    className={`field-row ${isDiff ? 'diff' : ''} ${isActive ? 'selected' : ''}`}
+                    onClick={onClick}
+                >
+                    <div className="w-36 flex-shrink-0">
+                        <div className="mono text-xs text-[var(--text-3)]">{fieldKey}</div>
+                        <div className="text-sm text-[var(--text-1)] truncate" title={def?.label}>{def?.label || fieldKey}</div>
+                    </div>
+
+                    <div className="flex-1 grid grid-cols-2 gap-3 min-w-0">
+                        <div
+                            className={`coder-panel p-2 ${selected === coderAName ? 'selected' : ''}`}
+                            onClick={(e) => { e.stopPropagation(); onSelect(coderAName); }}
+                        >
+                            <div className="flex items-center justify-between mb-1">
+                                <span className="text-xs text-[var(--text-3)] truncate">{coderAName}</span>
+                                <span className="kbd">1</span>
+                            </div>
+                            <div className={`text-sm break-words ${isLongText ? 'line-clamp-3' : ''}`}>
+                                {valA}
+                            </div>
+                        </div>
+
+                        <div
+                            className={`coder-panel p-2 ${selected === coderBName ? 'selected' : ''}`}
+                            onClick={(e) => { e.stopPropagation(); onSelect(coderBName); }}
+                        >
+                            <div className="flex items-center justify-between mb-1">
+                                <span className="text-xs text-[var(--text-3)] truncate">{coderBName}</span>
+                                <span className="kbd">2</span>
+                            </div>
+                            <div className={`text-sm break-words ${isLongText ? 'line-clamp-3' : ''}`}>
+                                {valB}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="w-28 flex-shrink-0 flex items-center justify-end gap-1">
+                        {isDiff ? (
+                            <span className="tag tag-diff">DIFF</span>
+                        ) : (
+                            <span className="tag tag-match">MATCH</span>
+                        )}
+                        {selected && (
+                            <span className="tag tag-selected">✓</span>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        // Group header
+        function GroupHeader({ name, fieldCount, diffCount, isExpanded, onToggle }) {
+            return (
+                <div className="group-header" onClick={onToggle}>
+                    <div className="flex items-center gap-3">
+                        <span className="text-[var(--text-2)]">{isExpanded ? '▼' : '▶'}</span>
+                        <span className="font-medium text-[var(--text-0)]">{name}</span>
+                        <span className="tag tag-group">{fieldCount} fields</span>
+                        {diffCount > 0 && (
+                            <span className="tag tag-diff">{diffCount} diffs</span>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        // Custom value input modal
+        function CustomValueModal({ fieldKey, fieldDef, currentValue, onSave, onClose }) {
+            const [value, setValue] = useState(currentValue || '');
+
+            return (
+                <div className="modal-overlay" onClick={onClose}>
+                    <div className="modal-content w-[600px]" onClick={e => e.stopPropagation()}>
+                        <div className="p-4 border-b border-[var(--border)] flex items-center justify-between">
+                            <div>
+                                <div className="mono text-xs text-[var(--text-3)]">{fieldKey}</div>
+                                <h3 className="font-semibold text-[var(--text-0)]">{fieldDef?.label}</h3>
+                            </div>
+                            <button className="btn btn-ghost btn-sm" onClick={onClose}>
+                                Close <span className="kbd">Esc</span>
+                            </button>
+                        </div>
+
+                        <div className="p-4">
+                            {fieldDef?.type === 'select' || fieldDef?.type === 'concept' ? (
+                                <select
+                                    value={value}
+                                    onChange={e => setValue(e.target.value)}
+                                    className="w-full p-3 bg-[var(--bg-2)] border border-[var(--border)] rounded-lg text-[var(--text-1)]"
+                                    autoFocus
+                                >
+                                    <option value="">Select...</option>
+                                    {(fieldDef?.type === 'concept' ? CONCEPTS : fieldDef?.options || []).map(opt => (
+                                        <option key={opt} value={opt}>{opt}</option>
+                                    ))}
+                                </select>
+                            ) : fieldDef?.type === 'boolean' ? (
+                                <div className="flex gap-4">
+                                    <button
+                                        className={`flex-1 p-3 rounded-lg border ${value === 'TRUE' ? 'border-[var(--accent)] bg-[var(--accent)]/10' : 'border-[var(--border)]'}`}
+                                        onClick={() => setValue('TRUE')}
+                                    >
+                                        TRUE
+                                    </button>
+                                    <button
+                                        className={`flex-1 p-3 rounded-lg border ${value === 'FALSE' ? 'border-[var(--accent)] bg-[var(--accent)]/10' : 'border-[var(--border)]'}`}
+                                        onClick={() => setValue('FALSE')}
+                                    >
+                                        FALSE
+                                    </button>
+                                </div>
+                            ) : fieldDef?.type === 'longtext' ? (
+                                <textarea
+                                    value={value}
+                                    onChange={e => setValue(e.target.value)}
+                                    className="w-full p-3 bg-[var(--bg-2)] border border-[var(--border)] rounded-lg text-[var(--text-1)] min-h-[200px]"
+                                    autoFocus
+                                />
+                            ) : (
+                                <input
+                                    type="text"
+                                    value={value}
+                                    onChange={e => setValue(e.target.value)}
+                                    className="w-full p-3 bg-[var(--bg-2)] border border-[var(--border)] rounded-lg text-[var(--text-1)]"
+                                    autoFocus
+                                />
+                            )}
+                        </div>
+
+                        <div className="p-4 border-t border-[var(--border)] flex justify-end gap-2">
+                            <button className="btn btn-ghost" onClick={onClose}>Cancel</button>
+                            <button className="btn btn-primary" onClick={() => onSave(value)}>
+                                Save <span className="kbd">Enter</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        // Markdown viewer modal
+        function MarkdownModal({ content, title, onClose }) {
+            const htmlContent = useMemo(() => {
+                if (typeof marked !== 'undefined') return marked.parse(content || '');
+                return content;
+            }, [content]);
+
+            const openInNewWindow = () => {
+                const newWindow = window.open('', '_blank');
+                newWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>${title}</title>
+                        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+                        <style>
+                            body { font-family: 'Crimson Pro', serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.7; font-size: 18px; }
+                            h1, h2, h3 { font-weight: 600; margin-top: 24px; }
+                            p { margin: 16px 0; }
+                            blockquote { border-left: 3px solid #3b82f6; padding-left: 16px; color: #666; font-style: italic; }
+                        </style>
+                    </head>
+                    <body>${htmlContent}</body>
+                    </html>
+                `);
+            };
+
+            return (
+                <div className="modal-overlay" onClick={onClose}>
+                    <div className="modal-content" onClick={e => e.stopPropagation()}>
+                        <div className="p-4 border-b border-[var(--border)] flex items-center justify-between">
+                            <h3 className="font-semibold text-[var(--text-0)]">{title}</h3>
+                            <div className="flex items-center gap-2">
+                                <button className="btn btn-ghost btn-sm" onClick={openInNewWindow}>
+                                    New Window
+                                </button>
+                                <button className="btn btn-ghost btn-sm" onClick={onClose}>
+                                    Close <span className="kbd">Esc</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            className="p-6 overflow-y-auto max-h-[calc(90vh-80px)] markdown-content"
+                            dangerouslySetInnerHTML={{ __html: htmlContent }}
+                        />
+                    </div>
+                </div>
+            );
+        }
+
+        // Help modal
+        function HelpModal({ onClose }) {
+            return (
+                <div className="modal-overlay" onClick={onClose}>
+                    <div className="modal-content w-[500px]" onClick={e => e.stopPropagation()}>
+                        <div className="p-4 border-b border-[var(--border)] flex items-center justify-between">
+                            <h3 className="font-semibold text-[var(--text-0)]">Keyboard Shortcuts</h3>
+                            <button className="btn btn-ghost btn-sm" onClick={onClose}>
+                                Close <span className="kbd">Esc</span>
+                            </button>
+                        </div>
+                        <div className="p-4">
+                            <table className="w-full">
+                                <tbody>
+                                    {SHORTCUTS.map(s => (
+                                        <tr key={s.key} className="border-b border-[var(--border)] last:border-0">
+                                            <td className="py-2 pr-4">
+                                                <span className="kbd">{s.key}</span>
+                                            </td>
+                                            <td className="py-2 text-[var(--text-1)]">{s.desc}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        // Main comparison view
+        function ComparisonView({ holding, coderNames, onUpdateSelection, activeField, setActiveField, settings }) {
+            const [expandedGroups, setExpandedGroups] = useState(
+                Object.fromEntries(Object.keys(FIELD_GROUPS).map(g => [g, true]))
+            );
+
+            if (!holding) return null;
+
+            const [coderAName, coderBName] = coderNames;
+            const coderA = holding.coders?.[coderAName] || {};
+            const coderB = holding.coders?.[coderBName] || {};
+
+            const allFieldKeys = Object.keys(FIELD_DEFINITIONS).filter(k => !['A1', 'A2', 'A3', 'A4'].includes(k));
+
+            // Filter to show only diffs if enabled
+            const fieldKeys = settings.showDiffsOnly
+                ? allFieldKeys.filter(key => (coderA[key] || 'NULL') !== (coderB[key] || 'NULL'))
+                : allFieldKeys;
+
+            const toggleGroup = (group) => {
+                setExpandedGroups(prev => ({ ...prev, [group]: !prev[group] }));
+            };
+
+            // Render with groups
+            if (settings.showGroups) {
+                let fieldIndex = 0;
+                return (
+                    <div className="flex-1 overflow-y-auto">
+                        {Object.entries(FIELD_GROUPS).map(([groupName, groupFields]) => {
+                            const visibleFields = groupFields.filter(k => fieldKeys.includes(k));
+                            if (visibleFields.length === 0) return null;
+
+                            const diffCount = visibleFields.filter(k =>
+                                (coderA[k] || 'NULL') !== (coderB[k] || 'NULL')
+                            ).length;
+
+                            const startIndex = fieldIndex;
+                            fieldIndex += visibleFields.length;
+
+                            return (
+                                <div key={groupName}>
+                                    <GroupHeader
+                                        name={groupName}
+                                        fieldCount={visibleFields.length}
+                                        diffCount={diffCount}
+                                        isExpanded={expandedGroups[groupName]}
+                                        onToggle={() => toggleGroup(groupName)}
+                                    />
+                                    {expandedGroups[groupName] && visibleFields.map((key, idx) => (
+                                        <FieldRow
+                                            key={key}
+                                            fieldKey={key}
+                                            coderA={coderA}
+                                            coderB={coderB}
+                                            coderAName={coderAName}
+                                            coderBName={coderBName}
+                                            selected={holding.selected?.[key]}
+                                            onSelect={(coder) => onUpdateSelection(key, coder)}
+                                            isActive={activeField === startIndex + idx}
+                                            onClick={() => setActiveField(startIndex + idx)}
+                                        />
+                                    ))}
+                                </div>
+                            );
+                        })}
+                    </div>
+                );
+            }
+
+            // Render flat
+            return (
+                <div className="flex-1 overflow-y-auto">
+                    {fieldKeys.map((key, idx) => (
+                        <FieldRow
+                            key={key}
+                            fieldKey={key}
+                            coderA={coderA}
+                            coderB={coderB}
+                            coderAName={coderAName}
+                            coderBName={coderBName}
+                            selected={holding.selected?.[key]}
+                            onSelect={(coder) => onUpdateSelection(key, coder)}
+                            isActive={activeField === idx}
+                            onClick={() => setActiveField(idx)}
+                        />
+                    ))}
+                </div>
+            );
+        }
+
+        // Main App
+        function App() {
+            const [data, setData] = useState(null);
+            const [currentHolding, setCurrentHolding] = useState(0);
+            const [activeField, setActiveField] = useState(0);
+            const [showHelp, setShowHelp] = useState(false);
+            const [showMarkdown, setShowMarkdown] = useState(false);
+            const [markdownContent, setMarkdownContent] = useState('');
+            const [showCustomInput, setShowCustomInput] = useState(false);
+            const [customInputField, setCustomInputField] = useState(null);
+            const [toast, setToast] = useState(null);
+            const [undoStack, setUndoStack] = useState([]);
+            const [settings, setSettings] = useState({
+                showDiffsOnly: false,
+                autoAdvance: true,
+                showGroups: false
+            });
+
+            // Load data on mount
+            useEffect(() => {
+                const saved = loadFromStorage();
+                if (saved?.data) {
+                    setData(saved.data);
+                    setCurrentHolding(saved.currentHolding || 0);
+                    setSettings(prev => ({ ...prev, ...saved.settings }));
+                } else {
+                    loadDemoData().then(d => setData(d));
+                }
+            }, []);
+
+            // Save to localStorage on changes
+            useEffect(() => {
+                if (data) {
+                    saveToStorage({ data, currentHolding, settings });
+                }
+            }, [data, currentHolding, settings]);
+
+            const coderNames = useMemo(() => {
+                if (!data?.holdings?.[0]) return [];
+                return Object.keys(data.holdings[0].coders);
+            }, [data]);
+
+            const fieldKeys = useMemo(() => {
+                if (!data?.holdings?.[currentHolding]) return [];
+                const holding = data.holdings[currentHolding];
+                const coderA = holding.coders?.[coderNames[0]] || {};
+                const coderB = holding.coders?.[coderNames[1]] || {};
+                const allKeys = Object.keys(FIELD_DEFINITIONS).filter(k => !['A1', 'A2', 'A3', 'A4'].includes(k));
+                return settings.showDiffsOnly
+                    ? allKeys.filter(k => (coderA[k] || 'NULL') !== (coderB[k] || 'NULL'))
+                    : allKeys;
+            }, [data, currentHolding, coderNames, settings.showDiffsOnly]);
+
+            // Keyboard navigation
+            useEffect(() => {
+                const handleKeyDown = (e) => {
+                    if (showCustomInput || showHelp || showMarkdown) {
+                        if (e.key === 'Escape') {
+                            setShowCustomInput(false);
+                            setShowHelp(false);
+                            setShowMarkdown(false);
+                        }
+                        return;
+                    }
+
+                    switch (e.key) {
+                        case '1':
+                            if (coderNames[0]) handleUpdateSelection(fieldKeys[activeField], coderNames[0]);
+                            break;
+                        case '2':
+                            if (coderNames[1]) handleUpdateSelection(fieldKeys[activeField], coderNames[1]);
+                            break;
+                        case 'c':
+                            setCustomInputField(fieldKeys[activeField]);
+                            setShowCustomInput(true);
+                            break;
+                        case 'j':
+                        case 'ArrowDown':
+                            e.preventDefault();
+                            setActiveField(prev => Math.min(prev + 1, fieldKeys.length - 1));
+                            break;
+                        case 'k':
+                        case 'ArrowUp':
+                            e.preventDefault();
+                            setActiveField(prev => Math.max(prev - 1, 0));
+                            break;
+                        case 'n':
+                            if (data?.holdings) {
+                                setCurrentHolding(prev => Math.min(prev + 1, data.holdings.length - 1));
+                                setActiveField(0);
+                            }
+                            break;
+                        case 'p':
+                            setCurrentHolding(prev => Math.max(prev - 1, 0));
+                            setActiveField(0);
+                            break;
+                        case 'd':
+                            setSettings(prev => ({ ...prev, showDiffsOnly: !prev.showDiffsOnly }));
+                            setActiveField(0);
+                            break;
+                        case 'a':
+                            setSettings(prev => ({ ...prev, autoAdvance: !prev.autoAdvance }));
+                            break;
+                        case 'g':
+                            setSettings(prev => ({ ...prev, showGroups: !prev.showGroups }));
+                            break;
+                        case 'z':
+                            if (e.ctrlKey || e.metaKey) {
+                                handleUndo();
+                            } else {
+                                handleUndo();
+                            }
+                            break;
+                        case '?':
+                            setShowHelp(true);
+                            break;
+                        case 'm':
+                            handleViewDecision();
+                            break;
+                    }
+                };
+
+                window.addEventListener('keydown', handleKeyDown);
+                return () => window.removeEventListener('keydown', handleKeyDown);
+            }, [data, currentHolding, activeField, showCustomInput, showHelp, showMarkdown, fieldKeys, coderNames, settings]);
+
+            const handleUpdateSelection = useCallback((fieldKey, coderOrCustom) => {
+                if (!fieldKey) return;
+
+                // Save to undo stack
+                setUndoStack(prev => [...prev.slice(-50), {
+                    holdingIdx: currentHolding,
+                    fieldKey,
+                    previousValue: data?.holdings?.[currentHolding]?.selected?.[fieldKey]
+                }]);
+
+                setData(prev => {
+                    const newData = { ...prev };
+                    newData.holdings = [...prev.holdings];
+                    newData.holdings[currentHolding] = {
+                        ...newData.holdings[currentHolding],
+                        selected: {
+                            ...newData.holdings[currentHolding].selected,
+                            [fieldKey]: coderOrCustom
+                        }
+                    };
+                    return newData;
+                });
+
+                // Auto-advance
+                if (settings.autoAdvance) {
+                    setTimeout(() => {
+                        setActiveField(prev => Math.min(prev + 1, fieldKeys.length - 1));
+                    }, 100);
+                }
+            }, [currentHolding, settings.autoAdvance, fieldKeys, data]);
+
+            const handleUndo = useCallback(() => {
+                if (undoStack.length === 0) return;
+
+                const lastAction = undoStack[undoStack.length - 1];
+                setUndoStack(prev => prev.slice(0, -1));
+
+                setData(prev => {
+                    const newData = { ...prev };
+                    newData.holdings = [...prev.holdings];
+                    const newSelected = { ...newData.holdings[lastAction.holdingIdx].selected };
+
+                    if (lastAction.previousValue === undefined) {
+                        delete newSelected[lastAction.fieldKey];
+                    } else {
+                        newSelected[lastAction.fieldKey] = lastAction.previousValue;
+                    }
+
+                    newData.holdings[lastAction.holdingIdx] = {
+                        ...newData.holdings[lastAction.holdingIdx],
+                        selected: newSelected
+                    };
+                    return newData;
+                });
+
+                setToast('Undone');
+            }, [undoStack]);
+
+            const handleBulkSelect = useCallback((coderName) => {
+                const holding = data?.holdings?.[currentHolding];
+                if (!holding) return;
+
+                setData(prev => {
+                    const newData = { ...prev };
+                    newData.holdings = [...prev.holdings];
+                    const newSelected = { ...newData.holdings[currentHolding].selected };
+
+                    fieldKeys.forEach(key => {
+                        if (!newSelected[key]) {
+                            newSelected[key] = coderName;
+                        }
+                    });
+
+                    newData.holdings[currentHolding] = {
+                        ...newData.holdings[currentHolding],
+                        selected: newSelected
+                    };
+                    return newData;
+                });
+
+                setToast(`Selected all unreviewed from ${coderName}`);
+            }, [data, currentHolding, fieldKeys]);
+
+            const handleCustomSave = useCallback((value) => {
+                setData(prev => {
+                    const newData = { ...prev };
+                    newData.holdings = [...prev.holdings];
+                    newData.holdings[currentHolding] = {
+                        ...newData.holdings[currentHolding],
+                        selected: {
+                            ...newData.holdings[currentHolding].selected,
+                            [customInputField]: 'custom'
+                        },
+                        customValues: {
+                            ...newData.holdings[currentHolding].customValues,
+                            [customInputField]: value
+                        }
+                    };
+                    return newData;
+                });
+                setShowCustomInput(false);
+                if (settings.autoAdvance) {
+                    setTimeout(() => {
+                        setActiveField(prev => Math.min(prev + 1, fieldKeys.length - 1));
+                    }, 100);
+                }
+            }, [currentHolding, customInputField, settings.autoAdvance, fieldKeys]);
+
+            const handleLoadData = useCallback((e) => {
+                const file = e.target.files?.[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        try {
+                            const parsed = JSON.parse(e.target.result);
+                            setData(parsed);
+                            setCurrentHolding(0);
+                            setActiveField(0);
+                            setUndoStack([]);
+                            setToast('Data loaded');
+                        } catch (err) {
+                            alert('Failed to parse JSON file');
+                        }
+                    };
+                    reader.readAsText(file);
+                }
+            }, []);
+
+            const handleExport = useCallback(() => {
+                if (!data) return;
+
+                const output = {
+                    case_id: data.case_id,
+                    judgment_date: data.judgment_date,
+                    exported_at: new Date().toISOString(),
+                    holdings: data.holdings.map(h => {
+                        const cNames = Object.keys(h.coders);
+                        const consolidated = {};
+
+                        Object.keys(FIELD_DEFINITIONS).forEach(key => {
+                            if (['A1', 'A2', 'A3', 'A4'].includes(key)) return;
+                            const selection = h.selected?.[key];
+                            if (selection === 'custom') {
+                                consolidated[key] = h.customValues?.[key];
+                            } else if (selection) {
+                                consolidated[key] = h.coders[selection]?.[key];
+                            } else {
+                                consolidated[key] = h.coders[cNames[0]]?.[key];
+                            }
+                        });
+
+                        return { holding_id: h.holding_id, selections: h.selected, consolidated };
+                    })
+                };
+
+                const blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${data.case_id.replace(/\//g, '-')}_comparison_result.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+                setToast('Exported successfully');
+            }, [data]);
+
+            const handleViewDecision = useCallback(async () => {
+                if (!data?.decision_file) {
+                    const content = `# Case ${data?.case_id}\n\n**Date:** ${data?.judgment_date}\n\n## Holdings\n\n${
+                        data?.holdings?.map(h => {
+                            const cNames = Object.keys(h.coders);
+                            const coder = h.coders[cNames[0]];
+                            return `### Holding ${h.holding_id}\n\n**Core:** ${coder?.A7 || 'N/A'}\n\n**Concept:** ${coder?.A10 || 'N/A'}\n\n**Direction:** ${coder?.A32 || 'N/A'}\n`;
+                        }).join('\n') || ''
+                    }`;
+                    setMarkdownContent(content);
+                    setShowMarkdown(true);
+                    return;
+                }
+
+                try {
+                    const resp = await fetch(data.decision_file);
+                    const text = await resp.text();
+                    setMarkdownContent(text);
+                    setShowMarkdown(true);
+                } catch (err) {
+                    alert('Could not load decision file');
+                }
+            }, [data]);
+
+            const handleToggleSetting = useCallback((key) => {
+                setSettings(prev => ({ ...prev, [key]: !prev[key] }));
+                if (key === 'showDiffsOnly') setActiveField(0);
+            }, []);
+
+            const progress = useMemo(() => {
+                if (!data?.holdings) return 0;
+                const totalFields = (Object.keys(FIELD_DEFINITIONS).length - 4) * data.holdings.length;
+                const selectedFields = data.holdings.reduce((acc, h) => acc + Object.keys(h.selected || {}).length, 0);
+                return Math.round((selectedFields / totalFields) * 100);
+            }, [data]);
+
+            return (
+                <div className="h-screen flex flex-col">
+                    <Header
+                        caseId={data?.case_id}
+                        progress={progress}
+                        onExport={handleExport}
+                        onLoadData={handleLoadData}
+                        onShowHelp={() => setShowHelp(true)}
+                        settings={settings}
+                        onToggleSetting={handleToggleSetting}
+                        onBulkSelect={handleBulkSelect}
+                        coderNames={coderNames}
+                    />
+
+                    {data ? (
+                        <div className="flex-1 flex overflow-hidden">
+                            <HoldingSidebar
+                                holdings={data.holdings}
+                                currentHolding={currentHolding}
+                                onSelect={setCurrentHolding}
+                            />
+
+                            <div className="flex-1 flex flex-col overflow-hidden min-w-0">
+                                <StatsPanel data={data} currentHolding={currentHolding} />
+
+                                <div className="p-3 border-b border-[var(--border)] bg-[var(--bg-1)] flex items-center justify-between">
+                                    <span className="text-sm text-[var(--text-2)]">
+                                        Comparing: <span className="text-[var(--text-0)] font-medium">{coderNames.join(' vs ')}</span>
+                                    </span>
+                                    <button className="btn btn-ghost btn-sm" onClick={handleViewDecision}>
+                                        View Decision <span className="kbd">m</span>
+                                    </button>
+                                </div>
+
+                                <ComparisonView
+                                    holding={data.holdings[currentHolding]}
+                                    coderNames={coderNames}
+                                    onUpdateSelection={handleUpdateSelection}
+                                    activeField={activeField}
+                                    setActiveField={setActiveField}
+                                    settings={settings}
+                                />
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="flex-1 flex items-center justify-center">
+                            <div className="text-center">
+                                <h2 className="text-xl font-semibold text-[var(--text-0)] mb-4">Load Comparison Data</h2>
+                                <label className="btn btn-primary cursor-pointer">
+                                    <input type="file" accept=".json" onChange={handleLoadData} className="hidden" />
+                                    Load JSON File
+                                </label>
+                            </div>
+                        </div>
+                    )}
+
+                    {showHelp && <HelpModal onClose={() => setShowHelp(false)} />}
+                    {showMarkdown && (
+                        <MarkdownModal
+                            content={markdownContent}
+                            title={`Decision: ${data?.case_id}`}
+                            onClose={() => setShowMarkdown(false)}
+                        />
+                    )}
+                    {showCustomInput && (
+                        <CustomValueModal
+                            fieldKey={customInputField}
+                            fieldDef={FIELD_DEFINITIONS[customInputField]}
+                            currentValue={data?.holdings?.[currentHolding]?.customValues?.[customInputField]}
+                            onSave={handleCustomSave}
+                            onClose={() => setShowCustomInput(false)}
+                        />
+                    )}
+                    {toast && <Toast message={toast} onClose={() => setToast(null)} />}
+                </div>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+</html>
